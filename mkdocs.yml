@@ -27,7 +27,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: false
   - git-committers:
-      repository: squidfunk/mkdocs-material
+      repository: kangarko/docs
       branch: main
 
 extra:
