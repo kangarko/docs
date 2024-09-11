@@ -2,26 +2,43 @@ site_name: MineAcademy
 site_url: https://kangarko.github.io/docs
 repo_url: https://github.com/kangarko/docs
 edit_uri: edit/main/docs/
+repo_name: kangarko/docs
 
 theme:
   name: material
   icon:
     repo: fontawesome/brands/github
-
-theme:
   features:
-    - navigation.instant
+    - header.autohide
     - content.action.edit
-    - content.action.view
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.expand
+    - toc.follow
+    - toc.integrate
+    - navigation.top
 
 plugins:
-  - offline
   - privacy
   - search
   - social
   - tags
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
   - git-committers:
       repository: squidfunk/mkdocs-material
       branch: main
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+copyright: >
+  Copyright &copy; 2024 - MineAcademy –
+  <a href="#__consent">Change cookie settings</a>
