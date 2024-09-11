@@ -1,11 +1,27 @@
 site_name: MineAcademy
 site_url: https://kangarko.github.io/docs
+repo_url: https://github.com/kangarko/docs
+edit_uri: edit/main/docs/
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
+
+theme:
+  features:
+    - navigation.instant
+    - content.action.edit
+    - content.action.view
 
 plugins:
   - offline
   - privacy
   - search
   - social
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: squidfunk/mkdocs-material
+      branch: main
