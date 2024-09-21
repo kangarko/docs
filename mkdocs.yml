@@ -1,44 +1,201 @@
-site_name: MineAcademy
-site_url: https://kangarko.github.io/docs
+site_name: MineBot Docs
+repo_name: MineBot Docs
+site_url: https://docs.mineacademy.org
 repo_url: https://github.com/kangarko/docs
-edit_uri: edit/main/docs/
-repo_name: kangarko/docs
-
 theme:
   name: material
+  logo: assets/branding/icon-white.svg
+  favicon: assets/branding/icon-white.svg
+  font:
+    code: JetBrains Mono
   icon:
     repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: octicons/sun-16
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: octicons/moon-24
+        name: Switch to system preference
   features:
-    - header.autohide
-    - content.action.edit
-    - navigation.tracking
+    - content.tabs.link
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.code.select
     - navigation.instant
     - navigation.instant.progress
-    - navigation.expand
-    - toc.follow
-    - toc.integrate
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.footer
     - navigation.top
+    - content.action.view
+    - content.action.edit
+    - content.tooltips
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Getting Started: getting_started/index.md
+  - Guides:
+    - guides/index.md
+    - Installation:
+      - guides/installation/index.md
+      - guides/installation/requirements.md
+      - guides/installation/setup_and_run.md
+    - Configuration:
+      - guides/configuration/index.md
+      - guides/configuration/settings.md
+      - guides/configuration/commands.md
+      - guides/configuration/logging.md
+      - Systems:
+        - guides/configuration/systems/index.md
+        - guides/configuration/systems/link_account.md
+        - guides/configuration/systems/suggestion.md
+        - guides/configuration/systems/ticket.md
+    - Localization:
+      - guides/localization/index.md
+      - guides/localization/commands.md
+      - guides/localization/messages.md
+  - Examples:
+    - examples/index.md
+    - Configuration:
+      - examples/configuration/index.md
+      - examples/configuration/settings.md
+      - examples/configuration/commands.md
+      - examples/configuration/logging.md
+      - Systems:
+        - examples/configuration/systems/index.md
+        - examples/configuration/systems/link_account.md
+        - examples/configuration/systems/suggestion.md
+        - examples/configuration/systems/ticket.md
+    - Localization:
+      - examples/localization/index.md
+      - examples/localization/commands.md
+      - examples/localization/messages.md
+  - Changelog: changelog/index.md
 
 plugins:
-  - privacy
+  - autorefs
   - search
   - social
-  - tags
+  - privacy
   - git-revision-date-localized:
       enable_creation_date: false
-  - git-committers:
-      repository: kangarko/docs
-      branch: main
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      skip_classes:
+         - no-lightbox
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3.10/objects.inv
+            - https://docs.hikari-py.dev/en/latest/objects.inv
+          options:
+            heading_level: 3
+            annotations_path: brief
+            docstring_section_style: spacy
+            docstring_style: numpy
+            inherited_members: true
+            merge_init_into_class: true
+            separate_signature: true
+            show_signature_annotations: true
+            show_source: false
+            show_submodules: false
+            signature_crossrefs: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            line_length: 80
+            extensions:
+                - griffe_inherited_docstrings
 
 extra:
   consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeated visits and preferences, as well
+        as to measure the effectiveness of our documentation and whether users
+        find what they're searching for. With your consent, you're helping us to
+        make our documentation better.
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://mineacademy.org
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/aMSnAcx
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@kangarko
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/kangarko
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/egehankilicarslan
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
 copyright: >
   Copyright &copy; 2024 - MineAcademy –
   <a href="#__consent">Change cookie settings</a>
