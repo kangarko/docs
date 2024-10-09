@@ -149,13 +149,7 @@ plugins:
                 - griffe_inherited_docstrings
 
 extra:
-  consent:
-      title: Cookie consent
-      description: >- 
-        We use cookies to recognize your repeated visits and preferences, as well
-        as to measure the effectiveness of our documentation and whether users
-        find what they're searching for. With your consent, you're helping us to
-        make our documentation better.
+  CNAME: docs.mineacademy.org
   social:
     - icon: fontawesome/solid/globe
       link: https://mineacademy.org
@@ -197,5 +191,4 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   
 copyright: >
-  Copyright &copy; 2024 - MineAcademy –
-  <a href="#__consent">Change cookie settings</a>
+  Copyright &copy; 2024 - MineAcademy
