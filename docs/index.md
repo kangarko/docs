@@ -19,19 +19,3 @@ Welcome to the comprehensive documentation for `MineBot`, your fully customizabl
 - [:octicons-archive-24: Examples](./examples/index.md)
 
 </div>
-
-## Useful Links
-- [**WebSite**](https://mineacademy.org)
-- [**Discord**](https://discord.com/invite/aMSnAcx)
-- [**YouTube**](https://www.youtube.com/@kangarko)
-
-## Discounted Courses
-
-- [**Project Orion**](https://app.mineacademy.org/join/project-orion?u=iyie)
-- [**Forge Mastery**](https://app.mineacademy.org/join/forge-mastery?u=iyie)
-- [**NMS Advanced**](https://app.mineacademy.org/join/nms-advanced?u=iyie)
-
----
-
-!!! danger
-    **This project is developed by MineAcademy Kft. Any unauthorized copying, leaking, or sharing of this project will result in legal action taken against you. By engaging with this project, you acknowledge and accept these terms.**
