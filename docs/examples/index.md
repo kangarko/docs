@@ -8,7 +8,9 @@ hide:
 
 # :material-lightbulb: Examples
 
-Welcome to the `MineBot` localization guide. This section will guide you through the initial steps to set up `MineBot` localization, ensuring a smooth and efficient process.
+Welcome to the `MineBot` localization guide.
+
+This section covers examples of how to configure and translate MineBot.
 
 <div class="grid cards" markdown>
 
@@ -16,7 +18,7 @@ Welcome to the `MineBot` localization guide. This section will guide you through
 
     ---
 
-    Discover how to configure `MineBot` settings for various systems and environments. This section provides detailed instructions on setting up hardware, software, and other dependencies to ensure optimal performance.
+    Examples of how `MineBot`'s settings can be tweaked.
 
     [:octicons-arrow-right-24: Learn more](./configuration/index.md)
 
@@ -24,7 +26,7 @@ Welcome to the `MineBot` localization guide. This section will guide you through
 
     ---
 
-    Explore how to configure localization settings for `MineBot`. This section offers comprehensive guidance on setting up language preferences, regional settings, and other localization options to tailor `MineBot` to your needs.
+    Examples of changing `MineBot`'s messages and commands.
 
     [:octicons-arrow-right-24: Learn more](./localization/index.md)
 

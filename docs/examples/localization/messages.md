@@ -5,6 +5,8 @@ description: This is an example for message localization.
 
 # Message Localization Example
 
+Below you'll find an example for message localization.
+
 [Click here for guide](../../guides/localization/messages.md)
 
 === "EN-US"

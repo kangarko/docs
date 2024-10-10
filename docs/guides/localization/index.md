@@ -1,6 +1,6 @@
 ---
 title: Localization
-description: Comprehensive guides on localizing MineBot for different languages and regions.
+description: Localizing MineBot for different languages and regions.
 icon: material/sort-alphabetical-descending-variant
 hide:
   - toc
@@ -8,7 +8,9 @@ hide:
 
 # Localization
 
-Welcome to the localization guide for `MineBot`. This section provides detailed instructions on how to adapt `MineBot` to various languages and regions, ensuring a seamless user experience across different locales.
+Welcome to the localization guide for `MineBot`. 
+
+This section provides instructions on how to adapt `MineBot` to your specific needs or another language.
 
 <div class="grid cards" markdown>
 
@@ -16,7 +18,7 @@ Welcome to the localization guide for `MineBot`. This section provides detailed 
 
     ---
 
-    Command Localization involves translating and adapting the commands used in your application to different languages and regions. This ensures that users from various linguistic backgrounds can interact with your application in their preferred language. This guide will help you understand how to implement command localization, including setting up translation files and configuring your application to use them.
+    Command Localization involves translating or even changing commands bot uses.
 
     [:octicons-arrow-right-24: Learn more](./commands.md)
 
@@ -24,7 +26,7 @@ Welcome to the localization guide for `MineBot`. This section provides detailed 
 
     ---
 
-    Message Localization focuses on translating and adapting the messages displayed by your application to different languages and regions. This includes error messages, notifications, and any other text that users might see. Proper message localization enhances user experience by providing clear and understandable communication in the user's native language. This guide will walk you through the steps to localize messages in your application.
+    Message Localization focuses on translating and adapting the messages displayed in the bot.
 
     [:octicons-arrow-right-24: Learn more](./messages.md)
 

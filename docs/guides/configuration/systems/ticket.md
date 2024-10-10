@@ -1,22 +1,24 @@
 ---
 title: Ticket System
-description: Comprehensive guide to setting up and using the Ticket System in MineBot.
+description: Setting up and using the ticket system in MineBot.
 ---
 
 # Ticket System
 
-Welcome to the Ticket System guide for `MineBot`. This section provides detailed instructions on how to set up, configure, and use the Ticket System to manage user inquiries and support requests efficiently.
+Welcome to the ticket system guide for `MineBot`. 
+
+Here, you'll learn how to set up, configure, and use the ticket system to manage reports, tickets and questions efficiently.
 
 - [Click here for example config](../../../examples/configuration/systems/ticket.md)
 
 ## <u>Ticket Systems</u>
-There are basically 2 basic ticket systems that you can configure as follows.
+There are 2 systems for tickets:
 
-### Thread
-- I can say that this system uses a system that is not very old in discord, this system basically allows you to open subheadings on a single channel, and this ticket system is based on this basis.
+### 1. Thread
+- This is a new system that MineBot uses to open subheadings on a single channel.
 
-### Category
-- This system is one of the much older ways if you want to stick to traditions, I can say that it is for you. This system basically opens different channels on a category.
+### 2. Category
+- This system opens different channels on a category. This is an older system preferred by some networks. 
 
 === "Thread"
     ```markdown
@@ -28,7 +30,7 @@ There are basically 2 basic ticket systems that you can configure as follows.
     ```
 
 ## <u>Opening Styles</u>
-We have 2 opening styles, these are as follows
+We have 2 opening styles:
 
 ### Direct
 - Does not send any information message to the channel you set as the main channel, you must either send this message yourself or write it in the channel description.
@@ -51,7 +53,7 @@ We have 2 opening styles, these are as follows
     ```
 
 ## <u>Opening Methods</u>
-We have 5 different opening methods in this area, these are as follows
+We have 5 different opening methods in this area:
 
 ### Message
 - This opening method creates a ticket channel when a message arrives in the channel you specified for the ticket category.
@@ -64,13 +66,13 @@ We have 5 different opening methods in this area, these are as follows
 
 ### Button
 - This opening method defines different buttons to the information message in the channel you set as the main channel and tickets in different categories can be opened through these buttons.
-- It is possible to assign different buttons for each ticket category
-- Each button has an emoji and text that can be determined for itself
+- It is possible to assign different buttons for each ticket category.
+- Each button has an emoji and text that can be determined for itself.
 - It receives information messages for Ticket from the user via the form.
 
 ### Dropdown
 - This opening method uses discord's dropdown system and turns all ticket categories into a selectable dropdown and opens a channel in the selected category.
-- Each category has an emoji and text that can be determined for itself
+- Each category has an emoji and text that can be determined for itself.
 - It receives information messages for Ticket from the user via the form.
 
 ### Command
@@ -156,7 +158,7 @@ We have 5 different opening methods in this area, these are as follows
 
 
 ## <u>Starting Styles</u>
-In this section we have 2 different start styles, these are as follows
+In this section we have 2 different start styles:
 
 ### Direct
 - No message is sent to the ticket channel opened in this startup style.
@@ -221,10 +223,10 @@ In this section we have 2 different start styles, these are as follows
 
 
 ## <u>Transcript Methods</u>
-We have added 5 different customisable transcript methods for you, they are as follows
+We have added 5 different customisable transcript methods for you:
 
 ### No Transcript
-- Simply this method does nothing :D
+- Do nothing.
 
 ### Move Channel
 - This method moves the channel to another category.
@@ -236,21 +238,26 @@ We have added 5 different customisable transcript methods for you, they are as f
 
 ### Send Channel As Text
 - This method saves all messages from the channel in a .txt file.
+
 #### Upload Methods
+
 ##### Github
-- Sends the saved file to the designated github repo
+- Sends the saved file to the designated github repo.
+- 
 ##### Channel
-- Sends the saved file to the designated discord channel
+- Sends the saved file to the designated discord channel.
 
 ### Send Channel As HTML
 - This method saves all messages from the channel in a .html file.
 - [For example page click here](https://egehankilicarslan.github.io/minebot-transcript-example/html/1726687925.html)
 
 #### Upload Methods
+
 ##### Github
-- Sends the saved file to the designated github repo
+- Sends the saved file to the designated github repo.
+
 ##### Channel
-- Sends the saved file to the designated discord channel
+- Sends the saved file to the designated discord channel.
 
 === "No Transcript"
     ```markdown

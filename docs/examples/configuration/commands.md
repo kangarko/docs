@@ -1,9 +1,11 @@
 ---
-title: Commands
+title: Commands Config Example
 description: This is an example for commands config.
 ---
 
 # Commands Example
+
+Below you'll find an example for commands configuration.
 
 [Click here for guide](../../guides/configuration/commands.md)
 

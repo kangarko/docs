@@ -5,6 +5,8 @@ description: This is an example for command localization.
 
 # Command Localization Example
 
+Below you'll find an example for commands localization.
+
 [Click here for guide](../../guides/localization/commands.md)
 
 === "EN-US"

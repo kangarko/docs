@@ -1,9 +1,11 @@
 ---
-title: Settings
+title: Settings Example
 description: This is an example for settings config file.
 ---
 
 # Settings Example
+
+Below you'll find an example main bot configuration.
 
 [Click here for guide](../../guides/configuration/settings.md)
 

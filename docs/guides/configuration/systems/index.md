@@ -1,43 +1,39 @@
 ---
 title: System Configuration
-description: Comprehensive guides on configuring various systems within MineBot for optimal performance and customization.
+description: Configuring MineBot to take advantage of all of our features.
 hide:
   - toc
 ---
 
 # System Configuration
 
-Welcome to the System Configuration guide for `MineBot`. This section provides detailed instructions on how to configure and optimize different systems within `MineBot` to ensure they meet your specific needs and perform at their best.
+Welcome to the System Configuration guide for `MineBot`. 
+
+This section provides instructions on how to configure `MineBot` the first time.
 
 <div class="grid cards" markdown>
 
--   :material-connection:{ .lg .middle } **Account Linking System**
+-   :material-connection:{ .lg .middle } **Account Linking**
 
     ---
 
-    Seamlessly integrate your Minecraft and Discord accounts
-    with `MineBot`. Follow our guide to link your accounts
-    and unlock additional features and capabilities.
+    Link your Minecraft and Discord and unlock additional features.
 
     [:octicons-arrow-right-24: Learn more](./link_account.md)
 
--   :material-transit-connection-horizontal:{ .lg .middle } **Suggestion System**
+-   :material-transit-connection-horizontal:{ .lg .middle } **Suggestions**
 
     ---
 
-    Enhance user engagement by setting up a Suggestion System
-    in `MineBot`. Learn how to gather, manage, and implement
-    user feedback effectively.
+    Enhance your Discord engagement by using our suggestion system.
 
     [:octicons-arrow-right-24: Learn more](./suggestion.md)
 
--   :material-ticket:{ .lg .middle } **Ticket System**
+-   :material-ticket:{ .lg .middle } **Tickets**
 
     ---
 
-    Streamline your support process with `MineBot`'s Ticket
-    System. Discover how to manage user inquiries and support
-    requests efficiently.
+    Streamline and organize your support with our ticket system.
 
     [:octicons-arrow-right-24: Learn more](./ticket.md)
 

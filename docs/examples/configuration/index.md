@@ -8,7 +8,7 @@ hide:
 
 # :octicons-gear-24: Configuration Examples
 
-Explore practical examples that showcase the effective utilization of MineBot's features and capabilities.
+Here, you'll findeExamples of MineBot configuration and features.
 
 <div class="grid cards" markdown>
 
@@ -16,7 +16,7 @@ Explore practical examples that showcase the effective utilization of MineBot's 
 
     ---
 
-    Learn about the essential prerequisites for running `MineBot` efficiently. This section covers the necessary hardware, software, and other dependencies for optimal performance. Additionally, find out how to localize these settings to match your regional requirements.
+    The main bot configuration.
 
     [:octicons-arrow-right-24: Learn more](./settings.md)
 
@@ -24,7 +24,7 @@ Explore practical examples that showcase the effective utilization of MineBot's 
 
     ---
 
-    Discover how to install, configure, and launch `MineBot` with our step-by-step guide. This section provides comprehensive instructions to get your bot operational quickly, including localization options to ensure compatibility with your language and region.
+    The command configuration.
 
     [:octicons-arrow-right-24: Learn more](./commands.md)
 
@@ -32,7 +32,7 @@ Explore practical examples that showcase the effective utilization of MineBot's 
 
     ---
 
-    Understand the logging mechanisms of `MineBot`. This section explains how to set up and manage logs to monitor your bot's activities effectively. Learn how to localize log formats and settings to meet your regional standards.
+    The logging configuration.
 
     [:octicons-arrow-right-24: Learn more](./logging.md)
 
@@ -40,7 +40,7 @@ Explore practical examples that showcase the effective utilization of MineBot's 
 
     ---
 
-    Explore the various systems that `MineBot` integrates with. This section provides detailed information on system compatibility and how to localize system settings for optimal performance in your region.
+    The configuration for various systems in the bot.
 
     [:octicons-arrow-right-24: Learn more](./systems/index.md)
 

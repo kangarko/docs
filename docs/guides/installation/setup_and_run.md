@@ -6,7 +6,7 @@ description: Follow our step-by-step guide to install, configure, and launch `Mi
 The first step to creating a Discord bot is to create a **bot user** on the developer portal. [Navigate to the developer portal](https://discord.com/developers/applications) and create a new bot:
 
 !!! warning
-    Before proceeding, ensure you have met all the necessary prerequisites. You can find detailed information on system requirements and dependencies [here](./requirements.md).
+    Before proceeding, ensure you have met all the necessary prerequisites. You can find information on system requirements and dependencies [here](./requirements.md).
 
 !!! danger
     Anyone with access to this token has **full access to your bot's account**, you should ensure that nobody has access to this token but you. Treat it like a username/password combination, but for bots.
@@ -22,7 +22,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
           ![Create Application](../../assets/getting-started/image-1.webp){ width=450 }
           <figcaption></figcaption>
       </figure>
-    <figcaption>By creating an app you accept [Discord's Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/developer-terms-of-service).</figcaption>
+        <figcaption>By creating an app you accept [Discord's Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/developer-terms-of-service).</figcaption>
     </figure>
 
 -   :material-robot:{ .lg .middle } **Navigate to the Information Tab**
@@ -34,7 +34,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
           ![General Information Tab](../../assets/getting-started/image-2.webp){ width="450" }
           <figcaption></figcaption>
       <figure>
-    <figcaption>Keep this application ID for the next step.</figcaption>
+        <figcaption>Keep this application ID for the next step.</figcaption>
     </figure>
 
 -   :fontawesome-solid-paper-plane:{ .lg .middle } **Invite Your Bot to Your Server**
@@ -46,7 +46,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
             ![Create the Invite Link](../../assets/getting-started/image-3.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
-    <figcaption>Enter your application ID [here](https://discordapi.com/permissions.html#2147483656) and invite your bot to your server.</figcaption>
+        <figcaption>Enter your application ID [here](https://discordapi.com/permissions.html#2147483656) and invite your bot to your server.</figcaption>
     </figure>
 
 -   :material-robot:{ .lg .middle } **Navigate to the Bot Tab**
@@ -58,7 +58,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
           ![Bot Tab](../../assets/getting-started/image-4.webp){ width="80" }
           <figcaption></figcaption>
       <figure>
-    <figcaption>Access the bot settings in this tab.</figcaption>
+        <figcaption>Access the bot settings in this tab.</figcaption>
     </figure>
 
 -   :material-form-textbox-password:{ .lg .middle } **Create a New Token**
@@ -70,7 +70,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
             ![Reset Token](../../assets/getting-started/image-5.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
-    <figcaption>Generate a new token for your bot. Keep it secure and do not share it publicly.</figcaption>
+        <figcaption>Generate a new token for your bot. Keep it secure and do not share it publicly.</figcaption>
     </figure>
 
 -   :material-form-textbox-password:{ .lg .middle } **Write Your Token**
@@ -82,7 +82,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
             ![Write Token](../../assets/getting-started/image-6.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
-    <figcaption>Write your token to your config file.</figcaption>
+        <figcaption>Write your token to your config file.</figcaption>
     </figure>
 
 </div>

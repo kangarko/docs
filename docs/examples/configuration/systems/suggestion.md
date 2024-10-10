@@ -1,9 +1,11 @@
 ---
-title: Suggestion
+title: Suggestion Config Example
 description: This is an example for suggestion config.
 ---
 
 # Suggestion Example
+
+Below you'll find an example for suggestion system configuration.
 
 [Click here for guide](../../../guides/configuration/systems/suggestion.md)
 

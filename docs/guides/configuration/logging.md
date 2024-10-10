@@ -1,11 +1,13 @@
 ---
 title: Logging
-description: Comprehensive guide to configuring and optimizing logging features in MineBot.
+description: Configuring and optimizing logging features in MineBot.
 ---
 
 # Logging
 
-Welcome to the logging configuration guide for `MineBot`. This section provides detailed instructions on how to set up and optimize logging to ensure you have the necessary insights and data for monitoring and troubleshooting.
+Welcome to the logging configuration guide for `MineBot`. 
+
+This section provides instructions on how to set up and optimize logging to ensure you have the necessary insights and data for monitoring and troubleshooting.
 
 ??? quote "Related Configuration File"
     - `configuration/logging/config.yaml`

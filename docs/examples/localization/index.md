@@ -1,6 +1,6 @@
 ---
 title: Localization Examples
-description: Practical examples demonstrating effective usage of MineBot.
+description: Examples of translating MineBot.
 icon: material/translate
 hide:
   - toc
@@ -8,7 +8,7 @@ hide:
 
 # :material-translate: Localization Examples
 
-Explore practical examples that showcase the effective utilization of `MineBot`'s features and capabilities.
+Below you'll find examples of translating parts of MineBot.
 
 <div class="grid cards" markdown>
 
@@ -16,7 +16,7 @@ Explore practical examples that showcase the effective utilization of `MineBot`'
 
     ---
 
-    Learn how to install `MineBot` with our step-by-step guide. This guide will walk you through the entire installation process, ensuring you have `MineBot` up and running in no time. Additionally, find out how to localize the installation process to suit your regional settings.
+    An example commands localization.
 
     [:octicons-arrow-right-24: Learn more](./commands.md)
 
@@ -24,7 +24,7 @@ Explore practical examples that showcase the effective utilization of `MineBot`'
 
     ---
 
-    Discover the extensive customization options available for `MineBot`. Learn how to tailor every feature to meet your specific requirements. This includes localization settings to ensure `MineBot` operates seamlessly in your preferred language and region.
+    An example message localization.
 
     [:octicons-arrow-right-24: Learn more](./messages.md)
 

@@ -27,8 +27,7 @@ If you notice any missing information or inaccuracies, please don't hesitate to 
     ---
 
     `MineBot` is highly customizable. Learn how to modify every
-    aspect of the bot to suit your needs. Start here to explore
-    all the configuration options available!
+    feature and disable those you don't need.
 
     [:octicons-arrow-right-24: Learn more](./configuration/index.md)
 
@@ -37,8 +36,7 @@ If you notice any missing information or inaccuracies, please don't hesitate to 
     ---
 
     `MineBot` features a custom-built localization system, allowing
-    you to tailor every aspect to your needs. Dive in to explore
-    the full range of customization possibilities!
+    you to translate the bot.
 
     [:octicons-arrow-right-24: Learn more](./localization/index.md)
 

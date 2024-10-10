@@ -1,9 +1,11 @@
 ---
-title: Ticket
+title: Ticket Config Example
 description: This is an example for ticket config.
 ---
 
 # Ticket Example
+
+Below you'll find an example for ticket system configuration.
 
 [Click here for guide](../../../guides/configuration/systems/ticket.md)
 

@@ -3,12 +3,12 @@ title: Requirements
 description: Ensure your system meets all the necessary prerequisites to run MineBot smoothly.
 ---
 
-Be prepared to put in some effort, but the results will be well worth it.
+We've created this guide to help complete beginners or advanced users to get started with MineBot quickly.
 
 ??? quote "Prerequisites"
-    - **Valid License**
-    - Windows/Mac/Linux System
+    - A valid license key
     - Python 3.10+
+    - Windows, macOS or Linux
 
 
 ## Install Python
@@ -108,7 +108,7 @@ After extracting the bot files, follow these steps to set up a virtual environme
 
 ## Get Your License Key
 
-Unlock the full potential of our software by entering your license key. Follow these simple steps to activate your license:
+Follow these simple steps to activate your license:
 
 1. **Connect Your BuiltByBit Account**: Link your BuiltByBit account with Discord.
 2. **Retrieve Your License Key**: Send `/getlicense` in a direct message to the `MineAcademy Licenser` bot.

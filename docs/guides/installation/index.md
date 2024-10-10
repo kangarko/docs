@@ -14,9 +14,8 @@ hide:
 
     ---
 
-    Ensure your system meets all the necessary prerequisites to
-    run `MineBot` smoothly. This section covers hardware,
-    software, and other dependencies required for optimal performance.
+    This section covers the hardware, software, and other
+    dependencies required to run `MineBot`.
 
     [:octicons-arrow-right-24: Learn more](./requirements.md)
 
@@ -24,9 +23,8 @@ hide:
 
     ---
 
-    Follow our step-by-step guide to install, configure, and
-    launch `MineBot`. This section provides detailed
-    instructions to get your bot up and running in no time.
+    This section provides instructions
+    to get your bot up and running asap.
 
     [:octicons-arrow-right-24: Learn more](./setup_and_run.md)
 

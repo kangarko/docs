@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: A comprehensive guide to help you get started with MineBot.
+description: A guide on getting started with MineBot.
 icon: material/fast-forward
 hide:
   - navigation
@@ -8,7 +8,9 @@ hide:
 
 # :material-fast-forward: Getting Started
 
-Welcome to the `MineBot` setup guide. This section will walk you through the initial steps to get `MineBot` up and running, ensuring a smooth and efficient setup process.
+Welcome to the `MineBot` setup guide. 
+
+This section will walk you through the initial steps to get `MineBot` up and running.
 
 ## Installation
 <div class="grid cards" markdown>

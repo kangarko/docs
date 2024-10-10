@@ -1,11 +1,13 @@
 ---
 title: Suggestion System
-description: Comprehensive guide to setting up and using the Suggestion System in MineBot.
+description: Setting up and using the suggestion system in MineBot.
 ---
 
 # Suggestion System
 
-Welcome to the Suggestion System guide for `MineBot`. This section provides detailed instructions on how to set up, configure, and use the Suggestion System to gather and manage user feedback effectively.
+Welcome to the suggestion system guide for `MineBot`. 
+
+Here, you'll learn how to set up, configure, and use the suggestion system to gather and manage user feedback.
 
 - [Click here for example config](../../../examples/configuration/systems/suggestion.md)
 

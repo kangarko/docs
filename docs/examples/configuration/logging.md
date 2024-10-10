@@ -1,9 +1,11 @@
 ---
-title: Logging
+title: Logging Config Example
 description: This is an example for logging config.
 ---
 
 # Logging Example
+
+Below you'll find an example for logging configuration.
 
 [Click here for guide](../../guides/configuration/logging.md)
 

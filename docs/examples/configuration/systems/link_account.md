@@ -1,9 +1,11 @@
 ---
-title: Link Account
+title: Account Linking Config Example
 description: This is an example for link account config.
 ---
 
 # Link Account Example
+
+Below you'll find an example for account linking configuration.
 
 [Click here for guide](../../../guides/configuration/systems/link_account.md)
 
