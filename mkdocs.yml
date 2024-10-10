@@ -157,10 +157,6 @@ extra:
       link: https://discord.com/invite/aMSnAcx
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@kangarko
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/kangarko
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/egehankilicarslan
 
 markdown_extensions:
   - admonition
