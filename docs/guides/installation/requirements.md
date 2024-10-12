@@ -11,7 +11,7 @@ We've created this guide to help complete beginners or advanced users to get sta
     - Windows, macOS or Linux
 
 
-## Install Python
+## 1. Install Python
 
 === ":fontawesome-brands-windows: Windows"
     1. **Download the Installer**: Go to the [official Python website](https://www.python.org/downloads/windows/) and download the latest Python installer for Windows.
@@ -58,7 +58,7 @@ We've created this guide to help complete beginners or advanced users to get sta
         3. **Verify Installation**: `python3 --version`
 
 
-## Download and Extract Bot Files
+## 2. Download and Extract Bot Files
 
 Follow these steps to download and extract the bot files from BuiltByBit on your operating system:
 
@@ -79,7 +79,9 @@ Follow these steps to download and extract the bot files from BuiltByBit on your
     4. **Move Files**: Move the extracted files to your desired location.
 
 
-## Setup Virtual Environment
+## 3. Setup Virtual Environment
+
+### NB: After each restart (or after you've closed your Terminal), only repeat steps 1, 3 and 5. 
 
 After extracting the bot files, follow these steps to set up a virtual environment and install the required dependencies:
 
@@ -100,19 +102,22 @@ After extracting the bot files, follow these steps to set up a virtual environme
         ```sh
         source venv/bin/activate
         ```
-4. **Install Dependencies**:
+
+4. **Start the bot**:
     ```sh
-    pip install -r requirements.txt
+    nox -s srv
     ```
 
+## 4. Create A Discord Application
 
-## Get Your License Key
+After you've completed the above steps, head over to the link below to add the bot to your server.
 
-Follow these simple steps to activate your license:
+[:octicons-quote-16: Tutorial](./setup_and_run.md)
 
-1. **Connect Your BuiltByBit Account**: Link your BuiltByBit account with Discord.
-2. **Retrieve Your License Key**: Send `/getlicense` in a direct message to the `MineAcademy Licenser` bot.
-3. **Update Configuration**: Open `configuration/settings/config.yaml` and enter your license key.
-4. **Save Changes**: Save the `config.yaml` file to apply the changes.
+## 5. If Running Locally - Keep The Terminal Window Opened
 
-If you encounter any issues, please contact our support team for assistance.
+That's it :)
+
+## 6. What To Do After Restart Or You've Closed The Console/Terminal
+
+If you've restarted your machine or closed the terminal, repeat steps 1, 3 and 5 from section "3. Setup Virtual Environment".

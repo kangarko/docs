@@ -11,6 +11,10 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
 !!! danger
     Anyone with access to this token has **full access to your bot's account**, you should ensure that nobody has access to this token but you. Treat it like a username/password combination, but for bots.
 
+Click the images below to zoom them.
+
+TODO: Tell people to enable Developer Mode in Discord.
+
 <div class="grid cards" markdown>
 
 -   :material-plus-circle:{ .lg .middle } **Create a New Application**
@@ -46,7 +50,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
             ![Create the Invite Link](../../assets/getting-started/image-3.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
-        <figcaption>Enter your application ID [here](https://discordapi.com/permissions.html#2147483656) and invite your bot to your server.</figcaption>
+        <figcaption>Enter your application ID [here](https://discordapi.com/permissions.html#2147483656) into "Client ID", and click the Link. Do not change any other options./figcaption>
     </figure>
 
 -   :material-robot:{ .lg .middle } **Navigate to the Bot Tab**
@@ -61,16 +65,18 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
         <figcaption>Access the bot settings in this tab.</figcaption>
     </figure>
 
--   :material-form-textbox-password:{ .lg .middle } **Create a New Token**
+-   :material-form-textbox-password:{ .lg .middle } **Create a New Token & Give Privileged Intents**
 
     ---
+
+    TODO SPLIT THE SECTION INTO: Generate Token and Give Intents (3, make sure the image shows all of them)
 
     <figure markdown>
         <figure markdown>
             ![Reset Token](../../assets/getting-started/image-5.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
-        <figcaption>Generate a new token for your bot. Keep it secure and do not share it publicly.</figcaption>
+        <figcaption>Generate a new token for your bot and keep it private. NB: Adjust 3 Privileged Gateway Intents as per the image above.</figcaption>
     </figure>
 
 -   :material-form-textbox-password:{ .lg .middle } **Write Your Token**
@@ -84,5 +90,7 @@ The first step to creating a Discord bot is to create a **bot user** on the deve
         </figure>
         <figcaption>Write your token to your config file.</figcaption>
     </figure>
+
+   TODO add image about changing the guild (server ID)
 
 </div>
