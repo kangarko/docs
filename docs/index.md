@@ -12,7 +12,7 @@ hide:
 
 `MineBot` is a fully customizable Discord bot. 
 
-It comes with moderation tools, economy management, fun commands, a Minecraft-Discord bridge, and a highly-customizable ticket system. 
+It comes with moderation tools, suggestion system, a Minecraft-Discord bridge, and a highly-customizable ticket system. 
 
 <div class="grid cards" markdown>
 
