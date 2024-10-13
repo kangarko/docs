@@ -8,14 +8,12 @@ hide:
 The first step to creating a Discord bot is to create a **bot user** on the developer portal. [Navigate to the developer portal](https://discord.com/developers/applications) and create a new bot:
 
 !!! warning
-    Before proceeding, ensure you have met all the necessary prerequisites. You can find information on system requirements and dependencies [here](./requirements.md).
+    - Before proceeding, ensure you have met all the necessary prerequisites. You can find information on system requirements and dependencies [here](./requirements.md).
+    - Please enable Discord Developer Mode by navigating to `Settings -> Advanced -> Developer Mode`.
+    - Click the images below to zoom them.
 
 !!! danger
     Anyone with access to this token has **full access to your bot's account**, you should ensure that nobody has access to this token but you. Treat it like a username/password combination, but for bots.
-
-Click the images below to zoom them.
-
-TODO: Tell people to enable Developer Mode in Discord.
 
 <div class="grid cards" markdown>
 
@@ -67,19 +65,30 @@ TODO: Tell people to enable Developer Mode in Discord.
         <figcaption>Access the bot settings in this tab.</figcaption>
     </figure>
 
--   :material-form-textbox-password:{ .lg .middle } **Create a New Token & Give Privileged Intents**
+-   :material-form-textbox-password:{ .lg .middle } **Create a New Token**
 
     ---
-
-    TODO SPLIT THE SECTION INTO: Generate Token and Give Intents (3, make sure the image shows all of them)
 
     <figure markdown>
         <figure markdown>
             ![Reset Token](../../../assets/getting-started/image-5.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
-        <figcaption>Generate a new token for your bot and keep it private. NB: Adjust 3 Privileged Gateway Intents as per the image above.</figcaption>
+        <figcaption>Generate a new token for your bot and keep it private.</figcaption>
     </figure>
+
+-   :material-form-textbox-password:{ .lg .middle } **Give Privileged Intents**
+
+    ---
+
+    <figure markdown>
+        <figure markdown>
+            ![Give Intents](../../../assets/getting-started/image-6.webp){ width=450 }
+            <figcaption></figcaption>
+        </figure>
+        <figcaption>Adjust 3 Privileged Gateway Intents as per the image above.</figcaption>
+    </figure>
+
 
 -   :material-form-textbox-password:{ .lg .middle } **Write Your Token**
 
@@ -87,12 +96,34 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
         <figure markdown>
-            ![Write Token](../../../assets/getting-started/image-6.webp){ width=450 }
+            ![Write Token](../../../assets/getting-started/image-7.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Write your token to your config file.</figcaption>
     </figure>
 
-   TODO add image about changing the guild (server ID)
+-   :material-form-textbox-password:{ .lg .middle } **Copy Your Discord Servers ID**
+
+    ---
+
+    <figure markdown>
+        <figure markdown>
+            ![Copy ID](../../../assets/getting-started/image-8.webp){ width=80 }
+            <figcaption></figcaption>
+        </figure>
+        <figcaption>Copy the Discord server guild ID that you plan to use with MineBot.</figcaption>
+    </figure>
+
+-   :material-form-textbox-password:{ .lg .middle } **Paste Your Discord Servers ID**
+
+    ---
+
+    <figure markdown>
+        <figure markdown>
+            ![Paste ID](../../../assets/getting-started/image-9.webp){ width=450 }
+            <figcaption></figcaption>
+        </figure>
+        <figcaption>Paste the Discord server guild ID that you copied.</figcaption>
+    </figure>
 
 </div>
