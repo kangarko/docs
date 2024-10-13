@@ -1,6 +1,8 @@
 ---
 title: Setup and Run
 description: Follow our step-by-step guide to install, configure, and launch `MineBot`.
+hide:
+    - toc
 ---
 
 The first step to creating a Discord bot is to create a **bot user** on the developer portal. [Navigate to the developer portal](https://discord.com/developers/applications) and create a new bot:
@@ -23,7 +25,7 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
       <figure markdown>
-          ![Create Application](../../assets/getting-started/image-1.webp){ width=450 }
+          ![Create Application](../../../assets/getting-started/image-1.webp){ width=450 }
           <figcaption></figcaption>
       </figure>
         <figcaption>By creating an app you accept [Discord's Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/developer-terms-of-service).</figcaption>
@@ -35,7 +37,7 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
       <figure markdown>
-          ![General Information Tab](../../assets/getting-started/image-2.webp){ width="450" }
+          ![General Information Tab](../../../assets/getting-started/image-2.webp){ width="450" }
           <figcaption></figcaption>
       <figure>
         <figcaption>Keep this application ID for the next step.</figcaption>
@@ -47,7 +49,7 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
         <figure markdown>
-            ![Create the Invite Link](../../assets/getting-started/image-3.webp){ width=450 }
+            ![Create the Invite Link](../../../assets/getting-started/image-3.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Enter your application ID [here](https://discordapi.com/permissions.html#2147483656) into "Client ID", and click the Link. Do not change any other options./figcaption>
@@ -59,7 +61,7 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
       <figure markdown>
-          ![Bot Tab](../../assets/getting-started/image-4.webp){ width="80" }
+          ![Bot Tab](../../../assets/getting-started/image-4.webp){ width="80" }
           <figcaption></figcaption>
       <figure>
         <figcaption>Access the bot settings in this tab.</figcaption>
@@ -73,7 +75,7 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
         <figure markdown>
-            ![Reset Token](../../assets/getting-started/image-5.webp){ width=450 }
+            ![Reset Token](../../../assets/getting-started/image-5.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Generate a new token for your bot and keep it private. NB: Adjust 3 Privileged Gateway Intents as per the image above.</figcaption>
@@ -85,7 +87,7 @@ TODO: Tell people to enable Developer Mode in Discord.
 
     <figure markdown>
         <figure markdown>
-            ![Write Token](../../assets/getting-started/image-6.webp){ width=450 }
+            ![Write Token](../../../assets/getting-started/image-6.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Write your token to your config file.</figcaption>

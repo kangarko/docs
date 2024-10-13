@@ -2,8 +2,6 @@
 title: Changelogs
 description: All changelogs for MineBot
 icon: material/restore-alert
-hide:
-  - navigation
 ---
 
 # :material-restore-alert: Changelog

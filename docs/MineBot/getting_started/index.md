@@ -2,8 +2,6 @@
 title: Getting Started
 description: A guide on getting started with MineBot.
 icon: material/fast-forward
-hide:
-  - navigation
 ---
 
 # :material-fast-forward: Getting Started
