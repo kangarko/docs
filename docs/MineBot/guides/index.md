@@ -10,8 +10,6 @@ hide:
 
 In this section, you'll find a variety of in-depth guides that thoroughly explain specific topics. Additionally, there are fully functional [examples](../examples/index.md) available for practical reference.
 
-If you notice any missing information or inaccuracies, please don't hesitate to [open an issue](https://github.com/kangarko/MineBot/issues/new/choose) on our GitHub repository!
-
 <div class="grid cards" markdown>
 
 -   :simple-exercism:{ .lg .middle } **Installation**
