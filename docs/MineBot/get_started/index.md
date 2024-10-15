@@ -1,10 +1,10 @@
 ---
-title: Getting Started
+title: Get Started
 description: A guide on getting started with MineBot.
 icon: material/fast-forward
 ---
 
-# :material-fast-forward: Getting Started
+# :material-fast-forward: Get Started
 
 Welcome to the `MineBot` setup guide. 
 

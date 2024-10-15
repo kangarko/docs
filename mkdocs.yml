@@ -68,7 +68,7 @@ nav:
   - Plugins: Plugins/index.md
   - MineBot:
     - MineBot/index.md
-    - Getting Started: MineBot/getting_started/index.md
+    - Get Started: MineBot/get_started/index.md
     - Guides:
       - MineBot/guides/index.md
       - Installation:

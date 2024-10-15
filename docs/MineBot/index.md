@@ -15,13 +15,8 @@ It comes with moderation tools, suggestion system, a Minecraft-Discord bridge, a
 
 <div class="grid cards" markdown>
 
-- [:octicons-arrow-right-24: Get Started](./getting_started/index.md)
+- [:octicons-arrow-right-24: Get Started](get_started/index.md)
 - [:octicons-repo-24: Guides](./guides/index.md)
 - [:octicons-archive-24: Examples](./examples/index.md)
 
 </div>
-
----
-
-!!! info
-    If you notice any missing information or inaccuracies, please don't hesitate to [open an issue](https://github.com/kangarko/MineBot/issues/new/choose) on our GitHub repository!
