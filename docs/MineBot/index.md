@@ -17,6 +17,6 @@ It comes with moderation tools, suggestion system, a Minecraft-Discord bridge, a
 
 - [:octicons-arrow-right-24: Get Started](get_started/index.md)
 - [:octicons-repo-24: Guides](./guides/index.md)
-- [:octicons-archive-24: Examples](./examples/index.md)
+- [:material-lightbulb: Examples](./examples/index.md)
 
 </div>
