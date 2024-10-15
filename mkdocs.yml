@@ -64,48 +64,48 @@ theme:
 
 nav:
   - Home: index.md
-  - Courses: Courses/index.md
-  - Plugins: Plugins/index.md
+  - Courses: courses/index.md
+  - Plugins: plugins/index.md
   - MineBot:
-    - MineBot/index.md
-    - Get Started: MineBot/get_started/index.md
+    - minebot/index.md
+    - Get Started: minebot/get_started/index.md
     - Guides:
-      - MineBot/guides/index.md
+      - minebot/guides/index.md
       - Installation:
-        - MineBot/guides/installation/index.md
-        - MineBot/guides/installation/requirements.md
-        - MineBot/guides/installation/setup_and_run.md
+        - minebot/guides/installation/index.md
+        - minebot/guides/installation/requirements.md
+        - minebot/guides/installation/setup_and_run.md
       - Configuration:
-        - MineBot/guides/configuration/index.md
-        - MineBot/guides/configuration/settings.md
-        - MineBot/guides/configuration/commands.md
-        - MineBot/guides/configuration/logging.md
+        - minebot/guides/configuration/index.md
+        - minebot/guides/configuration/settings.md
+        - minebot/guides/configuration/commands.md
+        - minebot/guides/configuration/logging.md
         - Systems:
-          - MineBot/guides/configuration/systems/index.md
-          - MineBot/guides/configuration/systems/link_account.md
-          - MineBot/guides/configuration/systems/suggestion.md
-          - MineBot/guides/configuration/systems/ticket.md
+          - minebot/guides/configuration/systems/index.md
+          - minebot/guides/configuration/systems/link_account.md
+          - minebot/guides/configuration/systems/suggestion.md
+          - minebot/guides/configuration/systems/ticket.md
       - Localization:
-        - MineBot/guides/localization/index.md
-        - MineBot/guides/localization/commands.md
-        - MineBot/guides/localization/messages.md
+        - minebot/guides/localization/index.md
+        - minebot/guides/localization/commands.md
+        - minebot/guides/localization/messages.md
     - Examples:
-      - MineBot/examples/index.md
+      - minebot/examples/index.md
       - Configuration:
-        - MineBot/examples/configuration/index.md
-        - MineBot/examples/configuration/settings.md
-        - MineBot/examples/configuration/commands.md
-        - MineBot/examples/configuration/logging.md
+        - minebot/examples/configuration/index.md
+        - minebot/examples/configuration/settings.md
+        - minebot/examples/configuration/commands.md
+        - minebot/examples/configuration/logging.md
         - Systems:
-          - MineBot/examples/configuration/systems/index.md
-          - MineBot/examples/configuration/systems/link_account.md
-          - MineBot/examples/configuration/systems/suggestion.md
-        - MineBot/examples/configuration/systems/ticket.md
+          - minebot/examples/configuration/systems/index.md
+          - minebot/examples/configuration/systems/link_account.md
+          - minebot/examples/configuration/systems/suggestion.md
+        - minebot/examples/configuration/systems/ticket.md
       - Localization:
-        - MineBot/examples/localization/index.md
-        - MineBot/examples/localization/commands.md
-        - MineBot/examples/localization/messages.md
-    - Changelog: MineBot/changelog/index.md
+        - minebot/examples/localization/index.md
+        - minebot/examples/localization/commands.md
+        - minebot/examples/localization/messages.md
+    - Changelog: minebot/changelog/index.md
 
 plugins:
   - autorefs
