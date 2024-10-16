@@ -10,9 +10,6 @@ hide:
 # :material-home: Home
 
 Welcome to the official documentation of all *MineAcademy.org* courses, plugins, and discord bots!<br>
-You can learn about new features and corrections in our [blog](#).
-
-Made with :heart: by Jannick and Egehan!
 
 ## Your courses
 
