@@ -1,7 +1,6 @@
 ---
 title: MineBot
 description: MineBot documentation
-icon: fontawesome/brands/discord
 hide:
   - toc
 ---
@@ -9,9 +8,7 @@ hide:
 
 # :fontawesome-brands-discord: MineBot
 
-`MineBot` is a fully customizable Discord bot. 
-
-It comes with moderation tools, suggestion system, a Minecraft-Discord bridge, and a highly-customizable ticket system. 
+`MineBot` is a modern, fully customizable Discord bot. It integrates with your Minecraft server and comes with moderation tools, suggestion system, a highly-customizable ticket system and many other features.
 
 <div class="grid cards" markdown>
 

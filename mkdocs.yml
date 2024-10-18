@@ -1,11 +1,14 @@
-site_name: Documentation
-repo_name: Documentation
+site_name: MineAcademy Docs
+repo_name: MineAcademy Docs
 site_url: https://docs.mineacademy.org
 repo_url: https://github.com/kangarko/docs
+extra_css:
+  - assets/stylesheets/extra.css
 theme:
   name: material
-  logo: assets/branding/icon-white.svg
-  favicon: assets/branding/icon-white.svg
+  logo: assets/branding/header-white.png
+  favicon: assets/branding/logo-white.png
+  custom_dir: docs/overrides
   font:
     code: JetBrains Mono
   icon:
@@ -29,34 +32,35 @@ theme:
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/link
-        name: Switch to light mode
+        name: Auto mode
+
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: octicons/sun-16
-        name: Switch to dark mode
+        name: Light mode
+
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
         icon: octicons/moon-24
-        name: Switch to system preference
+        name: Dark mode
+
   features:
     - content.tabs.link
     - search.highlight
     - search.suggest
-    - search.share
     - content.code.copy
     - content.code.select
+    - navigation.tabs
     - navigation.instant
     - navigation.instant.progress
-    - navigation.tabs
     - navigation.indexes
     - navigation.footer
-    - navigation.top
     - content.action.view
     - content.action.edit
     - content.tooltips
@@ -64,8 +68,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Courses: courses/index.md
-  - Plugins: plugins/index.md
   - MineBot:
     - minebot/index.md
     - Get Started: minebot/get_started/index.md
@@ -110,10 +112,11 @@ nav:
 plugins:
   - autorefs
   - search
-  - social
+  #- social
   - privacy
-  - git-revision-date-localized:
-      enable_creation_date: false
+  #- git-revision-date-localized:
+  #    enable_creation_date: false
+  - open-in-new-tab
   - glightbox:
       touchNavigation: true
       loop: false
@@ -127,30 +130,6 @@ plugins:
       caption_position: bottom
       skip_classes:
          - no-lightbox
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          import:
-            - https://docs.python.org/3.10/objects.inv
-            - https://docs.hikari-py.dev/en/latest/objects.inv
-          options:
-            heading_level: 3
-            annotations_path: brief
-            docstring_section_style: spacy
-            docstring_style: numpy
-            inherited_members: true
-            merge_init_into_class: true
-            separate_signature: true
-            show_signature_annotations: true
-            show_source: false
-            show_submodules: false
-            signature_crossrefs: true
-            show_symbol_type_heading: true
-            show_symbol_type_toc: true
-            line_length: 80
-            extensions:
-                - griffe_inherited_docstrings
 
 extra:
   CNAME: docs.mineacademy.org

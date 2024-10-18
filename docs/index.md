@@ -1,40 +1,54 @@
 ---
 title: Home
 description: MineAcademy documentation
-icon: material/home
 hide:
   - navigation
   - toc
 ---
 
-# :material-home: Home
+# :material-home: MineAcademy Docs
 
-Welcome to the official documentation of all *MineAcademy.org* courses, plugins, and discord bots!<br>
-
-## Your courses
+Documentation for all MineAcademy software projects, including ChatControl, Boss, CoreArena and Discord Bots.<br>
 
 <div class="grid cards" markdown>
-- <center>**Java Masterclass** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-- <center>**Project Orion** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-- <center>**NMS Advanced** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-- <center>**Forge Mastery** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-- <center>**Black Nova** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-- <center>**System Administration** :material-clock-time-four:{title="This course is coming soon!"}</center>
-</div>
 
-## Your plugins
+-   [__:fontawesome-solid-cube: ChatControl__](https://mineacademy.org/chatcontrol)
 
-<div class="grid cards" markdown>
-- <center>**ChatControl Red™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
-- <center>**Boss™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
-- <center>**Protect™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
-- <center>**CoreArena™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
-- <center>**Winter™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
-- <center>**Dungeons™** :material-clock-time-four:{title="This plugin is coming soon!"}</center>
-</div>
+    ---
 
-## Your discord bots
+    Elite formatting and filtering plugin. Can replace 200+ plugins. High-performance. Folia supported.
 
-<div class="grid cards" markdown>
-- <center>[**MineBot** :material-new-box:](MineBot/index.md)</center>
-</div>
+    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/chatcontrol-red/wiki)
+
+
+-   [__:fontawesome-solid-cube: Boss__](https://mineacademy.org/boss)
+
+    ---
+
+    Easily add new mobs & AI to Minecraft (without datapacks or scripts).
+
+    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/boss/wiki)
+
+-   [__:fontawesome-solid-cube: CoreArena__](https://mineacademy.org/corearena)
+
+    ---
+
+    Procedurally destroyable arenas with classes, tier system & BungeeCord support.
+
+    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/corearena/wiki)
+
+-   [__:fontawesome-solid-cube: Protect__](https://mineacademy.org/protect)
+
+    ---
+
+    Catch duplicated, hacked or impossible-to-obtain items, detect x-rayers and balance you economy.
+
+    [**Read the docs** :material-open-in-new:{title="This documentation currently on GitHub."}](https://github.com/kangarko/protect/wiki)
+
+-   __:fontawesome-brands-discord: MineBot__ :material-clock-outline:{title="The MineBot is currently is preparation."}
+
+    ---
+
+    A modern, all-in-one Discord bot with a Minecraft connector and a ton of useful features.
+
+    [**Read the docs**](minebot/index.md)
