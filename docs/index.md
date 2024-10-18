@@ -11,38 +11,30 @@ hide:
 
 Welcome to the official documentation of all *MineAcademy.org* courses, plugins, and discord bots!<br>
 
-<div class="flex-container" markdown>
-    <div class="flex-item">
-        <center>**Java Masterclass** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-    </div>
-    <div class="flex-item">
-        <center>**Project Orion** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-    </div>
-    <div class="flex-item">
-        <center>**NMS Advanced** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-    </div>
-    <div class="flex-item">
-        <center>**Forge Mastery** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-    </div>
-    <div class="flex-item">
-        <center>**Black Nova** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
-    </div>
-    <div class="flex-item">
-        <center>**System Administration** :material-clock-time-four:{title="This course is coming soon!"}</center>
-    </div>
+## Your courses
+
+<div class="grid cards" markdown>
+- <center>**Java Masterclass** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
+- <center>**Project Orion** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
+- <center>**NMS Advanced** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
+- <center>**Forge Mastery** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
+- <center>**Black Nova** :material-information-outline:{title="This course documentation is not ready yet!"}</center>
+- <center>**System Administration** :material-clock-time-four:{title="This course is coming soon!"}</center>
 </div>
 
-<style>
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+## Your plugins
 
-    .flex-item {
-        width: 100%; /* Stretching the items to take full space horizontally */
-        margin: 10px 0; /* Adding some margin space between the elements */
-    }
-</style>
+<div class="grid cards" markdown>
+- <center>**ChatControl Red™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
+- <center>**Boss™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
+- <center>**Protect™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
+- <center>**CoreArena™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
+- <center>**Winter™** :material-information-outline:{title="This plugin documentation is not ready yet!"}</center>
+- <center>**Dungeons™** :material-clock-time-four:{title="This plugin is coming soon!"}</center>
+</div>
+
+## Your discord bots
+
+<div class="grid cards" markdown>
+- <center>[**MineBot** :material-new-box:](MineBot/index.md)</center>
+</div>
