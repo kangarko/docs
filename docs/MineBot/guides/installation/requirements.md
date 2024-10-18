@@ -6,9 +6,9 @@ description: Ensure your system meets all the necessary prerequisites to run Min
 We've created this guide to help complete beginners or advanced users to get started with MineBot quickly.
 
 ??? quote "Prerequisites"
-    - A valid license key
     - Python 3.10+
     - Windows, macOS or Linux
+    - (Optional) Minecraft server with RCON enabled
 
 
 ## 1. Install Python
@@ -81,7 +81,9 @@ Follow these steps to download and extract the bot files from BuiltByBit on your
 
 ## 3. Setup Virtual Environment
 
-### NB: After each restart (or after you've closed your Terminal), only repeat steps 1, 3 and 5. 
+!!! warning
+
+    You need to re-run steps 1, 3 and 4 each time you reboot your machine or close the terminal/console window.
 
 After extracting the bot files, follow these steps to set up a virtual environment and install the required dependencies:
 
@@ -120,4 +122,4 @@ That's it :)
 
 ## 6. What To Do After Restart Or You've Closed The Console/Terminal
 
-If you've restarted your machine or closed the terminal, repeat steps 1, 3 and 5 from section "3. Setup Virtual Environment".
+If you've restarted your machine or closed the terminal, repeat steps 1, 3 and 4 from section #3.

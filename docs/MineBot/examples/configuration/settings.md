@@ -11,10 +11,10 @@ Below you'll find an example main bot configuration.
 
 ```markdown
 # Bot Token
-token: "UYVwMDIwUnQyOTU1NDA2NDI2OI.NFpiYn.oiO2zlTUjJPGvc-CoMxTBxGozZH4Mb3sNqsip4"
+token: "paste your bot token here"
 
 # Guild Information
-default_guild: 1162063738841616474
+default_guild: paste the numerical ID your server here
 
 # Supported Providers: [mongodb, sqlite]
 database:
