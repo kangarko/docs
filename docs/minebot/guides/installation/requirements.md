@@ -114,6 +114,13 @@ After extracting the bot files, follow these steps to set up a virtual environme
     nox -s srv
     ```
 
+    !!! note "Optional: Install nox"
+
+        If you're getting "Unknown command: nox" error, you need to install nox first:
+        ```sh
+        pip install nox
+        ```
+
 ## 5. If Running Locally - Keep The Terminal Window Opened
 
 That's it :)
