@@ -8,7 +8,6 @@ theme:
   name: material
   logo: assets/branding/header-white.png
   favicon: assets/branding/logo-white.png
-  custom_dir: docs/overrides
   font:
     code: JetBrains Mono
   icon:
