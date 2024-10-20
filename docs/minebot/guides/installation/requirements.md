@@ -10,7 +10,6 @@ We've created this guide to help complete beginners or advanced users to get sta
     - Windows, macOS or Linux
     - (Optional) Minecraft server with RCON enabled
 
-
 ## 1. Install Python
 
 === ":fontawesome-brands-windows: Windows"
@@ -78,8 +77,13 @@ Follow these steps to download and extract the bot files from BuiltByBit on your
     3. **Run Extraction Command**: Use the command `unzip <filename>.zip` to extract the files.
     4. **Move Files**: Move the extracted files to your desired location.
 
+## 3. Create A Discord Bot And Link Bot Token
 
-## 3. Setup Virtual Environment
+Before you start the bot, head over to the link below, create and add the bot to your server and configure MineBot to use its token.
+
+[:octicons-quote-16: Tutorial](./setup_and_run.md)
+
+## 4. Setup Virtual Environment
 
 !!! warning
 
@@ -109,12 +113,6 @@ After extracting the bot files, follow these steps to set up a virtual environme
     ```sh
     nox -s srv
     ```
-
-## 4. Create A Discord Application
-
-After you've completed the above steps, head over to the link below to add the bot to your server.
-
-[:octicons-quote-16: Tutorial](./setup_and_run.md)
 
 ## 5. If Running Locally - Keep The Terminal Window Opened
 
