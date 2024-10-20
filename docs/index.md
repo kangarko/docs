@@ -3,6 +3,7 @@ title: Home
 description: MineAcademy documentation
 hide:
   - navigation
+  - footer
   - toc
 ---
 
