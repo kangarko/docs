@@ -13,7 +13,6 @@ hide:
 <div class="grid cards" markdown>
 
 - [:octicons-arrow-right-24: Get Started](get_started/index.md)
-- [:octicons-repo-24: Guides](./guides/index.md)
-- [:material-lightbulb: Examples](./examples/index.md)
+- [:octicons-repo-24: Installation](./installation/index.md)
 
 </div>

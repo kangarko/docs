@@ -1,0 +1,4 @@
+mkdocs-material
+mkdocs-autorefs
+mkdocs-glightbox
+mkdocs-open-in-new-tab

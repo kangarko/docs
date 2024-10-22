@@ -1,15 +1,16 @@
 ---
-title: Commands
-description: Guide to localizing commands in `MineBot` to suit your needs.
+title: Localization
+description: Localizing MineBot for different languages and regions.
+icon: material/sort-alphabetical-descending-variant
+hide:
+  - toc
 ---
 
-# Localizing Commands
+# Localization
 
 Welcome to the `MineBot` localization guide. 
 
 Here, you will find instructions on how to translate parts of the bot to your own language or needs.
-
-- [Click here for example config](../../examples/localization/commands.md)
 
 !!! warning
     - Please do not try to change anything that is not said to change below, this will prevent the bot from working.
@@ -17,7 +18,7 @@ Here, you will find instructions on how to translate parts of the bot to your ow
 Here are three examples to help you understand how translations work.
 
 ## Simple Commands
-```markdown
+```yaml
 suggest:
   name: suggest
   description: Suggest a feature for the server.
@@ -29,7 +30,7 @@ As you can see, in this section we have left only two parts that you can change:
 - description -> The description of the command as it appears in the user interface.
 
 ## Complex Commands
-```markdown
+```yaml
 wiki:
   name: wiki
   description: Search the MineAcademy wiki.
@@ -45,7 +46,7 @@ Let's take the wiki command as an example. This command can be divided into two 
 - description -> The description of the command or option in the user interface.
 
 ## Commands With Subcommands
-```markdown
+```yaml
 suggestion:
   name: suggestion
   description: View a suggestion.

@@ -69,52 +69,19 @@ nav:
   - Home: index.md
   - MineBot:
     - minebot/index.md
-    - Get Started: minebot/get_started/index.md
-    - Guides:
-      - minebot/guides/index.md
-      - Installation:
-        - minebot/guides/installation/index.md
-        - minebot/guides/installation/requirements.md
-        - minebot/guides/installation/setup_and_run.md
-      - Configuration:
-        - minebot/guides/configuration/index.md
-        - minebot/guides/configuration/settings.md
-        - minebot/guides/configuration/commands.md
-        - minebot/guides/configuration/logging.md
-        - Systems:
-          - minebot/guides/configuration/systems/index.md
-          - minebot/guides/configuration/systems/link_account.md
-          - minebot/guides/configuration/systems/suggestion.md
-          - minebot/guides/configuration/systems/ticket.md
-      - Localization:
-        - minebot/guides/localization/index.md
-        - minebot/guides/localization/commands.md
-        - minebot/guides/localization/messages.md
-    - Examples:
-      - minebot/examples/index.md
-      - Configuration:
-        - minebot/examples/configuration/index.md
-        - minebot/examples/configuration/settings.md
-        - minebot/examples/configuration/commands.md
-        - minebot/examples/configuration/logging.md
-        - Systems:
-          - minebot/examples/configuration/systems/index.md
-          - minebot/examples/configuration/systems/link_account.md
-          - minebot/examples/configuration/systems/suggestion.md
-        - minebot/examples/configuration/systems/ticket.md
-      - Localization:
-        - minebot/examples/localization/index.md
-        - minebot/examples/localization/commands.md
-        - minebot/examples/localization/messages.md
-    - Changelog: minebot/changelog/index.md
+    - Get Started: 
+      - minebot/get_started/index.md
+    - Installation: 
+      - minebot/installation/index.md
+    - Configuration:
+      - minebot/configuration/index.md
+    - Localization:
+      - minebot/localization/index.md
 
 plugins:
   - autorefs
   - search
-  #- social
   - privacy
-  #- git-revision-date-localized:
-  #    enable_creation_date: false
   - open-in-new-tab
   - glightbox:
       touchNavigation: true

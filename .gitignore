@@ -2,3 +2,5 @@
 site
 .idea
 .DS_Store
+venv/
+.vscode/

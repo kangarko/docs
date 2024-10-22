@@ -1,15 +1,111 @@
 ---
-title: Ticket System
-description: Setting up and using the ticket system in MineBot.
+title: Configuration
+description: Configuring MineBot for optimal performance and customization.
+icon: octicons/gear-24
+hide:
+  - toc
 ---
+
+# Settings
+
+Welcome to the guide for `MineBot`'s main configuration file. 
+
+??? quote "Related Configuration File"
+    - `configuration/settings.yml`
+
+# Main Configuration Keys
+
+## Token
+- A token is a key that allows us to access your Discord bot with the Discord api.
+- To get the token, visit the Discord Developer Portal.
+- For more information, see [Installation](../installation/index.md)
+
+## Default Guild
+- Default guild is the id of the main server you will use the bot on.
+
+## Database
+- We provide this section with compatibility with two different providers.
+- You can tell us which provider you are using in the database.provider section.
+=== ":simple-mongodb: MongoDB"
+    1. **Collection**: On MongoDB, you can write whatever you want the name of the collection in the cluster to be.
+    2. **URI**: The URI we need to connect to your MongoDB database.
+=== ":simple-sqlite: SqLite"
+    - There is no extra key you need to add in this section.
+
+## Server RCON
+- You need to enter the RCON information we need to connect to your Minecraft server in this section.
+- Enable RCON by setting enable-rcon to true in server.properties. 
+- If you do not enter any information in this section, server support will automatically switch off.
+=== ":material-minecraft: RCON Information"
+    1. **IP**: The IP address of your server.
+    2. **Port**: The port for the RCON connection from rcon.port in server.properties. Set to 25575 by default.
+    3. **Password**: The password from rcon.password in server.properties.
+
+## Embed Color
+- You can change the default colors used in Discord embed messages in this section.
+- The colors you type must be in HEX format.
+- By default, the colors we have set for you are green and red.
+
+# Bot Commands
+
+This section is straightforward - you can activate or deactivate commands as needed.
+
+## Enabled
+- You can enable or disable the log from this section.
+
+## Channel
+- You need to write the id of the channel you want the log to go to here.
+- Remember that the channel must be a writing channel.
+
+# Account Linking System
+
+Here, you'll learn how to link your Minecraft and Discord accounts with MineBot to unlock additional features.
+
+## Reward Mode
+- With this setting, you can distribute certain rewards to people who pairs their account.
+- There are 4 different modes for prizes:
+    - None -> No Reward
+    - Role -> Give a discord role
+    - Item -> Give item, perm etc. with command.
+    - Both -> Role + Item reward mode
+
+## Reward Section
+=== "Role"
+    ```yaml
+    reward:
+      role: 1173046888820375552 # role id
+    ```
+=== "Item"
+    ```yaml
+    reward:
+      item: # give command(s)
+        - "give {player} minecraft:iron_ingot 64"
+        - "give {player} minecraft:diamond 32"
+    ```
+=== "Both"
+    ```yaml
+    reward:
+      role: 1173046888820375552 # role id
+      item: # give command(s)
+        - "give {player} minecraft:iron_ingot 64"
+        - "give {player} minecraft:diamond 32"
+    ```
+
+# Suggestion System
+
+Here, you'll learn how to set up, configure, and use the suggestion system to gather and manage user feedback.
+
+## Text
+    - Min -> Minimum character for suggestion message.
+    - Max -> Maximum character for suggestion message.
+
+## Log
+    - Channel -> The channel id you want to send logs to.
+    - Notification -> Sends a toast message to the person whose suggestion is accepted in the game.
 
 # Ticket System
 
-Welcome to the ticket system guide for `MineBot`. 
-
 Here, you'll learn how to set up, configure, and use the ticket system to manage reports, tickets and questions efficiently.
-
-- [Click here for example config](../../../examples/configuration/systems/ticket.md)
 
 ## <u>Ticket Systems</u>
 There are 2 systems for tickets:
@@ -21,11 +117,11 @@ There are 2 systems for tickets:
 - This system opens different channels on a category. This is an older system preferred by some networks. 
 
 === "Thread"
-    ```markdown
+    ```yaml
     ticket_system: Thread
     ```
 === "Category"
-    ```markdown
+    ```yaml
     ticket_system: Category
     ```
 
@@ -41,12 +137,12 @@ We have 2 opening styles:
 - Post Message opening style is compatible with **all opening methods**.
 
 === "Direct"
-    ```markdown
+    ```yaml
     opening:
       style: Direct
     ```
 === "Post Message"
-    ```markdown
+    ```yaml
     opening:
       style: Post Message
       message_channel: 1275571829657833584
@@ -80,7 +176,7 @@ We have 5 different opening methods in this area:
 - It receives information messages for Ticket from the user via the form.
 
 === "Message"
-    ```markdown
+    ```yaml
     opening:
       method: Message
       categories:
@@ -94,7 +190,7 @@ We have 5 different opening methods in this area:
           category_id: 1270857751366602783
     ```
 === "Reaction"
-    ```markdown
+    ```yaml
     opening:
       method: Reaction
       categories:
@@ -110,7 +206,7 @@ We have 5 different opening methods in this area:
           emoji: "📝"
     ```
 === "Button"
-    ```markdown
+    ```yaml
     opening:
       method: Button
       categories:
@@ -126,7 +222,7 @@ We have 5 different opening methods in this area:
           emoji: "📝"
     ```
 === "Dropdown"
-    ```markdown
+    ```yaml
     opening:
       method: Dropdown
       categories:
@@ -142,7 +238,7 @@ We have 5 different opening methods in this area:
           emoji: "📝"
     ```
 === "Command"
-    ```markdown
+    ```yaml
     opening:
       method: Command
       categories:
@@ -170,12 +266,12 @@ In this section we have 2 different start styles:
 - Compatible with **all** opening and closing methods.
 
 === "Direct"
-    ```markdown
+    ```yaml
     starting:
       style: Direct
     ```
 === "Post Information"
-    ```markdown
+    ```yaml
     starting:
       style: Post Information
     ```
@@ -196,7 +292,7 @@ In this section we have 2 different start styles:
 - By adding the discord application command, it helps you close the ticket through the command.
 
 === "Reaction"
-    ```markdown
+    ```yaml
     closing:
       method: Command
       emojis:
@@ -204,7 +300,7 @@ In this section we have 2 different start styles:
         answer: 🙋
     ```
 === "Button"
-    ```markdown
+    ```yaml
     closing:
       method: Button
       buttons:
@@ -216,7 +312,7 @@ In this section we have 2 different start styles:
           emoji: 🙋
     ```
 === "Command"
-    ```markdown
+    ```yaml
     closing:
       method: Command
     ```
@@ -260,23 +356,23 @@ We have added 5 different customisable transcript methods for you:
 - Sends the saved file to the designated discord channel.
 
 === "No Transcript"
-    ```markdown
+    ```yaml
     transcript:
       method: No Transcript
     ```
 === "Move Channel"
-    ```markdown
+    ```yaml
     transcript:
       method: Move Channel
       category_id: 1270857751366602783 
     ```
 === "Lock Channel"
-    ```markdown
+    ```yaml
     transcript:
       method: Lock Channel
     ```
 === "Send Channel As Text"
-    ```markdown
+    ```yaml
     transcript:
       method: Send Channel as Text
       upload:
@@ -284,7 +380,7 @@ We have added 5 different customisable transcript methods for you:
         channel_id: 1277218813632450662
     ```
 === "Send Channel As HTML"
-    ```markdown
+    ```yaml
     transcript:
       method: Send Channel as HTML
       upload:
