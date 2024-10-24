@@ -53,3 +53,12 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
     A modern, all-in-one Discord bot with a Minecraft connector and a ton of useful features.
 
     [**Read the docs**](minebot/index.md)
+
+-   [__:fontawesome-solid-cube: Bans-Plugin__](https://mineacademy.org/protect)
+
+    ---
+
+    This is a punishment plugin that allows users to kick, mute, soft mute, ban, and freeze players. It also has a reporting system. Additionally, it supports cross-network functionality, making it versatile for various server setups.
+
+    [**Read the docs** :material-open-in-new:{title="This documentation currently on GitHub."}](bans/index.md)
+</div>

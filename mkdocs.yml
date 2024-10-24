@@ -77,6 +77,19 @@ nav:
       - minebot/configuration/index.md
     - Localization:
       - minebot/localization/index.md
+  - Bans-Plugin:
+      - bans/index.md
+      - Commands:
+          - bans/commands/index.md
+      - Compatibility:
+          - bans/compatability/index.md
+      - Discord:
+          - bans/discord/index.md
+      - Installation:
+          - bans/installation/index.md
+      - Proxy:
+          - bans/proxy/index.md
+
 
 plugins:
   - autorefs
