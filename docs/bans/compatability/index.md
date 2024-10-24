@@ -1,6 +1,7 @@
 ---
 title: Compatability
 description: Compatability documentation
+icon: material/compare-vertical
 hide:
   - toc
 ---

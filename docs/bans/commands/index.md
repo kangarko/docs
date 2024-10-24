@@ -1,6 +1,7 @@
 ---
 title: Commands
 description: Commands and permissions for the Bans-Plugin
+icon: octicons/command-palette-24
 hide:
   - toc
 ---

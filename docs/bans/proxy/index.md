@@ -1,6 +1,7 @@
 ---
 title: Proxy
 description: proxy setup guide
+icon: simple/traefikproxy
 hide:
   - toc
 ---

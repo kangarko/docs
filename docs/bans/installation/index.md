@@ -1,6 +1,7 @@
 ---
 title: Installation
 description: Installation guide for Bans
+icon: material/download
 hide:
   - toc
 ---

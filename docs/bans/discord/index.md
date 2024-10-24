@@ -1,6 +1,7 @@
 ---
 title: Discord
 description: guide to the DiscordSRV integration
+icon: fontawesome/brands/discord
 hide:
   - toc
 ---

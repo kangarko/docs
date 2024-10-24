@@ -1,6 +1,7 @@
 ---
 title: Home
 description: MineAcademy documentation
+icon: material/home
 hide:
   - navigation
   - footer

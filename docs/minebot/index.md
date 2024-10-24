@@ -1,6 +1,7 @@
 ---
 title: MineBot
 description: MineBot documentation
+icon: fontawesome/brands/discord
 hide:
   - toc
 ---

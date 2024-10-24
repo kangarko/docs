@@ -1,6 +1,7 @@
 ---
 title: Bans
 description: Bans documentation
+icon: fontawesome/solid/cube
 hide:
   - toc
 ---
