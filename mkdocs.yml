@@ -122,6 +122,8 @@ extra:
 
 markdown_extensions:
   - admonition
+  - abbr
+  - footnotes
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
