@@ -77,7 +77,7 @@ nav:
       - minebot/configuration/index.md
     - Localization:
       - minebot/localization/index.md
-  - Bans-Plugin:
+  - Bans:
       - bans/index.md
       - Commands:
           - bans/commands/index.md

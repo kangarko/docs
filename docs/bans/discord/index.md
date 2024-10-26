@@ -1,6 +1,6 @@
 ---
 title: Discord
-description: guide to the DiscordSRV integration
+description: DiscordSRV integration guide
 icon: fontawesome/brands/discord
 hide:
   - toc
@@ -48,9 +48,9 @@ Now open up config.yml in plugins/DiscordSRV. Insert , "channel-name": "channel-
 ![image](https://github.com/user-attachments/assets/1ece43ae-890b-4d90-ac71-71d1c5c8abbf)
 
 <hr>
-## 5) Link channels in ***Bans-Plugin***
+## 5) Link channels in ***Bans***
 
-Finally, open ***Bans-Plugin*** settings.yml, go to `Discord` section and paste the channel's ID to the Channel_ID key for channels you want connected.
+Finally, open ***Bans*** settings.yml, go to `Discord` section and paste the channel's ID to the Channel_ID key for channels you want connected.
 
 Do this for ALL your servers that you want to link to the Discord channel.
 

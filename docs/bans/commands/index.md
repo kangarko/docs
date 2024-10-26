@@ -1,14 +1,13 @@
 ---
 title: Commands
-description: Commands and permissions for the Bans-Plugin
+description: Commands and permissions
 icon: octicons/command-palette-24
 hide:
   - toc
 ---
 
-***Bans-Plugin*** has a ridiculous command offering. Everything you need to know about commands is shown in the game using feature-rich interactive system. Just use your mouse and hover over commands to get more information.
+**Bans** has a ridiculous command offering. Everything you need to know about commands is shown in the game using feature-rich interactive system. Just use your mouse and hover over commands to get more information.
 
-<hr>
 # How to use commands
 
 To use commands, simply execute them in your console or the in-game chat. Many commands support additional parameters, see below.
@@ -16,12 +15,10 @@ To use commands, simply execute them in your console or the in-game chat. Many c
 * [] = optional arguments (use only one at once, or one + reason when muting or clearing the chat)
 * <> = required arguments
 
-<hr>
 # Permissions
 
 Type /bans perms to view all available command permissions.
 
-<hr>
 # Main Commands
 
 | Command | Description |
@@ -29,7 +26,6 @@ Type /bans perms to view all available command permissions.
 |/bans reload | This will reload all configs |
 |/bans perms | This will show you a full list of all permissions |
 
-<hr>
 # Stand alone commands
 
 | Command | Description |

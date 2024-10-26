@@ -1,9 +1,9 @@
 ---
 title: Compatability
-description: Compatability documentation
+description: Compatability
 icon: material/compare-vertical
 hide:
-  - toc
+  - toc∂
 ---
 
 
@@ -23,7 +23,7 @@ hide:
 <hr>
 ## Minecraft Version
 
-You can run ***Bans-Plugin*** on the following Minecraft versions below. Please note that the x stands for any sub-version, for example, 1.21 or 1.21.1.
+You can run **Bans** on the following Minecraft versions below. Please note that the `∂x` stands for any sub-version, for example, 1.21 or 1.21.1.
 
 > Many issues are often caused by incompatible other plugins such as ProtocolLib and not by your Minecraft version. Make sure all dependencies are up-to-date. We reserve the right to close tickets with startup log with errors from other plugins since they might interfere.
 
