@@ -21,17 +21,13 @@ Set `Debug` key in settings.yml to "[discord]" and restart. This will save you H
 
 Install [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) to get started.
 
-Warning: DiscordSRV updates frequently and tends to break the API. If you get any errors ask them first.
+**Warning:** DiscordSRV updates frequently and tends to break the API. If you get any errors ask them first.
 
 ## 3) Create bot and connect DiscordSRV
 
-Configure DiscordSRV as per [this guide](https://www.spigotmc.org/resources/discordsrv.18494/) on its resource page (just scroll below and you will see it).
+Configure DiscordSRV as per this [initial setup guide](https://docs.discordsrv.com/installation/initial-setup) by DiscordSVR.
 
-!!! warning "Ensure to give your bot the ability (permission) to delete/manage messages."
-
-!!! warning "The image below may get outdated really fast, please check [this](https://www.spigotmc.org/resources/discordsrv.18494/) link for up to date info on connecting discord."
-
-![image](../../assets/bans/discordsvr-install.png)
+!!! warning "Ensure to give your bot the ability (permission) to delete/manage messages!"
 
 ## 4) Link channels in DiscordSRV
 
