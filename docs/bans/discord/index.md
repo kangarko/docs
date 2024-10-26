@@ -31,17 +31,17 @@ Configure DiscordSRV as per [this guide](https://www.spigotmc.org/resources/disc
 
 !!! warning "The image below may get outdated really fast, please check [this](https://www.spigotmc.org/resources/discordsrv.18494/) link for up to date info on connecting discord."
 
-![image](https://github.com/user-attachments/assets/4ea7ede2-b867-474e-a5f3-e83e05794ac9)
+![image](../../assets/bans/discordsvr-install.png)
 
 ## 4) Link channels in DiscordSRV
 
 Copy the channel ID of your channels you want connected. Open up Discord client, right click your channel and select Copy ID.
 
-![image](https://github.com/user-attachments/assets/24b6abf3-8808-4a65-bb24-f9541bb645a3)
+![image](../../assets/bans/copy-channel-id.png)
 
 Now open up config.yml in plugins/DiscordSRV. Insert , "channel-name": "channel-id" at the end of Channels or without the initial ',' in case your Channels are empty. Use the exact channel names as you have on Discord. This is how multiple connected channels look like:
 
-![image](https://github.com/user-attachments/assets/1ece43ae-890b-4d90-ac71-71d1c5c8abbf)
+![image](../../assets/bans/insert-channel-names.png)
 
 ## 5) Link channels in **Bans**
 
@@ -49,5 +49,5 @@ Finally, open **Bans** settings.yml, go to `Discord` section and paste the chann
 
 Do this for ALL your servers that you want to link to the Discord channel.
 
-![image](https://github.com/user-attachments/assets/5650eaec-5638-477c-9cba-d6683561cfb3)
+![image](../../assets/bans/link-channels.png)
 

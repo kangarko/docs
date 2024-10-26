@@ -98,7 +98,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
       <figure markdown>
-          ![Create Application](../../assets/get-minebot/image-1.webp){ width=450 }
+          ![Create Application](../../assets/minebot/image-1.webp){ width=450 }
           <figcaption></figcaption>
       </figure>
         <figcaption>Head over to [Discord's Developer Portal](https://discord.com/developers/applications) and create a new application.</figcaption>
