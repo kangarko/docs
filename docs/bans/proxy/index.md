@@ -8,7 +8,7 @@ hide:
 
 # Currently supported proxies:
 
-<!-- Remember to replace the example links with the actual links -->
+!!! todo Remember to replace the example links with the actual links!
 * Bungee - Install [Bans-Bungee](#) on your proxy and keep **Bans** on Bukkit servers.
 * Velocity - Install [Bans-Velocity](#) on your proxy and keep **Bans** on Bukkit servers.
 
@@ -43,4 +43,3 @@ Example for Velocity's velocity.toml:
 # 4. Restart
 
 After a restart, you should now be able to use proxy features automatically.
-
