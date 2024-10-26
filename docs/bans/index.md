@@ -9,11 +9,7 @@ hide:
 
 # :fontawesome-solid-cube: Bans
 
-Welcome to the **Bans** wiki!
-
-## Purpose
-
-**Bans** is a punishment plugin that allows users to kick, mute, soft mute, ban, and freeze players. It also has a reporting system. Additionally, it supports cross-network functionality, making it versatile for various server setups.
+`Bans` is a punishment plugin that allows users to kick, mute, soft mute, ban, and freeze players. It also has a reporting system. Additionally, it supports cross-network functionality, making it versatile for various server setups.
 
 ## Features
 
@@ -35,7 +31,8 @@ Welcome to the **Bans** wiki!
 ## Before you Buy
 
 ### [Compatibility](compatability/index.md)
-See what is required to run **Bans**
+
+See what is required to run **Bans**.
 
 ## The Basics
 
@@ -49,6 +46,6 @@ Commands are key essentials to expand the functionality of **Bans** and make lif
 
 <div class="grid cards" markdown>
 
-- [:octicons-repo-24: Installation](./installation/index.md)
+- [:material-download: Installation](./installation/index.md)
 
 </div>
