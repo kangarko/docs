@@ -116,8 +116,8 @@ plugins:
       branch: main
       exclude:
         - index.md
-        - /minebot/index.md
-        - /bans/index.md
+        - /minebot/
+        - /bans/
 
 extra:
   CNAME: docs.mineacademy.org
