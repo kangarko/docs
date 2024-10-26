@@ -47,7 +47,7 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     [**Read the docs** :material-open-in-new:{title="This documentation currently on GitHub."}](https://github.com/kangarko/protect/wiki)
 
--   __:fontawesome-brands-discord: MineBot__
+-   [__:fontawesome-brands-discord: MineBot__](https://mineacademy.org/minebot)
 
     ---
 
