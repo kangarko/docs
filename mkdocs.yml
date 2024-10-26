@@ -8,6 +8,7 @@ theme:
   name: material
   logo: assets/branding/header-white.png
   favicon: assets/branding/logo-white.png
+  custom_dir: docs/assets/overrides
   font:
     code: JetBrains Mono
   icon:
@@ -154,5 +155,4 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   
-copyright: >
-  &copy; MineAcademy | Made by Jannick and Egehan
+copyright: enabled # Change copyright in /docs/assets/overrides/partials/copyright.html
