@@ -45,7 +45,7 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     Catch duplicated, hacked or impossible-to-obtain items, detect x-rayers and balance you economy.
 
-    [**Read the docs** :material-open-in-new:{title="This documentation currently on GitHub."}](https://github.com/kangarko/protect/wiki)
+    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/protect/wiki)
 
 -   [__:fontawesome-solid-cube: Bans__](https://mineacademy.org/bans)
 
