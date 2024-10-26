@@ -6,27 +6,29 @@ hide:
   - toc
 ---
 
+# :octicons-command-palette-24: Commands
+
 **Bans** has a ridiculous command offering. Everything you need to know about commands is shown in the game using feature-rich interactive system. Just use your mouse and hover over commands to get more information.
 
-# How to use commands
+## How to use commands
 
 To use commands, simply execute them in your console or the in-game chat. Many commands support additional parameters, see below.
 
 * [] = optional arguments (use only one at once, or one + reason when muting or clearing the chat)
 * <> = required arguments
 
-# Permissions
+## Permissions
 
 Type /bans perms to view all available command permissions.
 
-# Main Commands
+## Main Commands
 
 | Command | Description |
 |-------|-------------|
 |/bans reload | This will reload all configs |
 |/bans perms | This will show you a full list of all permissions |
 
-# Stand alone commands
+## Stand alone commands
 
 | Command | Description |
 |-------|-------------|

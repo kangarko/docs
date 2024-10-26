@@ -6,30 +6,25 @@ hide:
   - toc
 ---
 
+# :fontawesome-brands-discord: Discord Setup
 
-!!! warning "Ensure to give your bot the ability (permission) to delete/manage messages."
-
-!!! warning "To avoid duplicated messages, set DiscordChatChannelMinecraftToDiscord to false in DiscordSRV/config.yml."
-
-# Installation
-
-## 1) Enable debug
+## 1. Enable debug
 
 Set `Debug` key in settings.yml to "[discord]" and restart. This will save you HOURS and print out what is happening to the console. After you're finished setting up, you can remove this key.
 
-## 2) Install DiscordSRV
+## 2. Install DiscordSRV
 
 Install [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) to get started.
 
 **Warning:** DiscordSRV updates frequently and tends to break the API. If you get any errors ask them first.
 
-## 3) Create bot and connect DiscordSRV
+## 3. Create bot and connect DiscordSRV
 
 Configure DiscordSRV as per this [initial setup guide](https://docs.discordsrv.com/installation/initial-setup) by DiscordSVR.
 
 !!! warning "Ensure to give your bot the ability (permission) to delete/manage messages!"
 
-## 4) Link channels in DiscordSRV
+## 4. Link channels in DiscordSRV
 
 Copy the channel ID of your channels you want connected. Open up Discord client, right click your channel and select Copy ID.
 
@@ -39,7 +34,9 @@ Now open up config.yml in plugins/DiscordSRV. Insert , "channel-name": "channel-
 
 ![image](../../assets/bans/insert-channel-names.png)
 
-## 5) Link channels in **Bans**
+!!! warning "To avoid duplicated messages, set DiscordChatChannelMinecraftToDiscord to false in DiscordSRV/config.yml."
+
+## 5. Link channels in **Bans**
 
 Finally, open **Bans** settings.yml, go to `Discord` section and paste the channel's ID to the Channel_ID key for channels you want connected.
 
