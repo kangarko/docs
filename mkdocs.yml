@@ -61,6 +61,7 @@ theme:
     - navigation.instant.progress
     - navigation.indexes
     - navigation.footer
+    - navigation.top
     - content.action.view
     - content.action.edit
     - content.tooltips
@@ -110,6 +111,13 @@ plugins:
       caption_position: bottom
       skip_classes:
          - no-lightbox
+  - git-committers:
+      repository: kangarko/docs
+      branch: main
+      exclude:
+        - index.md
+        - /minebot/index.md
+        - /bans/index.md
 
 extra:
   CNAME: docs.mineacademy.org
