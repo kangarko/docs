@@ -8,7 +8,9 @@ hide:
 
 # Currently supported proxies:
 
-!!! todo Remember to replace the example links with the actual links!
+!!! todo
+  Remember to replace the example links with the actual links!
+  
 * Bungee - Install [Bans-Bungee](#) on your proxy and keep **Bans** on Bukkit servers.
 * Velocity - Install [Bans-Velocity](#) on your proxy and keep **Bans** on Bukkit servers.
 
