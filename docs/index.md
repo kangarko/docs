@@ -55,11 +55,11 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     [**Read the docs**](minebot/index.md)
 
--   [__:fontawesome-solid-cube: Bans__](https://mineacademy.org/protect)
+-   [__:fontawesome-solid-cube: Bans__](https://mineacademy.org/bans)
 
     ---
 
-    This is a punishment plugin that allows users to kick, mute, soft mute, ban, and freeze players. It also has a reporting system. Additionally, it supports cross-network functionality, making it versatile for various server setups.
+    A modern punishment plugin with Velocity, BungeeCord and Discord support and a reporting system.
 
     [**Read the docs**](bans/index.md)
 </div>
