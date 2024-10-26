@@ -47,19 +47,19 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     [**Read the docs** :material-open-in-new:{title="This documentation currently on GitHub."}](https://github.com/kangarko/protect/wiki)
 
--   [__:fontawesome-brands-discord: MineBot__](https://mineacademy.org/minebot)
-
-    ---
-
-    A modern, all-in-one Discord bot with a Minecraft connector and a ton of useful features.
-
-    [**Read the docs**](minebot/index.md)
-
 -   [__:fontawesome-solid-cube: Bans__](https://mineacademy.org/bans)
 
     ---
 
     A modern punishment plugin with Velocity, BungeeCord and Discord support and a reporting system.
 
-    [**Read the docs**](bans/index.md)
+    [**Read the docs** :material-arrow-right:](bans/index.md)
+
+-   [__:fontawesome-brands-discord: MineBot__](https://mineacademy.org/minebot)
+
+    ---
+
+    A modern, all-in-one Discord bot with a Minecraft connector and a ton of useful features.
+
+    [**Read the docs** :material-arrow-right:](minebot/index.md)
 </div>
