@@ -98,7 +98,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
       <figure markdown>
-          ![Create Application](../../assets/get-started/image-1.webp){ width=450 }
+          ![Create Application](../../assets/get-minebot/image-1.webp){ width=450 }
           <figcaption></figcaption>
       </figure>
         <figcaption>Head over to [Discord's Developer Portal](https://discord.com/developers/applications) and create a new application.</figcaption>
@@ -110,7 +110,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
       <figure markdown>
-          ![General Information Tab](../../assets/get-started/image-2.webp){ width="450" }
+          ![General Information Tab](../../assets/minebot/image-2.webp){ width="450" }
           <figcaption></figcaption>
       <figure>
         <figcaption>In the General Information tab, copy the application ID for the next step.</figcaption>
@@ -122,7 +122,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Create the Invite Link](../../assets/get-started/image-3.webp){ width=450 }
+            ![Create the Invite Link](../../assets/minebot/image-3.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>[Visit this website](https://discordapi.com/permissions.html#2147483656), ensure "Administrator" and "Use Application Commands" are checked and paste your Client ID from step 2 into "Client ID". Do not change any other options. Then click the "Link". <br><br>Invite the bot to your server and in the final screen, check all boxes to grant all of the permissions we've selected previously.</figcaption>
@@ -134,7 +134,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Check Permissions](../../assets/get-started/image-10.webp){ width=450 }
+            ![Check Permissions](../../assets/minebot/image-10.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Drag the "bot" role to the top (it can be below other administrator roles) and ensure it's got the Administrator permission.</figcaption>
@@ -146,7 +146,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
       <figure markdown>
-          ![Bot Tab](../../assets/get-started/image-4.webp){ width="80" }
+          ![Bot Tab](../../assets/minebot/image-4.webp){ width="80" }
           <figcaption></figcaption>
       <figure>
         <figcaption>Access the bot settings in this tab.</figcaption>
@@ -158,7 +158,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Reset Token](../../assets/get-started/image-5.webp){ width=450 }
+            ![Reset Token](../../assets/minebot/image-5.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Generate a new token for your bot and keep it private.</figcaption>
@@ -170,7 +170,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Give Intents](../../assets/get-started/image-6.webp){ width=450 }
+            ![Give Intents](../../assets/minebot/image-6.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Adjust 3 Privileged Gateway Intents as per the image above.</figcaption>
@@ -183,7 +183,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Write Token](../../assets/get-started/image-7.webp){ width=450 }
+            ![Write Token](../../assets/minebot/image-7.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Write your token to your configuration/settings.yml file .</figcaption>
@@ -195,7 +195,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Copy ID](../../assets/get-started/image-8.webp){ width=80 }
+            ![Copy ID](../../assets/minebot/image-8.webp){ width=80 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Copy the Discord server id (guild id) that you plan to use with MineBot.</figcaption>
@@ -207,7 +207,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Paste ID](../../assets/get-started/image-9.webp){ width=450 }
+            ![Paste ID](../../assets/minebot/image-9.webp){ width=450 }
             <figcaption></figcaption>
         </figure>
         <figcaption>Paste the Discord server guild ID that you copied in the same config file where you set the bot token in step 8.</figcaption>
