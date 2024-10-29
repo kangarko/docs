@@ -1,6 +1,6 @@
 /* https://dev.to/rashidshamloo/preventing-the-layout-shift-caused-by-scrollbars-2flp */ 
-body {
-  overflow-y: scroll;
+html {
+  scrollbar-gutter: stable;
 }
 
 /* Hide Go To Repository next to search and Edit Source and site title */
