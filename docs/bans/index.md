@@ -6,10 +6,17 @@ hide:
   - toc
 ---
 
-
 # :fontawesome-solid-cube: Bans
 
 `Bans` is a punishment plugin that allows users to kick, mute, soft mute, ban, and freeze players. It also has a reporting system. Additionally, it supports cross-network functionality, making it versatile for various server setups.
+
+<div class="grid cards" markdown>
+
+- [:material-compare-vertical: Compatibility](./compatibility/index.md)
+- [:material-download: Installation](./installation/index.md)
+- [:octicons-command-palette-24: Commands and Permissions](./commands/index.md)
+
+</div>
 
 ## Features
 
@@ -28,27 +35,4 @@ hide:
 - **HelpOp Channel**: A dedicated channel for players to request help from administrators.
 - **History Command**: View histories related to player data.
 
-## Before you Buy
-
-### [Compatibility](compatability/index.md)
-
-See what is required to run **Bans**.
-
-## The Basics
-
-### [Installation](installation/index.md)
-
-Installing is straightforward.
-
-### [Commands And Permissions](commands/index.md)
-Commands are key essentials to expand the functionality of **Bans** and make life easier for both players and server administrators. Click the section to view the command list.
-
-
-<div class="grid cards" markdown>
-
-- [:material-download: Installation](./installation/index.md)
-
-</div>
-
 !!! info "If you experience any issues or need help with **Bans**, feel free to open an issue on our [GitHub repository](https://github.com/kangarko/Bans/issues)!"
-
