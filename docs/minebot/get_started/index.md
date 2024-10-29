@@ -12,7 +12,7 @@ This section will walk you through the initial steps to get `MineBot` up and run
 
 <div class="grid cards" markdown>
 
-- [:octicons-quote-16: Installation](../installation/index.md)
+- [:material-download: Installation](../installation/index.md)
 - [:octicons-gear-24: Settings](../configuration/index.md)
 - [:octicons-command-palette-24: Localization](../localization/index.md)
 
