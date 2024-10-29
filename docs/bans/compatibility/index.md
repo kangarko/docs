@@ -1,12 +1,12 @@
 ---
-title: Compatability
+title: Compatibility
 description: Compatability
 icon: material/compare-vertical
 hide:
   - toc
 ---
 
-# :material-compare-vertical: Compatability
+# :material-compare-vertical: Compatibility
 
 ## Proxy (BungeeCord, Velocity)
 

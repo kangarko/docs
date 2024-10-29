@@ -82,15 +82,15 @@ nav:
   - Bans:
     - bans/index.md
     - Commands:
-        - bans/commands/index.md
+      - bans/commands/index.md
     - Compatibility:
-        - bans/compatability/index.md
+      - bans/compatibility/index.md
     - Discord:
-        - bans/discord/index.md
+      - bans/discord/index.md
     - Installation:
-        - bans/installation/index.md
+      - bans/installation/index.md
     - Proxy:
-        - bans/proxy/index.md
+      - bans/proxy/index.md
 
 plugins:
   - autorefs
