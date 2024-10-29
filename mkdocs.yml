@@ -125,6 +125,7 @@ plugins:
 
 extra:
   CNAME: docs.mineacademy.org
+	generator: false
   social:
     - icon: fontawesome/solid/globe
       link: https://mineacademy.org
