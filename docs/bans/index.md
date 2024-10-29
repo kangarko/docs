@@ -18,6 +18,8 @@ hide:
 
 </div>
 
+!!! info "If you experience any issues or need help with **Bans**, feel free to open an issue on our [GitHub repository](https://github.com/kangarko/Bans/issues)!"
+
 ## Features
 
 - **Kick Players**: Instantly remove disruptive players from the server.
@@ -34,5 +36,3 @@ hide:
 - **Warning System**: Use a point-based system when warning a player once a set amount of points has been reached it will run the set punishment.
 - **HelpOp Channel**: A dedicated channel for players to request help from administrators.
 - **History Command**: View histories related to player data.
-
-!!! info "If you experience any issues or need help with **Bans**, feel free to open an issue on our [GitHub repository](https://github.com/kangarko/Bans/issues)!"
