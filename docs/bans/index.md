@@ -1,12 +1,12 @@
 ---
 title: Bans
 description: Bans documentation
-icon: fontawesome/solid/cube
+icon: fontawesome/solid/hammer
 hide:
   - toc
 ---
 
-# :fontawesome-solid-cube: Bans
+# :fontawesome-solid-hammer: Bans
 
 `Bans` is a complete punishment plugin that integrates with Velocity and BungeeCord.
 
