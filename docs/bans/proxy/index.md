@@ -37,11 +37,11 @@ Ensure that your server name on proxy equals to the "Server_Name" key from step 
 
 Example for BungeeCord's config.yml:
 
-![image](../../assets/bans/bungeecord-config.png)
+![BungeeCord config.ym](../../assets/bans/bungeecord-config.png)
 
 Example for Velocity's velocity.toml:
 
-![image](../../assets/bans/velocity-config.png)
+![Velocity config.yml](../../assets/bans/velocity-config.png)
 
 ## 4. Restart
 
