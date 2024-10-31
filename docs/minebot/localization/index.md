@@ -8,12 +8,7 @@ hide:
 
 # Localization
 
-Welcome to the `MineBot` localization guide. 
-
-Here, you will find instructions on how to translate parts of the bot to your own language or needs.
-
-!!! warning
-    - Please do not try to change anything that is not said to change below, this will prevent the bot from working.
+Welcome to the `MineBot` localization guide. You will find instructions on how to translate parts of the bot to your own language or change messages here.
 
 Here are three examples to help you understand how translations work.
 
