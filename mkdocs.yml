@@ -127,10 +127,10 @@ extra:
   CNAME: docs.mineacademy.org
   generator: false
   social:
-    - icon: fontawesome/solid/globe
+    - icon: fontawesome/solid/house
       link: https://mineacademy.org
     - icon: fontawesome/brands/discord
-      link: https://discord.com/invite/aMSnAcx
+      link: https://mineacademy.org/discord
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@kangarko
 
