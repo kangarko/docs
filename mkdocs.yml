@@ -71,8 +71,6 @@ nav:
   - Home: index.md
   - MineBot:
     - minebot/index.md
-    - Get Started: 
-      - minebot/get_started/index.md
     - Installation: 
       - minebot/installation/index.md
     - Configuration:
