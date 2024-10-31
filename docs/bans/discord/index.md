@@ -28,11 +28,11 @@ Configure DiscordSRV as per this [initial setup guide](https://docs.discordsrv.c
 
 Copy the channel ID of your channels you want connected. Open up Discord client, right click your channel and select Copy ID.
 
-![Channel Id](../assets/bans/copy-channel-id.png)
+![Channel Id](../../assets/bans/copy-channel-id.png)
 
 Now open up config.yml in plugins/DiscordSRV. Insert , "channel-name": "channel-id" at the end of Channels or without the initial ',' in case your Channels are empty. Use the exact channel names as you have on Discord. This is how multiple connected channels look like:
 
-![Channel Names](../assets/bans/insert-channel-names.png)
+![Channel Names](../../assets/bans/insert-channel-names.png)
 
 !!! warning "To avoid duplicated messages, set DiscordChatChannelMinecraftToDiscord to false in DiscordSRV/config.yml."
 
@@ -42,5 +42,5 @@ Finally, open **Bans** settings.yml, go to `Discord` section and paste the chann
 
 Do this for ALL your servers that you want to link to the Discord channel.
 
-![Channels](../assets/bans/link-channels.png)
+![Channels](../../assets/bans/link-channels.png)
 

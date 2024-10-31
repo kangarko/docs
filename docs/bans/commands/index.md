@@ -8,7 +8,7 @@ hide:
 
 # :octicons-command-palette-24: Commands
 
-**Bans** has a ridiculous command offering. Everything you need to know about commands is shown in the game using feature-rich interactive system. Just use your mouse and hover over commands to get more information.
+**Bans** has a vast command offering. Everything you need to know about commands is shown in the game using feature-rich interactive system. Just use your mouse and hover over commands to get more information.
 
 ## How to use commands
 
@@ -25,28 +25,28 @@ Type /bans perms to view all available command permissions.
 
 | Command | Description |
 |-------|-------------|
-|/bans reload | This will reload all configs |
-|/bans perms | This will show you a full list of all permissions |
+|/bans reload | Reload all configs. |
+|/bans perms | Show you a full list of all permissions. |
 
-## Stand alone commands
+## Standalone Commands
 
 | Command | Description |
 |-------|-------------|
-| /ac  &lt;message&gt; | This will send a message to the admin chat |
-| /ban ? | This will show you how to use the ban command |
-| /ipban ? | This will show you how to use the ip ban command |
-| /freeze <player> | This will freeze or unfreeze an already frozen player |
-| /helpop &lt;message&gt; | This will send a message to the helpop channel only people with permission can see the messages |
-| /history ? | This will show you how to use the history command |
-| /kick ? | This will show you how to use the kick command |
-| /mute ? | This will show you how to use the mute command |
-| /networkmove <player> <target server> | This will move a player to another server in the network, only work if proxy is enabled |
-| /report ? | This will show you how to use the report command |
-| /softmute ? | This will show you how to use the soft mute command |
-| /spy | This will toggle spying |
-| /template ? | This command is sued to manage/create templates |
-| /unban ? | This will show you how to use the unban command |
-| /unbanip ? | This will show you how to use the unban ip command |
-| /unmute ? | This will show you how to use the un mute command |
-| /vanish | This will hide you from players bellow your rank |
-| /warn ? | This will show you how to use the warn command |
+| /ac  &lt;message&gt; | Send a message to the admin chat. |
+| /ban | The ban command. Type '/ban ?' for usage. |
+| /ipban | The ip ban command. Type '/ipban ?' for usage. |
+| /freeze <player> | Un/freeze the target player. |
+| /helpop &lt;message&gt; | Send a message to the helpop channel. Only people with a permission (see Permissions above) can see the messages. |
+| /history | The punishment log command. Type '/history ?' for usage. |
+| /kick | The kick command. Type '/kick ?' for usage. |
+| /mute | The mute command. Type '/mute ?' for usage. |
+| /networkmove <player> <target server> | Move a player to another server in the network. Requires [Proxy](../proxy/index.md) enabled. |
+| /report | The report command. Type '/report ?' for usage. |
+| /softmute | The soft mute command. Type '/softmute ?' for usage. |
+| /spy | Toggle spying mode. |
+| /template | Manage/create punishment templates. |
+| /unban | The unban command. Type '/unban ?' for usage. |
+| /unbanip | The unban ip command. Type '/unbanip ?' for usage. |
+| /unmute | The unmute command. Type '/unmute ?' for usage. |
+| /vanish | Hide you from players bellow your rank. |
+| /warn | The warn command. Type '/warn ?' for usage. |

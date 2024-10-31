@@ -8,22 +8,24 @@ hide:
 
 # :material-compare-vertical: Compatibility
 
-## Proxy (BungeeCord, Velocity)
+## Proxy Support (Velocity, BungeeCord)
 
-* See [Proxy](../proxy/index.md) page.
+See the [Proxy](../proxy/index.md) for setup.
 
 ## Server Software
 
 | Server Distribution | Compatibility        |
 |---------|----------------------------------|
-| Paper   | Officially tested and supported. |
-| Spigot, Purpur, PandaSpigot, JesusSpigot, and other pro-Spigot forks   | Supported on a best-effort basis. We recommend you stick with Paper |
+| Paper   | Officially supported and tested on each release. |
+| Folia   | Supported but not tested on each release. Report all bugs to [GitHub Issues](https://github.com/kangarko/bans/issues). |
+| Spigot, Purpur, and forks | Supported on a best-effort basis. |
+| CraftBukkit   | Unsupported, please use Paper. |
 
 ## Minecraft Version
 
-You can run **Bans** on the following Minecraft versions below. Please note that the `x` stands for any sub-version, for example, 1.21 or 1.21.1.
+You can run **Bans** on the following Minecraft versions below. Please note that the `x` stands for any sub-version, for example, 1.21 or 1.21.3.
 
-> Many issues are often caused by incompatible other plugins such as ProtocolLib and not by your Minecraft version. Make sure all dependencies are up-to-date. We reserve the right to close tickets with startup log with errors from other plugins since they might interfere.
+> Many issues are often caused by incompatible other plugins and not by your Minecraft version. Make sure all dependencies are up-to-date. We reserve the right to close tickets with startup log with errors from other plugins since they might interfere.
 
 | Version | Compatibility                  |
 |---------|--------------------------------|

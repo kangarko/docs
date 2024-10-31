@@ -13,7 +13,8 @@ hide:
 
 <div class="grid cards" markdown>
 
-- [:octicons-arrow-right-24: Get Started](get_started/index.md)
-- [:material-download: Installation](./installation/index.md)
+- [:octicons-arrow-right-24: Installation](installation/index.md)
+- [:material-download: Configuration](./configuration/index.md)
+- [:material-translate: Localization](./localization/index.md)
 
 </div>

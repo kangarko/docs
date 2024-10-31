@@ -8,38 +8,30 @@ hide:
 
 # :simple-traefikproxy: Proxy
 
-## Currently supported proxies:
-
-!!! todo "Remember to replace the example links with the actual links!"
-  
-* Bungee - Install [Bans-Bungee](#) on your proxy and keep **Bans** on Bukkit servers.
-* Velocity - Install [Bans-Velocity](#) on your proxy and keep **Bans** on Bukkit servers.
-
-## Requirements
-
-* MySQL database
-
 ## 1. Install Proxy Addons
 
 Keep **Bans** on your Bukkit servers and install our addons on proxy from above.
 
-## 2. Enable MySQL
+* BungeeControl - Install Bans-Bungee.
+* Velocity - Install Bans-Velocity.
 
+## 2. Enable MySQL
 
 We require a database connection to synchronize data between your network effectively.
 
-a. Enable database in `settings.yml` inside plugins/Bans-Plugin folder. b. Enable network in `Settings.yml` inside plugins/Bans-Plugin folder. c. Change "Server_Name" in the section called `Proxy` to be unique for each server (see below).
+- A. Enable database in `settings.yml` inside plugins/Bans folder. 
+- B. Enable network in `Settings.yml` inside plugins/Bans folder. 
+- C. Change "Server_Name" in the section called `Proxy` to be unique for each server (see below).
 
 ## 3. Link Your Server Name
 
-
 Ensure that your server name on proxy equals to the "Server_Name" key from step 2c.
 
-Example for BungeeCord's config.yml:
+Where to find server name in BungeeCord's config.yml:
 
 ![BungeeCord config.ym](../../assets/bans/bungeecord-config.png)
 
-Example for Velocity's velocity.toml:
+Where to find server name in Velocity's velocity.toml:
 
 ![Velocity config.yml](../../assets/bans/velocity-config.png)
 

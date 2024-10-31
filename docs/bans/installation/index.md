@@ -8,11 +8,11 @@ hide:
 
 # :material-download: Installation
 
-!!! warning "Avoid using '/reload' or plugin managers like *PlugMan*. They cause issues and are unsupported. Always shut your server down when installing or updating **Bans**."
+!!! warning "Avoid using '/reload' or PlugManX when installing or updating Bans. They can cause issues and no support will be given. Always restart your server."
 
-## Spigot, Paper
+## Bukkit
 
-On Spigot or Paper install **Bans** as any other plugin.
+On Bukkit software such as Spigot or Paper, install **Bans** by copying the jar into the plugins/ folder in the root server folder. Make sure the server is stopped when you do.
 
 ## Proxy network
 
