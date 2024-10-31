@@ -17,5 +17,3 @@ hide:
 - [:material-download: Installation](./installation/index.md)
 
 </div>
-
-!!! info "If you experience any issues or need help with **MineBot**, feel free to open an issue on our [GitHub repository](https://github.com/kangarko/MineBot/issues)!"
