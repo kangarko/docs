@@ -81,16 +81,16 @@ nav:
       - minebot/localization/index.md
   - Bans:
     - bans/index.md
-    - Commands:
-      - bans/commands/index.md
     - Compatibility:
       - bans/compatibility/index.md
-    - Discord:
-      - bans/discord/index.md
     - Installation:
       - bans/installation/index.md
+    - Commands & Permissions:
+      - bans/commands/index.md
     - Proxy:
       - bans/proxy/index.md
+    - Discord:
+      - bans/discord/index.md
 
 plugins:
   - autorefs
