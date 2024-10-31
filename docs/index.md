@@ -61,7 +61,7 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     ---
 
-    A modern punishment plugin with Velocity, BungeeCord and Discord support and a reporting system.
+    A complete punishment system for Paper, Velocity and Bungee with Discord support and a GUI/command system.
 
     [**Read the docs**](bans/index.md)
 
@@ -72,7 +72,7 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     ---
 
-    A modern, all-in-one Discord bot with a Minecraft connector and a ton of useful features.
+    A modern Discord bot with Minecraft integration, moderation system, tickets and much more.
 
     [**Read the docs**](minebot/index.md)
 
