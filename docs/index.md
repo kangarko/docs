@@ -14,52 +14,68 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
 <div class="grid cards" markdown>
 
--   [__:fontawesome-solid-cube: ChatControl__](https://mineacademy.org/chatcontrol)
+-   **ChatControl™**
 
     ---
 
     Elite formatting and filtering plugin. Can replace 200+ plugins. High-performance. Folia supported.
 
-    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/chatcontrol-red/wiki)
+    [**Buy Now** :material-open-in-new:](https://mineacademy.org/chatcontrol)
+
+    [**Read the docs** :material-open-in-new:](https://github.com/kangarko/chatcontrol-red/wiki)
 
 
--   [__:fontawesome-solid-cube: Boss__](https://mineacademy.org/boss)
+-   **Boss™**
 
     ---
 
     Easily add new mobs & AI to Minecraft (without datapacks or scripts).
 
-    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/boss/wiki)
+    [**Buy Now** :material-open-in-new:](https://mineacademy.org/boss)
 
--   [__:fontawesome-solid-cube: CoreArena__](https://mineacademy.org/corearena)
+    [**Read the docs** :material-open-in-new:](https://github.com/kangarko/boss/wiki)
+
+
+-   **CoreArena™**
 
     ---
 
     Procedurally destroyable arenas with classes, tier system & BungeeCord support.
 
-    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/corearena/wiki)
+    [**Buy Now** :material-open-in-new:](https://mineacademy.org/corearena)
 
--   [__:fontawesome-solid-cube: Protect__](https://mineacademy.org/protect)
+    [**Read the docs** :material-open-in-new:](https://github.com/kangarko/corearena/wiki)
+
+
+-   **Protect™**
 
     ---
 
     Catch duplicated, hacked or impossible-to-obtain items, detect x-rayers and balance you economy.
 
-    [**Read the docs** :material-open-in-new:{title="This documentation is currently on GitHub."}](https://github.com/kangarko/protect/wiki)
+    [**Buy Now** :material-open-in-new:](https://mineacademy.org/protect)
 
--   [__:fontawesome-solid-cube: Bans__](https://mineacademy.org/bans)
+    [**Read the docs** :material-open-in-new:](https://github.com/kangarko/protect/wiki)
+
+
+-   **Bans™**
 
     ---
 
     A modern punishment plugin with Velocity, BungeeCord and Discord support and a reporting system.
 
-    [**Read the docs** :material-arrow-right:](bans/index.md)
+    [**Buy Now** :material-open-in-new:](https://mineacademy.org/bans)
 
--   [__:fontawesome-brands-discord: MineBot__](https://mineacademy.org/minebot)
+    [**Read the docs**](bans/index.md)
+
+
+-   **MineBot™**
 
     ---
 
     A modern, all-in-one Discord bot with a Minecraft connector and a ton of useful features.
 
-    [**Read the docs** :material-arrow-right:](minebot/index.md)
+    [**Buy Now** :material-open-in-new:](https://mineacademy.org/minebot)
+
+    [**Read the docs**](minebot/index.md)
 </div>
