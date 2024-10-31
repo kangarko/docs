@@ -90,7 +90,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 !!! danger
     Anyone with access to this token has **full access to your bot's account**, you should ensure that nobody has access to this token but you. Treat it like a username/password combination, but for bots.
 
-<div class="grid cards" markdown>
+<div class="cards" markdown>
 
 -   :material-plus-circle:{ .lg .middle } **1. Create A New Application**
 
@@ -98,7 +98,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
       <figure markdown>
-          ![Create Application](../../assets/minebot/image-1.webp){ width=450 }
+          ![Create Application](../../assets/minebot/image-1.webp)
           <figcaption></figcaption>
       </figure>
         <figcaption>Head over to [Discord's Developer Portal](https://discord.com/developers/applications) and create a new application.</figcaption>
@@ -110,7 +110,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
       <figure markdown>
-          ![General Information Tab](../../assets/minebot/image-2.webp){ width="450" }
+          ![General Information Tab](../../assets/minebot/image-2.webp)
           <figcaption></figcaption>
       <figure>
         <figcaption>In the General Information tab, copy the application ID for the next step.</figcaption>
@@ -122,92 +122,92 @@ Create a new bot on Discord's developer portal using the instructions below.
 
     <figure markdown>
         <figure markdown>
-            ![Create the Invite Link](../../assets/minebot/image-3.webp){ width=450 }
+            ![Create the Invite Link](../../assets/minebot/image-3.webp)
             <figcaption></figcaption>
         </figure>
         <figcaption>[Visit this website](https://discordapi.com/permissions.html#2147483656), ensure "Administrator" and "Use Application Commands" are checked and paste your Client ID from step 2 into "Client ID". Do not change any other options. Then click the "Link". <br><br>Invite the bot to your server and in the final screen, check all boxes to grant all of the permissions we've selected previously.</figcaption>
     </figure>
 
--   :fontawesome-solid-paper-plane:{ .lg .middle } **4. Set Permissions And Move Role To Top**
+-   :fontawesome-solid-paper-plane:{ .lg .middle } **4. Move Role To Top And Give Administrator Permissions**
 
     ---
 
     <figure markdown>
         <figure markdown>
-            ![Check Permissions](../../assets/minebot/image-10.webp){ width=450 }
+            ![Check Permissions](../../assets/minebot/image-10.webp)
             <figcaption></figcaption>
         </figure>
         <figcaption>Drag the "bot" role to the top (it can be below other administrator roles) and ensure it's got the Administrator permission.</figcaption>
     </figure>
 
--   :material-robot:{ .lg .middle } **5. Navigate to the Bot Tab**
+-   :material-robot:{ .lg .middle } **5. Navigate To The Bot Tab**
 
     ---
 
     <figure markdown>
       <figure markdown>
-          ![Bot Tab](../../assets/minebot/image-4.webp){ width="80" }
+          ![Bot Tab](../../assets/minebot/image-4.webp)
           <figcaption></figcaption>
       <figure>
         <figcaption>Access the bot settings in this tab.</figcaption>
     </figure>
 
--   :material-form-textbox-password:{ .lg .middle } **6. Create a New Token**
+-   :material-form-textbox-password:{ .lg .middle } **6. Create A New Token**
 
     ---
 
     <figure markdown>
         <figure markdown>
-            ![Reset Token](../../assets/minebot/image-5.webp){ width=450 }
+            ![Reset Token](../../assets/minebot/image-5.webp)
             <figcaption></figcaption>
         </figure>
         <figcaption>Generate a new token for your bot and keep it private.</figcaption>
     </figure>
 
--   :material-form-textbox-password:{ .lg .middle } **7. Give Privileged Intents**
+-   :material-form-textbox-password:{ .lg .middle } **7. Paste Your Token To configuration/settings.yml**
 
     ---
 
     <figure markdown>
         <figure markdown>
-            ![Give Intents](../../assets/minebot/image-6.webp){ width=450 }
+            ![Write Token](../../assets/minebot/image-7.webp)
+            <figcaption></figcaption>
+        </figure>
+        <figcaption>Write your token to your configuration/settings.yml file .</figcaption>
+    </figure>
+
+-   :material-form-textbox-password:{ .lg .middle } **8. Give Bot Privileged Intents**
+
+    ---
+
+    <figure markdown>
+        <figure markdown>
+            ![Give Intents](../../assets/minebot/image-6.webp)
             <figcaption></figcaption>
         </figure>
         <figcaption>Adjust 3 Privileged Gateway Intents as per the image above.</figcaption>
     </figure>
 
 
--   :material-form-textbox-password:{ .lg .middle } **8. Set Bot Token**
+-   :material-form-textbox-password:{ .lg .middle } **9. Copy Your Guilt Id**
 
     ---
 
     <figure markdown>
         <figure markdown>
-            ![Write Token](../../assets/minebot/image-7.webp){ width=450 }
-            <figcaption></figcaption>
-        </figure>
-        <figcaption>Write your token to your configuration/settings.yml file .</figcaption>
-    </figure>
-
--   :material-form-textbox-password:{ .lg .middle } **8. Set Your Guilt Id**
-
-    ---
-
-    <figure markdown>
-        <figure markdown>
-            ![Copy ID](../../assets/minebot/image-8.webp){ width=80 }
+            ![Copy ID](../../assets/minebot/image-8.webp)
             <figcaption></figcaption>
         </figure>
         <figcaption>Copy the Discord server id (guild id) that you plan to use with MineBot.</figcaption>
     </figure>
 
--   :material-form-textbox-password:{ .lg .middle } **10. Paste Your Discord Servers ID**
+-   :material-form-textbox-password:{ .lg .middle } **10. Paste Your Guild Id To configuration/settings.yml**
 
     ---
 
     <figure markdown>
         <figure markdown>
-            ![Paste ID](../../assets/minebot/image-9.webp){ width=450 }
+            ![Paste ID](../../assets/minebot/image-9.webp)
             <figcaption></figcaption>
         </figure>
         <figcaption>Paste the Discord server guild ID that you copied in the same config file where you set the bot token in step 8.</figcaption>
@@ -226,7 +226,7 @@ Create a new bot on Discord's developer portal using the instructions below.
 
 !!! warning
 
-    You need to re-run steps 1, 3 and 4 each time you reboot your machine or close the terminal/console window.
+    You need to re-run steps 1, 3 and 4 _from below_ each time you reboot your machine or close the terminal/console window.
 
 After extracting the bot files, follow these steps to set up a virtual environment and install the required dependencies:
 
