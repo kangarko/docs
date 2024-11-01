@@ -12,10 +12,6 @@ A complete guide for both beginners and experienced users to instal and setup Mi
 
 ## 1. Install Python
 
-!!! warning "Python 3.13 is not supported yet"
-
-    We are waiting for our dependencies to update to support Python 3.13. Until then, please use the latest 3.12.x version.
-
 === ":fontawesome-brands-windows: Windows"
     1. **Download the Installer**: Go to the [official Python website](https://www.python.org/downloads/windows/) and download the latest Python installer for Windows.
     2. **Run the Installer**: Open the downloaded file and run the installer.
