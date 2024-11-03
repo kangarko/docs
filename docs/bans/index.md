@@ -37,8 +37,8 @@ Click the cards below to learn how to get started with `Bans`.
 
 <div class="grid cards" markdown>
 
-- [:material-compare-vertical: Compatibility](./compatibility/index.md)
 - [:material-download: Installation](./installation/index.md)
+- [:material-compare-vertical: Compatibility](./compatibility/index.md)
 - [:octicons-command-palette-24: Commands and Permissions](./commands/index.md)
 
 </div>
