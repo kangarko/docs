@@ -46,6 +46,7 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
 
     [**Buy Now** :material-open-in-new:](https://mineacademy.org/corearena)
 
+
 -   **Protect™**
 
     ---
@@ -55,17 +56,6 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
     [**Read the docs** :material-open-in-new:](https://github.com/kangarko/protect/wiki)
 
     [**Buy Now** :material-open-in-new:](https://mineacademy.org/protect)
-
-
--   **Bans™**
-
-    ---
-
-    A complete punishment system for Paper, Velocity and Bungee with Discord support and a GUI/command system.
-
-    [**Read the docs**](bans/index.md)
-
-    [**Buy Now** :material-open-in-new:](https://mineacademy.org/bans)
 
 
 -   **MineBot™**
