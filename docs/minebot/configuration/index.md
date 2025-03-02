@@ -27,19 +27,29 @@ Welcome to the guide for `MineBot`'s main configuration file.
 - We provide this section with compatibility with two different providers.
 - You can tell us which provider you are using in the database.provider section.
 === ":simple-mongodb: MongoDB"
-    1. **Collection**: On MongoDB, you can write whatever you want the name of the collection in the cluster to be.
-    2. **URI**: The URI we need to connect to your MongoDB database.
-=== ":simple-sqlite: SqLite"
+    1. **collection**: On MongoDB, you can write whatever you want the name of the collection in the cluster to be.
+    2. **uri**: The URI we need to connect to your MongoDB database.
+=== ":simple-mysql: MySQL"
+    1. **host**: The hostname of your MySQL server.
+    2. **port**: The port number for your MySQL server (default: 3306).
+    3. **user**: The username for accessing your MySQL database.
+    4. **password**: The password for the MySQL user.
+    5. **database**: The name of the MySQL database.
+=== ":simple-sqlite: SQLite"
     - There is no extra key you need to add in this section.
 
-### Server RCON
-- You need to enter the RCON information we need to connect to your Minecraft server in this section.
-- Enable RCON by setting enable-rcon to true in server.properties. 
-- If you do not enter any information in this section, server support will automatically switch off.
-=== ":material-minecraft: RCON Information"
-    1. **IP**: The IP address of your server.
-    2. **Port**: The port for the RCON connection from rcon.port in server.properties. Set to 25575 by default.
-    3. **Password**: The password from rcon.password in server.properties.
+### Server WebSocket
+- You need to enter the WebSocket information we need to connect to your Minecraft server in this section.
+- Install the MineBotConnector from our [plugins page](https://mineacademy.org/plugins).
+- If `server.enabled` is set to `false`, this section can be skipped.
+=== ":material-minecraft: WebSocket Information"
+    1. **uri**: Enter the WebSocket URI for your Minecraft server.
+    2. **password**: Provide the password set in the MineBotConnector plugin for authentication.
+=== ":material-minecraft: Minecraft Events"
+    1. **log.enabled**: Enable logging of Minecraft events to a Discord channel.
+    2. **log.channel**: The channel where log messages will be sent.
+    3. **minecraft.to-discord**: Set to true to sync events from Minecraft to Discord.
+    4. **minecraft.from-discord**: Set to true to sync events from Discord to Minecraft.
 
 ### Embed Color
 - You can change the default colors used in Discord embed messages in this section.
@@ -50,16 +60,23 @@ Welcome to the guide for `MineBot`'s main configuration file.
 
 This section is straightforward - you can activate or deactivate commands as needed.
 
-### Enabled
-- You can enable or disable the log from this section.
+#### enabled
+- You can enable or disable the command from this section.
 
-### Channel
+#### log
+- You can enable or disable the logging from this section.
+
+#### channel
 - You need to write the id of the channel you want the log to go to here.
 - Remember that the channel must be a writing channel.
 
 ## Account Linking System
 
 Here, you'll learn how to link your Minecraft and Discord accounts with MineBot to unlock additional features.
+
+### Logging
+  - **log**: Enable/Disable
+  - **channel**: Writing channel for logging
 
 ### Reward Mode
 - With this setting, you can distribute certain rewards to people who pairs their account.
@@ -95,14 +112,53 @@ Here, you'll learn how to link your Minecraft and Discord accounts with MineBot 
 
 Here, you'll learn how to set up, configure, and use the suggestion system to gather and manage user feedback.
 
+### Enabled
+- **enabled**: Enables or disables the suggestion system.
+
 ### Text
-    - Min -> Minimum character for suggestion message.
-    - Max -> Maximum character for suggestion message.
+- **text.min**: Minimum character limit for suggestion messages.
+- **text.max**: Maximum character limit for suggestion messages.
+
+### Notification
+- **log.notification**: Controls whether to send in-game messages to users whose suggestions are accepted.
 
 ### Log
-    - Channel -> The channel id you want to send logs to.
-    - Notification -> Sends a toast message to the person whose suggestion is accepted in the game.
+- **log.channel**: The channel ID where logs of moderator actions (accepting/denying suggestions) are sent.
 
+### Result
+- **moderator_channel**: Channel ID where moderators receive notifications of new suggestions.
+- **approve.emoji**: Emoji used for approving suggestions.
+- **approve.channel**: Channel ID where approved suggestions are posted.
+- **deny.emoji**: Emoji used for denying suggestions.
+- **deny.channel**: Channel ID where denied suggestions are posted.
+
+### Reward
+- There are 4 different modes for prizes:
+    - None -> No Reward
+    - Role -> Give a discord role
+    - Item -> Give item, perm etc. with command.
+    - Both -> Role + Item reward mode
+  
+=== "Role"
+    ```yaml
+    reward:
+      role: 1173046888820375552 # role id
+    ```
+=== "Item"
+    ```yaml
+    reward:
+      item: # give command(s)
+        - "give {player} minecraft:iron_ingot 64"
+        - "give {player} minecraft:diamond 32"
+    ```
+=== "Both"
+    ```yaml
+    reward:
+      role: 1173046888820375552 # role id
+      item: # give command(s)
+        - "give {player} minecraft:iron_ingot 64"
+        - "give {player} minecraft:diamond 32"
+    ```
 ## Ticket System
 
 Here, you'll learn how to set up, configure, and use the ticket system to manage reports, tickets and questions efficiently.
@@ -118,34 +174,34 @@ There are 2 systems for tickets:
 
 === "Thread"
     ```yaml
-    ticket_system: Thread
+    ticket_system: thread
     ```
 === "Category"
     ```yaml
-    ticket_system: Category
+    ticket_system: category
     ```
 
-### <u>Opening Styles</u>
-We have 2 opening styles:
+### <u>Starting Styles</u>
+In this section we have 2 different start styles:
 
 #### Direct
-- Does not send any information message to the channel you set as the main channel, you must either send this message yourself or write it in the channel description.
-- Direct opening style can only be used in message and command opening methods and **is not** compatible with other systems.
+- No message is sent to the ticket channel opened in this startup style.
+- Compatible with all opening methods **except** message opening method.
+- Supports **only** the command closing method.
 
-#### Post Message
-- It sends an embed information message to the channel you set as the main channel. Thus, you do not need to send any information message.
-- Post Message opening style is compatible with **all opening methods**.
+#### Post Information
+- The information received at startup is sent to the channel as an embed message.
+- Compatible with **all** opening and closing methods.
 
 === "Direct"
     ```yaml
-    opening:
-      style: Direct
+    starting:
+      style: direct
     ```
-=== "Post Message"
+=== "Post Information"
     ```yaml
-    opening:
-      style: Post Message
-      message_channel: 1275571829657833584
+    starting:
+      style: post information
     ```
 
 ### <u>Opening Methods</u>
@@ -252,28 +308,27 @@ We have 5 different opening methods in this area:
           category_id: 1270857751366602783
     ```
 
-
-### <u>Starting Styles</u>
-In this section we have 2 different start styles:
+### <u>Opening Styles</u>
+We have 2 opening styles:
 
 #### Direct
-- No message is sent to the ticket channel opened in this startup style.
-- Compatible with all opening methods **except** message opening method.
-- Supports **only** the command closing method.
+- Does not send any information message to the channel you set as the main channel, you must either send this message yourself or write it in the channel description.
+- Direct opening style can only be used in message and command opening methods and **is not** compatible with other systems.
 
-#### Post Information
-- The information received at startup is sent to the channel as an embed message.
-- Compatible with **all** opening and closing methods.
+#### Post Message
+- It sends an embed information message to the channel you set as the main channel. Thus, you do not need to send any information message.
+- Post Message opening style is compatible with **all opening methods**.
 
 === "Direct"
     ```yaml
-    starting:
+    opening:
       style: Direct
     ```
-=== "Post Information"
+=== "Post Message"
     ```yaml
-    starting:
-      style: Post Information
+    opening:
+      style: Post Message
+      message_channel: 1275571829657833584
     ```
 
 
@@ -321,70 +376,63 @@ In this section we have 2 different start styles:
 ### <u>Transcript Methods</u>
 We have added 5 different customisable transcript methods for you:
 
-#### No Transcript
+#### no transcript
 - Do nothing.
 
-#### Move Channel
+#### move channel
 - This method moves the channel to another category.
 - Only available for category ticket system.
 
-#### Lock Channel
+#### lock channel
 - This method locks the thread.
 - Only available for thread ticket system.
 
-#### Send Channel As Text
+#### send channel as text
 - This method saves all messages from the channel in a .txt file.
 
-##### Upload Methods
-
-###### Github
-- Sends the saved file to the designated github repo.
-
-###### Channel
-- Sends the saved file to the designated discord channel.
-
-#### Send Channel As HTML
+#### send channel as html
 - This method saves all messages from the channel in a .html file.
 - [For example page click here](https://egehankilicarslan.github.io/minebot-transcript-example/html/1726687925.html)
 
-##### Upload Methods
 
-###### Github
+### Upload Methods
+
+#### github
 - Sends the saved file to the designated github repo.
 
-###### Channel
+#### channel
 - Sends the saved file to the designated discord channel.
 
 === "No Transcript"
     ```yaml
     transcript:
-      method: No Transcript
+      method: no transcript
     ```
 === "Move Channel"
     ```yaml
     transcript:
-      method: Move Channel
+      method: move channel
       category_id: 1270857751366602783 
     ```
 === "Lock Channel"
     ```yaml
     transcript:
-      method: Lock Channel
+      method: lock channel
     ```
 === "Send Channel As Text"
     ```yaml
     transcript:
-      method: Send Channel as Text
+      method: send channel as text
       upload:
-        method: Channel
+        method: channel
         channel_id: 1277218813632450662
     ```
 === "Send Channel As HTML"
     ```yaml
     transcript:
-      method: Send Channel as HTML
+      method: send channel as html
       upload:
-        method: Github
+        method: github
         token: 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
         repo: EgehanKilicarslan/minebot-transcript-example
         branch: master
@@ -396,15 +444,15 @@ In this section there are different notifications for both users and staffs.
 #### Staff Notifications
 
 ##### Mention
-- Sends an in-game toast message to the staffs when tagged in the channel.
+- Sends an in-game message to the staffs when tagged in the channel.
 
 #### User Notifications
 
 ##### Mention
-- Sends an in-game toast message to the users when tagged in the channel.
+- Sends an in-game message to the users when tagged in the channel.
 
 ##### Answer
-- Sends users an in-game toast message when the ticket is marked as resolved.
+- Sends users an in-game message when the ticket receives a message from staff.
 
 ##### Close
-- Sends an in-game toast message to users when the ticket is closed.
+- Sends an in-game message to users when the ticket is closed.
