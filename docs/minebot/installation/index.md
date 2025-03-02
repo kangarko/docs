@@ -33,17 +33,12 @@ A complete guide for both beginners and experienced users to instal and setup Mi
 To integrate MineBot with your Minecraft server, follow these optional steps:
 
 1. **Move the MineBotConnector JAR**:  
-
-    Copy the `MineBotConnector-X.jar` file into your Minecraft server's `plugins` folder.
-
+    Copy the MineBotConnector-X.jar file into your Minecraft server's plugins folder.
 2. **Restart Your Minecraft Server**:  
-
     Restart your Minecraft server to load the MineBotConnector plugin.
-
 3. **Configure WebSocket Port**:  
-
-    Open the file `plugins/MineBotConnector/settings.yml` on your Minecraft server and set the `websocket.port` to match the port specified in your MineBot's `configuration/settings.yml` under `server.uri`.
-    Make sure to edit the `server.uri` parameter to match the IP address of your Minecraft server.
+    Open the file plugins/MineBotConnector/settings.yml on your Minecraft server and set the websocket.port to match the port specified in your MineBot's configuration/settings.yml under server.uri.
+    Make sure to edit the server.uri parameter to match the IP address of your Minecraft server.
 
 !!! warning
     Ensure the WebSocket port you configured is allowed through your firewall. If you're unsure or using a hosting provider, contact your hosting support to confirm which ports are available for use.
