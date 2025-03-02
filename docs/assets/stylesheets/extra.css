@@ -40,31 +40,6 @@ html {
     align-content: center;
 }
 
-/* Remove tooltip from site logo */
-.md-header__button.md-logo {
-    font-size: 0;
-}
-
-.md-header__button.md-logo[title] {
-    position: relative;
-}
-
-.md-header__button.md-logo[title]::before,
-.md-header__button.md-logo[title]::after {
+.md-header .md-tooltip {
     display: none !important;
-}
-
-/* More generic approach to remove all tooltips from the header */
-.md-header [title],
-.md-header [data-md-tooltip] {
-    pointer-events: auto;
-}
-
-.md-header [title]::before,
-.md-header [title]::after,
-.md-header [data-md-tooltip]::before,
-.md-header [data-md-tooltip]::after {
-    display: none !important;
-    opacity: 0 !important;
-    content: none !important;
 }
