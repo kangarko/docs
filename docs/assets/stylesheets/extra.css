@@ -29,3 +29,42 @@ html {
 .md-tabs {
     background: rgba(20, 21, 26, 1) !important;
 }
+
+.cards ul li {
+    list-style-type: none !important;
+}
+
+.md-typeset ol li blockquote, .md-typeset ol li p, .md-typeset ul li blockquote, .md-typeset ul li p {
+    display: flex;
+    gap: 10px;
+    align-content: center;
+}
+
+/* Remove tooltip from site logo */
+.md-header__button.md-logo {
+    font-size: 0;
+}
+
+.md-header__button.md-logo[title] {
+    position: relative;
+}
+
+.md-header__button.md-logo[title]::before,
+.md-header__button.md-logo[title]::after {
+    display: none !important;
+}
+
+/* More generic approach to remove all tooltips from the header */
+.md-header [title],
+.md-header [data-md-tooltip] {
+    pointer-events: auto;
+}
+
+.md-header [title]::before,
+.md-header [title]::after,
+.md-header [data-md-tooltip]::before,
+.md-header [data-md-tooltip]::after {
+    display: none !important;
+    opacity: 0 !important;
+    content: none !important;
+}

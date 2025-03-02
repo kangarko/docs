@@ -10,54 +10,7 @@ hide:
 
 A complete guide for both beginners and experienced users to instal and setup MineBot.
 
-## 1. Install Python
-
-=== ":fontawesome-brands-windows: Windows"
-    1. **Download the Installer**: Go to the [official Python website](https://www.python.org/downloads/windows/) and download the latest Python installer for Windows.
-    2. **Run the Installer**: Open the downloaded file and run the installer.
-    3. **Add Python to PATH**: Ensure you check the box that says "Add Python to PATH" before clicking "Install Now".
-    4. **Verify Installation**: Open Command Prompt and type `python3 --version` to verify the installation.
-
-=== ":material-apple: macOS"
-    1. **Download the Installer**: Visit the [official Python website](https://www.python.org/downloads/macos/) and download the latest Python installer for macOS.
-    2. **Run the Installer**: Open the downloaded `.pkg` file and follow the installation instructions.
-    3. **Verify Installation**: Open Terminal and type `python3 --version` to verify the installation.
-
-=== ":material-linux: Linux"
-    === ":material-debian: Debian"
-        1. **Update Package List**: `sudo apt update`
-        2. **Install Python**: `sudo apt install python3`
-        3. **Verify Installation**: `python3 --version`
-    === ":material-fedora: Fedora"
-        1. **Update Package List**: `sudo dnf update`
-        2. **Install Python**: `sudo dnf install python3`
-        3. **Verify Installation**: `python3 --version`
-    === ":material-arch: Arch"
-        1. **Update Package List**: `sudo pacman -Syu`
-        2. **Install Python**: `sudo pacman -S python`
-        3. **Verify Installation**: `python3 --version`
-    === ":material-nix: NixOS"
-        1. **Install Python**: `nix-env -iA nixpkgs.python3`
-        2. **Verify Installation**: `python3 --version`
-    === ":simple-opensuse: OpenSuse"
-        1. **Update Package List**: `sudo zypper refresh`
-        2. **Install Python**: `sudo zypper install python3`
-        3. **Verify Installation**: `python3 --version`
-    === ":simple-alpinelinux: Alpine"
-        1. **Update Package List**: `sudo apk update`
-        2. **Install Python**: `sudo apk add python3`
-        3. **Verify Installation**: `python3 --version`
-    === ":simple-voidlinux: Void"
-        1. **Update Package List**: `sudo xbps-install -Syu`
-        2. **Install Python**: `sudo xbps-install -S python3`
-        3. **Verify Installation**: `python3 --version`
-    === ":material-gentoo: Gentoo"
-        1. **Update Package List**: `sudo emerge --sync`
-        2. **Install Python**: `sudo emerge dev-lang/python`
-        3. **Verify Installation**: `python3 --version`
-
-
-## 2. Download And Extract Bot
+## 1. Download And Extract Bot
 
 === ":fontawesome-brands-windows: Windows"
     1. **Download the Files**: Download the bot files from BuiltByBit.
@@ -74,6 +27,24 @@ A complete guide for both beginners and experienced users to instal and setup Mi
     2. **Extract the Files**: Open Terminal and navigate to the directory containing the downloaded ZIP file.
     3. **Run Extraction Command**: Use the command `unzip <filename>.zip` to extract the files.
     4. **Move Files**: Move the extracted files to your desired location.
+
+## 2. (Optional) Install MineBotConnector
+
+To integrate MineBot with your Minecraft server, follow these optional steps:
+
+1. **Move the MineBotConnector JAR**:  
+   Copy the `MineBotConnector-X.jar` file into your Minecraft server's `plugins` folder.
+
+2. **Restart Your Minecraft Server**:  
+   Restart your Minecraft server to load the MineBotConnector plugin.
+
+3. **Configure WebSocket Port**:  
+   Open the file `plugins/MineBotConnector/settings.yml` on your Minecraft server and set the `websocket.port` to match the port specified in your MineBot's `configuration/settings.yml` under `server.uri`.
+   Make sure to edit the `server.uri` parameter to match the IP address of your Minecraft server.
+
+!!! warning
+    Ensure the WebSocket port you configured is allowed through your firewall. If you're unsure or using a hosting provider, contact your hosting support to confirm which ports are available for use.
+
 
 ## 3. Create A Discord Bot And Link Bot Token
 
@@ -208,54 +179,10 @@ Create a new bot on Discord's developer portal using the instructions below.
         </figure>
         <figcaption>Paste the Discord server guild ID that you copied in the same config file where you set the bot token in step 8.</figcaption>
     </figure>
-
--   :material-form-textbox-password:{ .lg .middle } **11. Done!**
-
-    ---
-
-    You're done! All other settings are optional. However, we highly recommend linking it with your Minecraft server to get the most functionality out of it in the "server" section of the same file from step 8 and 10.
-
-
 </div>
 
-## 4. Start The Bot
 
-!!! warning
+## :tada: 4. You're All Set!
 
-    You need to re-run steps 1, 3 and 4 _from below_ each time you reboot your machine or close the terminal/console window.
+Congratulations, you've successfully completed the installation steps! To start your bot, please follow the instructions in the [Running Guide](../running/index.md).
 
-After extracting the bot files, follow these steps to set up a virtual environment and install the required dependencies:
-
-1. **Navigate to the Extracted Folder**: Open Terminal (or Command Prompt on Windows) and navigate to the folder where you extracted the bot files.
-    ```sh
-    cd path/to/extracted/folder
-    ```
-2. **Create a Virtual Environment**:
-    ```sh
-    python3 -m venv venv
-    ```
-3. **Activate the Virtual Environment**:
-    - **Windows**:
-        ```sh
-        venv\Scripts\activate
-        ```
-    - **macOS/Linux**:
-        ```sh
-        source venv/bin/activate
-        ```
-
-4. **Start the bot**:
-    ```sh
-    nox -s srv
-    ```
-
-    !!! note "Optional: Install nox"
-
-        If you're getting "Unknown command: nox" error, you need to install nox first:
-        ```sh
-        pip install nox
-        ```
-
-    The bot will take some time to download its dependencies and should be up and running. 
-
-    If you need help, [open a ticket on GitHub](https://github.com/kangarko/MineBot/issues) and we will navigate you.
