@@ -1,6 +1,6 @@
 ---
 title: Running
-description: How to run MineBot.
+description: How to run Minebot.
 icon: material/run
 hide:
   - toc
@@ -8,10 +8,10 @@ hide:
 
 # Running
 
-On this page, you'll learn how to start MineBot.
+On this page, you'll learn how to start Minebot.
 
 !!! Tip
-    Before running MineBot, make sure you've completed the [Installation Guide](../installation/index.md) first!
+    Before running Minebot, make sure you've completed the [Installation Guide](../installation/index.md) first!
 
 
 ## 1. Install Python
@@ -100,4 +100,4 @@ After extracting the bot files, follow these steps to set up a virtual environme
 
     The bot will take some time to download its dependencies and should be up and running. 
 
-If you need help, [open a ticket on GitHub](https://github.com/kangarko/MineBot/issues) and we will navigate you.
+If you need help, [open a ticket on GitHub](https://github.com/kangarko/Minebot/issues) and we will navigate you.

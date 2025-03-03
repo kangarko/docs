@@ -1,6 +1,6 @@
 ---
 title: Localization
-description: Localizing MineBot for different languages and regions.
+description: Localizing Minebot for different languages and regions.
 icon: material/sort-alphabetical-descending-variant
 hide:
   - toc
@@ -8,7 +8,7 @@ hide:
 
 # Localization
 
-Welcome to the `MineBot` localization guide. You will find instructions on how to translate parts of the bot to your own language or change messages here.
+Welcome to the `Minebot` localization guide. You will find instructions on how to translate parts of the bot to your own language or change messages here.
 
 Here are two examples to help you understand how translations work.
 

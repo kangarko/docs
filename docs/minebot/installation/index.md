@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: A tutorial on getting started with MineBot.
+description: A tutorial on getting started with Minebot.
 icon: material/download
 hide:
   - toc
@@ -8,7 +8,7 @@ hide:
 
 # Installation
 
-A complete guide for both beginners and experienced users to instal and setup MineBot.
+A complete guide for both beginners and experienced users to instal and setup Minebot.
 
 ## 1. Download And Extract Bot
 
@@ -28,16 +28,16 @@ A complete guide for both beginners and experienced users to instal and setup Mi
     3. **Run Extraction Command**: Use the command `unzip <filename>.zip` to extract the files.
     4. **Move Files**: Move the extracted files to your desired location.
 
-## 2. (Optional) Install MineBotConnector
+## 2. (Optional) Install MinebotConnector
 
-To integrate MineBot with your Minecraft server, follow these optional steps:
+To integrate Minebot with your Minecraft server, follow these optional steps:
 
-1. **Move the MineBotConnector JAR**:  
-    Copy the MineBotConnector-X.jar file into your Minecraft server's plugins folder.
+1. **Move the MinebotConnector JAR**:  
+    Copy the MinebotConnector-X.jar file into your Minecraft server's plugins folder.
 2. **Restart Your Minecraft Server**:  
-    Restart your Minecraft server to load the MineBotConnector plugin.
+    Restart your Minecraft server to load the MinebotConnector plugin.
 3. **Configure WebSocket Port**:  
-    Open the file plugins/MineBotConnector/settings.yml on your Minecraft server and set the websocket.port to match the port specified in your MineBot's configuration/settings.yml under server.uri.
+    Open the file plugins/MinebotConnector/settings.yml on your Minecraft server and set the websocket.port to match the port specified in your Minebot's configuration/settings.yml under server.uri.
     Make sure to edit the server.uri parameter to match the IP address of your Minecraft server.
 
 !!! warning
@@ -163,7 +163,7 @@ Create a new bot on Discord's developer portal using the instructions below.
             ![Copy ID](../../assets/minebot/image-8.webp)
             <figcaption></figcaption>
         </figure>
-        <figcaption>Copy the Discord server id (guild id) that you plan to use with MineBot.</figcaption>
+        <figcaption>Copy the Discord server id (guild id) that you plan to use with Minebot.</figcaption>
     </figure>
 
 -   :material-form-textbox-password:{ .lg .middle } **10. Paste Your Guild Id To configuration/settings.yml**

@@ -58,7 +58,7 @@ Documentation for all MineAcademy software projects, including ChatControl, Boss
     [**Buy Now** :material-open-in-new:](https://mineacademy.org/protect)
 
 
--   **MineBot™**
+-   **Minebot™**
 
     ---
 

@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: Configuring MineBot for optimal performance and customization.
+description: Configuring Minebot for optimal performance and customization.
 icon: octicons/gear-24
 hide:
   - toc
@@ -8,7 +8,7 @@ hide:
 
 # Settings
 
-Welcome to the guide for `MineBot`'s main configuration file. 
+Welcome to the guide for `Minebot`'s main configuration file. 
 
 ??? quote "Related Configuration File"
     - `configuration/settings.yml`
@@ -40,11 +40,11 @@ Welcome to the guide for `MineBot`'s main configuration file.
 
 ### Server WebSocket
 - You need to enter the WebSocket information we need to connect to your Minecraft server in this section.
-- Install the MineBotConnector from our [plugins page](https://mineacademy.org/plugins).
+- Install the MinebotConnector from our [plugins page](https://mineacademy.org/plugins).
 - If `server.enabled` is set to `false`, this section can be skipped.
 === ":material-minecraft: WebSocket Information"
     1. **uri**: Enter the WebSocket URI for your Minecraft server.
-    2. **password**: Provide the password set in the MineBotConnector plugin for authentication.
+    2. **password**: Provide the password set in the MinebotConnector plugin for authentication.
 === ":material-minecraft: Minecraft Events"
     1. **log.enabled**: Enable logging of Minecraft events to a Discord channel.
     2. **log.channel**: The channel where log messages will be sent.
@@ -72,7 +72,7 @@ This section is straightforward - you can activate or deactivate commands as nee
 
 ## Account Linking System
 
-Here, you'll learn how to link your Minecraft and Discord accounts with MineBot to unlock additional features.
+Here, you'll learn how to link your Minecraft and Discord accounts with Minebot to unlock additional features.
 
 ### Logging
   - **log**: Enable/Disable
@@ -167,7 +167,7 @@ Here, you'll learn how to set up, configure, and use the ticket system to manage
 There are 2 systems for tickets:
 
 #### 1. Thread
-- This is a new system that MineBot uses to open subheadings on a single channel.
+- This is a new system that Minebot uses to open subheadings on a single channel.
 
 #### 2. Category
 - This system opens different channels on a category. This is an older system preferred by some networks. 
