@@ -10,6 +10,14 @@ hide:
 
 A complete guide for both beginners and experienced users to instal and setup Minebot.
 
+## :movie_camera: Video Installation & Run Guide
+
+Follow along with our step-by-step video tutorial to quickly install and run Minebot:
+
+<div style="position: relative; padding-bottom: 28.125%; height: 0; overflow: hidden; max-width: 50%; height: auto; margin: 0;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/nlC1TCoK3R8" title="Minebot Installation & Run Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
 ## 1. Download And Extract Bot
 
 === ":fontawesome-brands-windows: Windows"
