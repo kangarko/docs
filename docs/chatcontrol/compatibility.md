@@ -248,6 +248,7 @@ That's not it! We support a lot more plugins than that, thanks to Vault, you can
 
 .plugin-card.stretched {
   grid-column: 1 / -1;
+  max-width: 100% !important;
 }
 
 
