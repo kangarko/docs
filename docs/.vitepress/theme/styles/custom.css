@@ -46,9 +46,8 @@ a:hover {
 
 .VPImage.logo {
   margin-right: 15px;
-  margin-top: 10px;
   border: none;
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 /* Background Effects */
