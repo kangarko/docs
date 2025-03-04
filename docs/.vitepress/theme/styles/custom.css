@@ -494,8 +494,8 @@ code.language-rs .token.date {
   max-width: 100%;
 }
 
-img {
-  border-radius: 8px;
+img, .VPImage {
+  border-radius: 8px !important;
 }
 
 /* Modal and cross-section link styles */
