@@ -4,7 +4,7 @@ layout: home
 hero:
   name: MineAcademy
   text: Documentation
-  tagline: Enhance your Minecraft server with our suite of plugins, developed since 2013
+  tagline: Learn how to get the most out of our software
   image:
     src: /images/home-icon.svg
     alt: MineAcademy
@@ -18,7 +18,7 @@ hero:
 
 features:
   - title: Minebot
-    details: Connect your Minecraft server with Discord for server monitoring, and powerful moderation tools.
+    details: The all-in-one Discord bot with Minecraft integration and powerful moderation tools.
     link: /minebot/
   - title: ChatControl
     details: Take control of your server's chat with powerful moderation tools, anti-spam features, and customizable formatting options.
@@ -27,13 +27,13 @@ features:
     details: Create epic boss battles with unique abilities, custom drops, and engaging mechanics that will challenge your players.
     link: /boss/
   - title: CoreArena
-    details: Build and manage competitive PvP arenas with extensive customization options, matchmaking, and rewards.
+    details: Build and manage competitive PvE arenas with extensive customization options, destruction, and rewards.
     link: /corearena/
   - title: Protect
-    details: Secure your server's builds and regions with comprehensive protection features and fine-grained permission control.
+    details: Confiscate hacked or duplicated items using custom rules without disturbing regular players.
     link: /protect/
   - title: Winter
-    details: Add winter-themed events and features to your server with snow storms, ice mechanics, and seasonal items.
+    details: Add particles and snow generation to your worlds including gift chests and custom snowman AI.
     link: /winter/
 ---
 
