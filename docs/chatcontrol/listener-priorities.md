@@ -448,7 +448,6 @@ code {
 .plugin-card {
   flex: 0 0 auto;
   min-width: 200px;
-  max-width: 250px;
   background-color: var(--vp-c-bg-mute);
   border-radius: 6px;
   padding: 15px;
