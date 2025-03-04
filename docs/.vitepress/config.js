@@ -143,7 +143,7 @@ export default {
             { text: 'Newcomer', link: '/chatcontrol/newcomer' },
             { text: 'Alternative Messages', link: '/chatcontrol/alternative-messages' },
             { text: 'Custom Commands', link: '/chatcontrol/custom-commands' },
-            { text: 'JSON', link: '/chatcontrol/json' },
+            { text: 'JSON', link: '/chatcontrol/JSON' },
             { text: 'Soft Mute', link: '/chatcontrol/soft-mute' },
             { text: 'Custom Tab Completion', link: '/chatcontrol/custom-tab-completion' },
             { text: 'Conflicting Commands', link: '/chatcontrol/conflicting-commands' }

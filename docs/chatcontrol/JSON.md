@@ -1,7 +1,7 @@
 # JSON
 
 JSON stands for **J**ava**S**cript **O**bject **N**otation. When exchanging data between you and the server, or storing data in a database, the data can only be text. JSON is widely used for storing various information, for example about players or server events. It is easy for humans to read and write and easy for machines to parse and generate. 
-
+ 
 Minecraft uses JSON when handling chat. In addition to the plain chat message, JSON allows other (to you invisible) data to be transferred as well. That way, you may view fancy chat components such as hover text or item specific information. ChatControl aims to fully support JSON and offers several way of using it.
 
 ::: tip
