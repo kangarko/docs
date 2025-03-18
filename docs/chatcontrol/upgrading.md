@@ -1,32 +1,28 @@
-# Upgrading
-
-::: info Latest Release
-In December 2024, we've finally released the long awaited ChatControl 11! 
-
-I recoded about 70% of the plugin, brought full Adventure and MiniMessage support and improved performance 1.5-3x.
-:::
+# Upgrading to ChatControl 11
 
 ## From ChatControl 10:
 Upgrading from v10 to v11 is 99% automatic. We will make a backup of your old folder. The new folder is named just "ChatControl".
 
+To upgrade, simply replace the jar files and restart your server. Observe the console logs in case you need to do something manually.
+
+See the Breaking Changes and Changelog below for changes.
+
 ## Upgrading From ChatControl Pro (8, 9)
-Please use ChatControl 10 first, then upgrade to 11.
+Upgrade to ChatControl 10 first, then upgrade to 11. Simply replace jar files when upgrading.
 
 ## From ChatControl Free
 Not possible except for /rules, although specifically for these archaic versions some operators might have been changed. You will be informed in the console about this.
 
-### Upgrading From ChatControl 10 Limitations 
-* Localization format has changed completely and automatic update is not offered at the moment.
-
-## Breaking Changes
+## ChatControl 11 Breaking Changes
 
 ::: warning Important
+* Localization format has changed completely and drastically and automatic update is not offered at the moment. Some people reported using AI with long context window (Claude Sonnet, Google Gemini) with some prompt engineering can with migrating the syntax from yml to json.  
 * Renamed some variables to ensure consistency, i.e. isp is now player_isp, town to player_town, nms_version to server_nms_version etc. The only exception is still `{player}` and `{nick}` but we recommend you change them to `{player_name}` and `{player_nick}` too. See [Variables](variables) for up-to-date syntax.
 * Some HEX color syntax is no longer supported, but we temporarily added support back in the new Performance section of settings.yml. Migrating to the official MiniMessage `<#123465>` or `<red>` syntax is advised. Legacy & color codes will always be supported.
 * Replaced %syntax% variable syntax with `{syntax}`. If you absolutely need to use the percentage syntax, see Performance section of settings.yml and enable it back.
 :::
 
-## Changelog:
+## ChatControl 11 Changelog
 
 ### Major Changes
 * **Major** | The plugin is now called "ChatControl" only, marking the end of ChatControl Red series.⁠
@@ -76,7 +72,7 @@ Not possible except for /rules, although specifically for these archaic versions
 * **Drop** | Support for Minecraft 1.7.10 and older.
 * **Drop** | The mic.
 
-## Technical limitations:
+## ChatControl 11 Technical Limitations
 
 ::: warning Limitations
 * Items renamed on Anvil will lose colors the player does not have the permission for. Give the player the "chatcontrol.use.color.anvil" permission and see the other permissions under the Colors section of settings.yml for specific colors configuration. 
@@ -85,13 +81,7 @@ Not possible except for /rules, although specifically for these archaic versions
 * /chc sendas `<player>` requires the player to be on the same server because formats need a Bukkit entity to build their conditions
 :::
 
-## Open sourcing:
-
-::: info Open Source Plans
-As discussed on Discord I am strongly considering open sourcing ChatControl 11 shortly after the new documentation is done. I will be going through the code and documenting stuff before that. The goal is to help networks customize the plugin to their own unique needs as my time is increasingly shortened as life goes on. Open source will also ensure the longevity of the plugin.
-:::
-
-## ChatControl 10 support:
+## ChatControl 10 Support
 
 ::: info Support Timeline
 I will continue to deliver critical fixes and security patches for ChatControl 10 until March 2025 but other general support will not be provided.
