@@ -152,7 +152,7 @@ export default {
         {
           text: 'Developer',
           items: [
-            { text: 'API', link: '/chatcontrol/api' }
+            { text: 'API', link: '/chatcontrol/API' }
           ]
         },
       ],      
