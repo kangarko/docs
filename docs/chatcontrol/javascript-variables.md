@@ -26,8 +26,6 @@ You can use "/chc info variable" to test format variables in a demo message.
 
 It is recommended you know a little bit of Java, knowing how to access methods in Bukkit, and have some basic knowledge of JavaScript itself, or at least know how to use Google properly and adjust and debug others' JavaScript code to your needs.
 
-You can use command "/chc inspect" to enumerate all methods or fields in a class, which lets you to make new variables easier.
-
 In your variables, you can use the variable "player" in JavaScript to get the Bukkit Player class.
 
 There is an extensive guide on how to code Javascript for Java on these locations:
