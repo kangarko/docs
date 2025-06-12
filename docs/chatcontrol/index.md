@@ -51,6 +51,9 @@ If you encounter any missing dependencies error, download the plugins manually a
 * [BungeeControl](https://builtbybit.com/resources/24248/)
 * [VelocityControl](https://builtbybit.com/resources/43226/)
 
+## Community Assets
+
+* https://github.com/PlayGlowCraft/GS-REGEXChatcontrol
 
 ## Common Issues
 See [Common Issues](common-issues) and how to fix them easily. Also contains general information on how to keep plugin maintained and how to avoid issues in the future.
