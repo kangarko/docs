@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/xACLX93.png" alt="MineBot Logo"/>
 </div>
 
-## MineBot - All-In-In Discord-Minecraft Bot
+## MineBot - All-In-One Discord-Minecraft Bot
 
 MineBot is the all-in-one Discord bot that seamlessly integrates with your Minecraft server. It combines multiple functionalities that would otherwise require several different plugins and bots, providing a streamlined experience for server owners, staff, and players.
 

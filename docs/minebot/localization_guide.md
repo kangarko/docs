@@ -110,7 +110,7 @@ Variables allow you to insert dynamic content into messages. Different contexts 
 | `{ticket_owner_discord_user_mention}` | Mentions ticket creator  | @Username                                                                                                                                                  |
 | `{ticket_category}`                   | Category of the ticket   | "support"                                                                                                                                                  |
 | `{ticket_channel_id}`                 | ID of the ticket channel | 123456789012345678                                                                                                                                         |
-| `{ticket_transcript_url}`             | URL to ticket transcript | [Click to see](https://egehankilicarslan.github.io/minebot-transcript-example/transcript/html/general_support_egehan.kilicarslan_1383785752315433003.html) |
+| `{ticket_transcript_url}`             | URL to ticket transcript | [Click to see](https://egehankilicarslan.github.io/minebot-transcript-example/transcript/html/general_support_egehan.kilicarslan_1383797133039374408.html) |
 | `{max_tickets}`                       | Maximum tickets per user | 1                                                                                                                                                          |
 
 | Variable                   | Description               | Example                      |
