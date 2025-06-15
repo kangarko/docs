@@ -48,25 +48,30 @@ Before running Minebot, make sure you've completed the [Installation Guide](./in
 <TabPanel title="Linux (Other)">
 
 **For NixOS:**
+
 1. **Install Python**: `nix-env -iA nixpkgs.python3`
 2. **Verify Installation**: `python3 --version`
 
 **For OpenSUSE:**
+
 1. **Update Package List**: `sudo zypper refresh`
 2. **Install Python**: `sudo zypper install python3`
 3. **Verify Installation**: `python3 --version`
 
 **For Alpine:**
+
 1. **Update Package List**: `sudo apk update`
 2. **Install Python**: `sudo apk add python3`
 3. **Verify Installation**: `python3 --version`
 
 **For Void:**
+
 1. **Update Package List**: `sudo xbps-install -Syu`
 2. **Install Python**: `sudo xbps-install -S python3`
 3. **Verify Installation**: `python3 --version`
 
 **For Gentoo:**
+
 1. **Update Package List**: `sudo emerge --sync`
 2. **Install Python**: `sudo emerge dev-lang/python`
 3. **Verify Installation**: `python3 --version`
@@ -81,38 +86,23 @@ On some operating systems, you might need to type `python` instead of `python3`.
 ## 2. Navigate to Bot Folder
 
 Open Terminal (or Command Prompt on Windows) and navigate to the folder where you extracted the bot files.
+
 ```sh
 cd path/to/extracted/folder
 ```
 
-## 3. Create a Virtual Environment
+## 3. Install dependencies
+
 ```sh
-python3 -m venv venv
+pip install -r requirements.txt
 ```
 
-## 4. Activate the Virtual Environment
-- **Windows**:
-    ```sh
-    venv\Scripts\activate
-    ```
-- **macOS/Linux**:
-    ```sh
-    source venv/bin/activate
-    ```
-## 5. Start the Bot
-```sh
-nox -s srv
-```
+## 4. Start the Bot
 
-::: info Note: Optional: Install nox
-If you're getting "Unknown command: nox" error, you need to install nox first:
 ```sh
-pip install nox
+python src/__main__.py
 ```
-:::
-
-The bot will take some time to download its dependencies and should be up and running. 
 
 ::: warning
-You need to re-run steps 2, 4 and 5 _from below_ each time you reboot your machine or close the terminal/console window.
+You need to re-run steps 2, 4 each time you reboot your machine or close the terminal/console window.
 :::

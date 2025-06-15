@@ -1,13 +1,13 @@
 # Installation
 
-A complete guide on how to install Minebot for both beginners and experienced users.
+A complete guide on how to install MineBot for both beginners and experienced users.
 
-## Video Guide
+## Video Guide (Deprecated)
 
-Follow along with our step-by-step video tutorial to quickly install and run Minebot:
+Follow along with our step-by-step video tutorial to quickly install and run MineBot:
 
 <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/nlC1TCoK3R8" title="Minebot Installation & Run Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/nlC1TCoK3R8" title="MineBot Installation & Run Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ## 1. Download Bot
@@ -39,46 +39,7 @@ Follow along with our step-by-step video tutorial to quickly install and run Min
   </TabPanel>
 </Tabs>
 
-## 2. Install MinebotConnector
-
-<div class="connector-setup">
-  <div class="connector-header">
-    <div class="connector-icon">🔌</div>
-    <h3>Connect Your Bot to Minecraft</h3>
-    <p>To integrate Minebot with your Minecraft server, follow these steps:</p>
-  </div>
-
-  <div class="connector-steps">
-    <div class="connector-step">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h4>Move the MinebotConnector jar</h4>
-        <p>Copy the <code>MinebotConnector-X.jar</code> file into your Minecraft server's <code>plugins</code> folder.</p>
-      </div>
-    </div>
-    <div class="connector-step">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h4>Restart Your Minecraft Server</h4>
-        <p>Restart your Minecraft server to load the MinebotConnector plugin.</p>
-      </div>
-    </div>
-    <div class="connector-step">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h4>Configure WebSocket Port</h4>
-        <p>Open the file <code>plugins/MinebotConnector/settings.yml</code> on your Minecraft server and set the <code>websocket.port</code> to match the port specified in your Minebot's <code>configuration/settings.yml</code> under <code>server.uri</code>.</p>
-        <p>Make sure to edit the <code>server.uri</code> parameter to match the IP address of your Minecraft server.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-::: warning
-Ensure the WebSocket port you configured is allowed through your firewall. If you're unsure or using a hosting provider, contact your hosting support to confirm which ports are available for use.
-:::
-
-## 3. Setup A Discord Application
+## 2. Setup A Discord Application
 
 Create a new bot on Discord's developer portal using the instructions below.
 
@@ -201,7 +162,7 @@ Anyone with access to this token has **full access to your bot's account**, you 
     <div class="vp-card-content">
       <figure>
         <img src="/images/minebot/image-8.webp" alt="Copy ID" class="zoomable-img">
-        <figcaption>Copy the Discord server id (guild id) that you plan to use with Minebot.</figcaption>
+        <figcaption>Copy the Discord server id (guild id) that you plan to use with MineBot.</figcaption>
       </figure>
     </div>
   </div>
@@ -220,9 +181,92 @@ Anyone with access to this token has **full access to your bot's account**, you 
   </div>
 </div>
 
-## 4. Run The Bot
+## 3. Run The Bot
 
-Congratulations, you've successfully completed the installation steps! To start your bot, please follow the instructions in the [Running Guide](./running.md).
+<div class="connector-setup">
+  <div class="connector-header">
+    <div class="connector-icon">🔐</div>
+    <h3>Generate SSL Certificates</h3>
+    <p>Before proceeding with MineBridge installation, you need to run MineBot once to generate necessary SSL certificates.</p>
+  </div>
+
+  <div class="connector-steps">
+    <div class="connector-step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Start MineBot</h4>
+        <p>Follow the instructions in the <a href="./running.md">Running Guide</a> to start your bot for the first time.</p>
+      </div>
+    </div>
+    <div class="connector-step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Verify Certificate Creation</h4>
+        <p>After running, check that the certificate files have been generated in the <code>configuration/certs/</code> folder.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+::: info
+SSL certificates enable secure communication between MineBot and MineBridge. They are automatically generated the first time you run the bot, so this step is crucial for security.
+:::
+
+## 4. Install MineBridge
+
+<div class="connector-setup">
+  <div class="connector-header">
+    <div class="connector-icon">🔌</div>
+    <h3>Connect Your Bot to Minecraft</h3>
+    <p>To integrate MineBot with your Minecraft server, follow these steps:</p>
+  </div>
+
+  <div class="connector-steps">
+    <div class="connector-step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Set server name</h4>
+        <p>Create a variable called <code>server-name=SERVER NAME</code> in <code>server.properties</code></p>
+      </div>
+    </div>
+    <div class="connector-step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Move the MineBridge jar</h4>
+        <p>Copy the <code>MineBridge-X-X.jar</code> file into your Minecraft server's <code>plugins</code> folder.</p>
+      </div>
+    </div>
+    <div class="connector-step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h4>Copy SSL certificate</h4>
+        <p>Copy the <code>configuration/certs/X.crt</code> file into your Minecraft server's <code>plugins/MineBridge-X/certs</code> folder.</p>
+      </div>
+    </div>
+    <div class="connector-step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h4>Restart Your Minecraft Server</h4>
+        <p>Restart your Minecraft server to load the MineBridge plugin.</p>
+      </div>
+    </div>
+    <div class="connector-step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <h4>Configure WebSocket Port</h4>
+        <p>Open the file <code>plugins/MineBridge-X/settings.yml</code> on your Minecraft server and set the <code>websocket.port</code> to match the port specified in your MineBot's <code>configuration/settings.yml</code> under <code>server.websocket.port</code>.</p>
+        <p>Make sure to edit the <code>websocket.host</code> and <code>websocket.password</code> parameter to match the IP address of your MineBot's <code>server.websocket.host</code> and <code>server.websocket.password</code>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+::: warning
+<code>server-name</code> is not the generic name of your server, it is the name for that server only, for example survival, creative, etc.
+:::
+::: warning
+Ensure the WebSocket port you configured is allowed through your firewall. If you're unsure or using a hosting provider, contact your hosting support to confirm which ports are available for use.
+:::
 
 <style>
 .vp-card-container {
@@ -316,7 +360,7 @@ Congratulations, you've successfully completed the installation steps! To start 
   }
 }
 
-/* MinebotConnector Setup Styles */
+/* MineBridge Setup Styles */
 .connector-setup {
   background-color: var(--vp-c-bg-soft);
   border-radius: 12px;

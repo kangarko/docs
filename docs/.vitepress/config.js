@@ -36,7 +36,7 @@ export default {
       {
         text: 'Bots',
         items: [
-          { text: 'Minebot', link: '/minebot/' }
+          { text: 'MineBot', link: '/minebot/' }
         ]
       }
     ],
@@ -338,7 +338,7 @@ export default {
         {
           text: 'Overview',
           items: [
-            { text: 'What is Minebot', link: '/minebot/' },
+            { text: 'What is MineBot', link: '/minebot/' },
           ]
         },
         {
@@ -351,8 +351,22 @@ export default {
         {
           text: 'Configuring',
           items: [
-            { text: 'Configuration', link: '/minebot/configuration' },
-            { text: 'Localization', link: '/minebot/localization' }
+            { text: 'Boost Reward System', link: '/minebot/boost_reward_system' },
+            { text: 'Bot Activity System', link: '/minebot/bot_activity_system' },
+            { text: 'Command System', link: '/minebot/command_system' },
+            { text: 'Database System', link: '/minebot/database_system' },
+            { text: 'Minecraft Synchronization', link: '/minebot/minecraft_synchronization' },
+            { text: 'Reward System', link: '/minebot/reward_system' },
+            { text: 'Suggestion System', link: '/minebot/suggestion_system' },
+            { text: 'WebSocket System', link: '/minebot/websocket_system' },
+            { text: 'Wiki System', link: '/minebot/wiki_system' }
+          ]
+        },
+        {
+          text: 'Localization',
+          items: [
+            { text: 'Localization Guide', link: '/minebot/localization_guide' },
+            { text: 'Message System', link: '/minebot/message_system' }
           ]
         }
       ]
