@@ -1,205 +1,208 @@
 <!-- Layout.vue -->
 <script setup>
-import DefaultTheme from 'vitepress/theme'
-import { useRoute, useData } from 'vitepress'
-import { computed, watch, onMounted, nextTick, ref } from 'vue'
+import DefaultTheme from "vitepress/theme";
+import { useRoute, useData } from "vitepress";
+import { computed, watch, onMounted, nextTick, ref } from "vue";
 
-const { Layout } = DefaultTheme
-const route = useRoute()
-const { frontmatter } = useData()
+const { Layout } = DefaultTheme;
+const route = useRoute();
+const { frontmatter } = useData();
 
 // Check if we're in iframe mode
 const isIframeMode = computed(() => {
-  if (typeof window === 'undefined') return false
-  const urlParams = new URLSearchParams(window.location.search)
-  return urlParams.get('iframe') === 'true'
-})
+  if (typeof window === "undefined") return false;
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("iframe") === "true";
+});
 
 // Extract product name from URL path
 const currentProduct = computed(() => {
-  const path = route.path.split('/')
+  const path = route.path.split("/");
   // If there's a path segment after the first slash, use it as the product name
   if (path.length > 1 && path[1]) {
-    return path[1].toLowerCase()
+    return path[1].toLowerCase();
   }
-  return null
-})
+  return null;
+});
 
 // Format the product name for display (capitalize words)
 const formattedProductName = computed(() => {
-  if (!currentProduct.value) return null
-  
+  if (!currentProduct.value) return null;
+
   // Special cases for specific plugin names
   const specialFormats = {
-    'chatcontrol': 'ChatControl',
-    'corearena': 'CoreArena'
-  }
-  
+    chatcontrol: "ChatControl",
+    corearena: "CoreArena",
+    minebot: "MineBot",
+  };
+
   // Return special format if defined, otherwise capitalize first letter
-  return specialFormats[currentProduct.value] || 
-         currentProduct.value.charAt(0).toUpperCase() + currentProduct.value.slice(1)
-})
+  return (
+    specialFormats[currentProduct.value] ||
+    currentProduct.value.charAt(0).toUpperCase() + currentProduct.value.slice(1)
+  );
+});
 
 // Function to add product header to the sidebar
 const addProductHeader = () => {
   nextTick(() => {
     // Check if running in browser environment
-    if (typeof window === 'undefined' || typeof document === 'undefined') {
+    if (typeof window === "undefined" || typeof document === "undefined") {
       return;
     }
 
     // Always remove any existing header first
-    const existingHeader = document.querySelector('.sidebar-header')
+    const existingHeader = document.querySelector(".sidebar-header");
     if (existingHeader) {
-      existingHeader.remove()
+      existingHeader.remove();
     }
-    
+
     // Only add the header if we have a valid product
     if (!currentProduct.value) {
-      return
+      return;
     }
-    
-    const sidebar = document.querySelector('.VPSidebar')
-    if (!sidebar) return
-    
+
+    const sidebar = document.querySelector(".VPSidebar");
+    if (!sidebar) return;
+
     // Create header element
-    const header = document.createElement('div')
-    header.className = 'sidebar-header'
-    header.id = `sidebar-header-${currentProduct.value}` // Add unique ID for debugging
-    
+    const header = document.createElement("div");
+    header.className = "sidebar-header";
+    header.id = `sidebar-header-${currentProduct.value}`; // Add unique ID for debugging
+
     // Create the flexbox container
-    const flexContainer = document.createElement('div')
-    flexContainer.className = 'product-header-flex'
-    
+    const flexContainer = document.createElement("div");
+    flexContainer.className = "product-header-flex";
+
     // Create image element
-    const img = document.createElement('img')
-    img.className = 'product-icon'
-    
+    const img = document.createElement("img");
+    img.className = "product-icon";
+
     // Special handling for "general" section
-    if (currentProduct.value === 'general') {
-      img.src = `/images/plugin-icon/placeholder.svg` // Use the SVG placeholder
-      img.alt = 'General'
-      
+    if (currentProduct.value === "general") {
+      img.src = `/images/plugin-icon/placeholder.svg`; // Use the SVG placeholder
+      img.alt = "General";
+
       // Create product name element with "General" text
-      const nameElement = document.createElement('div')
-      nameElement.className = 'product-name'
-      nameElement.textContent = 'General'
-      
+      const nameElement = document.createElement("div");
+      nameElement.className = "product-name";
+      nameElement.textContent = "General";
+
       // Assemble the header
-      flexContainer.appendChild(img)
-      flexContainer.appendChild(nameElement)
-      header.appendChild(flexContainer)
+      flexContainer.appendChild(img);
+      flexContainer.appendChild(nameElement);
+      header.appendChild(flexContainer);
     } else {
       // Normal case for other product sections
-      img.src = `/images/plugin-icon/${currentProduct.value}.png`
-      img.alt = formattedProductName.value
-      
+      img.src = `/images/plugin-icon/${currentProduct.value}.png`;
+      img.alt = formattedProductName.value;
+
       // Add onerror handler to hide header if image doesn't exist
       img.onerror = () => {
-        header.style.display = 'none'
-      }
-      
+        header.style.display = "none";
+      };
+
       // Create product name element
-      const nameElement = document.createElement('div')
-      nameElement.className = 'product-name'
-      nameElement.textContent = formattedProductName.value
-      
+      const nameElement = document.createElement("div");
+      nameElement.className = "product-name";
+      nameElement.textContent = formattedProductName.value;
+
       // Assemble the header
-      flexContainer.appendChild(img)
-      flexContainer.appendChild(nameElement)
-      header.appendChild(flexContainer)
+      flexContainer.appendChild(img);
+      flexContainer.appendChild(nameElement);
+      header.appendChild(flexContainer);
     }
-    
+
     // Insert header at the top of sidebar
-    const sidebarNav = sidebar.querySelector('.VPSidebarNav')
+    const sidebarNav = sidebar.querySelector(".VPSidebarNav");
     if (sidebarNav) {
-      sidebar.insertBefore(header, sidebarNav)
+      sidebar.insertBefore(header, sidebarNav);
     } else {
-      sidebar.prepend(header)
+      sidebar.prepend(header);
     }
 
     // Fix any curtains that might be hiding our header
-    const curtains = document.querySelectorAll('.aside-curtain, .curtain')
-    curtains.forEach(curtain => {
-      curtain.style.display = 'none'
-    })
-  })
-}
+    const curtains = document.querySelectorAll(".aside-curtain, .curtain");
+    curtains.forEach((curtain) => {
+      curtain.style.display = "none";
+    });
+  });
+};
 
 // Function to handle iframe mode
 const handleIframeMode = () => {
-  if (!isIframeMode.value || typeof document === 'undefined') return
-  
+  if (!isIframeMode.value || typeof document === "undefined") return;
+
   nextTick(() => {
     // Add iframe-mode class to body for CSS targeting
-    document.body.classList.add('iframe-mode')
-    
+    document.body.classList.add("iframe-mode");
+
     // Hide navigation elements
-    const navbar = document.querySelector('.VPNav')
-    if (navbar) navbar.style.display = 'none'
-    
-    const sidebar = document.querySelector('.VPSidebar')
-    if (sidebar) sidebar.style.display = 'none'
-    
+    const navbar = document.querySelector(".VPNav");
+    if (navbar) navbar.style.display = "none";
+
+    const sidebar = document.querySelector(".VPSidebar");
+    if (sidebar) sidebar.style.display = "none";
+
     // Adjust layout to use full width
-    const layout = document.querySelector('.VPLayout')
-    if (layout) layout.classList.add('iframe-layout')
-    
+    const layout = document.querySelector(".VPLayout");
+    if (layout) layout.classList.add("iframe-layout");
+
     // Hide footer
-    const footer = document.querySelector('.VPFooter')
-    if (footer) footer.style.display = 'none'
-    
+    const footer = document.querySelector(".VPFooter");
+    if (footer) footer.style.display = "none";
+
     // Remove any extra padding
-    const doc = document.querySelector('.VPDoc')
+    const doc = document.querySelector(".VPDoc");
     if (doc) {
-      doc.style.paddingTop = '0'
-      doc.style.paddingBottom = '0'
+      doc.style.paddingTop = "0";
+      doc.style.paddingBottom = "0";
     }
-    
+
     // Get page title - try to find the h1 heading first
-    let pageTitle = ''
-    const h1 = document.querySelector('.VPContent h1')
+    let pageTitle = "";
+    const h1 = document.querySelector(".VPContent h1");
     if (h1) {
-      pageTitle = h1.textContent
+      pageTitle = h1.textContent;
     } else if (document.title) {
       // Fall back to document title
-      pageTitle = document.title.split('|')[0].trim() // Remove site name if present
+      pageTitle = document.title.split("|")[0].trim(); // Remove site name if present
     }
-    
+
     // Add a small "Loaded in popup" indicator
-    const container = document.querySelector('.container')
+    const container = document.querySelector(".container");
     if (container) {
-      const indicator = document.createElement('div')
-      indicator.className = 'iframe-indicator'
-      
+      const indicator = document.createElement("div");
+      indicator.className = "iframe-indicator";
+
       // If we have a page title, include it
       if (pageTitle) {
-        indicator.innerHTML = `<span class="iframe-indicator-text">Viewing in popup</span>`
+        indicator.innerHTML = `<span class="iframe-indicator-text">Viewing in popup</span>`;
       } else {
-        indicator.textContent = 'Viewing in popup'
+        indicator.textContent = "Viewing in popup";
       }
-      
-      container.prepend(indicator)
+
+      container.prepend(indicator);
     }
-  })
-}
+  });
+};
 
 onMounted(() => {
-  addProductHeader()
-  handleIframeMode()
-})
+  addProductHeader();
+  handleIframeMode();
+});
 
 // Re-add header when route changes
 watch(
   () => route.path,
   () => {
     if (!isIframeMode.value) {
-      addProductHeader()
+      addProductHeader();
     }
-    handleIframeMode()
+    handleIframeMode();
   },
   { immediate: true } // Run the watcher immediately after setup
-)
+);
 </script>
 
 <template>
@@ -208,7 +211,8 @@ watch(
 
 <style>
 /* Override the VitePress curtain styles */
-.aside-curtain, .curtain {
+.aside-curtain,
+.curtain {
   display: none !important;
 }
 
@@ -294,4 +298,4 @@ watch(
 .iframe-mode .aside {
   display: none !important;
 }
-</style> 
+</style>
