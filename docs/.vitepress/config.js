@@ -358,6 +358,7 @@ export default {
             { text: 'Minecraft Synchronization', link: '/minebot/minecraft_synchronization' },
             { text: 'Reward System', link: '/minebot/reward_system' },
             { text: 'Suggestion System', link: '/minebot/suggestion_system' },
+            { text: 'Ticket System', link: '/minebot/ticket_system' },
             { text: 'WebSocket System', link: '/minebot/websocket_system' },
             { text: 'Wiki System', link: '/minebot/wiki_system' }
           ]
