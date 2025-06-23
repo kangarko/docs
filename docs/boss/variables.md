@@ -17,6 +17,9 @@ The following variables require a nearby Boss in the radius configured in settin
 | `%boss_alias%` | Closest boss' alias. Colors are supported. |
 | `%boss_health%` | Closest boss' health. |
 | `%boss_top_damager%` | Closest boss' top damager player name. |
+| `%boss_top_damager_[1-10]%` | Closest boss' top damager player name from 1 to 10. |
+| `%boss_top_damage%` | Closest boss' top damage in HP caused by top damager. |
+| `%boss_top_damage_[1-10]%` | Closest boss' top damage in HP from 1 to 10. |
 | `%boss_damage%` | Closest boss' top damage. |
 | `%boss_location_x%` | Closest boss' X position. |
 | `%boss_location_y%` | Closest boss' Y position. |
