@@ -214,6 +214,112 @@ then command channel send ally $2
 then deny
 ```
 
+## Integrating with Factions
+Create the following channels in settings.yml 
+
+```yaml
+    faction:
+      Format: faction-chat
+      Party: factions-faction
+    ally:
+      Format: ally-chat
+      Party: factions-ally
+    enemy:
+      Format: enemy-chat
+      Party: factions-enemy
+    truce:
+      Format: truce-chat
+      Party: factions-truce
+```
+
+Now place this into rules/commands.rs
+
+```rs
+# -----------------------------------------------------------------------------------------------
+# Create /g, /f, /fa, /fe & /ft commands that toggle & sends messages to those channels.
+# -----------------------------------------------------------------------------------------------
+
+#Catch "/g" and join the standard channel.
+match ^([/]g)$
+dont verbose
+strip colors false
+strip accents false
+then command channel join standard
+then deny
+
+#Catch "/f" and join the faction channel.
+match ^([/]f)$
+dont verbose
+strip colors false
+strip accents false
+then command channel join faction
+then deny
+
+#Catch "/fa" and join the faction ally channel.
+match ^([/]fa)$
+dont verbose
+strip colors false
+strip accents false
+then command channel join ally
+then deny
+
+#Catch "/fe" and join the faction enemy channel.
+match ^([/]fe)$
+dont verbose
+strip colors false
+strip accents false
+then command channel join enemy
+then deny
+
+#Catch "/ft" and join the faction truce channel.
+match ^([/]ft)$
+dont verbose
+strip colors false
+strip accents false
+then command channel join truce
+then deny
+
+#Catch "/g <message>" and redirect to the standard channel.
+match ^([/]g) (.*)
+dont verbose
+strip colors false
+strip accents false
+then command channel send standard $2
+then deny
+
+#Catch "/f <message>" and redirect to the faction channel.
+match ^([/]f) (.*)
+dont verbose
+strip colors false
+strip accents false
+then command channel send faction $2
+then deny
+
+#Catch "/fa <message>" and redirect to the faction ally channel.
+match ^([/]fa) (.*)
+dont verbose
+strip colors false
+strip accents false
+then command channel send ally $2
+then deny
+
+#Catch "/fe <message>" and redirect to the faction enemy channel.
+match ^([/]fe) (.*)
+dont verbose
+strip colors false
+strip accents false
+then command channel send enemy $2
+then deny
+
+#Catch "/ft <message>" and redirect to the faction truce channel.
+match ^([/]ft) (.*)
+dont verbose
+strip colors false
+strip accents false
+then command channel send truce $2
+then deny
+```
+
 ## Matching chat and using PlaceholderAPI
 Here is an example of how to use with PlaceholderAPI to prevent vanished players from accidentally chatting in a given chat channel (here: standard). It should be fairly self-explanatory.
 
