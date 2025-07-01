@@ -33,10 +33,10 @@ You can also set a chance for the command such that it can run rarely or not muc
 Alongside any typical commands we also support the following special syntax:
 
 - `tell <message>` - Send all players within 10 blocks' radius the specified message. Separate multiple lines with |.
-- `tell-damagers <message>` - Send a message to all players who damaged the boss. You can use {damager} for each damager's name and {damage} for the damage he did. Example: `tell-damagers &7Hey &6{damager}&7, you dealt &c{damage} damage &7to &a{boss_name}&7!` Separate multiple with |.
-- `tell-damagers-list <format> or <title>|<format>` - Works like tell-damagers but instead of sending one message to each damager, it sends a list of all damagers to each player so they see how up you rank compared to other players. In the message, you specify the format. You can use {order} to get the number, {damager} and {damage} as well as other [Boss variables](/boss/variables).
+- `tell-damagers <message>` - Send a message to all players who damaged the boss. You can use {damager} for each damager's name and {damage} or {damage_percent} for the damage he did. Example: `tell-damagers &7Hey &6{damager}&7, you dealt &c{damage} damage &7to &a{boss_name}&7!` Separate multiple with |.
+- `tell-damagers-list <format> or <title>|<format>` - Works like tell-damagers but instead of sending one message to each damager, it sends a list of all damagers to each player so they see how up you rank compared to other players. In the message, you specify the format. You can use {order} to get the number, {damager}, {damage} or {damage_percent} as well as other [Boss variables](/boss/variables).
 
-You can specify the header title of the messages using |, for example: `tell-damagers-list Who Hurt {boss_name}|&f#{order}. &6{damager} &f- &c{damage}` will make the message look like so:
+You can specify the header title of the messages using |, for example: `tell-damagers-list Who Hurt {boss_name}|&f#{order}. &6{damager} &f- &c{damage} ({damage_percent})` will make the message look like so:
 
 ![Damagers List Example](https://i.imgur.com/ws7NviD.png)
 
