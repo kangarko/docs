@@ -1,5 +1,7 @@
 # Messages
 
+**IMPORTANT: To use messages, please enable them in settings.yml under Messages.Apply_On first!**
+
 Inside the messages/ folder, you will find files for
 
 * join messages (join.rs)
