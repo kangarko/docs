@@ -111,6 +111,26 @@ Sometimes we provide more variables than the ones above, such as `{message}` whe
 | `{prefix_announce}` | Return the announce prefix from your localization. |
 | `{data_X}` | Returns a custom variable. This is set in rules with data-related operators, see [Rules](rules). See rules/chat.rs for example (search for @bot name demo rule). |
 
+## {sender_X}, {receiver_X}, and {killer_X} Variables
+
+Starting with version 11.0.0, the plugin supports dynamic placeholders that automatically adapt to message context:
+
+- `{sender_X}` - References the message sender's data  
+- `{receiver_X}` - References the message recipient's data  
+- `{killer_X}` - References the killer's data (where applicable)
+
+The `X` placeholder can be replaced with any of the following synced player data fields:
+
+| Variable | Description |
+|----------|-------------|
+| `_name` | Player's name |
+| `_prefix` | Player's prefix |
+| `_suffix` | Player's suffix |
+| `_group` | Player's primary permission group |
+| `_server` | Current server the player is connected to |
+| `_is_vanished` | Returns `true` if player is vanished, otherwise `false` |
+| `_is_afk` | Returns `true` if player is AFK, otherwise `false` |
+
 ## PlaceholderAPI Syntax
 
 Starting ChatControl 11, always use the `{syntax}` in your variables, even in extensions requiring %syntax%.
