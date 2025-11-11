@@ -73,7 +73,7 @@ Supported database types:
       <td>Check the BuiltByBit compatibility table for your specific plugin.</td>
     </tr>
     <tr>
-      <td><strong>Spigot Forks</strong><br>(UniverseSpigot, PandaSpigot, etc.)</td>
+      <td><strong>Spigot Forks</strong><br>(PandaSpigot, etc.)</td>
       <td>⚠️</td>
       <td>Should work, but not officially tested. We access minimal NMS and have protections to prevent data loss. When experiencing issues, <strong>always test on Paper first</strong> before opening a support ticket.</td>
     </tr>
