@@ -16,6 +16,12 @@ Most features such as channels, private messages, nicks, warning points etc. are
 MySQL database is required for proper proxy functionality.
 :::
 
+::: warning Velocity Configuration Required
+A change is required in your Velocity proxy configuration for inter-server communication.
+
+Set "bungee-plugin-message-channel" to "false" in your "velocity.toml" file. This is necessary for the proxy to correctly broadcast on the BungeeCord channel and ensure all plugins function as intended.
+:::
+
 ## Installation Guide
 
 ### 1. Install Proxy Addons
