@@ -26,7 +26,7 @@ The Java compiler will not be able to determine which version of the library it'
 
 Here is an example of ChatControl loading with HexNicks plugin on legacy server version, this is how a crash will appear in the game console:
 
-![JAR hell crash example](https://i.imgur.com/w748GUm_d.webp?maxwidth=1520&fidelity=grand)
+![JAR hell crash example](/images/chatcontrol/w748GUm_d.webp)
 
 Upon decompiling HexNicks, we found it shaded an outdated Adventure library without relocation (the path `net.kyori.adventure` should have been changed). Java compiler has thus given ChatControl the outdated library to use, leading to its crash:
 
@@ -34,11 +34,11 @@ Upon decompiling HexNicks, we found it shaded an outdated Adventure library with
 **UPDATE**: The issue appears to have been resolved in the most recent versions of HexNicks.
 :::
 
-![HexNicks decompiled code showing improper shading](https://i.imgur.com/5FB4PlM.png)
+![HexNicks decompiled code showing improper shading](/images/chatcontrol/5FB4PlM.png)
 
 Here is an example of DiscordSRV, a well-made plugin shading the Adventure library in a relocated package, meaning ChatControl will properly use the official version of the library and Java knows that it should only serve DiscordSRV the library it ships with:
 
-![DiscordSRV decompiled code showing proper shading with relocation](https://i.imgur.com/ysgDNIB.png)
+![DiscordSRV decompiled code showing proper shading with relocation](/images/chatcontrol/ysgDNIB.png)
 
 ## The solution is simple
 

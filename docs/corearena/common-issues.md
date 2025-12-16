@@ -54,7 +54,7 @@ If you are using `monsters` as your `next_phase_mode` in arenas.yml, please kill
 
 See this section in your arena.yml file:
 
-![Phase commands example](https://i.imgur.com/atVztMh.png)
+![Phase commands example](/images/corearena/atVztMh.png)
 
 ## Text Formatting
 

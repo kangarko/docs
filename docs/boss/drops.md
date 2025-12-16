@@ -4,13 +4,13 @@ Boss uses an extensive drop system with drop chances, and PvP drops to players w
 
 ## Death settings
 
-![Death Settings](https://i.imgur.com/rXsJxK5.png)
+![Death Settings](/images/boss/rXsJxK5.png)
 
 You can configure dropped items, dropped experience and Boss reinforcement when a Boss dies.
 
 ## Item drops
 
-![Item Drops](https://i.imgur.com/1hWHOEO.png)
+![Item Drops](/images/boss/1hWHOEO.png)
 
 ### Vanilla Drops
 
@@ -20,7 +20,7 @@ You can toggle whether or not vanilla Minecraft rules should make Boss drop item
 
 Drag and drop items into the container for them to be dropped. Then set their drop chance for each item:
 
-![Drop Chance](https://i.imgur.com/YHcocoV.png)
+![Drop Chance](/images/boss/YHcocoV.png)
 
 ### PvP drops to reward players who did the most damage to Boss
 
@@ -28,7 +28,7 @@ You can create so-called "order player drops" and set a time limit. For example,
 
 You can even reward each of these players completely different items and run commands for them!
 
-![PvP Drops](https://i.imgur.com/EoRS08y.png)
+![PvP Drops](/images/boss/EoRS08y.png)
 
 ## Developer API
 If you are a power user, we offer an extensive API so that you can take over the drop system completely.

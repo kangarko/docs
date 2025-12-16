@@ -34,17 +34,17 @@ Configure DiscordSRV as per [this guide](https://www.spigotmc.org/resources/disc
 
 **NOTICE:** The image below may get outdated really fast, please check [this](https://www.spigotmc.org/resources/discordsrv.18494/) link for up to date info on connecting discord.
 
-![DiscordSRV configuration screenshot](https://i.imgur.com/8eeEtFs.png)
+![DiscordSRV configuration screenshot](/images/chatcontrol/8eeEtFs.png)
 
 ### 4) Link Channels in DiscordSRV
 
 Copy the channel ID of your channels you want connected. Open up Discord client, right click your channel and select _Copy ID_. 
 
-![Discord Copy ID context menu](https://i.imgur.com/uZvFFYT.png)
+![Discord Copy ID context menu](/images/chatcontrol/uZvFFYT.png)
 
 Now open up config.yml in plugins/DiscordSRV. Insert `, "channel-name": "channel-id"` at the end of Channels or without the initial ',' in case your Channels are empty. **Use the exact channel names as you have on Discord.** This is how multiple connected channels look like:
 
-![DiscordSRV channels configuration](https://i.imgur.com/JDCIaZY.png)
+![DiscordSRV channels configuration](/images/chatcontrol/JDCIaZY.png)
 
 ### 5) Link Channels in ChatControl
 
@@ -54,7 +54,7 @@ Finally, open ChatControl's settings.yml, go to Channels.List section and paste 
 **Do this for ALL your servers that you want to link to the Discord channel.**
 :::
 
-![ChatControl channel configuration](https://i.imgur.com/h6hAXxk.png)
+![ChatControl channel configuration](/images/chatcontrol/h6hAXxk.png)
 
 ### 6) (Optional) Send Discord Messages from Rules
 

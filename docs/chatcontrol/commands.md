@@ -23,16 +23,16 @@ The short variant for **/chatcontrol** is **/chc** and **/ch** for **/channel** 
 
 Type `/chc perms` to view all available command permissions.
 
-![Permission command output showing all available permissions](https://i.imgur.com/W4UTeIV.png)
+![Permission command output showing all available permissions](/images/chatcontrol/W4UTeIV.png)
 
 You can also view the required permission directly in the error message when you attempt to execute a command you don't have access to.
 
-![Permission error message](https://i.imgur.com/9srxNEm.png)
+![Permission error message](/images/chatcontrol/9srxNEm.png)
 
 ## Main Commands
 
-![Main commands list first part](https://i.imgur.com/zmrU8KJ.png)
-![Main commands list second part](https://i.imgur.com/BAN8xwA.png)
+![Main commands list first part](/images/chatcontrol/zmrU8KJ.png)
+![Main commands list second part](/images/chatcontrol/BAN8xwA.png)
 
 To see more on how commands works and how it can be used, simply hover your mouse over it and additional information will follow.
 
@@ -100,7 +100,7 @@ Scans all files and converts ChatControl 10 syntax to 11. This command won't cha
 
 ## Channels Commands
 
-![Channels commands list](https://i.imgur.com/rFglGaw.png)
+![Channels commands list](/images/chatcontrol/rFglGaw.png)
 
 <div class="commands-section">
 

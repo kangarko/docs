@@ -3,7 +3,7 @@
 Using [Rules](rules) and [Formats](formats) you can create different types of chat bots to help your players learn how things work on your server. You can also create advanced bots to store data.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/mLZCXbZ.gif" alt="Chat bot demonstration" />
+  <img src="/images/chatcontrol/mLZCXbZ.gif" alt="Chat bot demonstration" />
 </div>
 
 ---

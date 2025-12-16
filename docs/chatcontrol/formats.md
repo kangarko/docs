@@ -13,7 +13,7 @@ We support PlaceholderAPI and thousands of variables you can use in your chat me
 You can also allow players to use certain placeholders in chat, such as "[item]". 
 
 <div class="image-container">
-  <img src="https://i.imgur.com/c1AiZ6H.gif" alt="Chat placeholders demonstration" />
+  <img src="/images/chatcontrol/c1AiZ6H.gif" alt="Chat placeholders demonstration" />
 </div>
 
 See [Variables](variables).
@@ -30,7 +30,7 @@ That's it.
 I really recommend you check out formats/chat.yml to see an example format. Don't worry, this is a beast of a format so don't expect to be an overnight expert on it. We start very simple, by creating a "first-format.yml" file in formats/ folder.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/xtF0sVV.png" alt="First format example" />
+  <img src="/images/chatcontrol/xtF0sVV.png" alt="First format example" />
 </div>
 
 Now we have a fully finished format we can use elsewhere, such as in [Channels](channels) by setting the "Format" key in channel configuration to "first-format".
@@ -38,7 +38,7 @@ Now we have a fully finished format we can use elsewhere, such as in [Channels](
 This format has no variables and so it will always print "Hello World". It has two parts that are meaningless, so let's add some variables and effects. I also renamed the format parts to be more appropriately named.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/o90ybjV.png" alt="Chat format example" />
+  <img src="/images/chatcontrol/o90ybjV.png" alt="Chat format example" />
 </div>
 
 Such format is suitable to use as a chat message. It has three parts. The Prefix part, which simply prints the player prefix (if the player has it, it will also append a space " " at the end thanks to the "+" you see at the variable end). It also shows hover information when hovering over player's prefix with your mouse, and opens the given URL when clicking on it.
@@ -134,7 +134,7 @@ Syntax: "&lt;fileName.&lt;fileExtension&gt;&gt;"
 Example: Image_File: creeper-head.png - This will pull the creeper-head.png file from images/ folder in ChatControl folder.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/yn2zxcT.png" alt="Image file example" />
+  <img src="/images/chatcontrol/yn2zxcT.png" alt="Image file example" />
 </div>
 
 #### "Image_Head"
@@ -169,7 +169,7 @@ Example: 'Image_Type: DARK_SHADE'
 
 Example in action: 
 <div class="image-container">
-  <img src="https://i.imgur.com/SuHB3JS.png" alt="Image type example" />
+  <img src="/images/chatcontrol/SuHB3JS.png" alt="Image type example" />
 </div>
 
 ## TIP: Making Player Prefixes

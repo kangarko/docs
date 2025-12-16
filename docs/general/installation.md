@@ -82,7 +82,7 @@ aliases:
 
 MineAcademy plugins feature an automatic update system between versions of the same generation. Your configuration files will be automatically updated and any changes will be reported in the console:
 
-![Update notification example](https://i.imgur.com/v5uydb8.png)
+![Update notification example](/images/general/v5uydb8.png)
 
 ::: tip Backup Your Configurations
 Before updating, it's always a good practice to back up your configuration files.

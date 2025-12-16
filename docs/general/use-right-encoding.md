@@ -36,7 +36,7 @@ When using Notepad++:
 4. If it shows another encoding (like ANSI), change it by selecting:
    - Encoding → Convert to UTF-8
 
-![Notepad++ encoding settings](https://i.imgur.com/vcjf6TU.png)
+![Notepad++ encoding settings](/images/general/vcjf6TU.png)
 
 ### For macOS and Linux Users
 
@@ -45,7 +45,7 @@ When using Notepad++:
 - Clean interface
 - Available on all major platforms
 
-![Sublime Text on macOS](https://i.imgur.com/n7kU90L.png)
+![Sublime Text on macOS](/images/general/n7kU90L.png)
 
 [**Visual Studio Code**](https://code.visualstudio.com/) is also excellent:
 - Free and open-source
@@ -80,7 +80,7 @@ If your server displays encoding errors at startup, try adding this Java flag to
 java -Xmx4G -Dfile.encoding=UTF-8 -jar server.jar nogui
 ```
 
-![Java startup parameters with UTF-8 flag](https://i.imgur.com/a2kc6YP.png)
+![Java startup parameters with UTF-8 flag](/images/general/a2kc6YP.png)
 
 ---
 

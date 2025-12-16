@@ -1,6 +1,6 @@
 # Skills
 
-![Skills Menu](https://i.imgur.com/xcUtlFe.png)
+![Skills Menu](/images/boss/xcUtlFe.png)
 
 ::: tip What are Skills?
 Skills are special abilities that make your bosses more dynamic and engaging, significantly enhancing player experience on your server. Each Boss can have unlimited skills, with customizable activation timing based on random delays between minimum and maximum values.

@@ -5,7 +5,7 @@ Rules are the #1 way to filter anything in your chat.
 Rules are used to match [advertisements](https://mineacademy.org) in messages, swear words and other prohibited stuff, but so much more. You can send custom messages based on player chat or command output and replace 10s of other plugins with our unique rules system.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/2GeqdSJ.gif" alt="Rules filter demonstration" />
+  <img src="/images/chatcontrol/2GeqdSJ.gif" alt="Rules filter demonstration" />
 </div>
 
 ::: tip New: Introducing web-based rules creator
@@ -59,7 +59,7 @@ Below is an example of a filter which blocks the word "fuck", and is also immune
 `match \b(f+[\W\d_]*[u_!@#$%^&*]+[\W\d_]*c+[\W\d_]*k+)(?=[^\s]*\b)`
 
 <div class="image-container">
-  <img src="https://i.imgur.com/XgGtbKo.png" alt="Efficient rules example" />
+  <img src="/images/chatcontrol/XgGtbKo.png" alt="Efficient rules example" />
 </div>
 
 The bold underline letters match the word. Notice how we also match _!@#$%^&*]+[\ letters as replacements for u, such that f_ck or f#ck is also caught. The last brown section will match the word inside another such as fucker, but will properly stop the filter in a sentence: "fuck you" will make only "fuck" matched and stop in the whitespace.
@@ -643,7 +643,7 @@ save key player-name <key>
 For example, here's a complete sequence of rules used to create simple chat bot. Player then type @bot <param> and then can save their own name.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/VGDzBxV.png" alt="Chat bot rules example" />
+  <img src="/images/chatcontrol/VGDzBxV.png" alt="Chat bot rules example" />
 </div>
 
 #### `ignore perm <permission>`

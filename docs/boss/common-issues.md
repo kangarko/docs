@@ -28,7 +28,7 @@ This page covers common issues and gives you tips on maintaining stability over 
 
 Use Spawn Eggs to often discover why Bosses are not spawning, we will give you a smart message so you avoid wasting time:
 
-![Spawn Egg Message](https://i.imgur.com/DelmK5F.png)
+![Spawn Egg Message](/images/boss/DelmK5F.png)
 
 ### Spawning Configuration Questions
 
@@ -88,7 +88,7 @@ Give your players negative `boss.use.spawneregg` permission for that world. For 
 ## Interface Issues
 
 **Odd creative inventory issues (ViaVersion/ProtocolSupport) / Menu doesn't work properly / Items disappear in the menu!**  
-Unfortunately this is unrelated to Boss but how these packet hacking plugins handle inventories: https://i.imgur.com/L7iKd90.png This is a wontfix for us unfortunately, you'd have to switch into survival or clear your inventory.
+Unfortunately this is unrelated to Boss but how these packet hacking plugins handle inventories: /images/boss/L7iKd90.png This is a wontfix for us unfortunately, you'd have to switch into survival or clear your inventory.
 
 Also, plugins such as CMI or OpenInv may cause this, always make sure to test without them before reporting issue on our end.
 

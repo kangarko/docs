@@ -11,7 +11,7 @@ This page covers ChatControl's folder and its files. We have quite a lot of file
 Here are (almost) all files that will appear in your ChatControl folder.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/Moi8ZPe.png" alt="ChatControl Folder" />
+  <img src="/images/chatcontrol/Moi8ZPe.png" alt="ChatControl Folder" />
 </div>
 
 ### Folders

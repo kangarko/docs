@@ -14,15 +14,15 @@ To use commands, simply execute them in your console or the in-game chat. Many c
 
 Type /protect perms to view all available command permissions.
 
-![Perms](https://i.imgur.com/J8j7nt0.png)
+![Perms](/images/protect/J8j7nt0.png)
 
 You can also view the required permission directly in the error message when you attempt to execute a command you don't have access to.
 
-![Permission](https://i.imgur.com/LgEfscQ.png)
+![Permission](/images/protect/LgEfscQ.png)
 
 # Main Commands
 
-![Commands](https://i.imgur.com/WSR1NqZ.png)
+![Commands](/images/protect/WSR1NqZ.png)
 
 To see more on how commands works and how it can be used, simply hover your mouse over it and additional information will follow. 
 
@@ -42,14 +42,14 @@ View player inventory, armor or enderchest content. Offline players are supporte
 Utility command to forcefully close an opened inventory for a player.
 
 ### /protect iteminfo
-Show your or a player's [held item properties](https://i.imgur.com/zVDGsUN.png): NBT tag, material, id, data, durability and Bukkit toString()
+Show your or a player's [held item properties](/images/protect/zVDGsUN.png): NBT tag, material, id, data, durability and Bukkit toString()
 
 ### /protect logs
 A complex command to view database logs for confiscated items, spied commands or shop transactions. Run `/protect logs <tableType> ?` to view all of the filtering options.
 
 There are many options, example: `/protect logs items date:1h location:here,10` will find all confiscated items in the last hour at your location within a 10-block radius.
 
-![Sample filter](https://i.imgur.com/PxMg9JA.png)
+![Sample filter](/images/protect/PxMg9JA.png)
 
 ### /protect perms
 Display all plugin's permissions.

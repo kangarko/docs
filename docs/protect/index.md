@@ -1,4 +1,4 @@
-![Protect Logo](https://i.imgur.com/nlgWdhn.jpeg)
+![Protect Logo](/images/protect/nlgWdhn.jpeg)
 
 ## Welcome to the Protect wiki! 
 

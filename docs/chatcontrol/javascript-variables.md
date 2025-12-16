@@ -5,7 +5,7 @@ ChatControl supports dynamic, high performance variables you create! They can be
 Variables can not only be used to display information, but because you can write your own full code in JavaScript to display them, they can also do whatever you would wish for your players/server, such as sneaking in code to send sounds or spawn monsters.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/6oSxWPr.gif" alt="Item variable demonstration" />
+  <img src="/images/chatcontrol/6oSxWPr.gif" alt="Item variable demonstration" />
 </div>
 
 ## Variable Types

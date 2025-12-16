@@ -3,7 +3,7 @@
 Using logs, you can see what happened in game while you were offline. If you have remote database enabled (in database.yml), these logs will go directly to your database.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/xnqgICe.gif" alt="Logs demonstration" />
+  <img src="/images/chatcontrol/xnqgICe.gif" alt="Logs demonstration" />
 </div>
 
 You can use logs on these aspects of game:

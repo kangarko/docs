@@ -25,7 +25,7 @@ An arena snapshot captures all blocks within the region at a specific moment.
 
 ## Making Snapshots
 
-![Taking Snapshot](https://i.imgur.com/aQitSdh.png)
+![Taking Snapshot](/images/corearena/aQitSdh.png)
 
 To create snapshots:
 1. Get the Region Tool via `/ma tools`

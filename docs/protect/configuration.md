@@ -8,7 +8,7 @@ While editing files, use UTF-8 encoding. Notepad and Wordpad on Windows are brok
 
 Here's all the files that will appear in your Protect folder.
 
-![Protect Folder](https://i.imgur.com/nmDE2tQ_d.webp?maxwidth=760&fidelity=grand)
+![Protect Folder](/images/protect/nmDE2tQ_d.webp)
 
 ### Folders
 

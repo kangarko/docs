@@ -7,7 +7,7 @@ You can group players by certain permission and have ChatControl treat them diff
 Open settings.yml and see "Groups" section. You can place, edit or remove all subsections at your will. Each subsection is a group with its options, such as the "admin" group has no message delay below:
 
 <div class="image-container">
-  <img src="https://i.imgur.com/jLhPHXn.png" alt="Group configuration example" />
+  <img src="/images/chatcontrol/jLhPHXn.png" alt="Group configuration example" />
 </div>
 
 You apply this group by giving players "chatcontrol.group.`{groupName}`" permission, in this case "chatcontrol.group.admin".

@@ -12,10 +12,10 @@ To use commands, simply execute them via the console or the in-game chat. Many c
 
 > You can view the required permission directly within the error message when you attempt to execute a command you don't have access to.
 
-> ![Permission](https://i.imgur.com/1hEj8Uq.png)
+> ![Permission](/images/boss/1hEj8Uq.png)
 
 
 ## Main Commands
 
-![Boss Commands](https://i.imgur.com/RPuTzIq.png)
-![Boss Commands 2](https://i.imgur.com/4M8RBab.png)
+![Boss Commands](/images/boss/RPuTzIq.png)
+![Boss Commands 2](/images/boss/4M8RBab.png)

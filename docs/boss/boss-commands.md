@@ -10,7 +10,7 @@ You can configure your Boss to execute custom commands on the following events:
 2. Boss death
 3. When a Boss' health goes below a specific value (i.e. less than 10 HP)
 
-![Boss Commands Menu](https://i.imgur.com/zZF9ics.png)
+![Boss Commands Menu](/images/boss/zZF9ics.png)
 
 ## Command Variables
 
@@ -24,7 +24,7 @@ We support the following variables inside a command:
 
 You can run the command as the console or with the permissions that the killer player has:
 
-![Command Configuration](https://i.imgur.com/qoRtIDO.png)
+![Command Configuration](/images/boss/qoRtIDO.png)
 
 You can also set a chance for the command such that it can run rarely or not much at all.
 
@@ -38,15 +38,15 @@ Alongside any typical commands we also support the following special syntax:
 
 You can specify the header title of the messages using |, for example: `tell-damagers-list Who Hurt {boss_name}|&f#{order}. &6{damager} &f- &c{damage} ({damage_percent})` will make the message look like so:
 
-![Damagers List Example](https://i.imgur.com/ws7NviD.png)
+![Damagers List Example](/images/boss/ws7NviD.png)
 
 
 -  `broadcast-damagers-list <format> or <title>|<format>` - See tell-damagers-list, but we will send the messages to all online players instead of only those who damaged the Boss before he died.
 - `broadcast <message>` - Send all players on the server the specified message. Separate multiple lines with |.
 - `discord <channelName> <message>` - (Requires DiscordSRV) Send the specified message to the given Discord channel.
 
-![Discord Command Example](https://i.imgur.com/RieObvS.png)
+![Discord Command Example](/images/boss/RieObvS.png)
 
 Here is the example in action:
 
-![Discord Message Example](https://i.imgur.com/sG8Jy16.png)
+![Discord Message Example](/images/boss/sG8Jy16.png)

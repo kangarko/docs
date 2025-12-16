@@ -22,7 +22,7 @@ If you are a developer, please fill the upgrade form selecting "I made a contrib
 ````
 
 ## All API Classes 
-![img](https://i.imgur.com/FE9owGu.png)
+![img](/images/boss/FE9owGu.png)
 
 Where should you start? Use BossAPI to access main API calls and BossSkillRegistry to add custom skills.
 

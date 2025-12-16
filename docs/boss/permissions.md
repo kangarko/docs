@@ -4,7 +4,7 @@ Here you can view all the permission this plugin supports. We recommend using Lu
 
 > You can view the required permission directly within the error message when you attempt to execute a command you don't have access to.
 
-> ![Permission](https://i.imgur.com/1hEj8Uq.png)
+> ![Permission](/images/boss/1hEj8Uq.png)
 
 ## Commands
 Permissions for the /boss commands.

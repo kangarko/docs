@@ -24,7 +24,7 @@ You can use Boss for various purposes as you'd like, such as:
 ## Boss Properties
 There are so many options to customize the monsters by, that we're only listing the most interesting ones:
 
-![img](https://i.imgur.com/s6BeP1n.png)
+![img](/images/boss/s6BeP1n.png)
 
 * Give the Boss a custom name
 * Edit Boss' health and maximum health

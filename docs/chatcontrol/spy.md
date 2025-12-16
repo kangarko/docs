@@ -5,7 +5,7 @@ Spying allows to see messages, commands, private messages, books, renamed items 
 If you miss spying while you're offline, don't worry, you can always view what happened in game using "/chc log", see [Logs](logs).
 
 <div class="image-container">
-  <img src="https://i.imgur.com/O605Lfw.gif" alt="Spy demonstration" />
+  <img src="/images/chatcontrol/O605Lfw.gif" alt="Spy demonstration" />
 </div>
 
 

@@ -49,7 +49,7 @@ Common issues related to chat messages, formatting, and display problems.
 ---
 
 ### 1.19+: "Chat validation error"
-![Chat validation error screenshot](https://i.imgur.com/24QKeeB.png)
+![Chat validation error screenshot](/images/chatcontrol/24QKeeB.png)
 
 ::: warning Solution
 Set `enforce-secure-profile` to `false` in `server.properties` while the server is stopped.
@@ -77,7 +77,7 @@ Write `{player_chat_color}` and `{player_chat_decoration}` to format used in the
 ```
 
 ### Toasts: How to edit "Goal Reached" for toast notifications?
-![Toast notification screenshot](https://i.imgur.com/EHORs3y.png)
+![Toast notification screenshot](/images/chatcontrol/EHORs3y.png)
 
 ::: info Minecraft Limitation
 The Toast always starts with "Goal Reached". This is due to the nature of Minecraft. Toast notifications are not intended to be used for custom messages; they are there to show advancements and rewards. All you can customize is the text that comes afterwards and the icon (on some places only).
@@ -102,7 +102,7 @@ To disable automatically joining a channel, give yourself or your group negative
 See [Listener Priorities](listener-priorities) on how to fix it.
 
 ### My emoticons :) are just showing as ? / Unicodes / Special characters not working
-![Emoji issue screenshot](https://i.imgur.com/DIZsbfN.png)
+![Emoji issue screenshot](/images/chatcontrol/DIZsbfN.png)
 
 ::: warning Text Encoding
 1. Use a [compatible text editor](../general/use-right-encoding) when editing yml files.
@@ -216,7 +216,7 @@ Set **Rules.Strip_Accents** to **false** in **settings.yml**.
 There is a default rule for that hidden in rules/chat.txt, remove # from the two lines after the first line and you be good to go. Edit `{3}` to change how many characters to allow.
 :::
 
-![Chat rule screenshot](https://i.imgur.com/RIRrdkj.png)
+![Chat rule screenshot](/images/chatcontrol/RIRrdkj.png)
 
 ### Tab completion does not work correctly!
 ::: tip Spigot Setting
@@ -281,7 +281,7 @@ Give yourself chatcontrol.bypass.reach permission to bypass these limits.
 2. Place the following command alias in commands.yml in your root server folder:
 :::
 
-![Towny command configuration](https://i.imgur.com/PuNbrBh.png)
+![Towny command configuration](/images/chatcontrol/PuNbrBh.png)
 
 ### ChatControl won't override /w or other aliases for private messages!
 ::: tip Commands.yml Setting

@@ -6,7 +6,7 @@ This page covers the configuration of settings.yml. You can also view the defaul
 
 After the installation, your Boss folder should look like this:
 
-![Boss Folder](https://i.imgur.com/gJ9EDww.png)
+![Boss Folder](/images/boss/gJ9EDww.png)
 
 * **bosses/** - A folder containing individual settings for each Boss.
 * **localization/** - A folder with the message file you can edit to design the plugin to your needs.

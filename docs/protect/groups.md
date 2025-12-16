@@ -10,10 +10,10 @@ Open rules/groups.rs and make a new group using "group" operator. Give it a uniq
 
 Example of a group called "beginner":
 
-![Sample Group](https://i.imgur.com/ol1y4uA.png)
+![Sample Group](/images/protect/ol1y4uA.png)
 
 ## Using Groups
 
 You can use groups in your other .rs files by the `group <name>` operator. Example:
 
-![Sample Using Group](https://i.imgur.com/eecZdH6.png)
+![Sample Using Group](/images/protect/eecZdH6.png)

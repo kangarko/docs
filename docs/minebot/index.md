@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.imgur.com/xACLX93.png" alt="MineBot Logo"/>
+  <img src="/images/minebot/xACLX93.png" alt="MineBot Logo"/>
 </div>
 
 ## MineBot - All-In-One Discord-Minecraft Bot

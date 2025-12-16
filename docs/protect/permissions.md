@@ -3,7 +3,7 @@
 Here you can view all permissions this plugin supports. We recommend using LuckPerms as a permission plugin, as it has proven stability over the many years of its course.
 
 One of the cool parts about Protect is tat you can view the missing permission within the error message directly.
-![Permission](https://i.imgur.com/LgEfscQ.png)
+![Permission](/images/protect/LgEfscQ.png)
 
 
 ***

@@ -33,7 +33,7 @@ Visit [MineAcademy.org/ChatControl](https://mineacademy.org/chatcontrol) to purc
 
 ## Donation
 
-<a href="https://buy.stripe.com/7sIg1QgQv9RC4ik6op">![Donate To ChatControl](https://i.imgur.com/vn1IUul.png)</a>
+<a href="https://buy.stripe.com/7sIg1QgQv9RC4ik6op">![Donate To ChatControl](/images/chatcontrol/vn1IUul.png)</a>
 
 Since purchases are one-time but life goes on and my expenses are monthly, please [consider donating to ChatControl to support its continued development here](https://buy.stripe.com/7sIg1QgQv9RC4ik6op).
 

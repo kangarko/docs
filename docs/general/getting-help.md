@@ -23,7 +23,7 @@ When you see an error in your console, it means something unexpected happened. T
 
 For example, many errors will clearly identify the problem:
 
-![Example Error](https://i.imgur.com/S9sReQb.png)
+![Example Error](/images/general/S9sReQb.png)
 
 The error above shows that a setting contains an invalid value type. In this case, a number was expected but a boolean (true/false) was provided instead.
 

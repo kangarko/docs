@@ -27,7 +27,7 @@ But there is a problem... what if your server does not have spawning enabled? Wh
 
 ## 2) Spawning At A Given Time
 
-![Time-based Spawning](https://i.imgur.com/ymqHCQB.png)
+![Time-based Spawning](/images/boss/ymqHCQB.png)
 
 Now you can completely customize the real-life day, week, down to the hour and minute when we'll spawn Bosses at predefined locations, such as your dungeons. You can even limit spawning to each Friday at 18:00 when it is a night in the game and raining!
 
@@ -54,4 +54,4 @@ On top of that, each Boss can be configured to only appear in certain regions.
 3. Run `/boss region add <name>`
 
 The selection is visualized so you always know how big the region is.
-![Region Selection](https://i.imgur.com/o2uYAwY.png)
+![Region Selection](/images/boss/o2uYAwY.png)

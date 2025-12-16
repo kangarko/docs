@@ -1,5 +1,5 @@
 <div class="hero-image">
-  <img src="https://i.imgur.com/eD8TbZc.png" alt="CoreArena Logo">
+  <img src="/images/corearena/eD8TbZc.png" alt="CoreArena Logo">
 </div>
 
 <hr>

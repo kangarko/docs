@@ -14,7 +14,7 @@ Newcomers can have the following attributes:
 You can configure everything in the Newcomer section of settings.yml.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/mzUFFcW.png" alt="Newcomer settings in settings.yml" />
+  <img src="/images/chatcontrol/mzUFFcW.png" alt="Newcomer settings in settings.yml" />
 </div>
 
 ## Newcomer Message Of The Day
@@ -22,7 +22,7 @@ You can configure everything in the Newcomer section of settings.yml.
 You can also send different welcome message to newcomers using `Motd.Format_Motd_Newcomer` option from settings.yml.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/YPucDl4.png" alt="Newcomer MOTD configuration" />
+  <img src="/images/chatcontrol/YPucDl4.png" alt="Newcomer MOTD configuration" />
 </div>
 
 ## Newcomer Variable

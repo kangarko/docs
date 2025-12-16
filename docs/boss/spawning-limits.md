@@ -8,7 +8,7 @@ Limit how many Bosses are around each other, or the total amount of Bosses per w
 
 You can also set where those limits apply, such as on Boss spawn eggs, the /boss spawn command, natural spawning, or all of these causes.
 
-![Boss Spawning Limits](https://i.imgur.com/GxbJQMS.png) 
+![Boss Spawning Limits](/images/boss/GxbJQMS.png) 
 
 ## Spawn Rule Limits
 
@@ -29,7 +29,7 @@ There's over 15 different conditions you can set to limit spawning your Bosses!
 - Biomes the Boss spawns in
 - Radius around players where to spawn
 
-![Spawn Rule Conditions](https://i.imgur.com/BojTpFI.png)
+![Spawn Rule Conditions](/images/boss/BojTpFI.png)
 
 ### But wait... sometimes there are more Bosses then my limits?
 

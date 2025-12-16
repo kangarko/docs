@@ -5,7 +5,7 @@ Having every chat message under a single place becomes messy as your server grow
 In other words, channels are chatting rooms where players can talk about different topics, or admins can chat together, with their messages only being visible to other members in the same chat room. 
 
 <div class="image-container">
-  <img src="https://i.imgur.com/Erxwd5D.png" alt="Channels demonstration" />
+  <img src="/images/chatcontrol/Erxwd5D.png" alt="Channels demonstration" />
 </div>
 
 ::: warning Important
@@ -74,7 +74,7 @@ Previously, in ChatControl Pro, you could turn channels off and only have one ch
 
 <div class="video-container">
   <a href="https://www.youtube.com/watch?v=EKziLXSjwhY" target="_blank" rel="noopener noreferrer">
-    <img src="https://i.imgur.com/MtMpN15.png" alt="Video tutorial" />
+    <img src="/images/chatcontrol/MtMpN15.png" alt="Video tutorial" />
   </a>
 </div>
 
@@ -158,7 +158,7 @@ You can create, edit or remove channels in "Channels.List" section of settings.y
 To add a new channel, simply place it in the "Channel.List" like you see with the standard, admin and global channels below. Writing such key there will create a new channel. Everything inside your channel key is channel configuration.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/gN0zG2Z.png" alt="Channels section" />
+  <img src="/images/chatcontrol/gN0zG2Z.png" alt="Channels section" />
 </div>
 
 ### Configuration

@@ -6,7 +6,7 @@ Here you can view all permissions this plugin supports. We recommend using LuckP
 One of the best parts about ChatControl is that, you can view the required permission directly within the error message when you attempt to execute a command you don't have access to.
 :::
 
-![Permission error message showing required permissions](https://i.imgur.com/9srxNEm.png)
+![Permission error message showing required permissions](/images/chatcontrol/9srxNEm.png)
 
 ---
 
@@ -39,7 +39,7 @@ If you see the dumb of the permissions file below, please note that chatcontrol.
 
 To list all permissions ChatControl has to offer, type "/chc perms". We moved our permissions list to the game because it was harder to maintain it here, and we can also show what permissions you have when you run this command in game.
 
-![Permissions command output showing list of available permissions](https://i.imgur.com/W4UTeIV.png)
+![Permissions command output showing list of available permissions](/images/chatcontrol/W4UTeIV.png)
 
 You can also view the required permission directly in the error message when you attempt to execute a command you don't have access to.
 

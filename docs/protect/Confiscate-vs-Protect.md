@@ -2,7 +2,7 @@
 
 Protect and Confiscate are two very different plugins separated by 7 years of development time and unique philosophies.
 
-![Confiscate vs Protect](https://i.imgur.com/CNszW7N.png)
+![Confiscate vs Protect](/images/protect/CNszW7N.png)
 
 **Confiscate takes away items based on mostly hardcoded rules into a physical chest room location in one of your worlds.** This location is not easily searchable, and becomes cluttered over time. You cannot remove outdated entries over time nor give once taken items back to the player since they have been marked with the plugin's lore.
 

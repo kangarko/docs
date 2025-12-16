@@ -16,7 +16,7 @@ Not possible except for /rules, although specifically for these archaic versions
 ## ChatControl 11 Breaking Changes
 
 ::: warning Important
-* Localization format has changed completely and drastically and automatic update is not offered at the moment. Some people reported using AI with long context window (Claude Sonnet, Google Gemini) with some prompt engineering can with migrating the syntax from yml to json.  
+* Localization format has changed completely and drastically and automatic update is not offered at the moment. Some people reported using AI with long context window (Claude Sonnet, Google Gemini) with some prompt engineering can with migrating the syntax from yml to json.
 * Renamed some variables to ensure consistency, i.e. isp is now player_isp, town to player_town, nms_version to server_nms_version etc. The only exception is still `{player}` and `{nick}` but we recommend you change them to `{player_name}` and `{player_nick}` too. See [Variables](variables) for up-to-date syntax.
 * Some HEX color syntax is no longer supported, but we temporarily added support back in the new Performance section of settings.yml. Migrating to the official MiniMessage `<#123465>` or `<red>` syntax is advised. Legacy & color codes will always be supported.
 * Replaced %syntax% variable syntax with `{syntax}`. If you absolutely need to use the percentage syntax, see Performance section of settings.yml and enable it back.
@@ -33,7 +33,7 @@ Not possible except for /rules, although specifically for these archaic versions
 * **New** | Custom tablist header and footer with formats/ support.
 * **New** | You can now use `{sender_x}` and `{receiver_x}` variables in private messages where x can be anything in our synced cache, where previously that was limited to just player names.
 * **New** | Added a new antispam feature whereby you can exclude commands without arguments from similarity check, preventing the annoying blocking of /help being typed 2x for example.
-* **New** | Added /dummy command that does absolutely nothing, please give a 5* review. This is not a joke, this command was added to allow command rules properly register in tab-completion. For example, if you made a /ping command in rules/commands.rs, [route to it in commands.yml](https://imgur.com/pe48BkR). (TIP: Remove the $1- if you do not want player names to complete after the main command label).
+* **New** | Added /dummy command that does absolutely nothing, please give a 5* review. This is not a joke, this command was added to allow command rules properly register in tab-completion. For example, if you made a /ping command in rules/commands.rs, [route to it in commands.yml](/images/chatcontrol/pe48BkR.png). (TIP: Remove the $1- if you do not want player names to complete after the main command label).
 * **New** | Added ultra fast "require variable `<variable> <value>`" rule operator to replace use of heavy "require script" whenever possible. For example "require variable `{player_vanished}` true" will be about 2x faster. See our docs for examples and usage.
 * **New** | Added /say command to replace Mojang limited /say command with robust formatting capabilities. Proxy addons have their own network-wide /say and /me commands too.
 * **New** | Added ability to use colors or minimessage tags on anvils, books and signs, including gradients. On books, you can include hover and click events. Those are protected by an extra `chatcontrol.action.<name>` permission.
@@ -75,7 +75,7 @@ Not possible except for /rules, although specifically for these archaic versions
 ## ChatControl 11 Technical Limitations
 
 ::: warning Limitations
-* Items renamed on Anvil will lose colors the player does not have the permission for. Give the player the "chatcontrol.use.color.anvil" permission and see the other permissions under the Colors section of settings.yml for specific colors configuration. 
+* Items renamed on Anvil will lose colors the player does not have the permission for. Give the player the "chatcontrol.use.color.anvil" permission and see the other permissions under the Colors section of settings.yml for specific colors configuration.
 * You MUST set your Server_Name in proxy.yml to be exactly matching the one set in velocity.toml or Bungee's config.yml for proxy to work.
 * Performance is reduced if JavaScript variables are used. Compiling realtime JavaScript is simply put heavy, do not complain about performance if you use JavaScript variables, there is nothing we can do and a cache is unfeasable because it is unfeasible. This is the same in ChatControl 10.
 * /chc sendas `<player>` requires the player to be on the same server because formats need a Bukkit entity to build their conditions

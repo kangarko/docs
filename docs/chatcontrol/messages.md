@@ -23,7 +23,7 @@ All messages are constructed similarly to [Rules](rules), that means we use our 
 Our system is very simple. You create a message "group", that will print one message (or one random message selected from a list) at a given time. You can create multiple groups and place them below each other in the same file.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/dMI10DG.png" alt="Message group example" />
+  <img src="/images/chatcontrol/dMI10DG.png" alt="Message group example" />
 </div>
 
 **We read the file from top to bottom.** Each group can have certain conditions when to show a certain message. Such as different messages for VIP players, etc. (but so much more!) The program reads all groups from top to bottom and if the first group's conditions don't allow it to show, it moves down to the next one, and so on, until it finds the first group where it can show, and then it stops.
@@ -36,7 +36,7 @@ There are only two mandatory things you need to write, when creating a message.
 So we could write something like that into, for example, the quit.rs file:
 
 <div class="image-container">
-  <img src="https://i.imgur.com/jq6HjV8.png" alt="Quit message example" />
+  <img src="/images/chatcontrol/jq6HjV8.png" alt="Quit message example" />
 </div>
 
 The group name is used in game, you can allow players to disable seeing certain messages with "/chc toggle" and you can toggle messages completely using "/chc message".
@@ -46,7 +46,7 @@ If you specify multiple messages, we automatically pick one random one.
 To send a multiline message, you can either use \n or the following system:
 
 <div class="image-container">
-  <img src="https://i.imgur.com/0YpXgms.png" alt="Multiline message example" />
+  <img src="/images/chatcontrol/0YpXgms.png" alt="Multiline message example" />
 </div>
 
 If you do not wish to send any chat messages, this can be done by setting the message option as follows:
@@ -223,7 +223,7 @@ save key player-name <key>
 For example, here's a complete sequence taken from rules used to create simple chat bot. Player then type @bot <param> and then can save their own name.
 
 <div class="image-container">
-  <img src="https://i.imgur.com/VGDzBxV.png" alt="Chat bot example" />
+  <img src="/images/chatcontrol/VGDzBxV.png" alt="Chat bot example" />
 </div>
 
 #### `ignore sender perm <permission>` and `ignore receiver perm <permission>`
@@ -411,7 +411,7 @@ then abort
 ```
 
 #### `random`
-(Only applicable if you have multiple messages in "messages") Randomly picks one message from your messages list. See this example: https://i.imgur.com/iO5O6fD.png (you don't have to use json)
+(Only applicable if you have multiple messages in "messages") Randomly picks one message from your messages list. See this example: /images/chatcontrol/iO5O6fD.png (you don't have to use json)
 
 Example:
 ```
