@@ -3,7 +3,7 @@
 ![Skills Menu](/images/boss/xcUtlFe.png)
 
 ::: tip What are Skills?
-Skills are special abilities that make your bosses more dynamic and engaging, significantly enhancing player experience on your server. Each Boss can have unlimited skills, with customizable activation timing based on random delays between minimum and maximum values.
+Skills are special abilities that make your bosses dynamic and engaging. Each Boss can have unlimited skills with customizable activation delays.
 :::
 
 ## Available Skills
@@ -39,12 +39,6 @@ Below is a comprehensive list of available skills that can be assigned to bosses
 - **Features**:
   - Configurable search radius for potential targets
   - Creates surprising encounters
-
-### 🔥 Fire
-- **Description**: Sets the player on fire
-- **Features**:
-  - Customizable burn duration
-  - Adds damage-over-time pressure to fights
 
 ### ☄️ Fireball
 - **Description**: Launches a ghast-like fireball at the player
@@ -88,25 +82,45 @@ Below is a comprehensive list of available skills that can be assigned to bosses
   - Customizable launch power
   - Creates opportunities for fall damage
 
+### 💊 Potions
+- **Description**: Applies potion effects to the targeted player
+- **Features**:
+  - Configure multiple potion effects via the GUI menu
+  - Customize type, duration, and amplifier for each effect
+  - Overrides existing effects of the same type
+
+### 🔥 Ignite
+- **Description**: Sets the targeted player on fire for a configurable duration
+- **Features**:
+  - Adjustable burn duration (1 second to 3 minutes)
+  - Standard Minecraft fire damage mechanics apply
+
+### 🖥️ Commands
+- **Description**: Run custom console commands at intervals without a target player
+- **Features**:
+  - No target player context — cannot use `{player}` variable
+  - Commands run from the server console
+  - Useful for global effects or broadcasts
+
+### 🎯 Commands Target
+- **Description**: Run custom commands for the player the Boss is currently targeting
+- **Features**:
+  - Full player context — `{player}` variable and `tell` commands work
+  - Commands can run as console or as the player
+
+### 📡 Commands Nearby
+- **Description**: Run custom commands for all nearby players within a radius
+- **Features**:
+  - Configurable radius (1-50 blocks)
+  - Max players limit (-1 for all nearby players)
+  - Players sorted by distance, closest first
+
 ::: warning Advanced Configuration
-Each skill can be individually configured with its own activation delay, effects, and other specific parameters. See the configuration file for detailed options.
+Each skill can be individually configured with its own activation delay, effects, and parameters. See the configuration file for detailed options.
 :::
-
-## Skill Combinations
-
-Some recommended skill combinations that work well together:
-
-| Combat Style | Recommended Skills | Effect |
-|-------------|-------------------|--------|
-| Aggressive | 🔥 Fire + 🏹 Arrow + 💣 Bomb | High damage output |
-| Tactical | 😵 Confuse + 🔫 Disarm + 🧲 Teleport | Control-oriented fight |
-| Defensive | 👥 Minions + 💉 Steal Life + ❄️ Freeze | Sustained battles |
-| Chaotic | 🚀 Throw + ⚡ Lightning + 🌀 Enderman | Unpredictable encounters |
 
 ## Extending With Custom Skills
 
 ::: info Developer API
-With our developer-friendly API, creating new skills is straightforward and quick. The possibilities for custom skills are virtually limitless.
+You can create custom skills with our API. See the [Developer API](./API) page.
 :::
-
-For more information on creating custom skills, please visit the [Developer API](./API) page.

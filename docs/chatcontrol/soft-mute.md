@@ -91,9 +91,3 @@ Note the message in ``then notify chatcontrol.chatsoftmute.notify <message>`` is
 
 That way you can set it to say something like.. ``then notify chatcontrol.chatsoftmute.notify &6The Soft muted `{player}` has died!`` but keep the message the soft muted player sees, as normal.
 :::
-
-<style>
-code {
-  font-family: monospace;
-}
-</style>

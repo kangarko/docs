@@ -1,6 +1,6 @@
 This page covers the configuration of settings.yml. You can also view the default settings by opening Boss.jar file and viewing the setting files from there. **Keep in mind you can't edit them inside your .jar file.**
 
-> Use UTF-8 encoding. Notepad and Wordpad on Windows is broken. Use [Notepad++](https://notepad-plus-plus.org/) while on Windows, or [Atom](https://atom.io/) for Windows, Mac and other platforms.
+> Use UTF-8 encoding. Notepad and Wordpad on Windows is broken. Use [Notepad++](https://notepad-plus-plus.org/) while on Windows, or [Sublime Text](https://www.sublimetext.com/) for Windows, Mac and other platforms.
 
 # Folder structure
 

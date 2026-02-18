@@ -1,9 +1,9 @@
 # Compatibility
 
-On this page, you'll learn the minimum requirements and supported third party plugins for Boss to run.
+On this page, you'll learn the minimum requirements and supported third party plugins for Protect to run.
 
 ::: danger
-Please read the [General Compatibility Guide](../general/compatibility.md) for general compatibility information and requirements that apply to Boss.
+Please read the [General Compatibility Guide](../general/compatibility.md) for general compatibility information and requirements that apply to Protect.
 :::
 
 ::: tip Custom Item/Enchants Plugins
@@ -19,7 +19,7 @@ Please read the [General Compatibility Guide](../general/compatibility.md) for g
 ## Dependencies
 
 * To fine a player, you need **[Vault](https://www.spigotmc.org/resources/vault.34315/)** and an economy plugin.
-* For network features, install [ChatControl Red](https://builtbybit.com/resources/chatcontrol-red-format-filter-chat.18217/). Then, if you're on BungeeCord, install [BungeeControl](https://builtbybit.com/resources/bungeecontrol-red-cross-network-chat.24248/) or [VelocityControl](https://builtbybit.com/resources/velocitycontrol-cross-network-chat.43226/) for Velocity. We understand these are premium plugins so we are preparing a free simple addon instead.
+* For network features, install [ChatControl](https://builtbybit.com/resources/chatcontrol-red-format-filter-chat.18217/). Then, if you're on BungeeCord, install [BungeeControl](https://builtbybit.com/resources/bungeecontrol-red-cross-network-chat.24248/) or [VelocityControl](https://builtbybit.com/resources/velocitycontrol-cross-network-chat.43226/) for Velocity. Network commands (`then bungeeconsole`) are temporarily disabled in the current version.
 
 ## Supported Plugins
 
@@ -32,4 +32,4 @@ Please read the [General Compatibility Guide](../general/compatibility.md) for g
 * EconomyShopGUI
 * QuickShop
 * **Per-world inventory plugins**: Compatible, because we wait until they have refreshed the player's inventory before scanning it.
-* **Custom GUI plugins**: Compatible, because we ignores non-vanilla inventory titles by default and lets you ignore container types or custom inventories by name manually too.
+* **Custom GUI plugins**: Compatible, because we ignore non-vanilla inventory titles by default and lets you ignore container types or custom inventories by name manually too.

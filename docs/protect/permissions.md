@@ -77,6 +77,9 @@ public final class Permissions {
 		
 		@Permission("Permission to receive alerts when a transaction is completed.")
 		public static final String TRANSACTION = "protect.notify.transaction";
+
+		@Permission("Permission to receive alerts when items match against scan rules.")
+		public static final String ITEM = "protect.notify.item";
 	}
 
 	@Permission("Permission to be placed in a group. Replace group name with the actual group name.")

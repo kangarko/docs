@@ -5,7 +5,7 @@
 Wouldn't it be fun if you could spawn your bosses where you want, and how you want it? That's why we added a special feature named Spawner Eggs, which allows you to summon Bosses easily.
 
 ## Obtaining a Spawner Egg
-You can obtain a spawner egg in the /boss menu or via /boss get command.
+You can obtain a spawner egg in the /boss menu or via /boss egg command.
 
 ![Boss Menu Spawner Egg](/images/boss/2R0X6CV.png)
 

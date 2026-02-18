@@ -12,17 +12,14 @@ Boss is a premium quality Spigot plugin that adds the possibility of creating cu
 Bosses are simply vanilla Minecraft monsters and animals with enhanced behavior and features. You can create an Ultimate Zombie Warrior, or a special pig for your in-game events! Almost any animal and monster is supported, even mobs like Snowman, Iron Golem and Bats!
 
 ## What Can Be Boss Used for
-You can use Boss for various purposes as you'd like, such as:
 * Enhancing your Survival server's experience
 * Natural spawning of Bosses in your hardcore world
-* Bosses in your Monster Arenas (or directly in a supported plugin [CoreArena](https://www.mc-market.org/resources/21619/))
-* To challenge players out as they walk through the forest or in caves...
-* To obtain special keys to unlocks gates (Bosses can have custom drops that you drag directly to their inventory)
-* Trolling your players...
-* and much more! **There is no limit!**
+* Bosses in your Monster Arenas (or directly in [CoreArena](https://www.mc-market.org/resources/21619/))
+* Challenging players in forests and caves
+* Bosses with custom drops that unlock gates or give special keys
+* And much more!
 
 ## Boss Properties
-There are so many options to customize the monsters by, that we're only listing the most interesting ones:
 
 ![img](/images/boss/s6BeP1n.png)
 
@@ -63,4 +60,4 @@ There are so many options to customize the monsters by, that we're only listing 
   * Execute commands on death, on spawn or when a Boss reaches a certain health! 
 * Keep Bosses in the region (that you create) where they spawned!
 
-Sounds interesting? Check out [Skills](skills) or [Natural Spawning](natural-spawning)!
+See [Skills](skills) or [Natural Spawning](natural-spawning) for more.

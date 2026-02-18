@@ -1,6 +1,6 @@
 # Variables
 
-A variable (placeholder) is a message in brackets `{}` (***this now also supports percents*** `%%`), which is replaced by the actual data. Example: {boss_name} is replaced with the boss name. ChatControl supports placeholders in some localization messages as well as it hooks into PlaceholderAPI so you can show your nearest Boss properties in different plugins!
+A variable (placeholder) is a message in brackets `{}` (***this now also supports percents*** `%%`), which is replaced by the actual data. Example: {boss_name} is replaced with the boss name. Boss supports placeholders in some localization messages as well as it hooks into PlaceholderAPI so you can show your nearest Boss properties in different plugins!
 
 **Note**: When using LuckPerms, to avoid double prefixes, we suggest you use {luckperms_prefix} from PlaceholderAPI plugin instead of {pl_prefix} from Vault.
 

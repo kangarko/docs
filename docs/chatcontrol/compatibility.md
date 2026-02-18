@@ -1,9 +1,7 @@
 # Compatibility
 
-On this page, you'll learn the minimum requirements and supported third party plugins for ChatControl to run.
-
 ::: danger
-Please read the [General Compatibility Guide](../general/compatibility.md) for general compatibility information and requirements that apply to ChatControl.
+Please read the [General Compatibility Guide](../general/compatibility.md) first.
 :::
 
 
@@ -17,6 +15,17 @@ ChatControl works with BungeeControl and Velocity, see [Proxy](proxy) page.
 ## Redis
 ::: info Redis Integration
 Proxy addons include Redis support for chat and data synchronization (e.g., /list command). Support for additional features is limited, but contributions are welcome as the project is now open source.
+:::
+
+## Folia
+
+::: warning Experimental Support
+ChatControl has experimental Folia support. Known limitations:
+- ProtocolLib features depend on ProtocolLib's own Folia support
+- Some timed broadcasts may not fire as expected
+- MySQL is recommended over SQLite on Folia
+
+Report Folia-specific issues on GitHub with `[Folia]` in the title.
 :::
 
 ## 🌐 BungeeCord/Velocity Plugins
@@ -160,7 +169,7 @@ You can print customized death messages, see [Messages](./messages) at the botto
 Spying for party chat and support for party chat, see [Channels](./channels).
 
 ::: tip Party Chat Support
-You can use mcMMO or ChatControl for party chat, both are fine. You can use ChatControl's channels system to have a channel for only people in mcMMO parties. If mcMMO party chat is used, we will show its messages to spying ChatControl players
+ChatControl's channels system can create a channel for mcMMO party members. If mcMMO party chat is used, messages are shown to spying ChatControl players.
 :::
 
 </div>

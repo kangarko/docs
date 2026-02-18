@@ -457,18 +457,8 @@ strip accents true
 strip accents false
 ```
 
-#### `strip colors`
-Overrides Rules.Strip_Colors option from settings.yml for an individual rule.
-
-Example:
-```
-strip colors # sets it true
-strip colors true
-strip colors false
-```
-
 #### `begins` and `expires`
-Expires means the date on which we start executing this rule. Begins means the date after which we stop executing this rule.
+Begins means the date on which we start executing this rule. Expires means the date after which we stop executing this rule.
 This is a great addition to pre-create rules for the holiday or special events!
 
 Examples:

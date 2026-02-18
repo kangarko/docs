@@ -93,6 +93,14 @@ Gift chests allow players to create lootable chests for other players. They're g
 
 Dated chests are only available during specific time periods. They are "infinite" - they don't lose items when looted, but each player can only loot them once.
 
+::: tip Preview Mode
+Enable `Dated_Chest.Preview` in settings.yml to let players see chest contents before the unlock date. The chest will show items but won't allow taking them until the date is reached.
+:::
+
+::: info Default Year
+Set `Dated_Chest.Default_Year` to the current year in settings.yml so your dated chests trigger correctly. The plugin warns you in console if the configured year doesn't match the current year.
+:::
+
 ### Daily Chest
 
 <div class="minecraft-sign">

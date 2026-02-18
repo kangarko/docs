@@ -13,7 +13,7 @@ The player-related variables you can use in operators inside rules/ for operator
 | Variable Name | Description |
 |---|---|
 | `{player}` or `{player_name}` | Dude's name. |
-| `{sender}` | The name of the message sender you can use in Receiver_Condition variables in your formats (If you use `{player}` in that keys it will return the message receiver's name and not the sender's). |
+| `{sender}` | Alias of `{player}`, typically the player whose items are being scanned. |
 | `{tab_name}` | Player's list name. |
 | `{display_name}` | Player's display name. |
 | `{nick}` or `{player_nick}` | Player's nick, or name if no nick. |

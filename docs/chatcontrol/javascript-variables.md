@@ -1,8 +1,8 @@
 # JavaScript Variables
 
-ChatControl supports dynamic, high performance variables you create! They can be used across the plugin, for example in formatting your chat or death messages. Currently, the folder variables/ stores all custom variables in each separate yml file.
+ChatControl supports dynamic JavaScript variables you can create and use across the plugin (chat formatting, death messages, etc.). Variables are stored as individual .yml files in the `variables/` folder.
 
-Variables can not only be used to display information, but because you can write your own full code in JavaScript to display them, they can also do whatever you would wish for your players/server, such as sneaking in code to send sounds or spawn monsters.
+Beyond displaying information, variables can execute any JavaScript code — send sounds, spawn entities, etc.
 
 <div class="image-container">
   <img src="/images/chatcontrol/6oSxWPr.gif" alt="Item variable demonstration" />
@@ -24,18 +24,16 @@ You can use "/chc info variable" to test format variables in a demo message.
 
 ## Requirements
 
-It is recommended you know a little bit of Java, knowing how to access methods in Bukkit, and have some basic knowledge of JavaScript itself, or at least know how to use Google properly and adjust and debug others' JavaScript code to your needs.
+Basic Java/Bukkit API knowledge and JavaScript fundamentals are recommended. In your variables, use the `player` variable to get the Bukkit Player class.
 
-In your variables, you can use the variable "player" in JavaScript to get the Bukkit Player class.
-
-There is an extensive guide on how to code Javascript for Java on these locations:
+JavaScript for Java references:
 
 * [Unofficial Nashorn Tutorial](http://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/)
 * [Official Nashorn Tutorial](http://www.oracle.com/technetwork/articles/java/jf14-nashorn-2126515.html)
 
 ## Preventing Abuse
 
-You can prevent players abusing variables, i.e. typing [item] too many times and bypassing anti-spam by placing a rule for each variable to rules/chat.rs. Here is an example to limit [item] once per chat message:
+Limit variable usage (e.g., typing [item] too many times) by adding a rule to rules/chat.rs:
 
 ```
 match (\[item\])\s*(?:\1\s*)+
@@ -46,7 +44,7 @@ then deny
 
 ## Setting Up And An Example
 
-Each variable residues in its own file in the variables/ folder. Before we create our own one, let's have a look at one of the default variables [item] that shows the item the player is hovering in his hands.
+Each variable lives in its own file in the `variables/` folder. Here's the default [item] variable that shows the item the player is holding:
 
 ```yaml
 Type: MESSAGE
@@ -55,11 +53,11 @@ Value: "player.getItemInHand().getType()"
 Hover_Item: "player.getItemInHand()"
 ```
 
-The first mandatory key is "**Type**", this is either "FORMAT" or "MESSAGE", see above for how they work.
+The first mandatory key is **"Type"** — either "FORMAT" or "MESSAGE" (see above).
 
-The second mandatory setting is "**Key**", that simply means what message you need to put in the chat or a format as the variable. In this case, it is "[item]." Do not put {} or [] around it, these are automatically placed according to variable type!
+The second is **"Key"** — the variable name without {} or [] brackets (added automatically by type).
 
-The third and final mandatory key is "**Value**", that is simply a JavaScript code that will return the value such as "Hello World" and replace our "[item]".
+The third is **"Value"** — JavaScript code returning the replacement text.
 
 ## Testing Variables
 Use "/chc info script" command in-game to test your javascript variables. It will parse them for you and tell you if they return properly (i.e. if they return a valid boolean, etc.).
@@ -100,10 +98,7 @@ Value: |-
   player.getHandle().ping
 ```
 
-Let's analyze this code really quickly:
-
-1. The script begins with the declaration of the Value itself. It can have unlimited size thanks to the |- functionality.
-2. The code itself - contains predefined "player" variable you can use (if present) to get the player instance. This instance represents CraftPlayer in Bukkit in Java, so you can easily access NMS internals without even specifying those pesky 1_16_R1 numbers every time!
+The `player` variable is a CraftPlayer instance, so you can access NMS internals without specifying version-specific package names.
 
 ## Troubleshooting
 
@@ -124,7 +119,7 @@ The other line will work fine, in this case it will assume empty strings are fal
 
 ## Available Options
 
-Three two mandatory keys, **"Type", "Key" and "Value"** are discussed above. Besides those, you can write the following options to your yml file:
+Besides the three mandatory keys (**Type**, **Key**, **Value**), you can add the following options:
 
 ### Sender_Condition
 ```yaml
@@ -134,19 +129,9 @@ Example: "player.getHealth() < 20"
 Example 2: "{player_vanished}"
 ```
 
-### Receiver Condition
-See Sender_Condition, except that we evaluate the JavaScript for each chat message receiver and only show the message to those receivers for which the condition returns true. 
-
 ### Sender_Permission
 ```yaml
 Description: What permission must the message sender have in order for this variable to display to him?
-Return value: String
-Example: "my.example.permission"
-```
-
-### Receiver_Permission
-```yaml
-Description: What permission must the message receiver have in order for this variable to display to them?
 Return value: String
 Example: "my.example.permission"
 ```

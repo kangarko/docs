@@ -6,10 +6,6 @@
 
 By using MineAcademy or kangarko's Products, you are agreeing and acknowledging that you have read and understood to the following terms and conditions.
 
-::: warning
-You will find the unlock command above by reading the terms in full.
-:::
-
 ## 1. Distribution of paid products is not allowed
 
 You are not allowed to distribute the product outside your Minecraft server or a Network. 
@@ -24,30 +20,22 @@ You can decompile our plugins to learn but you cannot copy paste or use our code
 
 ## 2. Support is only given to paid customers and only on GitHub.
 
-If you have not purchased ChatControl, you are not entitled to support.
+If you have not purchased ChatControl, you are not entitled to support. Discord is for volunteer-based support only. To report bugs or contact our developers, open a ticket on GitHub.
 
-::: warning
-Discord is for volunteer-based support only.
-
-To contact our developers, report bugs, you need to open a ticket on Github.
-:::
-
-You must be a buyer and able to produce evidence upon request to receive support. 
+You must be a buyer and able to produce evidence upon request to receive support.
 
 For pre-sale questions, see the link below for contact.
 
 ## 3. Please use "/chc tour" and read the docs before asking questions
 
-You can save days waiting for your reply by spending 3 minutes reading [docs.mineacademy.org](https:://docs.mineacademy.org). 
+You can save days waiting for your reply by spending 3 minutes reading [docs.mineacademy.org](https://docs.mineacademy.org). 
 
-::: warning
 Because I'm mostly developing ChatControl alone, answering tickets may take 0-5 business days.
-:::
 
 I don't sell ChatControl for business purposes but as a hobby. To accept that, type `/chc tour confirm` in game.
 
 ::: warning
-NB: On older ChatControl versions, you additionally need to type "/chc tour mothman".
+On older ChatControl versions, you additionally need to type "/chc tour mothman".
 :::
 
 ## 4. Usage on multiple networks/servers
@@ -75,13 +63,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## 7. Contact
 
 You can contact us in private via [mineacademy.org/contact](https://mineacademy.org/contact)
-
-Thanks for stopping by,
-
--Matej
-
-<style>
-code {
-  font-family: monospace;
-}
-</style>

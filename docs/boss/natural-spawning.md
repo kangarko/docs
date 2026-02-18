@@ -1,8 +1,8 @@
 # Natural Spawning
 
-Imagine you are digging inside a dark cave, when a suddenly a Boss appears in front of you! Boss support Natural Spawning, so the Bosses you create may (and will!) appear in your worlds, at your will.
+Boss supports automatic spawning so your custom Bosses appear naturally in your worlds.
 
-Apart from Boss eggs and /boss spawn command, we offer 4 ways to spawn your Bosses automatically:
+Apart from Boss eggs and /boss spawn command, we offer 5 ways to spawn Bosses automatically:
 
 **There are MANY options you can configure:**
 
@@ -21,29 +21,28 @@ You can even keep Bosses within their spawn region, or create a custom location 
 :::
 
 ## 1) Replacing Vanilla Mobs
-When a monster of the same type is spawned naturally (e.g. Zombie, Skeleton, Wither, ...), there is a chance that it will be transformed into boss (that you configure - see below). This is called Boss Transformation.
+When a monster of the same type spawns naturally (e.g. Zombie, Skeleton), there is a configurable chance it will be transformed into a Boss.
 
-But there is a problem... what if your server does not have spawning enabled? What if you wish MORE Bosses? Then use ...
+If your server has spawning disabled or you want more control, use:
 
 ## 2) Spawning At A Given Time
 
 ![Time-based Spawning](/images/boss/ymqHCQB.png)
 
-Now you can completely customize the real-life day, week, down to the hour and minute when we'll spawn Bosses at predefined locations, such as your dungeons. You can even limit spawning to each Friday at 18:00 when it is a night in the game and raining!
+Spawn Bosses at predefined locations on a schedule. Configure the real-life day, week, hour and minute. You can even limit spawning to each Friday at 18:00 when it is a night in the game and raining!
 
 ## 3) Respawning After Death
 
-You can create a spawnrule that will respawn the Boss after a certain time has passed after the Boss has died. Even after you restarted the server!
+Respawn the Boss after a configurable delay once it dies. Persists across server restarts.
 
 ## 4) Spawning When Entering A Region
 
-You can also select to spawn a Boss when players enter a certain region, with configurable delay and nearby Boss limit to prevent too many Bosses. Perfect for your new dungeon system!
+Spawn a Boss when players enter a region, with configurable delay and nearby Boss limit.
 
 ## 5) Naturally Around Players
-Each time (you specify!) we scan arenas around your players and can spawn Bosses around them.
+Periodically scan areas around players and spawn Bosses near them.
 
-You can cap the max amount of Bosses in the given Spawn Rule, or individually in the Spawning Limits section of your Boss.
-
+You can cap the max Bosses per Spawn Rule, or individually per Boss in the Spawning Limits section.
 
 ## Regions
 On top of that, each Boss can be configured to only appear in certain regions. 

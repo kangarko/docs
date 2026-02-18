@@ -11,12 +11,10 @@ All command permissions follow the pattern `winter.command.X` where X is the nam
 | Permission | Description |
 |------------|-------------|
 | `winter.command.snow` | Access to the `/winter snow` command |
-| `winter.command.help` | Access to the `/winter help` command |
+| `winter.command.populate` | Access to the `/winter populate` command (console only) |
+| `winter.command.psycho` | Access to the `/winter psycho` command |
+| `winter.command.region` | Access to the `/winter region` command |
 | `winter.command.reload` | Access to the `/winter reload` command |
-
-::: tip
-Replace "snow" with any other subcommand name to get the corresponding permission.
-:::
 
 ## Chest Permissions
 

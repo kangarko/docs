@@ -46,9 +46,3 @@ Running arbitrary JavaScript code like this lets anyone having access to your di
 
 JavaScript has been in ChatControl for years, and it poses no greater security threat than giving people access to your server files.
 :::
-
-<style>
-code {
-  font-family: monospace;
-}
-</style>

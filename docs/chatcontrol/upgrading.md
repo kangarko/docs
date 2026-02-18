@@ -1,25 +1,21 @@
 # Upgrading to ChatControl 11
 
-## From ChatControl 10:
-Upgrading from v10 to v11 is 99% automatic. We will make a backup of your old folder. The new folder is named just "ChatControl".
+## From ChatControl 10
+Upgrade is 99% automatic. Replace the jar and restart. A backup of your old folder is created automatically. The new folder is named "ChatControl".
 
-To upgrade, simply replace the jar files and restart your server. Observe the console logs in case you need to do something manually.
-
-See the Breaking Changes and Changelog below for changes.
-
-## Upgrading From ChatControl Pro (8, 9)
-Upgrade to ChatControl 10 first, then upgrade to 11. Simply replace jar files when upgrading.
+## From ChatControl Pro (8, 9)
+Upgrade to ChatControl 10 first, then to 11.
 
 ## From ChatControl Free
-Not possible except for /rules, although specifically for these archaic versions some operators might have been changed. You will be informed in the console about this.
+Not possible except for /rules (some operators may have changed — check console).
 
-## ChatControl 11 Breaking Changes
+## Breaking Changes
 
-::: warning Important
-* Localization format has changed completely and drastically and automatic update is not offered at the moment. Some people reported using AI with long context window (Claude Sonnet, Google Gemini) with some prompt engineering can with migrating the syntax from yml to json.
-* Renamed some variables to ensure consistency, i.e. isp is now player_isp, town to player_town, nms_version to server_nms_version etc. The only exception is still `{player}` and `{nick}` but we recommend you change them to `{player_name}` and `{player_nick}` too. See [Variables](variables) for up-to-date syntax.
-* Some HEX color syntax is no longer supported, but we temporarily added support back in the new Performance section of settings.yml. Migrating to the official MiniMessage `<#123465>` or `<red>` syntax is advised. Legacy & color codes will always be supported.
-* Replaced %syntax% variable syntax with `{syntax}`. If you absolutely need to use the percentage syntax, see Performance section of settings.yml and enable it back.
+::: warning
+* **Localization** format changed completely (yml → json). No automatic migration yet.
+* **Renamed variables** for consistency: `isp` → `player_isp`, `town` → `player_town`, `nms_version` → `server_nms_version`, etc. See [Variables](variables).
+* **HEX colors**: Some syntax no longer supported. Migrate to MiniMessage `<#123456>` or `<red>`. Legacy `&c` codes still work. Old syntax can be re-enabled temporarily in Performance section of settings.yml.
+* **Variable syntax**: `%syntax%` replaced with `{syntax}`. Can be re-enabled in Performance section if needed.
 :::
 
 ## ChatControl 11 Changelog
@@ -45,52 +41,40 @@ Not possible except for /rules, although specifically for these archaic versions
 * **New** | Added support proxy and per-serve mute.
 
 ### Improvements
-* **Improve** | Improved "then deny silently" so that spying players will receive the soft muted message with [denied] prefix (configurable), plus you can use `{message_is_denied_silently}` placeholder in chat formats to show that the message was soft muted to the sender. This variable is unsupported in spy format since they have a custom prefix if denied silently already.
-* **Improve** | The | divider in "then console", "then command" and "then proxy" is now used to pick one command randomly. Since you can use this operator multiple times, this now opens a whole lot of new possibilities. For comparison, on ChatControl 10 the | was used to separate multiple commands (all of which will be executed at the same time).
-* **Improve** | Auto-capitalization now works even for sentences starting with a & color or a minimessage tag.
-* **Improve** | Resolved all instabilities when sending join messages on proxy, reworked this communication system completely.
-* **Improve** | Solved Spigot placeholders not working on Velocity such as you can now use `{player_nick}` in your proxy join messages on VelocityControl and this will get replaced by the nick consistently over all servers.
-* **Improve** | In death messages, the `{killer_item}` variable now properly shows the exact ItemStack as it appears in vanilla Minecraft death messages.
-* **Improve** | You no longer will receive spy messages from players you ignore.
-* **Improve** | Rewritten variables for player messages. You can now use `{sender_x}`, `{receiver_x}` and `{killer_x}` variables such as to get these player's nicks etc.
-* **Improve** | The /toggle `<join/quit>` now properly ignores messages set on proxy too. The only limit is you cannot toggle individual message groups.
-* **Improve** | Spying on books will now properly open them over proxy or if player has disconnected when clicked the spy message.
+* Auto-capitalization works with `&` colors and MiniMessage tags
+* Reworked proxy join messages (more stable)
+* Spigot placeholders now work on Velocity (e.g. `{player_nick}` in proxy join messages)
+* `{killer_item}` now matches vanilla death message format
+* Spy messages no longer sent from ignored players
+* `{sender_x}`, `{receiver_x}`, `{killer_x}` variables for player messages
+* /toggle join/quit works on proxy
+* Book spy works over proxy / after disconnect
+* "then deny silently" shows `[denied]` prefix to spying players
+* The `|` in "then console/command/proxy" now picks one command randomly (was: run all)
 
 ### Fixes
-* **Fix** | Fixed sounds in channels not working.
-* **Fix** | Solved -f option in "/chc clear" command not working.
-* **Fix** | Solved Anti_Bot.Cooldown.Chat_After_Login and Command_After_Login options not working.
-* **Fix** | Solved fallback command prefix for commands not being ChatControl. Starting this release, you can tab /chatcontrol: and you will see all commands we have as a result. Thus, you can do /chatcontrol:me to explicitly invoke the me command.
+* Fixed sounds in channels, -f option in "/chc clear", Anti_Bot cooldown options
+* Fixed fallback command prefix (now `/chatcontrol:`)
 
-### Removed Features
-* **Remove** | Removed /chc tour secret command and simplified the plugin enabling process.
-* **Remove** | Removed packet rules. Current implementation had numerous flaws, showed up heavily in spark reports and was unreliable due to how component trees are now serialized. Additionally we found this feature to be extremely rarely used. All other packet features such as removing messages with [X] were re-implemented with higher performance.
-* **Remove** | Dropped support for %% variables, and made all variables support the `{syntax}`. This 2x the plugin performance because we no longer need to check for placeholders twice.
-* **Remove** | Removed Integration.Discord.Forward_From_Proxy because it was poorly implemented and required online players on the master server. We recommend having DiscordSRV installed on all servers from which you want to send or receive messages.
-* **Remove** | Removed waiting until the resourcepack is loaded to send player join message, because this is now unneeded on modern Minecraft versions as resourcepacks are loaded before the player join event is fired. And maintaining this insanity for multi-version is above my time and nerve scope. Btw on v10 right now we actually invoke 2x database calls due to this, dragging down performance and opening up for potential issues, so I recommend you turn off this option there as well if you are waiting with the upgrade.
-* **Remove** | Removed rarely used Receiver_Condition/Permission keys from variables/ files due to unsupported behavior with the new minimessage format.
-* **Drop** | Support for Minecraft 1.7.10 and older.
-* **Drop** | The mic.
+### Removed
+* Packet rules (performance issues, rarely used; other packet features like [X] removal were reimplemented)
+* `%%` variable syntax (use `{syntax}` — 2x performance improvement)
+* Integration.Discord.Forward_From_Proxy (install DiscordSRV on each server instead)
+* Resource pack delay for join messages (unneeded on modern MC)
+* Receiver_Condition/Permission in variables/ files
+* Support for Minecraft 1.7.10 and older
 
-## ChatControl 11 Technical Limitations
+## Known Limitations
 
-::: warning Limitations
-* Items renamed on Anvil will lose colors the player does not have the permission for. Give the player the "chatcontrol.use.color.anvil" permission and see the other permissions under the Colors section of settings.yml for specific colors configuration.
-* You MUST set your Server_Name in proxy.yml to be exactly matching the one set in velocity.toml or Bungee's config.yml for proxy to work.
-* Performance is reduced if JavaScript variables are used. Compiling realtime JavaScript is simply put heavy, do not complain about performance if you use JavaScript variables, there is nothing we can do and a cache is unfeasable because it is unfeasible. This is the same in ChatControl 10.
-* /chc sendas `<player>` requires the player to be on the same server because formats need a Bukkit entity to build their conditions
+::: warning
+* Anvil-renamed items lose colors without `chatcontrol.use.color.anvil` permission
+* `Server_Name` in proxy.yml must exactly match velocity.toml / BungeeCord config.yml
+* JavaScript variables reduce performance (unavoidable — realtime JS compilation is heavy)
+* `/chc sendas <player>` requires the player on the same server
 :::
 
 ## ChatControl 10 Support
 
-::: info Support Timeline
-I will continue to deliver critical fixes and security patches for ChatControl 10 until March 2025 but other general support will not be provided.
+::: info
+Critical fixes and security patches for ChatControl 10 were provided until March 2025. General support is no longer available.
 :::
-
-Thanks for reading!
-
-PS: Don't forget to update your BungeeControl and VelocityControl too. I hope you will enjoy the plugin as much as I did making it. Thanks for everyone who participated and those eagerly waiting.
-
-Enjoy!
-
--Matej

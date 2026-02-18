@@ -1,18 +1,6 @@
 # Using the Right File Encoding
 
-::: info What is File Encoding?
-File encoding determines how text characters are stored in your configuration files. Using the wrong encoding can cause special characters to display incorrectly or break your configuration entirely.
-:::
-
-## Why Encoding Matters
-
-All MineAcademy plugins save configuration files in **UTF-8 format**. This encoding is critical when you use:
-
-- Non-English characters (é, ü, ñ, etc.)
-- Emoji and symbols (★, ✓, ♥, etc.)
-- Minecraft color codes (§) and formatting
-
-Using incompatible text editors or the wrong encoding settings can corrupt your configurations and cause unexpected plugin behavior.
+All MineAcademy plugins use **UTF-8 encoding**. Using the wrong text editor or encoding will corrupt non-English characters, emojis, and color codes.
 
 ---
 
@@ -94,20 +82,6 @@ These will catch syntax errors before they cause problems on your server.
 
 ---
 
-## Unicode Character Alternatives
-
-In some environments where unicode still doesn't work, you can use escape sequences instead:
-- `\u2764` instead of ❤
-- `\u2605` instead of ★
-- `\u2714` instead of ✓
-
-And for Minecraft color codes:
-- `&6` for gold color (safer than § which can cause issues)
-
----
-
 ::: warning Persistently Garbled Text
-On some systems, unicode characters may still appear as garbage despite using the right encoding. This is an operating system limitation. In these cases, using escape sequences or sticking to basic characters is recommended.
+On some systems, unicode characters may still appear as garbage despite correct encoding. This is an OS limitation — stick to basic characters or use escape sequences like `\u2764` for ❤.
 :::
-
-By following these guidelines, you'll avoid common encoding problems and keep your MineAcademy plugin configurations working smoothly. 

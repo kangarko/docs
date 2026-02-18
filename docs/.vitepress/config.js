@@ -33,12 +33,6 @@ export default {
           { text: 'Winter', link: '/winter/' }
         ]
       },
-      {
-        text: 'Bots',
-        items: [
-          { text: 'MineBot', link: '/minebot/' }
-        ]
-      }
     ],
     search: {
       provider: 'local',
@@ -226,6 +220,7 @@ export default {
           text: 'Basics',
           items: [
             { text: 'Commands', link: '/corearena/commands' },
+            { text: 'Configuration', link: '/corearena/configuration' },
             { text: 'Permissions', link: '/corearena/permissions' },
             { text: 'Localization', link: '/general/localization' },
           ]
@@ -315,6 +310,8 @@ export default {
         {
           text: 'Basics',
           items: [
+            { text: 'Commands', link: '/winter/commands' },
+            { text: 'Configuration', link: '/winter/configuration' },
             { text: 'Permissions', link: '/winter/permissions' },
             { text: 'Localization', link: '/general/localization' },
           ]
@@ -334,43 +331,7 @@ export default {
           ]
         }
       ],
-      '/minebot/': [
-        {
-          text: 'Overview',
-          items: [
-            { text: 'What is MineBot', link: '/minebot/' },
-          ]
-        },
-        {
-          text: 'Getting Started',
-          items: [
-            { text: 'Installation', link: '/minebot/installation' },
-            { text: 'Running', link: '/minebot/running' }
-          ]
-        },
-        {
-          text: 'Configuring',
-          items: [
-            { text: 'Boost Reward System', link: '/minebot/boost_reward_system' },
-            { text: 'Bot Activity System', link: '/minebot/bot_activity_system' },
-            { text: 'Command System', link: '/minebot/command_system' },
-            { text: 'Database System', link: '/minebot/database_system' },
-            { text: 'Minecraft Synchronization', link: '/minebot/minecraft_synchronization' },
-            { text: 'Reward System', link: '/minebot/reward_system' },
-            { text: 'Suggestion System', link: '/minebot/suggestion_system' },
-            { text: 'Ticket System', link: '/minebot/ticket_system' },
-            { text: 'WebSocket System', link: '/minebot/websocket_system' },
-            { text: 'Wiki System', link: '/minebot/wiki_system' }
-          ]
-        },
-        {
-          text: 'Localization',
-          items: [
-            { text: 'Localization Guide', link: '/minebot/localization_guide' },
-            { text: 'Message System', link: '/minebot/message_system' }
-          ]
-        }
-      ]
+
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kangarko/docs' },

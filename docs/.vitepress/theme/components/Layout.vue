@@ -33,7 +33,6 @@ const formattedProductName = computed(() => {
   const specialFormats = {
     chatcontrol: "ChatControl",
     corearena: "CoreArena",
-    minebot: "MineBot",
   };
 
   // Return special format if defined, otherwise capitalize first letter

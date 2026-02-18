@@ -1,7 +1,5 @@
 # Common Issues
 
-Read this page to save hours waiting for our reply and fix common issues yourself quickly.
-
 ## Important:
 
 ::: danger Critical Information
@@ -13,17 +11,22 @@ Read this page to save hours waiting for our reply and fix common issues yoursel
   
   <div class="critical-item">
     <div class="critical-number">2</div>
+    <div class="critical-text">Use a <a href="/general/use-right-encoding">compatible text editor</a> when editing yml files.</div>
+  </div>
+</div>
+
+<details class="critical-advanced">
+<summary>Using a proxy or remote database? Read these too.</summary>
+
+<div class="critical-info" style="margin-top: 12px;">
+  <div class="critical-item">
+    <div class="critical-number">3</div>
     <div class="critical-text">If using proxy: Use the SAME ChatControl version on all servers. Use the SAME Server_Name as in velocity.toml (<strong>case sensitive</strong>) or bungee's config.yml.</div>
   </div>
   
   <div class="critical-item">
-    <div class="critical-number">3</div>
-    <div class="critical-text">If using remote database: Your db MUST support the "utf8mb4" charset (use utf8mb4_unicode_520_ci). See this <a href="https://stackoverflow.com/questions/1814532/1071-specified-key-was-too-long-max-key-length-is-767-bytes">StackOverflow</a> issue for solutions.</div>
-  </div>
-  
-  <div class="critical-item">
     <div class="critical-number">4</div>
-    <div class="critical-text">Use a <a href="/use-right-encoding">compatible text editor</a> when editing yml files.</div>
+    <div class="critical-text">If using remote database: Your db MUST support the "utf8mb4" charset (use utf8mb4_unicode_520_ci). See this <a href="https://stackoverflow.com/questions/1814532/1071-specified-key-was-too-long-max-key-length-is-767-bytes">StackOverflow</a> issue for solutions.</div>
   </div>
   
   <div class="critical-item">
@@ -36,36 +39,29 @@ Read this page to save hours waiting for our reply and fix common issues yoursel
     <div class="critical-text">Minecraft 1.8.8: Confirmed to work with MariaDB but breaks with MySQL 8.0. Minecraft 1.17 and higher works with MySQL 8.0.</div>
   </div>
 </div>
+
+</details>
 :::
 
 <div class="section-container chat-section">
 
 ## 💬 Chat {#chat-section}
 
-<div class="section-description">
-Common issues related to chat messages, formatting, and display problems.
-</div>
-
----
-
 ### 1.19+: "Chat validation error"
 ![Chat validation error screenshot](/images/chatcontrol/24QKeeB.png)
 
 ::: warning Solution
-Set `enforce-secure-profile` to `false` in `server.properties` while the server is stopped.
+Set `enforce-secure-profile` to `false` in `server.properties` (in your root server folder, next to your .jar file) while the server is stopped, then start it again.
 :::
 
 ### 1.19+: Chat reporting / "This message is not secure"
-::: info Security Note
-We send all messages as "system chat" so they cannot be reported to protect you privacy, sanity and freedom.
-
-The "This message is not secure" is Microsoft's way of misinformation to get as many people as possible to enable their anti-feature and you can ignore it safely. There's no way a message can be edited (unless by our rules) if it is sent out through ChatControl.
+::: info
+We send all messages as "system chat" so they cannot be reported. The "not secure" warning is harmless and can be ignored.
 :::
 
 ### 1.16+: Using HEX/RGB colors
-::: tip Color Format
-Use MiniMessage syntax: `<#123456>`. Legacy colors like `&c` are still supported. Click [here](https://htmlcolorcodes.com/) for a color generator.
-**NB:** In chat, since ChatControl 11, you must use the MiniMessage `<#132456>` syntax regardless of options in Performance.
+::: tip
+Use MiniMessage syntax: `<#123456>`. Legacy `&c` still works. Since ChatControl 11, chat requires the MiniMessage `<#132456>` syntax regardless of Performance options. [Color generator here](https://htmlcolorcodes.com/).
 :::
 
 ### /chc color is not applied to chat
@@ -79,53 +75,278 @@ Write `{player_chat_color}` and `{player_chat_decoration}` to format used in the
 ### Toasts: How to edit "Goal Reached" for toast notifications?
 ![Toast notification screenshot](/images/chatcontrol/EHORs3y.png)
 
-::: info Minecraft Limitation
-The Toast always starts with "Goal Reached". This is due to the nature of Minecraft. Toast notifications are not intended to be used for custom messages; they are there to show advancements and rewards. All you can customize is the text that comes afterwards and the icon (on some places only).
+::: info
+The "Goal Reached" header is hardcoded by Minecraft. You can only customize the text and icon that follow it.
 :::
 
 ### Toasts: Private messages notifications spam the chat!
-::: tip Disable Advancements
-Disable the broadcasting of advancements via the command: `/gamerule announceAdvancements false`.
+::: tip
+Run `/gamerule announceAdvancements false`.
 :::
 
 ### Language messages don't change after /chc reload?
-::: warning Server Restart Required
-Restart the server, some messages cannot be changed unless you do a clean start.
+::: warning
+Restart the server — some messages require a clean start.
 :::
 
 ### How can I turn off automatic channel join/spy for ops?
-::: tip Permission Solution
-To disable automatically joining a channel, give yourself or your group negative `chatcontrol.autojoin.{channel}.{mode}` permission. Replace `{channel}` with your channel name. Replace `{mode}` with the mode you wish to disable (write, read), or use `chatcontrol.autojoin.*` to completely disable auto-joining.
+::: tip
+Give yourself or your group negative `chatcontrol.channel.autojoin.{channel}.{mode}` permission. Replace `{channel}` with channel name and `{mode}` with `write`/`read`, or use `chatcontrol.channel.autojoin.*` to disable all.
 :::
 
 ### Players can speak when muted (e.g. using BanManager / LiteBans)
-See [Listener Priorities](listener-priorities) on how to fix it.
+::: warning
+Set `Chat_Listener_Priority` to `HIGH` in settings.yml and restart. This makes ChatControl check chat after the mute plugin, so it respects the mute. See [Listener Priorities](./listener-priorities) for other plugin combinations.
+:::
 
-### My emoticons :) are just showing as ? / Unicodes / Special characters not working
+### My emoticons :) are just showing as ? / Special characters not working
 ![Emoji issue screenshot](/images/chatcontrol/DIZsbfN.png)
 
-::: warning Text Encoding
-1. Use a [compatible text editor](../general/use-right-encoding) when editing yml files.
-2. Put brackets "" around the message containing emojis if it's in a yml file.
-
-If your system's language is using a different char set such as Chinese, Russian, Greek, Turkish, etc., then it may not work, you can try googling on how to enable unicode on your operating system. We unfortunately can't help since we have no idea.
+::: warning
+1. Use a [compatible text editor](../general/use-right-encoding).
+2. Wrap messages containing emojis in quotes `""` in yml files.
 :::
 
-### The `<center>` prefix doesn't exactly centers chat when colors/Russian/Greek etc. special characters are used!
-::: info Library Limitation
-Unfortunately this is the case of the free library extension we are using, anyone is encouraged to make a pull request to fix that: https://github.com/kangarko/Foundation/blob/master/src/main/java/org/mineacademy/fo/ChatUtil.java
+### The `<center>` prefix doesn't center properly with special characters
+::: info
+Known limitation of the centering library. PRs welcome: https://github.com/kangarko/Foundation/blob/master/src/main/java/org/mineacademy/fo/ChatUtil.java
 :::
 
-### I can't see join/quit messages, even though they were properly enabled and I don't ignore them!
-::: warning Resource Pack Setting
-If you don't have any server resourcepack, make sure `Delay_Until_Resource_Pack_Loaded` is set to `false`, otherwise the plugin will try to listen for the PlayerResourcePackStatusEvent event to fire before sending these messages.
-
-_**Spoiler Alert:** it will never fire without a server resourcepack or without a plugin that handles resourcepacks, such as ItemsAdder or Force Resourcepacks._
+### I can't see join/quit messages, even though they were properly enabled!
+::: warning
+Check `Messages.Apply_On` in settings.yml includes the right message types. On a proxy, ensure only one side (proxy or backend) handles them — see [Proxy vs backend](#proxy-vs-backend-which-server-handles-joinquit-messages) below.
 :::
+
+</div>
+
+<div class="section-container commands-section">
+
+## ⌨️ Commands {#commands-section}
+
+### The vanilla `/msg` is conflicting with the ChatControl `/msg` command
+::: tip
+See our guide on [fixing conflicting commands.](./conflicting-commands)
+:::
+
+### '/chc' is interfering with another plugin! (e.g ChestCommands)!
+::: tip
+Remove chc from **Command_Aliases** in settings.yml. Add your own alias instead.
+:::
+
+```yaml
+Command_Aliases: [chatcontrol, chc, anotheralias]
+```
+
+### How to only announce subtitle with /chc announce?
+::: tip
+Send "/chc announce title |my subtitle message" (note the | before the message).
+:::
+
+### /tell and /reply is causing lag!
+::: warning
+If Toast notifications are enabled (`Private_Messages.Toasts`), they cause lag since advancements must be written to file and deleted. You can also remove `private_message` from Spy/Log `Apply_On` sections.
+:::
+
+### How to private message vanished players or players who ignored you or toggled off PMs?
+::: tip
+Give yourself chatcontrol.bypass.reach permission.
+:::
+
+### ChatControl breaks Towny command /t!
+::: warning
+1. Remove the "t" alias from Private_Messages.Tell_Aliases in settings.yml
+2. Place the following command alias in commands.yml in your root server folder:
+:::
+
+![Towny command configuration](/images/chatcontrol/PuNbrBh.png)
+
+### ChatControl won't override /w or other aliases for private messages!
+::: tip
+Add
+```
+aliases:
+  w:
+  - []
+```
+to commands.yml in server directory to fix this.
+:::
+
+</div>
+
+<div class="section-container antispam-section">
+
+## 🛡️ Antispam And Rules {#antispam-section}
+
+### How to edit antispam messages ('You have to wait X seconds', 'Please do not post the same or similar message', etc.)?
+::: tip
+Edit in localization/messages_en.yml. See [Localization](../general/localization).
+:::
+
+### How to allow my server's domain or IP address in chat?
+::: tip
+Open rules/global.rs, find "ignore string minecraft:|youtube.com|imgur.com" and add "|yourdomain.com" at the end.
+:::
+
+### My URL / domains are broken / not clickable / all dots removed!
+::: warning
+1. If using Essentials, give players `essentials.chat.url` and `essentials.msg.url`
+2. Don't use "Suggest_Command" in format parts — it breaks links
+3. Since ChatControl 11, use MiniMessage for clickable links: `<click:open_url:'https://google.com'>link</click>`. Use https://webui.advntr.dev/ for help.
+4. Set `Make_Chat_Links_Clickable` to true in the proxy settings.yml (BungeeControl/VelocityControl) for automatic chat links on your network
+:::
+
+### Rules, channels or chat don't show or show when not supposed to (Towny/Factions/Plot Squared, ...)
+::: warning
+Set `Chat_Listener_Priority` to `LOWEST` in settings.yml and restart. This makes ChatControl process chat before other plugins. On 1.16+, try `LOWEST-MODERN` if `LOWEST` alone doesn't work. See [Listener Priorities](./listener-priorities) for specific plugin combinations.
+:::
+
+### Rules don't work for my non-English server - I use Cyrillic / special characters but they are not matched.
+::: tip
+Set **Rules.Strip_Accents** to **false** in **settings.yml**.
+:::
+
+### How to prevent spamming one character or limit it to 1 repeat maximum?
+::: tip
+There is a default rule for that hidden in rules/chat.rs, remove # from the two lines after the first line. Edit `{3}` to change how many characters to allow.
+:::
+
+![Chat rule screenshot](/images/chatcontrol/RIRrdkj.png)
+
+### Tab completion does not work correctly!
+::: tip
+Make sure you have tab-complete set to -1 in your spigot.yml.
+:::
+
+### I am getting kicked when removing messages with [X]
+::: tip
+Give yourself "chatcontrol.bypass.spamkick" permission.
+:::
+
+### I am getting kicked when I chat!
+::: warning
+If using ViaVersion, set `ProtocolLib.Enabled` to false in settings.yml.
+:::
+
+</div>
+
+<div class="section-container color-section">
+
+## 🎨 Colors and Formatting {#color-section}
+
+### MiniMessage tags not working (`<underline>`, `<strikethrough>`, etc.)
+Players need the corresponding permission: `chatcontrol.color.underline`, `chatcontrol.color.strikethrough`, etc. For hover/click: `chatcontrol.action.hover`, `chatcontrol.action.click`.
+
+### Hex/RGB colors not working in placeholders
+Use MiniMessage `<#123456>` format. Legacy `&#123456` may not work in all contexts since ChatControl 11.
+
+### `&k` (obfuscated) format causing visual issues
+This is Minecraft's intended behavior. Requires `chatcontrol.color.obfuscated` permission.
+
+### `</click></hover>` parsing errors
+Ensure matched open/close tags. Tags from one format part don't carry over to the next.
+
+</div>
+
+<div class="section-container messages-section">
+
+## 📢 Join, Quit, Death and Timed Messages {#messages-section}
+
+### Proxy vs backend: which server handles join/quit messages?
+When using a proxy (BungeeCord/Velocity), join and quit messages can be handled at _either_ the proxy level or the backend level — but not both, or you'll get duplicates.
+
+- **Proxy-level messages** (recommended): Set `Messages.Apply_On` in the proxy's settings.yml to include `join` and `quit`. Remove them from each backend server's settings.yml.
+- **Backend-level messages**: Keep `join`/`quit` in backend settings.yml and remove from proxy. These will only show to players on the same backend server.
+
+If you see duplicate or missing messages, check that **only one side** (proxy or backend) is configured to handle them.
+
+### Join/quit message spam
+
+**On a proxy network:** The most common cause is handling join/quit messages on both the proxy and backend servers. When a player switches servers, the backend sees a quit + join, causing duplicate spam. The fix: handle join/quit messages at the proxy level only (VelocityControl/BungeeControl) and remove `join`/`quit` from `Messages.Apply_On` in each backend server's settings.yml. See [Proxy vs backend](#proxy-vs-backend-which-server-handles-joinquit-messages) above.
+
+**On a single server** (or if you already handle messages at proxy level but players spam-reconnect): Add `player delay 30 seconds` to your join.rs and quit.rs message groups. This suppresses repeated messages from the same player within 30 seconds. See the [Messages](messages) page for details.
+
+### Lag on player join caused by PlaceholderAPI
+If you notice lag spikes when players join, check if your join.rs uses heavy PlaceholderAPI placeholders. Some PAPI expansions (like database lookups or web requests) are slow and block the main thread. This is not a ChatControl bug — it's the PAPI expansion being slow. Solutions:
+- Remove heavy PAPI placeholders from join.rs
+- Contact the PAPI expansion author about async support
+- Use `Debug` with `[performance]` to identify which placeholder is slow
+
+### Join/switch/quit messages not showing for vanished players?
+
+::: info
+For PremiumVanish, give the `chatcontrol.bypass.reach` permission to force vanished players' messages to show. If using CMI's SpectatorOnLogin, set it to false.
+:::
+
+::: warning
+`chatcontrol.bypass.reach` also lets players bypass ignore lists. Assign it **only on the proxy** to avoid unintended bypasses on Spigot.
+
+LuckPerms proxy command: `/luckpermsbungee group <group> permission set chatcontrol.bypass.range true server:<server>`
+:::
+
+</div>
+
+<div class="section-container discord-section">
+
+## 🔗 Discord {#discord-section}
+
+### Discord integration does not work / stopped working!
+::: tip
+Set the "Debug" option in settings.yml to "[discord]", restart, and check console messages for instructions.
+:::
+
+### Discord→Minecraft rules: operator ordering matters
+When writing rules that apply to messages coming from Discord, the `match` operator must come **before** any `require perm` or other condition operators. If `require perm` is placed before `match`, the rule will try to check permissions on the Discord bot user (which has none) and silently fail.
+
+**Wrong:**
+```
+require perm chatcontrol.emoji
+match :smile:
+then deny
+```
+
+**Correct:**
+```
+match :smile:
+require perm chatcontrol.emoji
+then deny
+```
+
+Use `ignore discord` in rules that should not apply to Discord messages, or `require discord` for Discord-only rules.
+
+### I cannot use @ mentions or my discord plugin broke when ChatControl is installed!
+::: info
+We unsend and resend messages through our system for filtering. This may conflict with other Discord plugins. Toggle this in the Discord section of settings.yml.
+:::
+
+</div>
+
+<div class="section-container placeholders-section">
+
+## ✨ Placeholders {#placeholders-section}
+
+### The `{server_name}` is wrong!
+::: tip
+If you use PlaceholderAPI with the server expansion, it will override ChatControl's placeholder. Change the server name in PlaceholderAPI's config instead.
+:::
+
+### PlaceholderAPI placeholders not working in toasts
+Toast notifications have limited variable support due to how Minecraft renders advancements. Some PlaceholderAPI placeholders may not parse correctly in toasts. Test with simple variables first.
+
+### `{}` placeholders not resolving
+Ensure the variable exists in variables/ or PlaceholderAPI is installed. Check for typos.
+
+</div>
+
+<div class="section-container item-section">
+
+## 📦 The [item] Variable {#item-section}
+
+### What is [item]?
+Lets players show their held item in chat with hover details (enchantments, lore). Configure in `variables/item.yml`.
 
 ### How to put brackets around the [item] variable so it shows "I hold [Stone]"?
-::: tip Javascript Modification
-You need to adjust your Javascript in variables/item.yml slightly, here is an example:
+::: tip
+Adjust your Javascript in variables/item.yml slightly, here is an example:
 :::
 
 ```yaml
@@ -151,201 +372,67 @@ Value: |-
     }
 ```
 
-</div>
+### Server freeze or crash with [item]
+Items with huge NBT (Shulker Boxes, heavily-modded items) can freeze the server. Newer `variables/item.yml` versions include a 256-character size limit. If yours doesn't, regenerate it or add the check manually.
 
-<div class="section-container discord-section">
+### [item] error spam in console
+If you see repeated errors about `[item]`, this is typically caused by items with incompatible NBT tags from other plugins or modded items. Enable `Debug` with `[variables]` in settings.yml to see which item is causing the issue.
 
-## 🔗 Discord {#discord-section}
-
-<div class="section-description">
-Issues related to Discord integration and messaging.
-</div>
-
----
-
-### Discord integration does not work / stopped working!
-::: tip Debug Mode
-Set the "Debug" option in settings.yml file to "[discord]", restart your server completely (do not reload and do not use PlugMan) and notice the console message when that happens. It will give you instructions on how to fix that, or you can open a ticket and paste the messages there.
+### Security: click/hover tags inside [item]
+::: danger Security Warning
+Players could potentially craft items with display names containing MiniMessage click/hover events (e.g., `<click:run_command:'/op player'>Click me</click>`). If your server allows custom item names (via anvils or plugins), ensure you have rules in place to strip dangerous tags from item names, or disable the `[item]` variable entirely if this is a concern.
 :::
 
-### I cannot use @ mentions or my discord plugin broke when ChatControl is installed!
-::: info Message Processing
-When you send a message, by default we have to unsend it and send it again through our own system. This makes filtering functional but poses some limitations. You can turn this off in Discord section of settings.yml.
-:::
+### [item] not parsing with gradient/color plugins
+Some third-party color plugins may conflict with the `[item]` variable parsing. Ensure ChatControl processes chat before the color plugin by adjusting your [Listener Priorities](./listener-priorities).
 
 </div>
 
-<div class="section-container antispam-section">
+<div class="section-container proxy-section">
 
-## 🛡️ Antispam And Rules {#antispam-section}
+## 🌐 Proxy / VelocityControl {#proxy-section}
 
-<div class="section-description">
-Issues with chat filtering, rule enforcement and spam protection.
-</div>
+### VelocityControl errors when stopping the server
+If you see errors about delayed shutdown when stopping a server, this is caused by pending database operations. Ensure your MySQL server is responsive and has enough connections available. This is harmless and does not affect data integrity.
 
----
+### Duplicate messages with other proxy plugins (Staff++, etc.)
+Ensure only ChatControl handles join/quit/switch messages. Disable equivalent messages in the other plugin, or remove the conflicting message type from `Messages.Apply_On` in the proxy settings.yml.
 
-### How to edit messages 'You have to wait X seconds before another message' or 'Please do not post the same or similar messages' or announcement format:
-::: tip Localization
-Edit these messages in localization/messages_en.yml. See [Localization](../general/localization) for more information.
-:::
+### Messages not showing on specific servers
+Check `Messages.Ignored_Servers` in your proxy settings.yml. Also verify `Server_Name` in ChatControl's proxy.yml matches the name in your proxy configuration (case-sensitive).
 
-### How to allow my server's domain or IP address in chat?
-::: tip Rule Modification
-Open rules/global.rs, find "ignore string minecraft:|youtube.com|imgur.com" line and simply put "|yourdomain.com" at the end of it. You can separate multiple domains to ignore with "|".
-:::
+### Cannot forward commands from proxy console
+Set `Enable_Forward_Command: true` in proxy settings.yml and restart. This is disabled by default for security. Only the proxy console can forward commands — players cannot.
 
-### My URL / domains are broken / not clickable / Ad filter doesn't work, all dots are removed! (Example: www.google.com becomes www google com)
-::: warning URL Configuration
-1. If you have Essentials, try adding your players `essentials.chat.url` and `essentials.msg.url` permissions
-2. Make sure you don't use "Suggest_Command" in your format part as this is known to break links.
-3. Since ChatControl 11, you need to use MiniMessage syntax to make links clickable in rules or formats such as `<click:open_url:'https://google.com'>https://google.com</click>`. Use https://webui.advntr.dev/ for help.
-4. For chat, turn Make_Chat_Links_Clickable option in settings.yml to true to make links clickable automatically.
-:::
+### Commands forwarded to empty servers are silently dropped
+If you use `/chc forward` to send commands to another backend server and no players are on that server, the command will not execute. This is because the proxy messaging channel requires at least one connected player on the target server to relay messages. This is a BungeeCord/Velocity limitation, not a ChatControl bug.
 
-### Rules, channels or chat don't show or show when not supposed to (Towny/Factions/Plot Squared, ...)
-Please see [this](./listener-priorities) article on how to fix it.
-
-### Rules don't work for my non-English server - I use Cyrillic / special characters but they are not matched.
-::: tip Character Settings
-Set **Rules.Strip_Accents** to **false** in **settings.yml**.
-:::
-
-### How to prevent spamming one character or limit it to 1 repeat maximum?
-::: tip Rule Configuration
-There is a default rule for that hidden in rules/chat.txt, remove # from the two lines after the first line and you be good to go. Edit `{3}` to change how many characters to allow.
-:::
-
-![Chat rule screenshot](/images/chatcontrol/RIRrdkj.png)
-
-### Tab completion does not work correctly!
-::: tip Spigot Setting
-Make sure you have tab-complete set to -1 in your spigot.yml file in the root server folder.
-:::
-
-### I am getting kicked when removing messages with [X]
-::: tip Permission
-Give yourself "chatcontrol.bypass.spamkick" permission.
-:::
-
-### I am getting kicked when I chat!
-::: warning Configuration Change
-Set Channels.Prevent_Spying to false, unfortunately some setups and plugins cause issues here. If you have ViaVersion or other protocol-hack plugins, set ProtocolLib.Enabled to false. Also try disabling console filter by setting Console_Filter.Enabled to false.
-:::
+### Toggle join/leave messages per-server on proxy
+Use `ignore sender server` or `require sender server` operators in your join.rs / quit.rs files. See [Proxy](./proxy) for details.
 
 </div>
 
-<div class="section-container commands-section">
+<div class="section-container folia-section">
 
-## ⌨️ Commands {#commands-section}
+## ⚡ Folia {#folia-section}
 
-<div class="section-description">
-Issues with command handling, conflicts and configuration.
-</div>
+### Kicked on advancement messages
+Disable advancement-related messages or exclude them from `Messages.Apply_On`.
 
----
+### Database caching issues
+Use MySQL or MariaDB. SQLite may have more threading issues on Folia than remote database.
 
-### The vanilla `/msg` is conflicting with the ChatControl `/msg` command
-::: tip Conflict Resolution
-See our guide on [how to fix conflicting commands.](./conflicting-commands)
-:::
-
-### '/chc' is interfering with another plugin! (e.g ChestCommands)!
-::: tip Command Aliases
-Remove chc from **Command_Aliases** in settings.yml. You can write your own command to invoke /chc there instead.
-:::
-
-```yaml
-Command_Aliases: [chatcontrol, chc, anotheralias]
-```
-
-### How to only announce subtitle with /chc announce?
-::: tip Command Syntax
-If you only want subtitle, send "/chc announce title |my subtitle message" (see the | before the message).
-:::
-
-### /tell and /reply is causing lag!
-::: warning Performance Note
-If you have Toast notifications enabled (Private_Messages.Toasts in your settings.yml), note that this naturally causes some lag since the advancements must be written on a file and immediately deleted. 
-You can also disable the Spy and the Log features being applied to private messages by removing "private_message" from Apply_On sections in settings.yml for these features.
-:::
-
-### How to private message vanished players or players who ignored you or toggled off PMs?
-::: tip Permission
-Give yourself chatcontrol.bypass.reach permission to bypass these limits.
-:::
-
-### ChatControl breaks Towny command /t!
-::: warning Command Conflict
-1. Remove the "t" alias from Private_Messages.Tell_Aliases in settings.yml
-2. Place the following command alias in commands.yml in your root server folder:
-:::
-
-![Towny command configuration](/images/chatcontrol/PuNbrBh.png)
-
-### ChatControl won't override /w or other aliases for private messages!
-::: tip Commands.yml Setting
-Add
-```
-aliases:
-  w:
-  - []
-```
-to commands.yml in server directory to fix this.
-:::
+### General Folia compatibility
+Folia support is experimental. Known limitations: some timed broadcasts may not fire, console filtering may differ, ProtocolLib features may not work. Report issues on GitHub with `[Folia]` in the title.
 
 </div>
 
-<div class="section-container messages-section">
+<div class="section-container still-stuck-section">
 
-## 📢 Join, Quit, Death and Timed Messages {#messages-section}
+## 🎫 Still Stuck? {#still-stuck}
 
-<div class="section-description">
-Issues with player join/quit notifications and scheduled messages.
-</div>
-
----
-
-### Join/switch/quit messages from proxy (bungeecord/waterfall/velocity) don't always show if in vanish?
-
-::: info Vanish Configuration
-If you are using a plugin such as PremiumVanish, you can force vanished users to have their messages shown if they have the permission ``chatcontrol.bypass.reach`` 
-
-If you have SpectatorOnLogin in your CMI plugin, set this to false, since CMI will tell us the player is vanished and we won't show the message otherwise.
-:::
-
-::: warning Permission Note
-The permission ``chatcontrol.bypass.reach`` also gives people the ability to talk to people who ignored them etc if this permission node is also assigned to the Spigot server. Permission checks to bypass players' ignored list, are done on the spigot server, and the permission check to make sure these messages (join/switch/quit) is sent, are done on the proxy server, so to ensure you do not give regular players the permission to bypass such features, you need to make sure to only assign it to the proxy.
-
-To assign a permission node just on proxy (bungeecord/waterfall/velocity) when using a permissions plugin like LuckPerms, this is the command you need to use (assuming you have LuckPerms on all of your servers linked to a database like MySQL or a similar setup).
-
-``/luckpermsbungee group <group_name> permission set chatcontrol.bypass.range true server:<server_name>``
-``<group_name>`` = group/rank name
-``<server_name>`` = Server name as stated in your LuckPerms config on proxy.
-
-If you want to check the permissions, you can run these commands if using LuckPerms.
-Remembering, you want the permission to be "true" on proxy, but "false" OR "undefined" on your spigot servers, unless you are happy for that specific group to be able to talk to people who have them ignored, etc.
-
-**For proxy** ``/luckpermsbungee group <group_name> permission check chatcontrol.bypass.range``
-
-**For Bukkit** ``/luckperms group <group_name> permission check chatcontrol.bypass.range``
-:::
-
-</div>
-
-<div class="section-container placeholders-section">
-
-## ✨ Placeholders {#placeholders-section}
-
-<div class="section-description">
-Issues with placeholders and variables in plugin configuration.
-</div>
-
----
-
-### The `{server_name}` is wrong!
-::: tip PlaceholderAPI Override
-If you use PlaceholderAPI with the server expansion, it will override ChatControl's placeholder since it uses the same placeholder. Change the server name in the PlaceholderAPI's config file instead.
+::: tip
+Open a ticket on our [GitHub Issues](https://github.com/kangarko/chatcontrol/issues) — our AI assistant typically responds within minutes and can help resolve most issues on the spot.
 :::
 
 </div>
@@ -361,12 +448,6 @@ If you use PlaceholderAPI with the server expansion, it will override ChatContro
 .section-container h2 {
     margin: 0;
 } 
-
-.section-description {
-  font-style: italic;
-  margin-bottom: 15px;
-  opacity: 0.8;
-}
 
 .chat-section {
   border-left-color: #42b883;
@@ -396,6 +477,31 @@ If you use PlaceholderAPI with the server expansion, it will override ChatContro
 .placeholders-section {
   border-left-color: #9c27b0;
   background-color: rgba(156, 39, 176, 0.05);
+}
+
+.proxy-section {
+  border-left-color: #00bcd4;
+  background-color: rgba(0, 188, 212, 0.05);
+}
+
+.item-section {
+  border-left-color: #ff9800;
+  background-color: rgba(255, 152, 0, 0.05);
+}
+
+.color-section {
+  border-left-color: #e91e63;
+  background-color: rgba(233, 30, 99, 0.05);
+}
+
+.folia-section {
+  border-left-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+.still-stuck-section {
+  border-left-color: #607d8b;
+  background-color: rgba(96, 125, 139, 0.05);
 }
 
 /* Critical Information Section Styling */
@@ -451,6 +557,25 @@ If you use PlaceholderAPI with the server expansion, it will override ChatContro
   color: #f03838;
 }
 
+/* Collapsible advanced section */
+.critical-advanced {
+  margin-top: 16px;
+  border: 1px solid rgba(240, 56, 56, 0.2);
+  border-radius: 6px;
+  padding: 0 12px;
+}
+
+.critical-advanced summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #f06b6b;
+  padding: 8px 0;
+}
+
+.critical-advanced summary:hover {
+  color: #f03838;
+}
+
 /* Dark mode adjustments */
 .dark .section-container {
   background-color: rgba(255, 255, 255, 0.03);
@@ -466,6 +591,10 @@ If you use PlaceholderAPI with the server expansion, it will override ChatContro
 
 .dark .critical-text code {
   background-color: rgba(240, 56, 56, 0.15);
+}
+
+.dark .critical-advanced {
+  border-color: rgba(240, 56, 56, 0.15);
 }
 
 h2 {

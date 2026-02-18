@@ -80,7 +80,10 @@ without spaces translate special characters into non-special ones, examples belo
 Permission for "Skeleton Warrior" is boss.spawn.skeletonwarrior
 Permission for "Der Günter" is boss.spawn.dergunter
 
-Perm: Boss.airspawn
+Perm: boss.use.tamer
+Info: Use the Boss Tamer Tool to edit owners of tameable entities.
+
+Perm: boss.airspawn
 Info: Use the Boss Spawn Egg in the air so Bosses appear in the line of sight in front of you.
 ````
 

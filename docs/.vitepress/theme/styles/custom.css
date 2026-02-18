@@ -2,19 +2,19 @@
 :root {
   --glass-blur: 16px;
   --dark-polygon-pattern: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 0l80 140H20L100 0zm100 200L140 80l60 60v60zM0 200l60-120 60 120H0z' fill='rgba(168, 177, 255, 0.02)' fill-rule='evenodd'/%3E%3C/svg%3E");
-  --glass-highlight: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.1)
-  );
   --glass-shadow: 
-    0 12px 32px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.05),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    0 12px 32px rgb(0 0 0 / 0.12),
+    0 2px 4px rgb(0 0 0 / 0.05),
+    inset 0 0 0 1px rgb(255 255 255 / 0.12);
   --polygon-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zM22.344 0L13.858 8.485 15.272 9.9l7.9-7.9h-.828zm13.312 0l8.485 8.485-1.414 1.414-7.9-7.9h.828zm-9.9 0l7.9 7.9-1.415 1.415-7.9-7.9h1.414zm6.485 0l7.9 7.9-1.414 1.415-7.9-7.9h1.414zM20.93 0L9.414 11.515l1.414 1.414 7.9-7.9h2.202zM39.07 0l11.516 11.515-1.414 1.414-7.9-7.9h-2.202zM0 9.414l11.515 11.516-1.414 1.414L0 11.828V9.414zm0 9.172l9.9 9.9-1.414 1.414L0 21.242v-2.656zm0 9.172l8.485 8.485-1.414 1.414L0 30.414v-2.656zm60-18.344L48.485 21.93l1.414 1.414L60 11.828V9.414zM60 21.242L50.1 31.142l1.414 1.414L60 21.242v-2.656zM39.07 60L50.586 48.485l-1.414-1.414-7.9 7.9h-2.202zM20.93 60L9.414 48.485l1.414-1.414 7.9 7.9h2.202zM11.03 60l-3.657-3.657 1.414-1.415L13.858 60h-2.828zm32.284 0l3.657-3.657-1.414-1.415L40.142 60h2.828zM0 49.414L11.515 37.9l-1.414-1.415L0 47.828v1.586zM60 49.414L48.485 37.9l1.414-1.415L60 47.828v1.586zM54.627 60l.83-.828-1.415-1.415L51.8 60h2.827zM5.373 60l-.83-.828L5.96 57.757 8.2 60H5.374zm8.485 0l7.9-7.9 1.414 1.414L15.272 60h-1.414zm32.284 0l-7.9-7.9-1.414 1.414L44.728 60h1.414z' fill='rgba(168, 177, 255, 0.05)' fill-rule='evenodd'/%3E%3C/svg%3E");
   --tab-bg-dark: #252529;
   --tab-bg-dark-hover: #2c2c32;
   --tab-bg-dark-active: #3c82f6;
+  --vp-c-bg-alpha-90: color-mix(in srgb, var(--vp-c-bg) 90%, transparent);
+  --vp-c-bg-alpha-80: color-mix(in srgb, var(--vp-c-bg) 80%, transparent);
+  --vp-c-bg-alpha-60: color-mix(in srgb, var(--vp-c-bg) 60%, transparent);
+  --vp-border-radius-large: 12px;
+  --feature-image-height: 180px;
 }
 
 /* Base Styles */
@@ -25,11 +25,10 @@
 }
 
 html {
-  overflow-y: scroll !important;
+  scrollbar-gutter: stable;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   line-height: 1.6;
   color: var(--vp-c-text-1);
 }
@@ -41,11 +40,11 @@ a {
 }
 
 a:hover {
-  color: var(--vp-c-brand-dark);
+  color: var(--vp-c-brand-2);
 }
 
 .VPImage.logo {
-  margin-right: 15px;
+  margin-inline-end: 15px;
   border: none;
   border-radius: 0 !important;
 }
@@ -54,15 +53,12 @@ a:hover {
 body::before {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: -2;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(168, 177, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(168, 177, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(168, 177, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 20% 20%, rgb(168 177 255 / 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgb(168 177 255 / 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgb(168 177 255 / 0.05) 0%, transparent 50%),
     var(--vp-c-bg);
   pointer-events: none;
 }
@@ -70,10 +66,7 @@ body::before {
 body::after {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: -1;
   background-image: var(--polygon-pattern);
   opacity: 0.4;
@@ -83,9 +76,9 @@ body::after {
 /* Dark mode background enhancements */
 .dark body::before {
   background: 
-    radial-gradient(circle at 20% 20%, rgba(168, 177, 255, 0.05) 0%, transparent 70%),
-    radial-gradient(circle at 80% 80%, rgba(168, 177, 255, 0.05) 0%, transparent 70%),
-    radial-gradient(circle at 50% 50%, rgba(168, 177, 255, 0.05) 0%, transparent 70%),
+    radial-gradient(circle at 20% 20%, rgb(168 177 255 / 0.05) 0%, transparent 70%),
+    radial-gradient(circle at 80% 80%, rgb(168 177 255 / 0.05) 0%, transparent 70%),
+    radial-gradient(circle at 50% 50%, rgb(168 177 255 / 0.05) 0%, transparent 70%),
     var(--vp-c-bg);
 }
 
@@ -120,174 +113,115 @@ body::after {
     var(--vp-c-bg-alpha-80),
     var(--vp-c-bg-alpha-60)
   );
-  border: 1px solid rgba(168, 177, 255, 0.1);
+  border: 1px solid rgb(168 177 255 / 0.1);
   border-radius: var(--vp-border-radius-large);
   box-shadow: var(--glass-shadow);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   padding: 24px;
-  padding-top: 180px; /* Space for the image at the top */
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  padding-block-start: var(--feature-image-height);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  block-size: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline: 0;
+    block-size: var(--feature-image-height);
+    background-image:
+      linear-gradient(to bottom,
+        rgb(255 255 255 / 0.87),
+        rgb(255 255 255 / 0.9) 50%,
+        rgb(255 255 255 / 1) 100%),
+      var(--feature-img, none);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    z-index: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 15px 35px rgb(0 0 0 / 0.2);
+    border-color: rgb(168 177 255 / 0.3);
+  }
+
+  .title {
+    color: var(--vp-c-brand-3) !important;
+    font-size: 1.4rem;
+    margin-block-end: 12px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+    position: relative;
+    z-index: 1;
+  }
+
+  .details {
+    color: var(--vp-c-text-1);
+    line-height: 1.6;
+    flex-grow: 1;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 0.1);
+    position: relative;
+    z-index: 1;
+  }
+
+  .VPFeatureIcon {
+    display: none;
+  }
 }
 
-.VPFeature:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  border-color: rgba(168, 177, 255, 0.3);
+/* Feature card images — only the URL varies per card */
+.VPFeatures .container .items {
+  .item.grid-4 {
+    width: calc(100% / 3) !important;
+  }
+
+  .item:nth-child(1) .VPFeature { --feature-img: url('/images/plugin-icon/chatcontrol.png'); }
+  .item:nth-child(2) .VPFeature { --feature-img: url('/images/plugin-icon/boss.png'); }
+  .item:nth-child(3) .VPFeature { --feature-img: url('/images/plugin-icon/corearena.png'); }
+  .item:nth-child(4) .VPFeature { --feature-img: url('/images/plugin-icon/protect.png'); }
+  .item:nth-child(5) .VPFeature { --feature-img: url('/images/plugin-icon/winter.png'); }
 }
 
-.VPFeature .title {
-  color: var(--vp-c-brand-darker) !important;
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.VPFeature .details {
-  color: var(--vp-c-text-1);
-  line-height: 1.6;
-  flex-grow: 1;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-/* Hide the emoji icons */
-.VPFeature .VPFeatureIcon {
-  display: none;
-}
-
-/* Product-specific backgrounds - using nth-child to target specific features */
-.VPFeatures .container .items .item:nth-child(1) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.87), 
-    rgba(255, 255, 255, 0.9) 50%, 
-    rgba(255, 255, 255, 1) 100%), 
-    url('/images/plugin-icon/minebot.png');
-}
-
-.VPFeatures .container .items .item:nth-child(2) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.87), 
-    rgba(255, 255, 255, 0.9) 50%, 
-    rgba(255, 255, 255, 1) 100%), 
-    url('/images/plugin-icon/chatcontrol.png');
-}
-
-.VPFeatures .container .items .item:nth-child(3) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.87), 
-    rgba(255, 255, 255, 0.9) 50%, 
-    rgba(255, 255, 255, 1) 100%), 
-    url('/images/plugin-icon/boss.png');
-}
-
-.VPFeatures .container .items .item:nth-child(4) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.87), 
-    rgba(255, 255, 255, 0.9) 50%, 
-    rgba(255, 255, 255, 1) 100%), 
-    url('/images/plugin-icon/corearena.png');
-}
-
-.VPFeatures .container .items .item:nth-child(5) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.87), 
-    rgba(255, 255, 255, 0.8) 50%, 
-    rgba(255, 255, 255, 1) 100%), 
-    url('/images/plugin-icon/protect.png');
-}
-
-.VPFeatures .container .items .item:nth-child(6) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.87), 
-    rgba(255, 255, 255, 0.8) 50%, 
-    rgba(255, 255, 255, 1) 100%), 
-    url('/images/plugin-icon/winter.png');
-}
-
-/* Dark mode gradient adjustments */
+/* Dark mode feature cards */
 .dark .VPFeature {
   background-color: var(--vp-c-bg-soft);
-}
 
-/* Dark mode specific backgrounds */
-.dark .VPFeatures .container .items .item:nth-child(1) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.75), 
-    rgba(25, 25, 30, 0.95) 70%, 
-    rgba(20, 20, 25, 1) 100%), 
-    url('/images/plugin-icon/minebot.png');
-}
+  &::before {
+    background-image:
+      linear-gradient(to bottom,
+        rgb(0 0 0 / 0.75),
+        rgb(25 25 30 / 0.95) 70%,
+        rgb(20 20 25 / 1) 100%),
+      var(--feature-img, none);
+  }
 
-.dark .VPFeatures .container .items .item:nth-child(2) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.75), 
-    rgba(25, 25, 30, 0.95) 70%, 
-    rgba(20, 20, 25, 1) 100%), 
-    url('/images/plugin-icon/chatcontrol.png');
-}
+  .title {
+    color: white !important;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 0.5);
+  }
 
-.dark .VPFeatures .container .items .item:nth-child(3) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.75), 
-    rgba(25, 25, 30, 0.95) 70%, 
-    rgba(20, 20, 25, 1) 100%), 
-    url('/images/plugin-icon/boss.png');
-}
-
-.dark .VPFeatures .container .items .item:nth-child(4) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.75), 
-    rgba(25, 25, 30, 0.95) 70%, 
-    rgba(20, 20, 25, 1) 100%), 
-    url('/images/plugin-icon/corearena.png');
-}
-
-.dark .VPFeatures .container .items .item:nth-child(5) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.75), 
-    rgba(25, 25, 30, 0.95) 70%, 
-    rgba(20, 20, 25, 1) 100%), 
-    url('/images/plugin-icon/protect.png');
-}
-
-.dark .VPFeatures .container .items .item:nth-child(6) .VPFeature {
-  background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.75), 
-    rgba(25, 25, 30, 0.95) 70%, 
-    rgba(20, 20, 25, 1) 100%), 
-    url('/images/plugin-icon/winter.png');
-}
-
-/* Dark mode specific text styles */
-.dark .VPFeature .title {
-  color: white !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.dark .VPFeature .details {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  .details {
+    color: rgb(255 255 255 / 0.9);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  }
 }
 
 /* Navigation enhancements */
 .VPNav {
   position: relative;
-  z-index: 999;
+  z-index: var(--vp-z-index-nav);
   backdrop-filter: none;
   background: var(--vp-c-bg);
   isolation: isolate;
 }
 
 .VPNavBar.home:not(.top) {
-  box-sizing: none !important;
-  border-bottom: none !important;
+  border-block-end: none !important;
 }
 
 /* Enhance navbar layout */
@@ -303,16 +237,16 @@ body::after {
 
 .VPNavBar.container .title {
   position: absolute;
-  left: 32px;
+  inset-inline-start: 32px;
 }
 
 .VPNavBar .title {
-  border-bottom: none !important;
+  border-block-end: none !important;
 }
 
 .VPNavBar.container .content {
   position: absolute;
-  right: 32px;
+  inset-inline-end: 32px;
 }
 
 .VPNavBarSearch.search {
@@ -329,9 +263,9 @@ body::after {
     var(--vp-c-bg-alpha-90),
     var(--vp-c-bg-alpha-80)
   );
-  border-right: 1px solid rgba(168, 177, 255, 0.1);
+  border-inline-end: 1px solid rgb(168 177 255 / 0.1);
   backdrop-filter: blur(var(--glass-blur));
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 /* Add custom dark mode support for tabs */
@@ -356,31 +290,7 @@ body::after {
 
 .medium-zoom-image {
   z-index: 101;
-  cursor: pointer; /* Show pointer cursor on images to indicate they are clickable */
-  transition: transform 0.3s ease;
-}
-
-.medium-zoom-image:hover {
-  transform: scale(1.02); /* Subtle scale effect on hover */
-}
-
-/* Badge that indicates an image is zoomable */
-img:not(.no-zoom)::after {
-  content: '🔍';
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-img:not(.no-zoom):hover::after {
-  opacity: 1;
+  cursor: pointer;
 }
 
 .aside-curtain {
@@ -475,7 +385,7 @@ code.language-rs .token.date {
 
 /* Dark mode adjustments */
 .dark code.language-rs .token.comment {
-  color: #696969; /* Darker gray for dark mode */
+  color: #696969;
 }
 
 .vp-doc code {
@@ -484,13 +394,13 @@ code.language-rs .token.date {
 
 .image-container,
 .video-container {
-  margin: 20px 0;
+  margin-block: 20px;
   text-align: center;
 }
 
 .image-container img,
 .video-container img {
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 img {
@@ -504,11 +414,8 @@ img {
 /* Modal and cross-section link styles */
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -518,10 +425,10 @@ img {
 .modal-container {
   background-color: var(--vp-c-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 1000px;
-  max-height: 90vh;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.2);
+  inline-size: 80%;
+  max-inline-size: 1000px;
+  max-block-size: 90vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -532,7 +439,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  border-bottom: 1px solid var(--vp-c-divider);
+  border-block-end: 1px solid var(--vp-c-divider);
 }
 
 .modal-header h3 {
@@ -555,8 +462,8 @@ img {
 }
 
 .modal-iframe {
-  width: 100%;
-  height: 80vh;
+  inline-size: 100%;
+  block-size: 80vh;
   border: none;
 }
 
@@ -603,7 +510,7 @@ img {
 .modal-icon {
   display: inline-flex !important;
   font-size: 0.75em;
-  margin-left: 2px;
+  margin-inline-start: 2px;
   vertical-align: super;
   color: var(--vp-c-brand);
   opacity: 0.7;
@@ -631,7 +538,7 @@ img {
 }
 
 .iframe-layout {
-  max-width: 100% !important;
+  max-inline-size: 100% !important;
 }
 
 .iframe-mode .VPContent {
@@ -639,7 +546,7 @@ img {
 }
 
 .iframe-mode .content {
-  max-width: 100% !important;
+  max-inline-size: 100% !important;
   padding: 0 24px !important;
 }
 
@@ -678,6 +585,45 @@ img {
 }
 
 .group section.VPSidebarItem {
-  padding-bottom: 10px !important;
+  padding-block-end: 10px !important;
+}
+
+.command-list {
+  margin-block-end: 20px;
+}
+
+.command-list h3 {
+  background-color: color-mix(in srgb, var(--vp-c-brand-1) 5%, transparent);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  font-family: monospace;
+  border-inline-start: 3px solid var(--vp-c-brand);
+}
+
+.command-list h3 + p {
+  margin-inline-start: 12px;
+  padding-block-end: 12px;
+  border-block-end: 1px dashed color-mix(in srgb, var(--vp-c-border) 30%, transparent);
+}
+
+.dark .command-list h3 {
+  background-color: color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent);
+}
+
+/* Responsive: mobile feature cards and modal */
+@media (max-width: 640px) {
+  :root {
+    --feature-image-height: 120px;
+  }
+
+  .modal-container {
+    inline-size: 95%;
+  }
+
+  .modal-iframe {
+    block-size: 70vh;
+  }
 }
 

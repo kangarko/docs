@@ -9,6 +9,7 @@ Inside the messages/ folder, you will find files for
 * kick messages (kick.rs)
 * death messages (death.rs)
 * timed message broadcaster (timed.rs)
+* server switch messages (switch.rs) — proxy only, see [Proxy](./proxy)
 
 You can simply open .rs files using a [compatible text editor](../general/use-right-encoding).
 
@@ -102,6 +103,17 @@ How much time to wait before showing this message again?
 ```
 delay 6 seconds
 ```
+
+#### `player delay <time>`
+Prevents the same player from triggering this message again within the given time. Useful for preventing join/quit message spam when players reconnect rapidly.
+
+```
+player delay 30 seconds
+```
+
+::: tip Common Use Case
+If players spam-reconnect and flood your chat with join/quit messages, add `player delay 30 seconds` to your join.rs and quit.rs groups. This ensures each player's join/quit message only shows once per 30 seconds regardless of how many times they reconnect.
+:::
 
 #### `require sender perm <permission>` and `require receiver perm <permission>` 
 An optional permission that, if set, will make the message only show if the sender/receiver has it. 

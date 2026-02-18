@@ -26,17 +26,7 @@ This page provides a collection of useful tools, websites, and resources to help
 
 <div class="resource-section">
 
-::: tip Recommended
-These editors properly handle UTF-8 encoding, which is crucial for plugin configuration files:
-
-* [**Notepad++**](https://notepad-plus-plus.org/downloads) - A powerful yet lightweight text editor for Windows with syntax highlighting and proper encoding support.
-* [**Sublime Text**](https://www.sublimetext.com/) - A sophisticated text editor with a beautiful interface and advanced features.
-:::
-
-::: warning Not Recommended
-* **Windows Notepad** / **WordPad** - These editors do not properly handle UTF-8 encoding and can corrupt your configuration files. Use with extreme caution!
-* **macOS TextEdit** - This default macOS editor may save files with incorrect encoding or formatting, potentially corrupting your configuration files. Avoid using it for editing plugin configurations.
-:::
+See [Using the Right File Encoding](./use-right-encoding) for recommended editors and encoding tips.
 
 </div>
 

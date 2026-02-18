@@ -1,15 +1,13 @@
 # JSON
 
-JSON stands for **J**ava**S**cript **O**bject **N**otation. When exchanging data between you and the server, or storing data in a database, the data can only be text. JSON is widely used for storing various information, for example about players or server events. It is easy for humans to read and write and easy for machines to parse and generate. 
- 
-Minecraft uses JSON when handling chat. In addition to the plain chat message, JSON allows other (to you invisible) data to be transferred as well. That way, you may view fancy chat components such as hover text or item specific information. ChatControl aims to fully support JSON and offers several way of using it.
+Minecraft uses JSON for interactive chat components (hover text, click events, etc.). ChatControl supports JSON in several ways.
 
 ::: tip
 To create JSON, you can use this [JSON generator](http://minecraftjson.com). It is a very handy tool that will produce interactive chat messages, for example with elements displaying on clicking or hovering on the message.
 :::
 
 ## JSON in formats
-Starting ChatControl 11, we no longer supports JSON in format parts in favor of increased performance. Please use [MiniMessage format](https://webui.advntr.dev/) which supports all component features.
+Starting ChatControl 11, JSON in format parts is no longer supported. Use [MiniMessage format](https://webui.advntr.dev/) instead.
 
 ## JSON in .yml Files
 Files such as settings.yml or localization files support JSON just where a normal message would be. There are two ways of using it.
@@ -46,9 +44,3 @@ match ^This area is now protected.
 dont verbose
 then console tellraw {player} {"text": "This area is now protected."}
 ```
-
-<style>
-code {
-  font-family: monospace;
-}
-</style>

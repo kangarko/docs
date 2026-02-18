@@ -9,7 +9,7 @@
 ChatControl is the most advanced chat filtering and management plugin. It builds on the successes of the ChatControl Pro plugin from 2015, bringing substantial improvements:
 
 * Mail and nicks
-* Toast messages, sending books, titles, action bars and boosbar
+* Toast messages, sending books, titles, action bars and bossbar
 * Join, quit and death messages
 * Region chat rules
 * Removing messages with \[x\]

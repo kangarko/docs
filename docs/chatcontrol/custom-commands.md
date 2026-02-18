@@ -32,9 +32,3 @@ Using our rules you can literally create unlimited amount of aliases, simple and
 ::: tip
 Some people prefer Bukkit's way of creating command aliases. This is more limited but will work just fine, here's a tutorial on it: https://bukkit.fandom.com/wiki/Commands.yml
 :::
-
-<style>
-code {
-  font-family: monospace;
-}
-</style>

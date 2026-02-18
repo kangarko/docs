@@ -1,6 +1,6 @@
 # PlaceholderAPI Integration
 
-If you install PlaceholderAPI, you can take advantage of our rich placeholder system and use our placeholders ANYWHERE on the server. Even in other plugins like ChatControl Pro or your favourite scoreboard plugin.
+If you install PlaceholderAPI, you can take advantage of our rich placeholder system and use our placeholders ANYWHERE on the server. Even in other plugins like ChatControl or your favourite scoreboard plugin.
 
 ::: warning Important Note
 Your plugin may require `%corearena_X%` syntax instead of our `{corearena_X}` syntax outlined below.
@@ -16,6 +16,7 @@ Your plugin may require `%corearena_X%` syntax instead of our `{corearena_X}` sy
 | `{corearena_is_playing}` | Returns "yes" or "no" depending if the player is currently playing |
 | `{corearena_is_in_lobby}` | Returns "yes" or "no" depending if the player is in an arena lobby waiting for the game to start |
 | `{corearena_class}` | A player's class or "none" if he has not yet selected a class in the arena he plays in |
+| `{corearena_arena}` | The name of the arena the player is currently in, or "dead" if not playing |
 
 ### Two Arguments Variables
 
@@ -57,7 +58,7 @@ Supply `ARENA` variable as per above instructions in "two argument variables" se
 
 **Example:** `{corearena_player_current_health}`
 
-### Found Arguments Variables
+### Four Arguments Variables
 
 Supply `X` with the player index in your arena. If there are two players playing, you can use "1" or "2" to get those players. If you specify an invalid number, we return "dead".
 

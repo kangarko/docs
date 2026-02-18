@@ -19,32 +19,6 @@ Winter is a Christmas/Winter 2-in-1 suite for your Minecraft server. It adds fes
 - [Permissions](permissions.md) - Available permissions
 - [Chests](chests.md) - Different types of special chests and how to use them
 
-## Key Features
-
-### Weather System
-- Dynamic snow storms
-- Ice formation
-- Temperature mechanics
-- Weather patterns
-
-### Seasonal Content
-- Winter mob variants
-- Seasonal items
-- Custom crafting
-- Special effects
-
-### Event System
-- Scheduled events
-- Custom rewards
-- Special challenges
-- Holiday celebrations
-
-### World Features
-- Snow accumulation
-- Ice spreading
-- Custom biome effects
-- Seasonal decorations
-
 ## Support
 
 Need help? Join our [Discord community](https://discord.gg/mineacademy) for support and updates.

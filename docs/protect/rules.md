@@ -1,44 +1,40 @@
 # Rules
 
-Protect has a unique way of matching illegal items using rules. Rules are simple operators that can be customized to match unusual items or abnormal quantities of them.
+Protect matches illegal items using rules — simple operators that catch unusual items or abnormal quantities.
 
 ## Creating Custom Rule Files
 
-By default, we copy rules/main.rs file with examples and some preconfigured filters. You can remove this file and make as many .rs files as you wish in the rules/ folder. We will automatically load all of them. This is great for keeping rules organized.
+By default, we ship rules/main.rs with examples and some preconfigured filters. You can remove it and create as many .rs files as you wish in the rules/ folder. We will automatically load all of them.
 
-> Do not remove the groups.rs file as it's used for groups, see below.
+> Do not remove the groups.rs file — it's used for [Groups](groups).
 
-# Groups
+## Groups
 
-You can bulk the operators above together in groups.rs file. 
+You can bulk the operators above together in the groups.rs file. Instead of "match", use `group <name>` to create a rule. Then reference this group in your rules files using `group <name>`.
 
-In this file, simply create rules using the same operators as above but instead of "match" use `group <name>` to create a rule. Then return back to your rules files and reference to this group using `group <name>`.
-
-That way, you can deal with of 100s rules easily without having to copy-paste operators under every rule.
+That way, you can manage 100s of rules easily without having to copy-paste operators under every rule.
 
 ## Creating A New Rule
 
-We match against material names using [our cross-version compatible name table](https://github.com/kangarko/Foundation/blob/master/src/main/java/org/mineacademy/fo/remain/CompMaterial.java). This includes legacy versions.
+We match against material names using [our cross-version compatible name table](https://github.com/kangarko/Foundation/blob/master/src/main/java/org/mineacademy/fo/remain/CompMaterial.java).
 
-Open rules/main.rs or make a new .rs file there and start creating with the two operators below:
+Open rules/main.rs or create a new .rs file. Each line after the match starts with an operator.
 
-Each line after the match starts with an operator. We invented a custom language to write these because there simply was no other way and yaml was ineffective.
-
-Below, the `<>` parameters are must-have whereas the `[]` ones are optional.
+Below, `<>` = required, `[]` = optional.
 
 # Must-Have Operators
 
 #### `match <materialName>`
-Each rule starts with the "match" operator. This is the core fundamental of every rule. A player’s item material type will be tested against the given expression (see below for documentation).
+Each rule starts with "match". Four matching modes:
 
-> If you are familiar with ChatControl, please know that Protect does not support regular expressions. We use our own fast matcher (see below) for high performance instead.
+1. `*_AXE` — starts with: matches all axes
+2. `DIAMOND_*` — ends with: matches all diamond items
+3. `"DIAMOND"` — exact: matches only DIAMOND
+4. `GRASS` — contains: matches GRASS, TALL_GRASS, GRASS_BLOCK
 
-What comes after the match is the material name. Four different ways of specifying the name are supported:
+Use `|` to combine: `DIAMOND_*|"GOLDEN_HOE"`
 
-1. Start your name with * and we will evaluate if the message starts with it, example: *_AXE will match all axes.
-2. End it with * and we'll evaluate endings, example DIAMOND_* will match all diamond tools and blocks.
-3. Start with " and end with " to evaluate equal, example "DIAMOND" will only match DIAMOND but not DIAMOND_BLOCK.
-4. Otherwise we evaluate if message contains the pattern, example GRASS will match GRASS, TALL_GRASS, GRASS_BLOCK etc.
+> Protect does not support regular expressions in match by default. See "Using Regex" below.
 
 Example:
 
@@ -74,7 +70,7 @@ then confiscate
 
 #### Using Regex
 
-If you still want/need to use regex you can prefix your message with "* " and then match normally, i.e. "* ^DIAMOND_(SWORD|HOE)". Please note regex imposes a performance penalty (player inventory is 41 slots big, so each rule needs to be evaluated 41x times and regex is way slower than our own matcher).
+Prefix your match with `* ` to use regex: `* ^DIAMOND_(SWORD|HOE)`. Note: regex is slower since each inventory slot (41 slots) is checked per rule.
 
 #### `name <rule name>`
 Give a rule a name that is unique to this rule. You can use it later with the `{rule_name}` variable.
@@ -102,9 +98,7 @@ require cause item_spawn
 ````
 
 #### `require amount <number>`
-Only match this rule if the item stack ONLY FOR THE SCANNED SLOT in the inventory is over the given amount.
-
-IMPORTANT: This will only count one slot's size! Example: If you want to count how many total diamonds are in the inventory, use "require inventory amount" instead.
+Only match if the item stack at the scanned slot exceeds the given amount. For total inventory count, use `require inventory amount` instead.
 
 #### `require name length <number>`
 Only match this rule if the item has a custom name and the custom name (without colors) exceeds the given size.
@@ -185,11 +179,11 @@ require tag length 512
 ````
 
 #### `require persistent tag <key> <value>`
-Only match this rule if the item's persistent metadata tag (https://www.youtube.com/watch?v=sQmNWUwK4DA) has the given key with the given value.
+Only match if the item's persistent metadata tag has the given key-value pair.
 
-IMPORTANT: The value will be returned with NBT prefix, see Data types: https://minecraft.fandom.com/wiki/NBT_format For example, to match if persistent tag called "Stamina" has byte tag 20, you need to type 20b 
+The value uses NBT prefix notation (e.g., `20b` for byte tag 20). See [Data types](https://minecraft.fandom.com/wiki/NBT_format).
 
-IMPORTANT: This only matches custom plugin-coded data tags. To access vanilla NBT, use "require script" and use the "nbt" instance in the script to navigate NBT. Note this is limited due to how vanilla works.
+This only matches custom plugin-coded data tags. For vanilla NBT, use `require script` with the `nbt` instance.
 
 Example:
 
@@ -199,9 +193,9 @@ require persistent tag Stamina 1b
 ````
 
 #### `ignore inventory title <title>`
-Ignore the item if it was opened in a container (i.e. chest) with the given title. We compare the title with colors removed.
+Ignore items in containers with the given title (colors stripped).
 
-IMPORTANT: Protect ignores custom sized and custom named (colored) inventory titles by default.
+Protect ignores custom-sized and custom-named inventory titles by default.
 
 Example:
 
@@ -306,13 +300,13 @@ Reduce the enchant level to the maximum allowed by vanilla.
 Example:
 
 ````
-then neft
+then nerf
 ````
 
 #### `then clone`
-Silently clones the item into the logs table. Use "/protect logs" to view it.
+Silently clone the item into the logs table. View with `/protect logs`.
 
-IMPORTANT: To prevent duplicate clone, we add an invisible NBT tag to the item. Note that this will make the item unstackable with other items in the inventory so player can figure out that it's been flagged. There is no other way around this.
+To prevent duplicate clones, we add an invisible NBT tag (makes the item unstackable).
 
 Example:
 
@@ -354,7 +348,7 @@ group advertisement
 ````
 
 #### `begins` and `expires`
-Expires means the date on which we start executing this rule. Begins means the date after which we stop executing this rule.
+Begins means the date on which we start executing this rule. Expires means the date after which we stop executing this rule.
 This is a great addition to pre-create rules for the holiday or special events!
 
 Examples:
@@ -410,9 +404,11 @@ require perm protect.rule.special {error_prefix} You lack the ‘{permission}’
 ````
 
 #### `require script <javascript returning a boolean>`
-An optional JavaScript that must return true/false. The rule will only be executed if it returns a value of true. You can use "player" to get the sender’s instance (nullable) and "nbt" to get the NBT-API NBTItem instance for NBT manipulation (not null). You can also use other rule variables there and they will be translated in the script directly. A variable returning "true" will be treated as a boolean.
+JavaScript that must return true for the rule to execute. Use `player` for the Bukkit Player instance (nullable) and `nbt` for the NBT-API NBTItem instance.
 
-Warning: JavaScript knowledge is required to program the script. We currently don’t have the capacity to do so we don’t offer help with creating your own scripts.
+::: warning
+JavaScript knowledge required. We don't offer help with creating custom scripts.
+:::
 
 Example:
 
@@ -470,9 +466,9 @@ ignore key player-name
 ````
 
 #### `save key <key> <value>`
-Save a custom key to player's data. This is permanent and will remain even after reload.
+Save a custom key to player's data (permanent, survives reload).
 
-WARNING: The key, before saved, is treated as JavaScript. That means, if you simply want to save a string such as "tree", you must put it into brackets: "save key 'tree'". In your save code, you can use "player" variable to get Bukkit Player class, see image below for example usage.
+The value is evaluated as JavaScript. To save a plain string like "tree", wrap it in quotes: `save key 'tree'`. Use `player` variable for the Bukkit Player class.
 
 Example:
 
@@ -543,11 +539,10 @@ Commands that will be executed in the given order as the sender, with his permis
 Commands that will be executed in the given order from the console, with server privileges. Use | to define multiple commands, and use the `{player}` variable to get the player.
 
 #### `then bungeeconsole <server> <command1|command2>`
-Commands that will be sent to BungeeCord to be executed. Use | to define multiple commands, and use the `{player}` variable to get the player.
 
-**You need VelocityControl or BungeeControl Red. Make sure that you give yourself the "chatcontrol.command.forward" permission on BungeeCord also.**
-
-The server variable can either be "bungee" (so we run the command on BungeeCord), "velocity" for Velocity, or a name of another server where the command should be forwarded. 
+::: warning Temporarily Disabled
+This operator is currently disabled in the latest version of Protect.
+:::
 
 #### `then log`
 Log a message to the console.
@@ -654,7 +649,7 @@ then abort
 ````
 
 #### `dont log`
-Prevent the rule from being logged into "/chc log".
+Prevent the rule from being logged into "/protect logs".
 
 Example:
 ````
@@ -670,7 +665,7 @@ dont verbose
 ````
 
 #### `disabled`
-Makes this rule load to memory but be disabled. Used in "/chc rule" commands to toggle rules.
+Makes this rule load to memory but be disabled.
 
 Example:
 ````

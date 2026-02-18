@@ -17,9 +17,6 @@ hero:
       link: https://mineacademy.org/project-orion?st=docs?sc=header
 
 features:
-  - title: MineBot
-    details: The all-in-one Discord bot with Minecraft integration and powerful moderation tools.
-    link: /minebot/
   - title: ChatControl
     details: Take control of your server's chat with powerful moderation tools, anti-spam features, and customizable formatting options.
     link: /chatcontrol/

@@ -1,9 +1,9 @@
 # Compatibility
 
-On this page, you'll learn the minimum requirements and supported third party plugins for Boss to run.
+On this page, you'll learn the minimum requirements and supported third party plugins for CoreArena to run.
 
 ::: danger
-Please read the [General Compatibility Guide](../general/compatibility.md) for general compatibility information and requirements that apply to Boss.
+Please read the [General Compatibility Guide](../general/compatibility.md) for general compatibility information and requirements that apply to CoreArena.
 :::
 
 ## Recommended plugins

@@ -1,11 +1,10 @@
 # Discord Integration
 
-With ChatControl, you can connect your channels to Discord. You can even send any message such as alert staff about ads or misbehavior, or broadcast death messages to any Discord channel!
+Connect your channels to Discord. Send any message — staff alerts about ads/misbehavior, death messages, etc. — to any Discord channel.
 
-::: warning Important Notes
-- There are some IMPORTANT notes at the bottom of this page, make sure to check them out.
-- **IMPORTANT:** Ensure to give your bot the ability (permission) to delete/manage messages.
-- **DUPLICATE MESSAGES**: To avoid duplicated messages, set DiscordChatChannelMinecraftToDiscord to false in DiscordSRV/config.yml.
+::: danger Important
+- Give your bot the **Manage Messages** permission on Discord.
+- To avoid duplicate messages, set `DiscordChatChannelMinecraftToDiscord` to false in DiscordSRV/config.yml.
 :::
 
 ## Installation
@@ -32,7 +31,7 @@ Configure DiscordSRV as per [this guide](https://www.spigotmc.org/resources/disc
 **IMPORTANT:** Ensure to give your bot the ability (permission) to delete/manage messages.
 :::
 
-**NOTICE:** The image below may get outdated really fast, please check [this](https://www.spigotmc.org/resources/discordsrv.18494/) link for up to date info on connecting discord.
+**NOTE:** The image below may become outdated — check [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) for up to date info.
 
 ![DiscordSRV configuration screenshot](/images/chatcontrol/8eeEtFs.png)
 
@@ -62,27 +61,39 @@ You can use the `then discord` operator in [Rules](./rules), such as `then disco
 
 ## Additional Notes
 
-### Permissions
-::: warning Bot Permissions
-Ensure to give your bot the ability (permission) to delete/manage messages.
-:::
-
 ### Proxy Integration
-::: info Proxy Networks
-If you have [proxy enabled](./proxy), and your channel has Discord on, we will send it both to proxy and to Discord. If the other server has DiscordSRV installed, it will not send it to Discord to avoid duplication.
 
-If however, you send a message from a server on your network which lacks DiscordSRV but the channel has Discord enabled, it will try to find another network server which has **Discord.Forward_From_Proxy** on true in settings.yml and DiscordSRV installed and try forwarding the message to Discord through that server.
-:::
+If you have [proxy enabled](./proxy) and your channel has Discord on, messages are sent to both proxy and Discord. If the other server has DiscordSRV installed, it will not send to Discord to avoid duplication.
+
+We recommend having DiscordSRV installed on all servers from which you want to send or receive Discord messages.
 
 ### Rules and Mentions
 
-If you want rules and filtering for your Discord, the @ mentions or your other Discord plugin may not work.
+If you want rules and filtering for Discord messages, the @ mentions or your other Discord plugin may not work.
 
-::: tip Message Processing
-When you send a message to Discord, by default we have to unsend it and send it again through our own system. This is because Discord doesn't let developers to edit messages sent by other players. This makes filtering functional but poses some limitations. You can turn this off in Discord section of settings.yml, see:
-:::
+When you send a message to Discord, by default we unsend it and resend it through our own system (Discord doesn't let developers edit messages sent by other players). This makes filtering functional but poses some limitations. You can turn this off:
 
 ```yaml
 Discord:
   Send_Messages_As_Bot: false
 ```
+
+## Troubleshooting
+
+### Discord → Minecraft rules triggering incorrectly
+When messages come from Discord into Minecraft, your chat rules will process them. If you have emoji-related or special character rules, they may trigger on Discord messages. Use the `ignore discord` operator in your rules to prevent this, or `require discord` to create Discord-only rules.
+
+### `deny silent` not deleting Discord messages
+The `deny silently` operator prevents messages from appearing in Minecraft chat, but it cannot delete the original Discord message. To delete Discord messages, ensure your bot has the **Manage Messages** permission on Discord and set `Send_Messages_As_Bot` to `true`.
+
+### Discord channel text formatting issues
+Discord uses its own formatting (bold with \*\*, italic with \*, etc.) while ChatControl uses MiniMessage. These are not automatically converted between platforms. Format your `Format_To_Discord` without MiniMessage tags, and your `Format_From_Discord` without Discord markdown.
+
+- **`Format_To_Discord`** controls how Minecraft messages appear in Discord. Use plain text or Discord markdown here — do not use MiniMessage tags like `<#123456>` as Discord won't render them.
+- **`Format_From_Discord`** controls how Discord messages appear in Minecraft. Use MiniMessage formatting here — do not use Discord markdown like `**bold**` as Minecraft won't render it.
+
+### DiscordSRV grabbing messages suppressed by rules
+If DiscordSRV still sends messages to Discord even after ChatControl's rules suppress them, adjust your [Listener Priorities](./listener-priorities) so ChatControl processes messages before DiscordSRV. Set ChatControl's priority higher (earlier) than DiscordSRV's.
+
+### Duplicate messages appearing
+Set `DiscordChatChannelMinecraftToDiscord` to `false` in DiscordSRV's config.yml. If using proxy, ensure only one server has DiscordSRV installed to avoid duplication.

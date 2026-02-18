@@ -28,7 +28,7 @@ If you're getting "Specified key was too long; max key length is 767 bytes" or a
 
 ### Special characters are just showing as ? / Unicodes / Special characters not working
 
-Ensure you open and save all files using the right encoding and the right program, see [Use-Right-Encoding]Use-Right-Encoding(). You may need to regenerate your file in case the unicode letters have been corrupted by wrong encoding earlier. For unicode, you can also use the escape characters `\u2642`.
+Ensure you open and save all files using the right encoding and the right program, see [Use Right Encoding](/general/use-right-encoding). You may need to regenerate your file in case the unicode letters have been corrupted by wrong encoding earlier. For unicode, you can also use the escape characters `\u2642`.
 
 Please also make sure to surround the message that contains these characters with quotes ("").
 
