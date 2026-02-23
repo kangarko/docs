@@ -58,6 +58,30 @@ To stop all Bosses from regenerating health from any source, set `Health.Prevent
 
 The `Fighting.Disable_Cheats` list controls what player abilities are disabled when fighting a Boss. Default: `[FLIGHT, GOD_MODE, INVISIBILITY]`.
 
+### Boss Bar
+
+Each Boss can display a Boss Bar above all nearby players showing its name and remaining health. Toggle it per-boss in the Boss menu > Settings > Boss Bar.
+
+Configure the global Boss Bar appearance in settings.yml under `Fighting.Boss_Bar`:
+
+```yaml
+Boss_Bar:
+  Color: RED
+  Style: SOLID
+  Format: "&c{boss_alias} &7- &c{health}&7/&c{max_health} &4❤"
+  Radius: 32
+```
+
+The Boss Bar appears when the Boss spawns, updates on damage, and automatically tracks nearby players within the configured radius. It is removed when the Boss dies or despawns.
+
+### Projectile Immune
+
+You can make a Boss immune to all projectile damage (arrows, tridents, snowballs, etc.) by enabling the **Projectile_Immune** custom setting in the Boss menu > Settings > Specific Settings. This forces players to engage in melee combat only.
+
+### Mannequin Support
+
+Boss now supports MANNEQUIN entities (in addition to ARMOR_STAND) as base mob types where applicable.
+
 ## Death Commands and Rewards
 
 ### Player_Commands (Ranked Rewards)

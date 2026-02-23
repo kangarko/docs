@@ -68,9 +68,9 @@ Supported database types:
       <td>Fully supported.</td>
     </tr>
     <tr>
-      <td><strong>Folia</strong></td>
+      <td><strong>Folia / ShreddedPaper</strong></td>
       <td>⚠️</td>
-      <td>Check the BuiltByBit compatibility table for your specific plugin.</td>
+      <td>Entity scheduling uses the entity's own scheduler on Folia/ShreddedPaper for thread safety. Check the BuiltByBit compatibility table for your specific plugin.</td>
     </tr>
     <tr>
       <td><strong>Spigot Forks</strong><br>(UniverseSpigot, PandaSpigot, etc.)</td>

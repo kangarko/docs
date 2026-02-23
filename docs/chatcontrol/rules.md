@@ -872,11 +872,17 @@ then points ads 50
 #### `then replace <replacement>`
 Replace the matched part in the message with the given replacement. Use | to separate multiple replacements. Once will be randomly chosen from those.
 
+You can use `@prolong <char>` as the replacement to automatically duplicate the given character to fit the length of the matched word. For example, if "fuck" is matched and the replacement is `@prolong *`, the result will be `****`.
+
+By default, `@prolong` measures the length of the entire match (group 0). You can target a specific regex capturing group with `@prolong:N <char>` where N is the group index. This is useful when your regex has multiple groups and you want the replacement length to match only one of them.
+
 Example:
 
 ```
 then replace I am a fool!
 then replace I am a fool!|I am an idiot!
+then replace @prolong *
+then replace @prolong:1 #
 ```
 
 #### `then rewrite <replacement>`

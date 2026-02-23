@@ -30,6 +30,11 @@ The following variables require a nearby Boss in the radius configured in settin
 | `%boss_{bossName}_{player}_kills%` | Display how many Bosses the player has killed. The way this is counted is listening to a Boss entity death event and getting the killer from there. You can replace {player} with player for the current player, or give a player name. |
 | `%boss_{bossName}_top_damage_{leadingPosition}_{player/value}%` | Get the player's name or the amount of damage (see `%boss_{bossName}_{player}_damage%`) that the player at the given leading order has dealt. For example: `%boss_Zombie_top_damage_1_player%` returns the name of the player who dealt the most damage to the Zombie boss. Replace 1 with 2 to get the second most damaging player, etc. |
 | `%boss_{bossName}_top_kills_{leadingPosition}_{player/value}%` | Get the player's name or the amount of killed entities (see `%boss_{bossName}_{player}_kills%`) that the player at the given leading order has dealt. For example: `%boss_Zombie_top_kills_1_player%` returns the name of the player who killed the most Zombie bosses. Replace 1 with 2 to get the second most damaging player, etc. |
+| `%boss_spawned%` | Total count of all alive Bosses across all worlds. |
+| `%boss_spawned_{world}%` | Total count of all alive Bosses in the given world. Replace `{world}` with your world name. |
+| `%boss_{bossName}_spawned%` | Count of alive instances of the given Boss across all worlds. |
+| `%boss_{bossName}_spawned_{world}%` | Count of alive instances of the given Boss in the given world. |
+| `%boss_spawned_here%` | Count of all alive Bosses in the player's current world. |
 
 The following variables require the player to have the Region Tool from "/boss tool" and selected a region.
 

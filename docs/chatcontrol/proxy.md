@@ -159,3 +159,65 @@ The proxy settings.yml (inside your VelocityControl or BungeeControl plugins fol
 ## Additional Features
 
 You can also forward commands to proxy using "then proxyconsole" in [Rules](./rules) and [Messages](./messages) and "/chc forward" command.
+
+## Proxy Command Rules
+
+You can filter, block, and act on commands executed at the proxy level using the `rules/command.rs` file inside your BungeeControl or VelocityControl plugins folder. This works just like Bukkit-side [Rules](./rules) but runs on the proxy before commands reach any server.
+
+The proxy command rules use the same syntax as Bukkit rules. Place rules in the `rules/command.rs` file inside the proxy plugin's data folder.
+
+### Available Operators
+
+| Operator | Description |
+|----------|-------------|
+| `match <regex>` | Match commands against a regular expression |
+| `name <name>` | Name this rule for identification |
+| `require sender perm <perm> [message]` | Require sender to have a permission |
+| `require sender server <server>` | Require sender to be on a specific server |
+| `require sender script <script>` | Require a JavaScript condition |
+| `ignore sender perm <perm>` | Skip rule if sender has this permission |
+| `ignore sender server <server>` | Skip rule if sender is on this server |
+| `ignore sender script <script>` | Skip rule if JavaScript condition is true |
+| `require perm <perm>` | Shorthand for require sender perm |
+| `ignore perm <perm>` | Shorthand for ignore sender perm |
+| `require playedbefore` | Only match if the sender has played before |
+| `ignore playedbefore` | Skip rule if the sender has played before |
+| `strip colors <true/false>` | Strip colors before matching |
+| `strip accents <true/false>` | Strip accents before matching |
+| `then deny` | Block the command |
+| `then warn <message>` | Send a warning message to the sender |
+| `then command <command>` | Run a command as the sender |
+| `then proxy <command>` | Run a command on the proxy console |
+| `then log <message>` | Log a message to console |
+| `then kick <message>` | Kick the player |
+| `then discord <channel> <message>` | Send a message to Discord |
+| `then write <file> <message>` | Write to a log file |
+| `then abort` | Stop processing further rules |
+| `disabled` | Temporarily disable this rule |
+
+### Example: Block /op on Proxy
+
+```rs
+match ^/op\b
+ignore perm chatcontrol.bypass.rules
+name /op
+then warn &cThis command is not allowed.
+then deny
+```
+
+### Example: Audit Punishment Commands
+
+```rs
+match ^/(ban|mute|kick|warn)\b
+name punishment-audit
+then log {player} executed proxy command: {original_message}
+```
+
+### Example: Restrict Command to Specific Server
+
+```rs
+match ^/creative\b
+require sender server creative
+then warn &cYou can only use this on the creative server.
+then deny
+```

@@ -44,6 +44,10 @@ Periodically scan areas around players and spawn Bosses near them.
 
 You can cap the max Bosses per Spawn Rule, or individually per Boss in the Spawning Limits section.
 
+::: warning
+Spawn rule names **must not contain underscores** (`_`). Underscores break PlaceholderAPI placeholder parsing. See [Naming Rules](./customizing-bosses#underscores-not-allowed-in-names) for details.
+:::
+
 ## Regions
 On top of that, each Boss can be configured to only appear in certain regions. 
 
