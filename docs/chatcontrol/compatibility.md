@@ -34,15 +34,15 @@ Report Folia-specific issues on GitHub with `[Folia]` in the title.
 
 <div class="plugin-card">
 
-#### 🎮 [Parties](https://www.spigotmc.org/resources/3709/) <Badge type="tip" text="Compatible" />
-Support ChatControl nicks in party chat.
+#### 🎮 [Parties](https://www.spigotmc.org/resources/3709/) <Badge type="tip" text="Party Chat" />
+Support ChatControl nicks in proxy party chat, and party chat channels on Bukkit. See [Channels](./channels).
 
 </div>
 
 <div class="plugin-card">
 
-#### 👥 [Parties and friends](https://www.spigotmc.org/resources/9531) <Badge type="tip" text="Compatible" />
-Support ChatControl nicks or any other supported [variable](./variables) in party chat.
+#### 👥 [Parties and friends](https://www.spigotmc.org/resources/9531) <Badge type="tip" text="Party Chat" />
+Support ChatControl nicks in proxy party chat, and party chat channels on Bukkit. See [Channels](./channels).
 
 </div>
 
@@ -147,6 +147,26 @@ Support for party chat, see [Channels](./channels).
 
 #### Towny and TownyChat <Badge type="tip" text="Party & Spy" />
 Spying on towny chat and support for party chat, see [Channels](./channels).
+
+</div>
+
+</div>
+
+### 🎉 Party Plugins
+
+<div class="plugin-grid">
+
+<div class="plugin-card">
+
+#### Parties (AlessioDP) <Badge type="tip" text="Party Chat" />
+Support for party chat, see [Channels](./channels).
+
+</div>
+
+<div class="plugin-card">
+
+#### Party and Friends (PAF) <Badge type="tip" text="Party Chat" />
+Support for party chat, see [Channels](./channels). Requires both `FriendsAPIForPartyAndFriends` and `Spigot-Party-API-PAF` installed.
 
 </div>
 
