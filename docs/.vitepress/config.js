@@ -188,6 +188,7 @@ export default {
           items: [
             { text: 'Customizing Bosses', link: '/boss/customizing-bosses' },
             { text: 'Skills', link: '/boss/skills' },
+            { text: 'Particles', link: '/boss/particles' },
             { text: 'Boss Spawning', link: '/boss/natural-spawning' },
             { text: 'Boss Commands', link: '/boss/boss-commands' },
             { text: 'Drops', link: '/boss/drops' },

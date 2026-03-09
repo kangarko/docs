@@ -72,6 +72,13 @@ Write `{player_chat_color}` and `{player_chat_decoration}` to format used in the
     Message: "&7:&r`{player_chat_color}{player_chat_decoration}{message}`"
 ```
 
+### `{player_prefix}` is empty on Velocity / proxy
+::: warning
+This is usually a Vault/LuckPerms context mismatch — if the prefix is assigned to a specific server context in LuckPerms, Vault returns empty on other servers. Run `/lp user <name> meta info` on the backend and check the prefix is in `global` context, not scoped to a server name.
+
+Alternatively, use `{luckperms_prefix}` in your format (bypasses Vault entirely). Requires the LuckPerms PAPI expansion: `/papi ecloud download LuckPerms`, then `/papi reload`.
+:::
+
 ### Toasts: How to edit "Goal Reached" for toast notifications?
 ![Toast notification screenshot](/images/chatcontrol/EHORs3y.png)
 
