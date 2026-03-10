@@ -227,7 +227,9 @@ ignore material PLAYER_HEAD|PLAYER_WALL_HEAD
 ````
 
 #### `ignore inventory amount <totalAmount>`
-Ignore the scan if the container with player inventory combined contains less than the given amount of the scanned item type.
+Ignore the scan if the container with player inventory combined contains less than the given amount of matching items.
+
+When the rule has `require name` or `require lore`, only items matching those conditions are counted — not all items of the same material type.
 
 Example: If I hold 5x diamonds and I open a chest with 10x diamonds, together the container + my inventory hold 15x diamonds. If you want the scan to match when there is a total of 50x diamonds, you set the totalAmount to 50.
 
@@ -315,7 +317,9 @@ then clone
 ````
 
 #### `then confiscate excess`
-Attempts to remove the excessive amount of items of the same type from the inventory and logs to the database. Use "/protect logs" to view.
+Attempts to remove the excessive amount of matching items from the inventory and logs to the database. Use "/protect logs" to view.
+
+When the rule has `require name` or `require lore`, only items matching those conditions are removed — other items of the same material type are left untouched.
 
 Requires "require inventory amount" to be set. Example: I hold 64x beacons. The "require inventory amount" is set to 10. After "then confiscate excess" is fired, Protect will take 54x beacons so I am left with 10x in my inventory.
 
