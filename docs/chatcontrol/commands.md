@@ -152,7 +152,7 @@ Set your own nick, prefix, or suffix.
 Send a private message.
 
 ### `/toggle`
-Disable receiving message types: `announcement`, `broadcast`, `chat`, `mail`, `private_message`, `sound_notify`, `join`, `quit`, `kick`, `death`, `timed`, `switch`. For example, you can enable players to disable seeing death messages or timed message announcements.
+Disable receiving message types: `announcement`, `broadcast`, `chat`, `mail`, `private_message`, `proxy_chat`, `sound_notify`, `join`, `quit`, `kick`, `death`, `timed`, `switch`. For example, you can enable players to disable seeing death messages or timed message announcements.
 
 </div>
 
