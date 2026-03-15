@@ -192,6 +192,16 @@ require persistent tag CoreArena_Item true
 require persistent tag Stamina 1b
 ````
 
+#### `require attribute value <amount>`
+Only match if the item has an attribute modifier whose absolute value equals or exceeds the given amount. Must be combined with `check attribute modified`.
+
+Example:
+
+````
+check attribute modified
+require attribute value 100
+````
+
 #### `ignore inventory title <title>`
 Ignore items in containers with the given title (colors stripped).
 
@@ -287,6 +297,34 @@ Example:
 check enchant too-high
 ````
 
+#### `check enchant conflicting`
+Fire this rule if the item has two or more enchantments that conflict with each other (e.g. Sharpness + Smite, Protection + Blast Protection). Vanilla Minecraft prevents this combination, so it indicates a hacked item.
+
+Example:
+
+````
+check enchant conflicting
+````
+
+#### `check unbreakable`
+Fire this rule if the item has the unbreakable flag set. This flag cannot be obtained in survival without commands or hacks.
+
+Example:
+
+````
+check unbreakable
+````
+
+#### `check attribute modified`
+Fire this rule if the item has custom attribute modifiers (e.g. custom damage, speed, armor values). Combine with `require attribute value` to only match modifiers above a threshold.
+
+Example:
+
+````
+check attribute modified
+require attribute value 100
+````
+
 #### `then disenchant`
 Remove all enchantments from the item.
 
@@ -303,6 +341,24 @@ Example:
 
 ````
 then nerf
+````
+
+#### `then strip-attributes`
+Remove all custom attribute modifiers from the item, keeping the item itself intact. Useful with `check attribute modified`.
+
+Example:
+
+````
+then strip-attributes
+````
+
+#### `then strip-nbt`
+Strip all NBT data from the item, keeping only the material type and stack amount. This is the nuclear option — the item loses its name, lore, enchantments, and all other data.
+
+Example:
+
+````
+then strip-nbt
 ````
 
 #### `then clone`
