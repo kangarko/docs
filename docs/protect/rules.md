@@ -59,6 +59,21 @@ group beginner
 
 Use '*' to match everything, example: "match *".
 
+#### Minecraft Tag Matching
+
+Use `#tagName` to match items belonging to a vanilla Minecraft tag. Tags are resolved at plugin load into material sets, so runtime matching is O(1).
+
+Examples:
+
+````
+match #swords
+match #enchantable/durability
+match #anvil
+match #swords|TRIDENT
+````
+
+Tags are looked up from the items registry first, then blocks. See the [Minecraft Wiki](https://minecraft.wiki/w/Tag) for all available tags. Requires MC 1.13+.
+
 ````
 # Block too long nbt item tags (use /protect iteminfo to inspect) that
 # crash the client and the server.
@@ -247,6 +262,33 @@ Example:
 
 ````
 ignore inventory amount 50
+````
+
+#### `ignore displayname <pattern>`
+Ignore items whose display name (colors stripped) matches the pattern. Supports wildcard matching.
+
+Example:
+
+````
+ignore displayname *Custom Weapon*
+````
+
+#### `ignore lore <pattern>`
+Ignore items whose lore (lines joined with `|`, colors stripped) matches the pattern. Supports wildcard matching.
+
+Example:
+
+````
+ignore lore *Quest Item*
+````
+
+#### `ignore modeldata <number>`
+Ignore items with the given custom model data value.
+
+Example:
+
+````
+ignore modeldata 12345
 ````
 
 #### `ignore enchant <enchantName>`
