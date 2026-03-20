@@ -479,6 +479,22 @@ Catch-all: fire this rule if the item has ANY component that doesn't exist on th
 check illegal components
 ````
 
+#### `check illegal <name>`
+Check any component by name. You can use any [Minecraft data component](https://minecraft.wiki/w/Data_component_format) name with dashes instead of underscores. The 8 built-in names above are shortcuts for this syntax.
+
+````
+check illegal attack-range
+````
+
+#### `ignore component`
+Whitelist specific components so `check illegal components` and `then strip-components` skip them. Use pipe `|` to list multiple. This is essential when using the catch-all to avoid stripping legitimate components like enchantments or custom names.
+
+````
+ignore component enchantments|repair_cost|custom_name|lore|custom_data|custom_model_data
+````
+
+See the [Minecraft Wiki](https://minecraft.wiki/w/Data_component_format) for all available component names.
+
 #### `then strip-hide-tooltip`
 Remove the hidden tooltip from the item.
 
@@ -507,13 +523,21 @@ Remove the tool component from the item.
 Remove the enchantment glint override from the item.
 
 #### `then strip-components`
-Remove ALL non-vanilla components from the item at once. Pair with `check illegal components` for a catch-all rule:
+Remove ALL non-vanilla components from the item at once. Respects `ignore component` whitelist. Pair with `check illegal components` for a catch-all rule:
 
 ````
 match *
 name illegal-components
 check illegal components
+ignore component enchantments|repair_cost|custom_name|lore|custom_data|custom_model_data
 then strip-components
+````
+
+#### `then strip-<name>`
+Strip any component by name. You can use any [Minecraft data component](https://minecraft.wiki/w/Data_component_format) name with dashes instead of underscores. The 8 built-in names above are shortcuts for this syntax.
+
+````
+then strip-attack-range
 ````
 
 #### `then clone`
