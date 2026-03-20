@@ -403,6 +403,119 @@ Example:
 then strip-nbt
 ````
 
+### Component Operators (1.21+)
+
+These operators detect and strip hacked item components added via NBT editors or hacked clients. They require Minecraft 1.21+ and are silently skipped on older versions.
+
+#### `check hide-tooltip`
+Fire this rule if the item has a hidden tooltip (the entire tooltip is suppressed so players can't see what the item really is).
+
+Example:
+
+````
+check hide-tooltip
+````
+
+#### `check illegal food`
+Fire this rule if the item has a food component that doesn't belong on this item type in vanilla. E.g. a sword made edible.
+
+````
+check illegal food
+````
+
+#### `check illegal consumable`
+Fire this rule if the item has a consumable component that doesn't belong on this item type in vanilla. Catches items with custom on-consume effects (potion effects, teleport, etc.).
+
+````
+check illegal consumable
+````
+
+#### `check illegal equippable`
+Fire this rule if the item has an equippable component that doesn't belong on this item type in vanilla. E.g. a pickaxe wearable as a helmet.
+
+````
+check illegal equippable
+````
+
+#### `check illegal rarity`
+Fire this rule if the item has a rarity component that doesn't belong on this item type in vanilla.
+
+````
+check illegal rarity
+````
+
+#### `check illegal death-protection`
+Fire this rule if the item has a death protection component that doesn't belong on this item type in vanilla. E.g. an enchanted golden apple that grants custom effects on death.
+
+````
+check illegal death-protection
+````
+
+#### `check illegal damage-resistant`
+Fire this rule if the item has a damage resistance component that doesn't belong on this item type in vanilla.
+
+````
+check illegal damage-resistant
+````
+
+#### `check illegal tool`
+Fire this rule if the item has a tool component that doesn't belong on this item type in vanilla.
+
+````
+check illegal tool
+````
+
+#### `check enchantment-glint-override`
+Fire this rule if the item has a forced enchantment glint override (making it glow or suppressing the glow).
+
+````
+check enchantment-glint-override
+````
+
+#### `check illegal components`
+Catch-all: fire this rule if the item has ANY component that doesn't exist on the vanilla version of that item type. This is the broadest check and catches all of the above in one rule.
+
+````
+check illegal components
+````
+
+#### `then strip-hide-tooltip`
+Remove the hidden tooltip from the item.
+
+#### `then strip-food`
+Remove the food component from the item.
+
+#### `then strip-consumable`
+Remove the consumable component from the item.
+
+#### `then strip-equippable`
+Remove the equippable component from the item.
+
+#### `then strip-rarity`
+Remove the rarity component from the item.
+
+#### `then strip-death-protection`
+Remove the death protection component from the item.
+
+#### `then strip-damage-resistant`
+Remove the damage resistance component from the item.
+
+#### `then strip-tool`
+Remove the tool component from the item.
+
+#### `then strip-enchantment-glint`
+Remove the enchantment glint override from the item.
+
+#### `then strip-components`
+Remove ALL non-vanilla components from the item at once. Pair with `check illegal components` for a catch-all rule:
+
+````
+match *
+name illegal-components
+check illegal components
+then strip-components
+````
+
 #### `then clone`
 Silently clone the item into the logs table. View with `/protect logs`.
 
