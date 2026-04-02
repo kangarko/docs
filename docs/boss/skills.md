@@ -122,5 +122,5 @@ Each skill can be individually configured with its own activation delay, effects
 ## Extending With Custom Skills
 
 ::: info Developer API
-You can create custom skills with our API. See the [Developer API](./API) page.
+You can create custom skills with our API. See the [Developer API](./api) page.
 :::

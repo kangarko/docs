@@ -35,4 +35,4 @@ If you are a power user, we offer an extensive API so that you can take over the
 
 Simply start by listening to BossDeathEvent and use the getDrops() function or the Boss model to get the Boss drops, where you can clear them completely or edit them to your likings.
 
-More about the API on its [dedicated page](API).
+More about the API on its [dedicated page](api).
