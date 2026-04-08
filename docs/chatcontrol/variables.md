@@ -100,7 +100,7 @@ Sometimes we provide more variables than the ones above, such as `{message}` whe
 | `{chat_line}` | A simple chat line. |
 | `{chat_line_smooth}` | A smooth chat line. |
 | `{server_name}` | The "server-name" key from server.properties, or if you use PlaceholderAPI with the server extension, from its file. |
-| `{server_version}` | The full server version such as 1.21.2 |
+| `{server_version}` | The full server version such as 26.1 |
 | `{label_main}` | Return our main command label. |
 | `{prefix_plugin}` | Return the Prefix key from your settings.yml |
 | `{prefix_info}` | Return the info prefix from your localization. |

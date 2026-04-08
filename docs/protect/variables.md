@@ -36,7 +36,7 @@ The player-related variables you can use in operators inside rules/ for operator
 | `{chat_line}` | A simple chat line. |
 | `{chat_line_smooth}` | A smooth chat line. |
 | `{server_name}` | The "server-name" key from server.properties, or if you use PlaceholderAPI with the server extension, from its file. |
-| `{server_version}` | The full server version such as 1.21.2 |
+| `{server_version}` | The full server version such as 26.1 |
 | `{nms_version}` | (Advanced) The NMS package number such as 1_20_R3 (Empty for 1.20.5+ on Paper.) |
 | `{label}` | Return our main command label. |
 | `{plugin_prefix}` | Return the Prefix key from your settings.yml |

@@ -106,6 +106,11 @@ Many issues are caused by incompatible plugin dependencies rather than our plugi
   </thead>
   <tbody>
     <tr>
+      <td><strong>26.1</strong></td>
+      <td>✅</td>
+      <td>Fully supported</td>
+    </tr>
+    <tr>
       <td><strong>1.21.x</strong></td>
       <td>✅</td>
       <td>Fully supported</td>
