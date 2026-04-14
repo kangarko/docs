@@ -192,6 +192,8 @@ The proxy command rules use the same syntax as Bukkit rules. Place rules in the 
 | `then kick <message>` | Kick the player |
 | `then discord <channel> <message>` | Send a message to Discord |
 | `then write <file> <message>` | Write to a log file |
+| `delay <time> [message]` | Global cooldown before running this rule again |
+| `player delay <time> [message]` | Per-player cooldown before running this rule again |
 | `then abort` | Stop processing further rules |
 | `disabled` | Temporarily disable this rule |
 

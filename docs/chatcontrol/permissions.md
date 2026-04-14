@@ -32,6 +32,8 @@ If you see the dumb of the permissions file below, please note that chatcontrol.
 * chatcontrol.color.underline
 * chatcontrol.color.italic
 
+For gradients in the `/chc color` menu, use ``chatcontrol.guigradient.`{name}``` where `{name}` is the lowercased gradient name (e.g. `chatcontrol.guigradient.sunset`, `chatcontrol.guigradient.ocean`).
+
 **For the most up-to-date color permission information, see the header comments in the "Colors" section of settings.yml.**
 :::
 
