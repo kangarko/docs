@@ -39,6 +39,14 @@ Clear chat. Flags: `-a` (anonymous), `-s` (silent). Supports proxy and optional 
 ### `/chc color`
 Set chat color/decoration via command or GUI. Supports HEX on 1.16+.
 
+**Gradient colors:** Use `color1-color2` syntax to set a two-color gradient on your chat messages. Works with both named colors and HEX codes.
+
+Examples:
+- `/chc color red-blue` — gradient from red to blue
+- `/chc color #00C6FF-#0068E8` — gradient from two HEX colors
+- `/chc color #FF5555-#55FF55 bold` — gradient with bold decoration
+- `/chc color reset` — reset color (and gradient)
+
 ### `/chc debug`
 Compiles all files into a ZIP for bug reports (sensitive data removed).
 
