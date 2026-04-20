@@ -50,3 +50,5 @@ Enable or disable only spying certain parts of plugin such as mails, or certain 
 ## Automatically Toggle Spying
 
 Give staff "chatcontrol.spy.autoenable" permission to automatically enable spying for them on join.
+
+The auto-enable runs only on the player's first login. After that, whatever the player configures via `/spy menu`, `/spy toggle` or `/spy off` is remembered across logins and is never overwritten. This lets each staff member curate which sections they want to spy on without having to re-disable them every time they join.
