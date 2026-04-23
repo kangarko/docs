@@ -72,6 +72,8 @@ Sometimes we provide more variables than the ones above, such as `{message}` whe
 | `{player_chat_gradient_from}` | Get the starting hex color of the player's chat gradient (e.g. `#FF5555`), if set, or empty. |
 | `{player_chat_gradient_to}` | Get the ending hex color of the player's chat gradient, if set, or empty. |
 | `{player_chat_gradient_name}` | Get the name of the player's chat gradient, such as 'Sunset', if set, or return 'none'. |
+| `{player_chat_gradient_open}` | Expands to the opening `<gradient:#from:#to>` tag if the player has a chat gradient set, or an empty string otherwise. Pair with `{player_chat_gradient_close}` to wrap a portion of a format in a gradient only when one is configured. |
+| `{player_chat_gradient_close}` | Expands to the closing `</gradient>` tag if a chat gradient is set, or an empty string otherwise. |
 | `{player_chat_decoration}` | Get player's decoration, if set, or empty. This formats the message. |
 | `{player_chat_decoration_name}` | Get player's decoration name, such as 'bold', if set, or return 'none'. |
 | `{player_chat_decoration_letter}` | Get player's decoration code, such as '&l' for bold, or return ''. |
