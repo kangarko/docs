@@ -25,7 +25,7 @@ The following variables require a nearby Boss in the radius configured in settin
 | `%boss_location_y%` | Closest boss' Y position. |
 | `%boss_location_z%` | Closest boss' Z position. |
 | `%boss_location_world%` | Closest boss' world name. |
-| `%boss_{bossName}_respawn_{spawnRule}%` | Display the time until the given Boss respawns from the given respawn rule. |
+| `%boss_{bossName}_respawn_{spawnRule}%` | Display the time until the given Boss respawns from the given respawn rule. If the rule contains multiple Bosses, this shows the shared rule cooldown. |
 | `%boss_{bossName}_{player}_damage%` | Display the total damage the given player has dealt to this Boss, counts damage dealt to all spawned entities. You can replace {player} with player for the current player, or give a player name. |
 | `%boss_{bossName}_{player}_kills%` | Display how many Bosses the player has killed. The way this is counted is listening to a Boss entity death event and getting the killer from there. You can replace {player} with player for the current player, or give a player name. |
 | `%boss_{bossName}_top_damage_{leadingPosition}_{player/value}%` | Get the player's name or the amount of damage (see `%boss_{bossName}_{player}_damage%`) that the player at the given leading order has dealt. For example: `%boss_Zombie_top_damage_1_player%` returns the name of the player who dealt the most damage to the Zombie boss. Replace 1 with 2 to get the second most damaging player, etc. |

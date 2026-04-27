@@ -35,6 +35,8 @@ Spawn Bosses at predefined locations on a schedule. Configure the real-life day,
 
 Respawn the Boss after a configurable delay once it dies. Persists across server restarts.
 
+When one respawn rule contains multiple Bosses, the delay is shared by the whole rule. After any assigned Boss dies, the next assigned Boss waits for the same cooldown before appearing.
+
 ## 4) Spawning When Entering A Region
 
 Spawn a Boss when players enter a region, with configurable delay and nearby Boss limit.
