@@ -1,7 +1,10 @@
-# Upgrading to ChatControl 11
+# Upgrading to ChatControl 12
+
+## From ChatControl 11
+Upgrade to latest 11 and then to 12.
 
 ## From ChatControl 10
-Upgrade is 99% automatic. Replace the jar and restart. A backup of your old folder is created automatically. The new folder is named "ChatControl".
+Upgrade to latest ChatControl 11 first. There, the upgrade is 99% automatic. Replace the jar and restart. A backup of your old folder is created automatically. The new folder is named "ChatControl". After you have done that, update from 11 to 12.
 
 ## From ChatControl Pro (8, 9)
 Upgrade to ChatControl 10 first, then to 11.
