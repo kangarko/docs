@@ -14,7 +14,7 @@ Bosses are simply vanilla Minecraft monsters and animals with enhanced behavior 
 ## What Can Be Boss Used for
 * Enhancing your Survival server's experience
 * Natural spawning of Bosses in your hardcore world
-* Bosses in your Monster Arenas (or directly in [CoreArena](https://www.mc-market.org/resources/21619/))
+* Bosses in your Monster Arenas (or directly in [CoreArena](https://builtbybit.com/resources/21619/))
 * Challenging players in forests and caves
 * Bosses with custom drops that unlock gates or give special keys
 * And much more!
