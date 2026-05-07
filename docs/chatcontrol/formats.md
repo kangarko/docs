@@ -61,6 +61,7 @@ All options are optional except **Message**. See chat.yml for examples.
 | `Image_Url` | Display image from URL. Examples: `'https://mywebsite.com/images/creeper.png'`, `"https://mc-heads.net/avatar/{player_uuid}"`. **Blocking operation.** |
 | `Image_Height` | Image height in chat lines (min 8, default 8). Example: `15` |
 | `Image_Type` | Image render type: `BLOCK`, `DARK_SHADE`, `MEDIUM_SHADE`, `LIGHT_SHADE` |
+| `Proxy` | Set to `false` to skip this part when the formatted message is forwarded across the proxy. Use it for parts that contain per-receiver data (such as relational PlaceholderAPI placeholders) which cannot resolve on remote servers. Defaults to `true`. |
 
 Image_File example:
 

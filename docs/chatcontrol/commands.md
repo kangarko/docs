@@ -142,7 +142,7 @@ Send a formatted message to chat.
 Resend the join greeting message.
 
 ### `/mute`
-Mute a player, channel, or entire server. Blocks join/quit/death messages, PMs, mail, and specified commands.
+Mute a player, channel, or entire server. Blocks join/quit/death messages, PMs, mail, and specified commands. With `Voice_Chat.Enabled: true`, also silences the player on [Simple Voice Chat and Plasmo Voice](./compatibility#voice-chat).
 
 ### `/realname`
 Look up a player's real name from their nickname.

@@ -111,7 +111,40 @@ Muted players won't be able to chat in channels. You may need to adjust your [Li
 
 </div>
 
-### 🏠 Land Management
+### �️ Voice Chat
+
+ChatControl bridges its mute state into both supported voice chat plugins so a single `/mute` silences a player on chat **and** voice. Bypass works the same as for chat (`chatcontrol.bypass.mute`).
+
+Enable it in `settings.yml`:
+
+```yaml
+Voice_Chat:
+  Enabled: true
+  # Also mute voice when the channel a player writes to is muted.
+  Mute_On_Channel_Mute: true
+```
+
+When `Enabled: true`, ChatControl auto-detects whichever of the two plugins is installed - install both, one, or neither.
+
+<div class="plugin-grid">
+
+<div class="plugin-card">
+
+#### [Simple Voice Chat](https://modrinth.com/plugin/simple-voice-chat) <Badge type="tip" text="Auto" />
+While a player is muted by ChatControl, their microphone packets are dropped server-side. Mute expires automatically with the timer - no extra config required.
+
+</div>
+
+<div class="plugin-card">
+
+#### [Plasmo Voice](https://modrinth.com/plugin/plasmo-voice) <Badge type="tip" text="Auto" />
+ChatControl drives Plasmo's `MuteManager` so its own UI reflects the mute and shows the remaining duration. Server, channel, and per-player mutes are all forwarded.
+
+</div>
+
+</div>
+
+### �🏠 Land Management
 
 <div class="plugin-grid">
 
