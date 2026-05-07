@@ -127,7 +127,7 @@ The following commands don't have a prefix such as /chc or /ch.
 <div class="command-list">
 
 ### `/ignore`
-Ignore a player's messages. Can also block their PMs.
+Ignore a player's messages. Can also block their PMs. Set `Ignore.Stop_Private_Messages` to `silent` in settings.yml to make blocked DMs *appear* delivered to the sender (no "You're blocked!" reply).
 
 ### `/list`
 See online players (server or proxy), sorted by any key.

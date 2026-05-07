@@ -5,7 +5,7 @@ ChatControl is highly optimized — if you configure it with respect to your har
 ::: tip TL;DR
 * Set `Rules.Case_Insensitive` to false in settings.yml
 * Set `Private_Messages.Toasts` to false to eliminate disk operations
-* Set `ProtocolLib.Enabled` to false if you don't need the [X] message removal feature
+* Disable PacketEvents integration in settings.yml if you don't need the [X] message removal feature
 * Review your regular expressions and JavaScript variables for efficiency
 :::
 

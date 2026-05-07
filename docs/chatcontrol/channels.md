@@ -56,7 +56,7 @@ Set Debug to `[channels-join]` in settings.yml to understand auto-join behavior.
 We periodically check if players still have channel permissions. Ensure they have `chatcontrol.channel.join.{channel}.{mode}`. Keep `Show_Tips` on true in settings.yml to see console messages explaining removals.
 
 ### Removing Messages
-With ProtocolLib installed, you can remove any chat message (including from Discord and proxy). See the delete part in formats/chat.yml.
+With [PacketEvents](https://modrinth.com/plugin/packetevents) installed, you can remove any chat message (including from Discord and proxy). See the delete part in formats/chat.yml. Removal now propagates reliably across proxy servers.
 
 ### Single-Channel Setup (No Channels)
 To have one chat everywhere (like ChatControl Pro), watch this tutorial:
@@ -135,6 +135,10 @@ dont verbose
 then command channel send helpop $2
 then deny
 ```
+
+## Auto-Switch on Region Enter/Leave
+
+You can have ChatControl move a player into a different channel automatically when they walk into or out of a [region](commands#chc-region). Configure it under your channel entry in settings.yml — set the region name and which channel to switch to on enter and on leave. Useful for arena chat, spawn chat, or staff zones.
 
 ## Creating Channels
 

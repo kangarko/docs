@@ -942,7 +942,7 @@ then write logs/swear.log {player} at {player_world} {player_x} {player_y} {play
 ```
 
 #### `clear chat history`
-Requires ProtocolLib. Remove all known past messages in the chat that the player has sent.
+Requires [PacketEvents](https://modrinth.com/plugin/packetevents). Remove all known past messages in the chat that the player has sent.
 
 Example:
 ```

@@ -46,7 +46,7 @@ All options are optional except **Message**. See chat.yml for examples.
 | `Receiver_Permission` | Only show to receivers with this permission. Supports `{sender_name}` and `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
 | `Receiver_Variable` | Like Sender_Variable but checked per receiver. Supports `{sender_name}`, `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
 | `Receiver_Condition` | JavaScript per receiver. **Heavy performance penalty.** Supports `{sender_name}`, `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
-| `Hover` | List of texts shown on mouse hover |
+| `Hover` | List of texts shown on mouse hover. Supports ItemsAdder and Nexo font images (`:name:`). |
 | `Hover_Item` | JavaScript returning ItemStack (e.g., `player.getItemInHand()`) |
 | `Open_Url` | URL to open on click |
 | `Suggest_Command` | Command to put in chat input on click |

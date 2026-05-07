@@ -231,7 +231,7 @@ Give yourself "chatcontrol.bypass.spamkick" permission.
 
 ### I am getting kicked when I chat!
 ::: warning
-If using ViaVersion, set `ProtocolLib.Enabled` to false in settings.yml.
+If using ViaVersion, disable PacketEvents integration in settings.yml.
 :::
 
 </div>
@@ -430,7 +430,7 @@ Disable advancement-related messages or exclude them from `Messages.Apply_On`.
 Use MySQL or MariaDB. SQLite may have more threading issues on Folia than remote database.
 
 ### General Folia compatibility
-Folia support is experimental. Known limitations: some timed broadcasts may not fire, console filtering may differ, ProtocolLib features may not work. Report issues on GitHub with `[Folia]` in the title.
+Folia support is experimental. Known limitations: some timed broadcasts may not fire, console filtering may differ, PacketEvents features may not work. Report issues on GitHub with `[Folia]` in the title.
 
 </div>
 

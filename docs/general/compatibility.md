@@ -25,7 +25,7 @@ This guide covers general requirements and compatibility information.
 ### Java Version
 
 ::: info Minimum Java Version
-  Java 8 or greater is required
+  Java 21 or greater is required.
 :::
 
 ### Remote Database

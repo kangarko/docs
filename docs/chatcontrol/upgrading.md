@@ -14,12 +14,45 @@ Not possible except for /rules (some operators may have changed — check consol
 
 ## Breaking Changes
 
-::: warning
+::: warning Going to v12
+* **Java 21** is now the minimum. Update your server JRE before swapping the jar.
+* **PacketEvents** replaces ProtocolLib. Drop the `PacketEvents` jar into `plugins/` to keep the [X] remove button, tab and packet features. You can uninstall ProtocolLib unless another plugin still needs it.
+:::
+
+::: warning Going to v11
 * **Localization** format changed completely (yml → json). No automatic migration yet.
 * **Renamed variables** for consistency: `isp` → `player_isp`, `town` → `player_town`, `nms_version` → `server_nms_version`, etc. See [Variables](variables).
 * **HEX colors**: Some syntax no longer supported. Migrate to MiniMessage `<#123456>` or `<red>`. Legacy `&c` codes still work. Old syntax can be re-enabled temporarily in Performance section of settings.yml.
 * **Variable syntax**: `%syntax%` replaced with `{syntax}`. Can be re-enabled in Performance section if needed.
 :::
+
+## ChatControl 12 Changelog
+
+### Major Changes
+* **Major** | Reworked proxy sync to be much more reliable on large networks. Fixes a long list of desync issues reported on GitHub.
+* **Major** | Switched database pooling to HikariCP for faster, more reliable connections. Also fixes the `/chc reload` race when many players join at once.
+
+### New Features
+* **New** | Added [Simple Voice Chat and Plasmo Voice](compatibility#voice-chat) support so muted players cannot talk.
+* **New** | Added Nexo support (font images, hovers). Works automatically like ItemsAdder.
+* **New** | Spanish localization included. Set `Locale: es_ES` in settings.yml.
+* **New** | `Ignore.Stop_Private_Messages` now accepts a `silent` option. The blocked sender sees their own message as if it went through, no "You're blocked!" reply.
+* **New** | Auto-switch channels when a player enters or leaves a region. Configure in settings.yml under your [Channels](channels) section.
+
+### Improvements
+* ItemsAdder and Nexo font images now render inside format `Hover` text, see [Formats](formats).
+
+### Fixes
+* Duplicated chat messages when typing rapidly no longer get out of sync.
+* `/chc color` now accepts hex colors from console.
+* Removing a message with `[X]` now propagates reliably across proxy servers.
+* Relational variables are no longer leaked over proxy and are now translated in spy output.
+* Region tools no longer conflict with our other plugins in edge cases.
+
+### Removed / Required
+* Java 21 is now the minimum.
+* ProtocolLib replaced by [PacketEvents](https://modrinth.com/plugin/packetevents). Install the PacketEvents jar to keep tab and packet features.
+* Updated to Adventure 5.
 
 ## ChatControl 11 Changelog
 

@@ -21,7 +21,7 @@ Proxy addons include Redis support for chat and data synchronization (e.g., /lis
 
 ::: warning Experimental Support
 ChatControl has experimental Folia support. Known limitations:
-- ProtocolLib features depend on ProtocolLib's own Folia support
+- PacketEvents features depend on PacketEvents' own Folia support
 - Some timed broadcasts may not fire as expected
 - MySQL is recommended over SQLite on Folia
 
@@ -57,8 +57,8 @@ Support ChatControl nicks in proxy party chat, and party chat channels on Bukkit
 
 <div class="plugin-card">
 
-#### ProtocolLib <Badge type="warning" text="Required for some features" />
-Support for removing chat messages with [X], see [Channels](./channels).
+#### [PacketEvents](https://modrinth.com/plugin/packetevents) <Badge type="warning" text="Required for some features" />
+Replaces ProtocolLib in v12+. Drop the jar into `plugins/` to enable the [X] remove button, tab features and other packet integrations. If you only used ProtocolLib for ChatControl, you can uninstall it.
 
 </div>
 
@@ -273,7 +273,14 @@ Connect your channels with [Discord](./discord) and send any message to any Disc
 <div class="plugin-card">
 
 #### ItemsAdder <Badge type="info" text="Font Images" />
-Use the `:name:` font images in chat or formats.
+Use the `:name:` font images in chat, formats and format hovers.
+
+</div>
+
+<div class="plugin-card">
+
+#### Nexo <Badge type="info" text="Font Images" />
+Auto-detected. Use Nexo `:name:` font images in chat, formats and format hovers, just like ItemsAdder.
 
 </div>
 
