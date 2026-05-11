@@ -737,6 +737,15 @@ ignore channel admin
 ignore channel admin|anarchy
 ```
 
+#### `ignore uuid`
+Mask player UUIDs out of the message before the rule's regex runs. Supports the canonical dashed `8-4-4-4-12` form and the bare 32-hex form. Useful for permissive swear filters that allow digits/dashes and would otherwise catch fragments inside a UUID in commands like `/whitelist add` or `/mail send`.
+
+Example:
+
+```
+ignore uuid
+```
+
 #### `ignore discord`
 Do not apply the rule if the sender of the message is coming from Discord.
 
