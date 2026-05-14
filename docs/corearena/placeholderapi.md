@@ -36,7 +36,6 @@ Replace `ARENA` with "player" to replace variables for the playing player (playe
 | `{corearena_ARENA_remaininglobby}` | Remaining lobby time in "1m1s" format (automatically built-up, if less than 1m is left we only show 59s instead of 0m59s etc.) |
 | `{corearena_ARENA_alive}` | The amount of players in the arena |
 | `{corearena_ARENA_lives}` | The amount of lives each player has in the arena (if configured) |
-| `{corearena_ARENA_bestphase}` | The requesting player's personal best (highest) phase reached in the given arena |
 
 **Example:** `{corearena_player_phase}`
 
@@ -75,7 +74,36 @@ Supply `ARENA` variable as per above instructions in "two argument variables" se
 | `{corearena_ARENA_player_X_livesleft}` | Lives left of the player |
 | `{corearena_ARENA_player_X_nearestmob}` | The nearest aggressive mob location in x y z |
 | `{corearena_ARENA_player_X_nearestmobmeters}` | The nearest aggressive mob location in meters |
-| `{corearena_ARENA_top_RANK_name}` | Name of the player at the given leaderboard `RANK` (1 = best) for the arena. Returns "none" when no entry exists |
-| `{corearena_ARENA_top_RANK_phase}` | Highest phase reached by the player at the given leaderboard `RANK` for the arena. Returns "0" when no entry exists |
 
 **Example:** `{corearena_player_player_1_health}`
+
+## Per-Arena Leaderboards
+
+CoreArena tracks each player's best (highest) phase ever reached per arena and exposes it through three placeholders. The record updates when a player leaves while the arena is in the `RUNNING` state. Lobby leaves do not count.
+
+### Personal Best
+
+| Placeholder | Description |
+|-------------|-------------|
+| `{corearena_ARENA_bestphase}` | The requesting player's own best (highest) phase reached in the given arena. Returns `0` if they never recorded a phase there. |
+
+**Example:** `{corearena_castle_bestphase}` shows the viewing player's personal record on the `castle` arena.
+
+### Top-N Leaderboard
+
+Replace `RANK` with a position number where `1` is the player who reached the highest phase ever on that arena, `2` is the second-best, and so on.
+
+| Placeholder | Description |
+|-------------|-------------|
+| `{corearena_ARENA_top_RANK_name}` | Name of the player at position `RANK` on the arena's leaderboard. Returns `none` if fewer than `RANK` players have records. |
+| `{corearena_ARENA_top_RANK_phase}` | Highest phase reached by the player at position `RANK`. Returns `0` if fewer than `RANK` players have records. |
+
+**Example:** to display the top 3 of the `castle` arena on a scoreboard:
+
+```
+1. {corearena_castle_top_1_name} - phase {corearena_castle_top_1_phase}
+2. {corearena_castle_top_2_name} - phase {corearena_castle_top_2_phase}
+3. {corearena_castle_top_3_name} - phase {corearena_castle_top_3_phase}
+```
+
+If only one player has ever played `castle`, the second and third rows will read `none - phase 0`.
