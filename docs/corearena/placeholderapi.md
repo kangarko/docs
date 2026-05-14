@@ -36,6 +36,7 @@ Replace `ARENA` with "player" to replace variables for the playing player (playe
 | `{corearena_ARENA_remaininglobby}` | Remaining lobby time in "1m1s" format (automatically built-up, if less than 1m is left we only show 59s instead of 0m59s etc.) |
 | `{corearena_ARENA_alive}` | The amount of players in the arena |
 | `{corearena_ARENA_lives}` | The amount of lives each player has in the arena (if configured) |
+| `{corearena_ARENA_bestphase}` | The requesting player's personal best (highest) phase reached in the given arena |
 
 **Example:** `{corearena_player_phase}`
 
@@ -74,5 +75,7 @@ Supply `ARENA` variable as per above instructions in "two argument variables" se
 | `{corearena_ARENA_player_X_livesleft}` | Lives left of the player |
 | `{corearena_ARENA_player_X_nearestmob}` | The nearest aggressive mob location in x y z |
 | `{corearena_ARENA_player_X_nearestmobmeters}` | The nearest aggressive mob location in meters |
+| `{corearena_ARENA_top_RANK_name}` | Name of the player at the given leaderboard `RANK` (1 = best) for the arena. Returns "none" when no entry exists |
+| `{corearena_ARENA_top_RANK_phase}` | Highest phase reached by the player at the given leaderboard `RANK` for the arena. Returns "0" when no entry exists |
 
 **Example:** `{corearena_player_player_1_health}`
