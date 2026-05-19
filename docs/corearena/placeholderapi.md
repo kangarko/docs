@@ -52,6 +52,7 @@ Supply `ARENA` variable as per above instructions in "two argument variables" se
 | `{corearena_ARENA_PLAYER_location}` | Location of the player |
 | `{corearena_ARENA_PLAYER_exp}` | Experience of the player required for the next level |
 | `{corearena_ARENA_PLAYER_level}` | Level of the player |
+| `{corearena_ARENA_PLAYER_kills}` | Number of mobs the player killed during the current arena session (resets when they leave) |
 | `{corearena_ARENA_PLAYER_livesleft}` | Lives left of the player |
 | `{corearena_ARENA_PLAYER_nearestmob}` | The nearest aggressive mob location x y z |
 | `{corearena_ARENA_PLAYER_nearestmobmeters}` | The nearest aggressive mob location in meters |
@@ -71,6 +72,7 @@ Supply `ARENA` variable as per above instructions in "two argument variables" se
 | `{corearena_ARENA_player_X_location}` | Location of the player |
 | `{corearena_ARENA_player_X_exp}` | Experience of the player required for the next level |
 | `{corearena_ARENA_player_X_level}` | Level of the player |
+| `{corearena_ARENA_player_X_kills}` | Number of mobs the player killed during the current arena session |
 | `{corearena_ARENA_player_X_livesleft}` | Lives left of the player |
 | `{corearena_ARENA_player_X_nearestmob}` | The nearest aggressive mob location in x y z |
 | `{corearena_ARENA_player_X_nearestmobmeters}` | The nearest aggressive mob location in meters |
@@ -79,23 +81,24 @@ Supply `ARENA` variable as per above instructions in "two argument variables" se
 
 ## Per-Arena Leaderboards
 
-CoreArena tracks each player's best (highest) phase ever reached per arena and exposes it through three placeholders. The record updates when a player leaves while the arena is in the `RUNNING` state. Lobby leaves do not count.
+CoreArena tracks each player's best (highest) phase reached and most mobs killed per arena, and exposes them through dedicated placeholders. Records update when a player leaves while the arena is in the `RUNNING` state. Lobby leaves do not count.
 
 ### Personal Best
 
 | Placeholder | Description |
 |-------------|-------------|
 | `{corearena_ARENA_bestphase}` | The requesting player's own best (highest) phase reached in the given arena. Returns `0` if they never recorded a phase there. |
+| `{corearena_ARENA_bestkills}` | The requesting player's own best (highest) mob-kill count recorded in the given arena. Returns `0` if they never recorded kills there. |
 
-**Example:** `{corearena_castle_bestphase}` shows the viewing player's personal record on the `castle` arena.
+**Example:** `{corearena_castle_bestphase}` shows the viewing player's personal phase record on the `castle` arena; `{corearena_castle_bestkills}` shows their best kill count.
 
-### Top-N Leaderboard
+### Top-N Leaderboard (Phases)
 
 Replace `RANK` with a position number where `1` is the player who reached the highest phase ever on that arena, `2` is the second-best, and so on.
 
 | Placeholder | Description |
 |-------------|-------------|
-| `{corearena_ARENA_top_RANK_name}` | Name of the player at position `RANK` on the arena's leaderboard. Returns `none` if fewer than `RANK` players have records. |
+| `{corearena_ARENA_top_RANK_name}` | Name of the player at position `RANK` on the arena's phase leaderboard. Returns `none` if fewer than `RANK` players have records. |
 | `{corearena_ARENA_top_RANK_phase}` | Highest phase reached by the player at position `RANK`. Returns `0` if fewer than `RANK` players have records. |
 
 **Example:** to display the top 3 of the `castle` arena on a scoreboard:
@@ -107,3 +110,20 @@ Replace `RANK` with a position number where `1` is the player who reached the hi
 ```
 
 If only one player has ever played `castle`, the second and third rows will read `none - phase 0`.
+
+### Top-N Leaderboard (Kills)
+
+Same format as above, but ranked by the highest mob-kill count ever recorded on that arena. Replace `RANK` with the position number.
+
+| Placeholder | Description |
+|-------------|-------------|
+| `{corearena_ARENA_topkills_RANK_name}` | Name of the player at position `RANK` on the arena's kills leaderboard. Returns `none` if fewer than `RANK` players have records. |
+| `{corearena_ARENA_topkills_RANK_kills}` | Highest mob-kill count recorded by the player at position `RANK`. Returns `0` if fewer than `RANK` players have records. |
+
+**Example:** top 3 killers on the `castle` arena:
+
+```
+1. {corearena_castle_topkills_1_name} - {corearena_castle_topkills_1_kills} kills
+2. {corearena_castle_topkills_2_name} - {corearena_castle_topkills_2_kills} kills
+3. {corearena_castle_topkills_3_name} - {corearena_castle_topkills_3_kills} kills
+```
