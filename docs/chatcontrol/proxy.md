@@ -180,8 +180,8 @@ The proxy command rules use the same syntax as Bukkit rules. Place rules in the 
 | `ignore sender script <script>` | Skip rule if JavaScript condition is true |
 | `require perm <perm>` | Shorthand for require sender perm |
 | `ignore perm <perm>` | Shorthand for ignore sender perm |
-| `require playedbefore` | Only match if the sender has played before |
-| `ignore playedbefore` | Skip rule if the sender has played before |
+| `require playedbefore` | Only match if the sender has played before. Requires `Register_Joining_Players: true` in `settings.yml` |
+| `ignore playedbefore` | Skip rule if the sender has played before. Requires `Register_Joining_Players: true` in `settings.yml` |
 | `strip colors <true/false>` | Strip colors before matching |
 | `strip accents <true/false>` | Strip accents before matching |
 | `then deny` | Block the command |
