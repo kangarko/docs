@@ -25,12 +25,13 @@ Below, `<>` = required, `[]` = optional.
 # Must-Have Operators
 
 #### `match <materialName>`
-Each rule starts with "match". Four matching modes:
+Each rule starts with "match". Five matching modes:
 
-1. `*_AXE` — starts with: matches all axes
-2. `DIAMOND_*` — ends with: matches all diamond items
-3. `"DIAMOND"` — exact: matches only DIAMOND
-4. `GRASS` — contains: matches GRASS, TALL_GRASS, GRASS_BLOCK
+1. `*_AXE` — ends with: matches all axes (DIAMOND_AXE, IRON_AXE, etc.)
+2. `DIAMOND_*` — starts with: matches all diamond items (DIAMOND_SWORD, DIAMOND_BLOCK, etc.)
+3. `*KEY*` — contains: matches anything containing KEY (DUNGEON_KEY, KEY_STONE, MASTERKEY)
+4. `"DIAMOND"` — exact: matches only DIAMOND
+5. `GRASS` — contains (unquoted, no asterisks): matches GRASS, TALL_GRASS, GRASS_BLOCK
 
 Use `|` to combine: `DIAMOND_*|"GOLDEN_HOE"`
 
@@ -121,7 +122,7 @@ Only match this rule if the item has a custom name and the custom name (without 
 #### `require name <name>`
 Only match this rule if the item has a custom name and the custom name (without colors) matches the given title.
 
-We use the same 4 matching modes as the "match" operator so you can use * and "" here too. See the main match operator for documentation.
+We use the same 5 matching modes as the "match" operator so you can use * and "" here too. See the main match operator for documentation.
 
 #### `require lore length <number>`
 Only match this rule if the item has a custom lore and it (without colors) exceeds the given size.
@@ -138,7 +139,7 @@ Egg lore"
 
 To match this, use "require lore A mythical Boss|Egg lore"
 
-We use the same 4 matching modes as the "match" operator so you can use * and "" here too. See the main match 
+We use the same 5 matching modes as the "match" operator so you can use * and "" here too. See the main match 
 operator for documentation.
 
 #### `require durability <number with operand>`
