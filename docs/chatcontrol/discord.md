@@ -78,6 +78,12 @@ Discord:
   Send_Messages_As_Bot: false
 ```
 
+### Attachments From Discord
+
+Files, images and other attachments posted on Discord are bridged into Minecraft as clickable `[filename]` links that open the file in the player's browser when clicked, with the URL shown on hover. Filenames are passed through your chat filters so they can be denied or rewritten by rules.
+
+When `Send_Messages_As_Bot` is `true`, the bot re-uploads attachments to the same Discord channel before deleting the user's original message. This keeps the links working in both Discord and Minecraft. If a file is too large to re-upload or the network call fails, the attachments are dropped from that single message and a warning is logged; the text part of the message is still delivered.
+
 ## Troubleshooting
 
 ### Discord → Minecraft rules triggering incorrectly
