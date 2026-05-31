@@ -82,6 +82,20 @@ Discord:
 
 Files, images and other attachments posted on Discord are bridged into Minecraft as clickable `[filename]` links that open the file in the player's browser when clicked, with the URL shown on hover. Filenames are passed through your chat filters so they can be denied or rewritten by rules.
 
+You can change how each attachment looks with the `Attachment_Format` key. It accepts MiniMessage and two placeholders: `{url}` for the attachment link and `{filename}` for its name. Multiple attachments are joined by a space.
+
+```yaml
+Discord:
+  # Default: clickable [filename] with the URL on hover
+  Attachment_Format: "<click:open_url:'{url}'><hover:show_text:'{url}'>[{filename}]</hover></click>"
+```
+
+For example, to show the filename in grey, italic and underlined instead of brackets:
+
+```yaml
+  Attachment_Format: "<grey><i><u><click:open_url:'{url}'><hover:show_text:'{url}'>{filename}</hover></click></u></i></grey>"
+```
+
 When `Send_Messages_As_Bot` is `true`, the bot re-uploads attachments to the same Discord channel before deleting the user's original message. This keeps the links working in both Discord and Minecraft. If a file is too large to re-upload or the network call fails, the attachments are dropped from that single message and a warning is logged; the text part of the message is still delivered.
 
 ## Troubleshooting
