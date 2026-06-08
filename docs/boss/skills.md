@@ -62,6 +62,7 @@ Below is a comprehensive list of available skills that can be assigned to bosses
 - **Description**: Boss spawns reinforcement mobs to assist in combat
 - **Features**:
   - Configurable minion types and amounts
+  - Kill On Death option removes all minions when the Boss dies
   - Creates more complex combat scenarios
 
 ### 💉 Steal Life
