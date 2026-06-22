@@ -139,7 +139,7 @@ Send book-form messages to players (even offline). Supports auto-responder, forw
 Send a formatted message to chat.
 
 ### `/motd`
-Resend the join greeting message.
+Resend the join greeting message. Optionally append a type to preview a specific MOTD: `/motd first_time`, `/motd newcomer` or `/motd default`. Staff with permission can preview another player's MOTD with `/motd <player> <type>`.
 
 ### `/mute`
 Mute a player, channel, or entire server. Blocks join/quit/death messages, PMs, mail, and specified commands. With `Voice_Chat.Enabled: true`, also silences the player on [Simple Voice Chat and Plasmo Voice](./compatibility#voice-chat).

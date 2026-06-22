@@ -30,6 +30,10 @@ You can even reward each of these players completely different items and run com
 
 ![PvP Drops](/images/boss/EoRS08y.png)
 
+### Party Rewards
+
+If you run the AlessioDP Parties plugin, enable **Party Rewards** in Boss menu > Death > Drops > Player Drops to rank damage by party instead of by individual player. Each rank's reward is then copied to every party member who damaged the Boss within the **Party Reward Radius** of the Boss death location. Set the radius to `0` for unlimited.
+
 ## Developer API
 If you are a power user, we offer an extensive API so that you can take over the drop system completely.
 

@@ -111,6 +111,10 @@ Player_Commands:
 
 Health-triggered commands fire when a Boss crosses a health threshold during combat. If a single massive hit crosses multiple thresholds (e.g., Boss drops from 80% to 20% in one hit), only the lowest crossed threshold's command fires. Space your thresholds further apart or use Bosses with higher health for reliable multi-threshold triggers.
 
+### Target Commands
+
+Run commands when a Boss starts targeting a player. Configure them in Boss menu > Settings > Commands On Target. Use `{player}` in the command to reference the targeted player. These fire once per target acquisition, so rapid re-targeting of the same player will not spam the commands.
+
 ## Naming Rules
 
 ### Underscores Not Allowed in Names
