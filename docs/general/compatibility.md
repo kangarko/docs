@@ -93,7 +93,7 @@ Supported database types:
 ### Minecraft Versions
 
 ::: warning Plugin Dependencies
-Many issues are caused by incompatible plugin dependencies rather than our plugins themselves. Always ensure dependencies like ProtocolLib are up-to-date.
+Many issues are caused by incompatible plugin dependencies rather than our plugins themselves. Always ensure dependencies like PacketEvents are up-to-date.
 :::
 
 <table>

@@ -88,7 +88,7 @@ Make non-snowy biomes appear as snowy biomes to players (client-side only).
 | `Terrain.Disguise_Biomes.Biome` | The snowy biome to disguise as. Must have a valid biome ID. |
 
 ::: warning
-Disguise Biomes requires ProtocolLib. Only works on MC 1.7.10, 1.8.8, 1.11, 1.12, 1.16, and 1.17.
+Disguise Biomes requires PacketEvents.
 :::
 
 ## Snow

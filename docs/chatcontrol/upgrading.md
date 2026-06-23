@@ -60,7 +60,7 @@ Not possible except for /rules (some operators may have changed — check consol
 * **Major** | The plugin is now called "ChatControl" only, marking the end of ChatControl Red series.⁠
 
 ### New Features
-* **New** | Added "clear chat history" operator which removes past  messages from the sending player. Requires ProtocolLib.
+* **New** | Added "clear chat history" operator which removes past  messages from the sending player. 
 * **New** | Updated some variable syntax, such as `{warn_prefix}` etc. is now `{prefix_warn}`. See [Variables](variables) for up-to-date placeholders.
 * **New** | Custom tablist header and footer with formats/ support.
 * **New** | You can now use `{sender_x}` and `{receiver_x}` variables in private messages where x can be anything in our synced cache, where previously that was limited to just player names.

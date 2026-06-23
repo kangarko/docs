@@ -4,7 +4,7 @@ Here's a list of all of the most "popular" problems and solutions that people ha
 
 **PLEASE COMPLETE THE FOLLOWING STEPS WHEN HAVING ISSUES**
 
-1. This sounds silly, but 99% of bugs are solved on the latest version. Use not Protect, but make sure dependencies like ProtocolLib, Essentials etc. are also updated. 
+1. This sounds silly, but 99% of bugs are solved on the latest version. Make sure dependencies like PacketEvents or sensitive plugins like ViaVersion etc. are also updated. 
 
 2. Plugin saves files in **UTF-8** format. WordPad or Notepad on Windows WILL break them. Use Notepad++ or Sublime Text. You can test different UTF-8 encodings until you find one that works.
 
