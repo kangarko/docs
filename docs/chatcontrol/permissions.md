@@ -97,21 +97,150 @@ Info: Hide the switch message when the player goes from one server to another.
 
 ## All Permissions
 
-<div class="live-permissions">
+::: tip Two things first
+1. The **always up-to-date** list is in-game, just run `/chc perms`.
+2. Some permissions end with a value **you** fill in, shown below as `<...>`. Swap it for a real value, or use `*` to grant the whole group at once (e.g. `chatcontrol.command.mute.*`).
+:::
 
-### Live Permissions from GitHub Repository
+### Commands
 
-The permissions below are loaded directly from the master branch of ChatControl repository, ensuring you always see the most up-to-date list:
+Let players use the plugin's commands (default label `/chc`).
 
-<GitHubFile 
-  repo="kangarko/ChatControl"
-  path="chatcontrol-core/src/main/java/org/mineacademy/chatcontrol/model/Permissions.java"
-  title="Permissions.java"
-  language="java"
-  parsePermissions="true"
-/>
+| Permission | What it does |
+|---|---|
+| `chatcontrol.command.announce.<type>` | Broadcast announcements. `<type>`: `chat`, `title`, `actionbar`, `bossbar`, `toast` |
+| `chatcontrol.command.book` | Read or save books used in rules |
+| `chatcontrol.command.clear` | Clear the game chat |
+| `chatcontrol.command.clear.console` | Clear the console |
+| `chatcontrol.command.color` | Change your own chat color and style |
+| `chatcontrol.command.color.others` | Change someone else's chat color and style |
+| `chatcontrol.command.debug` | Zip up your settings for a bug report |
+| `chatcontrol.command.forward` | Send a command to the proxy or another server |
+| `chatcontrol.command.ignore` | Ignore a player's messages and PMs |
+| `chatcontrol.command.ignore.list` | See who is ignoring whom |
+| `chatcontrol.command.ignore.others` | Make another player ignore or unignore |
+| `chatcontrol.command.info` | Print debug info about the plugin |
+| `chatcontrol.command.list` | Browse online players on the server or network |
+| `chatcontrol.command.log` | View recent chat and command history |
+| `chatcontrol.command.mail` | Use the in-game mail system |
+| `chatcontrol.command.mail.send.all` | Mail everyone who ever joined |
+| `chatcontrol.command.mail.send.online` | Mail everyone currently online |
+| `chatcontrol.command.me` | Send a formatted `/me` message |
+| `chatcontrol.command.say` | Send a formatted `/say` message (no proxy) |
+| `chatcontrol.command.message` | Edit join, MOTD and other player messages |
+| `chatcontrol.command.migrate` | Move data between MySQL and `data.yml` |
+| `chatcontrol.command.motd` | Show the message of the day |
+| `chatcontrol.command.motd.others` | Show the MOTD to another player |
+| `chatcontrol.command.mute.<type>` | Mute chat. `<type>`: `player`, `channel`, `server`, `proxy` |
+| `chatcontrol.command.permissions` | List all permissions (`/chc perms`) |
+| `chatcontrol.command.points` | Manage players' warning points |
+| `chatcontrol.command.purge` | Delete past messages |
+| `chatcontrol.command.realname` | Look up a player's real name and nick |
+| `chatcontrol.command.region` | Manage map regions used in rules |
+| `chatcontrol.command.reload` | Reload the plugin config |
+| `chatcontrol.command.reply` | Reply to the last person who PM'd you |
+| `chatcontrol.command.rule` | Manage the rules system |
+| `chatcontrol.command.script` | Run JavaScript scripts |
+| `chatcontrol.command.sendformat` | Send a message through a specific format |
+| `chatcontrol.command.spy` | Turn spying on players on or off |
+| `chatcontrol.command.tag.<type>` | Set your own tag. `<type>`: `prefix`, `suffix`, `nick` |
+| `chatcontrol.command.tag.admin` | Manage other players' tags |
+| `chatcontrol.command.tell` | Send a private message |
+| `chatcontrol.command.testrules` | Test a message against your rules |
+| `chatcontrol.command.testsave` | Force-save player data to the database |
+| `chatcontrol.command.tour` | Open the plugin intro tour |
+| `chatcontrol.command.toggle.<type>` | Toggle seeing a feature. `<type>`: `mail`, `announcement`, `me`, `pm`, `death`, `join`, `kick`, `quit`, `list`, `soundnotify` |
+| `chatcontrol.command.toggle.on` | Turn a toggle on |
+| `chatcontrol.command.toggle.off` | Turn a toggle off |
+| `chatcontrol.command.update` | Refresh a player's tab-list name |
 
-</div>
+### Channels
+
+`<channel>` = a channel name from `settings.yml`. `<mode>` = `read` or `write`.
+
+| Permission | What it does |
+|---|---|
+| `chatcontrol.channel.autojoin.<channel>.<mode>` | Auto-join a channel in a mode when you log in |
+| `chatcontrol.channel.join.<channel>.<mode>` | Join a channel with `/channel join` |
+| `chatcontrol.channel.join.others` | Join other players into channels |
+| `chatcontrol.channel.leave.<channel>` | Leave a channel with `/channel leave` |
+| `chatcontrol.channel.leave.others` | Make other players leave channels |
+| `chatcontrol.channel.list` | List players in channels |
+| `chatcontrol.channel.list.options` | Mute or kick players from the channel list |
+| `chatcontrol.channel.send.<channel>` | Send a one-off message to a channel |
+| `chatcontrol.channel.sendas.<channel>` | Send a message to a channel as another player |
+| `chatcontrol.channel.set` | Force-set which channel a player is in |
+
+### Colors & Formatting
+
+Let players use colors and formatting in what they type.
+
+| Permission | What it does |
+|---|---|
+| `chatcontrol.color.<name>` | Use a `&` color or style. `<name>`: `red`, `bold`, `italic`, `underline`, `strikethrough`, `obfuscated`, ... |
+| `chatcontrol.hexcolor.<hex>` | Use a hex color, e.g. `ccffdd` (no `#`) |
+| `chatcontrol.action.<action>` | Use clickable/hover MiniMessage tags. `<action>`: `hover`, `click`, `insertion`, `rainbow`, `font`. Can be abused, hand out carefully |
+| `chatcontrol.guicolor.<name>` | Pick a named color in the `/chc color` menu |
+| `chatcontrol.hexguicolor.<hex>` | Pick a hex color in the `/chc color` menu |
+| `chatcontrol.guigradient.<name>` | Pick a gradient in the `/chc color` menu, e.g. `sunset` |
+| `chatcontrol.use.color.<place>` | Actually apply your colors somewhere. `<place>`: `chat`, `me`, `prefix`, `nick`, `suffix`, `private_message` |
+
+### Chat
+
+| Permission | What it does |
+|---|---|
+| `chatcontrol.chat.read` | See chat messages |
+| `chatcontrol.chat.write` | Write chat messages |
+| `chatcontrol.chat.links` | Make your URLs clickable |
+
+### Spying
+
+Spy on what players do. `<type>`: `chat`, `command`, `private_message`, `mail`, `sign`, `book`, `anvil`.
+
+| Permission | What it does |
+|---|---|
+| `chatcontrol.spy.<type>` | Spy on one type of action |
+| `chatcontrol.spy.autoenable` | Start spying everything automatically on join |
+
+### Bypasses
+
+Let trusted staff skip filters and limits. Hand these out carefully.
+
+| Permission | What it skips |
+|---|---|
+| `chatcontrol.bypass.caps` | The anti-caps filter |
+| `chatcontrol.bypass.clear` | Keeps your chat when someone clears chat |
+| `chatcontrol.bypass.delay.chat` | The cooldown between messages |
+| `chatcontrol.bypass.delay.command` | The cooldown between commands |
+| `chatcontrol.bypass.grammar` | Auto-capitalize and add-a-dot grammar fixes |
+| `chatcontrol.bypass.log` | Logging of your messages and commands |
+| `chatcontrol.bypass.login.usernames` | The disallowed-nickname block when joining |
+| `chatcontrol.bypass.move` | The antibot "move before you chat" check |
+| `chatcontrol.bypass.newcomer` | Rules that only apply to newcomers |
+| `chatcontrol.bypass.spamkick` | The vanilla spam kick when typing fast |
+| `chatcontrol.bypass.signduplication` | The antibot sign-duplication check |
+| `chatcontrol.bypass.mute` | Chat or channel mute |
+| `chatcontrol.bypass.period` | The repeated-period antispam check |
+| `chatcontrol.bypass.range` | Channel range, reach everyone on all worlds (off even for OPs) |
+| `chatcontrol.bypass.range.world` | Channel range, same world only (off even for OPs) |
+| `chatcontrol.bypass.reach` | Lets you message players who ignore you or have PMs off |
+| `chatcontrol.bypass.vanish` | Lets you see and message vanished players |
+| `chatcontrol.bypass.similarity.chat` | The "too similar" check for messages |
+| `chatcontrol.bypass.similarity.command` | The "too similar" check for commands |
+| `chatcontrol.bypass.tabcomplete` | Tab-complete filtering |
+| `chatcontrol.bypass.warnpoints` | Warning points and their punishments |
+| `chatcontrol.bypass.parrot` | The "parrot" antispam check |
+| `chatcontrol.bypass.spy.<type>` | Stops your own actions being spied on. `<type>`: `chat`, `command`, `private_message`, `mail`, `sign`, `book`, `anvil` |
+| `chatcontrol.bypass.network.tabcomplete` | Always see whole-network players when tab-completing PMs |
+
+### Discord, Receive & Extras
+
+| Permission | What it does |
+|---|---|
+| `chatcontrol.discord.tag` | Tag Discord roles with `@` from in-game chat |
+| `chatcontrol.receive.announcer` | See your own `/chc announce` messages |
+| `chatcontrol.soundnotify` | Use the sound-notify `@mention` feature |
+| `chatcontrol.group.<name>` | Auto-assign a `settings.yml` group to a player. `<name>` = the group name |
 
 <style>
 /* Custom styling for permissions document */
@@ -132,10 +261,6 @@ The permissions below are loaded directly from the master branch of ChatControl 
   list-style-type: none;
   padding-left: 0;
 } 
-
-.live-permissions {
-  margin: 24px 0;
-}
 
 .code-block-container {
   margin: 24px 0;
