@@ -3,7 +3,6 @@ import DefaultTheme from 'vitepress/theme'
 import './styles/custom.css'
 import Tabs from './components/Tabs.vue'
 import TabPanel from './components/TabPanel.vue'
-import GitHubFile from './components/GitHubFile.vue'
 import Layout from './components/Layout.vue'
 import CrossSectionLink from './components/CrossSectionLink.vue'
 import Modal from './components/Modal.vue'
@@ -108,7 +107,6 @@ export default {
   enhanceApp({ app }) {
     app.component('Tabs', Tabs)
     app.component('TabPanel', TabPanel)
-    app.component('GitHubFile', GitHubFile)
     app.component('CrossSectionLink', CrossSectionLink)
     app.component('Modal', Modal)
   },
