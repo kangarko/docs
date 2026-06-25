@@ -17,6 +17,7 @@ Not possible except for /rules (some operators may have changed — check consol
 ::: warning Going to v12
 * **Java 21** is now the minimum. Update your server JRE before swapping the jar.
 * **PacketEvents** replaces ProtocolLib. Drop the `PacketEvents` jar into `plugins/` to keep the [X] remove button, tab and packet features. You can uninstall ProtocolLib unless another plugin still needs it.
+* **Per-type mute permissions**: the flat `chatcontrol.command.mute` is split per mute type. Grant `chatcontrol.command.mute.player`, `chatcontrol.command.mute.channel`, `chatcontrol.command.mute.server` and `chatcontrol.command.mute.proxy` (or `chatcontrol.command.mute.*` for all) to staff who should mute each type.
 :::
 
 ::: warning Going to v11
