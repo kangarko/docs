@@ -31,6 +31,8 @@ If your server has spawning disabled or you want more control, use:
 
 Spawn Bosses at predefined locations on a schedule. Configure the real-life day, week, hour and minute. You can even limit spawning to each Friday at 18:00 when it is a night in the game and raining!
 
+The delay is measured from the last successful spawn, so slow kills never postpone the schedule. If the Boss is still alive when its next spawn is due (blocked by a spawning limit), the delay restarts from its death instead, so the Boss never reappears instantly after being killed.
+
 ## 3) Respawning After Death
 
 Respawn the Boss after a configurable delay once it dies. Persists across server restarts.
