@@ -16,7 +16,7 @@ v6 shipped a single `Foundation` artifact. v7 is split into modules, you depend 
 | `foundation-bukkit` | Bukkit, Spigot, Paper and Folia plugins |
 | `foundation-bungee` | BungeeCord plugins |
 | `foundation-velocity` | Velocity plugins |
-| `foundation-core` | Shared code, pulled in automatically |
+| `foundation-core` | Shared code, already bundled inside each platform module |
 
 ```xml
 <!-- v6 -->
@@ -34,13 +34,12 @@ v6 shipped a single `Foundation` artifact. v7 is split into modules, you depend 
 </dependency>
 ```
 
-Your shade configuration must now include **both** the platform module and core. The relocation stays mandatory and unchanged:
+In your shade configuration, update the include to the new artifact name. The platform module already contains core, so one include is enough. The relocation stays mandatory and unchanged:
 
 ```xml
 <artifactSet>
     <includes>
         <include>com.github.kangarko.Foundation:foundation-bukkit*</include>
-        <include>com.github.kangarko.Foundation:foundation-core*</include>
     </includes>
 </artifactSet>
 <relocations>
