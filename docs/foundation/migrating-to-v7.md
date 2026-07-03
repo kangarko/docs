@@ -16,7 +16,21 @@ v6 shipped a single `Foundation` artifact. v7 is split into modules, you depend 
 | `foundation-bukkit` | Bukkit, Spigot, Paper and Folia plugins |
 | `foundation-bungee` | BungeeCord plugins |
 | `foundation-velocity` | Velocity plugins |
-| `foundation-core` | Shared code, already bundled inside each platform module |
+| `foundation-core` | Shared code, pulled in by each platform module |
+
+If your pom.xml is based on our [PluginTemplate](https://github.com/kangarko/PluginTemplate/blob/master/pom.xml), you only need to update two properties:
+
+```xml
+<!-- The latest version from https://github.com/kangarko/Foundation/releases,
+     or "LATEST" if you compiled Foundation locally with mvn clean install. -->
+<foundation.version>REPLACE_VERSION</foundation.version>
+
+<!-- Use "com.github.kangarko.foundation" to download Foundation from GitHub like most people,
+     or "org.mineacademy" if you compiled it locally. -->
+<foundation.path>com.github.kangarko.foundation</foundation.path>
+```
+
+If you maintain your own pom.xml, update the dependency:
 
 ```xml
 <!-- v6 -->
@@ -34,7 +48,7 @@ v6 shipped a single `Foundation` artifact. v7 is split into modules, you depend 
 </dependency>
 ```
 
-In your shade configuration, update the include to the new artifact name. The platform module already contains core, so one include is enough. The relocation stays mandatory and unchanged:
+Then update the include in your shade configuration to the new artifact name. The platform module already contains core, so one include is enough. The relocation stays mandatory and unchanged:
 
 ```xml
 <artifactSet>
@@ -49,8 +63,6 @@ In your shade configuration, update the include to the new artifact name. The pl
     </relocation>
 </relocations>
 ```
-
-See the [PluginTemplate pom.xml](https://github.com/kangarko/PluginTemplate/blob/master/pom.xml) for a complete working example.
 
 ## 2. Update Your Main Class
 
