@@ -23,14 +23,14 @@ v6 shipped a single `Foundation` artifact. v7 is split into modules, you depend 
 <dependency>
     <groupId>com.github.kangarko</groupId>
     <artifactId>Foundation</artifactId>
-    <version>6.10.0</version>
+    <version>REPLACE_VERSION</version>
 </dependency>
 
 <!-- v7 -->
 <dependency>
-    <groupId>com.github.kangarko.Foundation</groupId>
+    <groupId>com.github.kangarko.foundation</groupId>
     <artifactId>foundation-bukkit</artifactId>
-    <version>7.0.0</version>
+    <version>REPLACE_VERSION</version>
 </dependency>
 ```
 
@@ -39,7 +39,7 @@ In your shade configuration, update the include to the new artifact name. The pl
 ```xml
 <artifactSet>
     <includes>
-        <include>com.github.kangarko.Foundation:foundation-bukkit*</include>
+        <include>com.github.kangarko.foundation:foundation-bukkit*</include>
     </includes>
 </artifactSet>
 <relocations>
