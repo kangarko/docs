@@ -32,6 +32,9 @@ features:
   - title: Winter
     details: Add particles and snow generation to your worlds including gift chests and custom snowman AI.
     link: /winter/
+  - title: Foundation
+    details: The open source framework powering our plugins. Build Bukkit, BungeeCord and Velocity plugins with less boilerplate.
+    link: /foundation/
 ---
 
 <div class="custom-home-content">

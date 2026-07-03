@@ -33,6 +33,10 @@ export default {
           { text: 'Winter', link: '/winter/' }
         ]
       },
+      {
+        text: 'Foundation',
+        link: '/foundation/'
+      },
     ],
     search: {
       provider: 'local',
@@ -329,6 +333,20 @@ export default {
           text: 'Learn',
           items: [
             { text: 'Chests', link: '/winter/chests' },
+          ]
+        }
+      ],
+      '/foundation/': [
+        {
+          text: 'About',
+          items: [
+            { text: 'What is Foundation', link: '/foundation/' },
+          ]
+        },
+        {
+          text: 'Upgrading',
+          items: [
+            { text: 'Migrating From v6 To v7', link: '/foundation/migrating-to-v7' },
           ]
         }
       ],
