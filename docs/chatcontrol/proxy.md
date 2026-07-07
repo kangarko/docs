@@ -84,6 +84,20 @@ Use `/chc forward` to send commands from a Bukkit server to the proxy or another
 By default, forwarding commands from the proxy console is disabled for security reasons. To enable it, set `Enable_Forward_Command` to `true` in the proxy settings.yml. This allows only the proxy console (not players) to forward commands to Bukkit servers.
 :::
 
+To run a command on a backend server's console directly from the proxy, enable the `/forward` command in the proxy settings.yml under `Forward` and run:
+
+```
+forward <server_name> <command>
+```
+
+It works from the proxy console out of the box, and for players holding the `chatcontrol.command.forward` permission. Unless Redis is enabled, the target server needs at least one online player to receive the command — this is a limitation of proxy plugin messaging.
+
+```yaml
+Forward:
+  Enabled: true
+  Command_Aliases: [forward]
+```
+
 ## Chat Forwarding
 
 For servers on your network that do **not** have ChatControl installed, you can enable basic chat forwarding in the proxy settings.yml under `Chat_Forwarding`. This only relays raw chat messages — no filtering or formatting is applied on those servers.
@@ -131,6 +145,7 @@ The proxy settings.yml (inside your VelocityControl or BungeeControl plugins fol
 | `Integration.Parties` | Party and Friends / Parties plugin integration |
 | `Say` | Configure the `/say` broadcast command |
 | `Me` | Configure the `/me` broadcast command |
+| `Forward` | Configure the `/forward` command running backend console commands from the proxy |
 | `Enable_Forward_Command` | Allow console forwarding from proxy |
 | `Make_Chat_Links_Clickable` | Auto-clickable URLs on proxy |
 | `Redis_Integration` | Toggle RedisBungee support |
@@ -146,7 +161,7 @@ The proxy settings.yml (inside your VelocityControl or BungeeControl plugins fol
 | `chatcontrol.bypass.silence.join` | Still see hidden join messages |
 | `chatcontrol.bypass.silence.leave` | Still see hidden leave messages |
 | `chatcontrol.bypass.silence.switch` | Still see hidden switch messages |
-| `chatcontrol.command.forward` | Use `/chc forward` (must be assigned on proxy too) |
+| `chatcontrol.command.forward` | Use `/chc forward` and the proxy `/forward` command (must be assigned on proxy too) |
 
 ## Troubleshooting
 
