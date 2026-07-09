@@ -35,7 +35,6 @@ Not possible except for /rules (some operators may have changed — check consol
 
 ### New Features
 * **New** | Mutes from AdvancedBan, BanManager, CMI, EssentialsX and LiteBans on the same backend server are now honored fully: they block chat, the commands in `Mute.Prevent_Commands`, sign placing, book writing and anvil renames, and hide join/quit/death messages.
-* **New** | `Mute.Prevent_Commands` now also applies to individually muted players, not just server mutes.
 * **New** | Added [Simple Voice Chat and Plasmo Voice](compatibility#voice-chat) support so muted players cannot talk.
 * **New** | Added Nexo support (font images, hovers). Works automatically like ItemsAdder.
 * **New** | Spanish localization included. Set `Locale: es_ES` in settings.yml.
