@@ -2,7 +2,7 @@
 
 Boss supports automatic spawning so your custom Bosses appear naturally in your worlds.
 
-Apart from Boss eggs and /boss spawn command, we offer 5 ways to spawn Bosses automatically:
+Apart from Boss eggs and /boss spawn command, we offer 6 ways to spawn Bosses automatically:
 
 **There are MANY options you can configure:**
 
@@ -47,6 +47,12 @@ Spawn a Boss when players enter a region, with configurable delay and nearby Bos
 Periodically scan areas around players and spawn Bosses near them.
 
 You can cap the max Bosses per Spawn Rule, or individually per Boss in the Spawning Limits section.
+
+## 6) After A Kill Goal
+
+Spawn Bosses at your saved /boss location points after players kill a set amount of other Bosses.
+
+Pick which Bosses count towards the goal, then set the Kill Goal. Kills from every player add to one shared counter that survives restarts and resets automatically once the goal Boss spawns. Each counted kill shows the killer an actionbar progress message you can customize with the `{boss}`, `{count}`, `{goal}` and `{remaining}` variables, or type `none` to hide it. The rule menu shows the current progress and has a button to reset the counter manually.
 
 ::: warning
 Spawn rule names **must not contain underscores** (`_`). Underscores break PlaceholderAPI placeholder parsing. See [Naming Rules](./customizing-bosses#underscores-not-allowed-in-names) for details.

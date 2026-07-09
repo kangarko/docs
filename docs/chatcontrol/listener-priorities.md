@@ -27,7 +27,7 @@ On 1.16+, there are two chat events. If a plugin uses the modern one, append `-M
 | Plugin | Recommended Setting | Notes |
 |--------|-------------------|-------|
 | **Towny / Factions** | `Chat_Listener_Priority: LOWEST` | May need adjustments |
-| **LiteBans / BanManager / LibertyBans** | `Chat_Listener_Priority: HIGH` | Fixes muted players chatting |
+| **LiteBans / BanManager / LibertyBans** | `Chat_Listener_Priority: HIGH` | Only needed for LibertyBans or proxy-only installs, LiteBans and BanManager backend mutes are honored natively |
 | **PlotSquared** | `Chat_Listener_Priority: LOWEST` | For plot-specific chat |
 | **Denizen** | `Chat_Listener_Priority: HIGH` | Allows Denizen chat triggers |
 | **DiscordSRV** | `Chat_Listener_Priority: LOWEST` | Filter before Discord relay |
@@ -35,7 +35,7 @@ On 1.16+, there are two chat events. If a plugin uses the modern one, append `-M
 ## Troubleshooting
 
 - **ChatControl not filtering?** → Try `LOWEST` or `LOWEST-MODERN`
-- **Muted players can still chat?** → Try `HIGH`
+- **Muted players can still chat?** → Try `HIGH` (only needed if the mute plugin is proxy-only or not natively supported, AdvancedBan, BanManager, CMI, EssentialsX and LiteBans backend mutes are detected automatically)
 - **Chat-dependent plugins broken?** → Start with `LOWEST`, try others
 - **Still broken?** → Try each priority, restart after each change
 

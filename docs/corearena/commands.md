@@ -33,7 +33,7 @@ Leave the current arena.
 List all available arenas with their status.
 
 ### `/arena start`
-Force-start an arena that is in the lobby phase.
+Start an arena. A stopped arena opens its lobby, an arena in the lobby phase is force-started. Shows an error if the arena is in edit mode or not fully configured yet (finish the setup with `/arena edit` and `/arena tools` first).
 
 ### `/arena stop`
 Force-stop a running arena.

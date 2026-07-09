@@ -756,7 +756,7 @@ ignore discord
 ```
 
 #### `ignore muted`
-Do not apply the rule if the sender of the message is muted either from ChatControl, LiteBans, Essentials or CMI.
+Do not apply the rule if the sender of the message is muted either by ChatControl or by AdvancedBan, BanManager, CMI, EssentialsX or LiteBans running on the same backend server.
 
 Example:
 

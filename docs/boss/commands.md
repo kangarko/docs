@@ -65,7 +65,7 @@ Open the tools menu to get region tools, the Tamer Tool and the Entity Info Tool
 Get player skulls to place on Boss heads. Usage: `/boss skull <name/url/uuid/base64> <value> [player]`. See [mcheads.ru](https://mcheads.ru/en/alphabet/vfro) for skull data examples. Run from console for long base64 strings.
 
 ### `/boss location`
-Create and manage Boss spawn locations. Sub-commands: `new <name>`, `tool`, `rem <name>`, `view [name]`, `tp <name>`, `list`, `point`. Locations are saved points used by LocationPeriod spawn rules.
+Create and manage Boss spawn locations. Sub-commands: `new <name>`, `tool`, `rem <name>`, `view [name]`, `tp <name>`, `list`, `point`. Locations are saved points used by the Spawning At A Given Time, Respawning After Death and After A Kill Goal spawn rules.
 
 ### `/boss remove`
 Permanently delete a Boss configuration. Usage: `/boss remove <boss>`. This only removes the Boss type definition, not already-spawned entities.

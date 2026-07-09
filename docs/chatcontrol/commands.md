@@ -142,7 +142,7 @@ Send a formatted message to chat.
 Resend the join greeting message. Optionally append a type to preview a specific MOTD: `/motd first_time`, `/motd newcomer` or `/motd default`. Staff with permission can preview another player's MOTD with `/motd <player> <type>`.
 
 ### `/mute`
-Mute a player, channel, or entire server. Blocks join/quit/death messages, PMs, mail, and specified commands. With `Voice_Chat.Enabled: true`, also silences the player on [Simple Voice Chat and Plasmo Voice](./compatibility#voice-chat).
+Mute a player, channel, or entire server. Blocks join/quit/death messages, PMs, mail, sign placing, book writing, anvil renames and the commands listed in `Mute.Prevent_Commands`. Mutes from AdvancedBan, BanManager, CMI, EssentialsX and LiteBans running on the same backend server are honored the same way. With `Voice_Chat.Enabled: true`, also silences the player on [Simple Voice Chat and Plasmo Voice](./compatibility#voice-chat).
 
 ### `/realname`
 Look up a player's real name from their nickname.

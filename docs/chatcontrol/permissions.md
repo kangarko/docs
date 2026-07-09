@@ -219,7 +219,7 @@ Let trusted staff skip filters and limits. Hand these out carefully.
 | `chatcontrol.bypass.newcomer` | Rules that only apply to newcomers |
 | `chatcontrol.bypass.spamkick` | The vanilla spam kick when typing fast |
 | `chatcontrol.bypass.signduplication` | The antibot sign-duplication check |
-| `chatcontrol.bypass.mute` | Chat or channel mute |
+| `chatcontrol.bypass.mute` | ChatControl player, channel, server and proxy mutes (chat, commands, signs, books, anvils, join/quit/death messages). Does not bypass mutes from third-party plugins such as AdvancedBan, BanManager, CMI, EssentialsX or LiteBans |
 | `chatcontrol.bypass.period` | The repeated-period antispam check |
 | `chatcontrol.bypass.range` | Channel range, reach everyone on all worlds (off even for OPs) |
 | `chatcontrol.bypass.range.world` | Channel range, same world only (off even for OPs) |

@@ -103,7 +103,7 @@ Give yourself or your group negative `chatcontrol.channel.autojoin.{channel}.{mo
 
 ### Players can speak when muted (e.g. using BanManager / LiteBans)
 ::: warning
-Set `Chat_Listener_Priority` to `HIGH` in settings.yml and restart. This makes ChatControl check chat after the mute plugin, so it respects the mute. See [Listener Priorities](./listener-priorities) for other plugin combinations.
+ChatControl honors mutes from AdvancedBan, BanManager, CMI, EssentialsX and LiteBans automatically when the mute plugin runs on the same backend server, so update to the latest ChatControl first. If your mute plugin only runs on the proxy, or you use a different plugin such as LibertyBans, set `Chat_Listener_Priority` to `HIGH` in settings.yml and restart. See [Listener Priorities](./listener-priorities) for other plugin combinations.
 :::
 
 ### My emoticons :) are just showing as ? / Special characters not working

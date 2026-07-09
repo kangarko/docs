@@ -28,6 +28,9 @@ Create a spawn rule for the given time in /boss menu > Spawn Rules.
 **Rotating spawns (one of several Bosses at a location)?**  
 Use a **Respawn After Death** spawn rule. Add all bosses to one rule with a delay (e.g., 30 seconds). Only **one boss from the rule is alive at any time** — when it dies, the next spawns after the delay.
 
+**Spawn a Boss after players kill a number of other Bosses?**  
+Use an **After A Kill Goal** spawn rule in /boss menu > Spawn Rules. Select which Bosses count, the kill goal and the locations to spawn at. Kills from all players share one persistent counter.
+
 **Spawn Bosses when entering a region?**  
 Create the region using /boss tools, then make a spawn rule via /boss menu > Spawn Rules > Entering a Region. Alternatively, use [CommandRegions](https://www.spigotmc.org/resources/18001/) with WorldGuard.
 

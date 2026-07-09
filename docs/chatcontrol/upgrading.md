@@ -34,6 +34,8 @@ Not possible except for /rules (some operators may have changed — check consol
 * **Major** | Switched database pooling to HikariCP for faster, more reliable connections. Also fixes the `/chc reload` race when many players join at once.
 
 ### New Features
+* **New** | Mutes from AdvancedBan, BanManager, CMI, EssentialsX and LiteBans on the same backend server are now honored fully: they block chat, the commands in `Mute.Prevent_Commands`, sign placing, book writing and anvil renames, and hide join/quit/death messages.
+* **New** | `Mute.Prevent_Commands` now also applies to individually muted players, not just server mutes.
 * **New** | Added [Simple Voice Chat and Plasmo Voice](compatibility#voice-chat) support so muted players cannot talk.
 * **New** | Added Nexo support (font images, hovers). Works automatically like ItemsAdder.
 * **New** | Spanish localization included. Set `Locale: es_ES` in settings.yml.
@@ -41,6 +43,7 @@ Not possible except for /rules (some operators may have changed — check consol
 * **New** | Auto-switch channels when a player enters or leaves a region. Configure in settings.yml under your [Channels](channels) section.
 
 ### Improvements
+* Anvil mute blocking, color filtering and rules now only trigger on actual renames. Repairing or enchanting an item without changing its name passes through untouched.
 * ItemsAdder and Nexo font images now render inside format `Hover` text, see [Formats](formats).
 
 ### Fixes
@@ -104,7 +107,7 @@ Not possible except for /rules (some operators may have changed — check consol
 ## Known Limitations
 
 ::: warning
-* Anvil-renamed items lose colors without `chatcontrol.use.color.anvil` permission
+* Anvil-renamed items lose colors without `chatcontrol.use.color.anvil` permission (only when the name is actually changed — repairing, enchanting or combining an item without renaming it keeps its colors and skips anvil rules)
 * `Server_Name` in proxy.yml must exactly match velocity.toml / BungeeCord config.yml
 * JavaScript variables reduce performance (unavoidable — realtime JS compilation is heavy)
 * `/chc sendas <player>` requires the player on the same server

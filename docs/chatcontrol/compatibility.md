@@ -104,8 +104,8 @@ We support AuthMe by hiding the quit message if player is not logged in.
 
 <div class="plugin-card stretched">
 
-#### BanManager <Badge type="warning" text="Changes required" />
-Muted players won't be able to chat in channels. You may need to adjust your [Listener Priority](./listener-priorities) first.
+#### AdvancedBan, BanManager, CMI, EssentialsX, LiteBans <Badge type="tip" text="Compatible" />
+Mutes are honored natively when the mute plugin runs on the same backend server: muted players cannot chat, use the commands listed in `Mute.Prevent_Commands`, place signs, write books or rename items on anvils, and their join/quit/death messages are hidden. The `chatcontrol.bypass.mute` permission does not exempt players from third-party mutes. Proxy-only installs are not detected, install the mute plugin on each backend server sharing one database instead, or adjust your [Listener Priority](./listener-priorities).
 
 </div>
 
