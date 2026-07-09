@@ -237,7 +237,7 @@ ChatControl's channels system can create a channel for mcMMO party members. If m
 <div class="plugin-card">
 
 #### CMI <Badge type="warning" text="Changes Required" />
-Support for afk, vanish status, and a few other features. Custom AFK reasons set with "/afk <reason>" are shown when messaging an AFK player, also across proxy networks.
+Support for afk, vanish status, and a few other features. Custom AFK reasons set with "/afk reason" are shown when messaging an AFK player, also across proxy networks.
 
 To prevent conflicts with ChatControl, open their chat.yml, set both ModifyChatFormat and ClickHoverMessages to false to prevent duplicated messages when using channels.
 
@@ -246,7 +246,7 @@ To prevent conflicts with ChatControl, open their chat.yml, set both ModifyChatF
 <div class="plugin-card">
 
 #### Essentials <Badge type="tip" text="Compatible" />
-Support for afk, vanish status, and a few other features. Custom AFK reasons set with "/afk <reason>" are shown when messaging an AFK player, also across proxy networks.
+Support for afk, vanish status, and a few other features. Custom AFK reasons set with "/afk reason" are shown when messaging an AFK player, also across proxy networks.
 
 </div>
 
