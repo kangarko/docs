@@ -113,7 +113,7 @@ Mutes are honored natively when the mute plugin runs on the same backend server:
 
 ### �️ Voice Chat
 
-ChatControl bridges its mute state into both supported voice chat plugins so a single `/mute` silences a player on chat **and** voice. Bypass works the same as for chat (`chatcontrol.bypass.mute`).
+ChatControl bridges its mute state into both supported voice chat plugins so a single `/mute` silences a player on chat **and** voice. Mutes from AdvancedBan, BanManager, CMI, EssentialsX and LiteBans running on the same server silence voice too. Bypass works the same as for chat (`chatcontrol.bypass.mute`) and does not apply to third-party mutes.
 
 Enable it in `settings.yml`:
 
@@ -131,14 +131,14 @@ When `Enabled: true`, ChatControl auto-detects whichever of the two plugins is i
 <div class="plugin-card">
 
 #### [Simple Voice Chat](https://modrinth.com/plugin/simple-voice-chat) <Badge type="tip" text="Auto" />
-While a player is muted by ChatControl, their microphone packets are dropped server-side. Mute expires automatically with the timer - no extra config required.
+While a player is muted by ChatControl or a third-party mute plugin, their microphone packets are dropped server-side. Mute expires automatically with the timer - no extra config required.
 
 </div>
 
 <div class="plugin-card">
 
 #### [Plasmo Voice](https://modrinth.com/plugin/plasmo-voice) <Badge type="tip" text="Auto" />
-ChatControl drives Plasmo's `MuteManager` so its own UI reflects the mute and shows the remaining duration. Server, channel, and per-player mutes are all forwarded.
+ChatControl drives Plasmo's `MuteManager` for its own mutes so Plasmo's UI reflects the mute and shows the remaining duration. Server, channel, and per-player mutes are all forwarded. Third-party mutes are enforced by dropping speech server-side, they apply and lift instantly without touching Plasmo's mute storage.
 
 </div>
 
