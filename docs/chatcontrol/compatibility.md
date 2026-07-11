@@ -138,7 +138,7 @@ While a player is muted by ChatControl or a third-party mute plugin, their micro
 <div class="plugin-card">
 
 #### [Plasmo Voice](https://modrinth.com/plugin/plasmo-voice) <Badge type="tip" text="Auto" />
-ChatControl drives Plasmo's `MuteManager` for its own mutes so Plasmo's UI reflects the mute and shows the remaining duration. Server, channel, and per-player mutes are all forwarded. Third-party mutes are enforced by dropping speech server-side, they apply and lift instantly without touching Plasmo's mute storage.
+ChatControl drives Plasmo's `MuteManager` so Plasmo's UI shows the muted microphone icon and the remaining duration - for its own server, channel and per-player mutes as well as third-party mutes, which appear and lift within a second. Speech is additionally dropped server-side, so the audio block applies instantly. Mutes placed with Plasmo's own `/vmute` are never touched.
 
 </div>
 
