@@ -2,7 +2,7 @@
 
 Here you can view all permissions this plugin supports. We recommend using LuckPerms as a permission plugin, as it has proven stability over the many years of its course.
 
-One of the cool parts about Protect is tat you can view the missing permission within the error message directly.
+One of the cool parts about Protect is that you can view the missing permission within the error message directly.
 ![Permission](/images/protect/LgEfscQ.png)
 
 
@@ -65,7 +65,7 @@ public final class Permissions {
 		@Permission("Your shop actions will leave no traces.")
 		public static final String TRANSACTION = "protect.bypass.transaction";
 
-		@Permission("Permission to bypass item limit for WorldEdit operations. Since some operations work with thousands of items, we do not allow only certain items to be bypassed because of the performance impact could freeze the server.")
+		@Permission("Permission to bypass the item limit for WorldEdit operations. Since some operations work with thousands of items, we do not allow only certain items to be bypassed because the performance impact could freeze the server.")
 		public static final String WORLDEDIT = "protect.bypass.worldedit";
 	}
 
