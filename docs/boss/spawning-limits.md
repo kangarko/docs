@@ -33,8 +33,10 @@ There's over 15 different conditions you can set to limit spawning your Bosses!
 
 ### But wait... sometimes there are more Bosses then my limits?
 
+On Paper and its forks we track Bosses in unloaded chunks (saved to unloaded-bosses.yml) and count them against world limits, including across server restarts. Stale records self-heal when their chunk loads again.
+
 ::: warning
-We can only count and control Bosses in loaded chunks (this is where players are). If the player walks around and load more chunks with Bosses saved from earlier, the limits may get slightly exceeded.
+On Spigot, we can only count and control Bosses in loaded chunks (this is where players are). If the player walks around and loads more chunks with Bosses saved from earlier, the limits may get slightly exceeded.
 :::
 
 We can scan offline chunks to remove your Bosses afterwards, see /boss scan command.
