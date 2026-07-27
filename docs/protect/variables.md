@@ -110,7 +110,7 @@ Additional variables available for shop transaction broadcast.
 | `{plugin}` | The shop plugin name. |
 | `{transaction_type}` | Either "buy" or "sell". |
 | `{price}` | The raw price, i.e. "1.0". |
-| `{price_formatted}` | The price formatted with currency to our best knowledge, i.e. "$5.0". |
+| `{price_formatted}` | The price formatted with currency to our best knowledge, always with two decimal points, i.e. "$5.00". |
 | `{shop_owner}` | The shop owner's name, or "adminshop" if not known. |
 | `{shop_owner_uid}` | The shop owner's uuid, if any. |
 | `{amount}` | The amount of transacted goods. |

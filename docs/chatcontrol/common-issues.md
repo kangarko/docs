@@ -101,6 +101,11 @@ Restart the server — some messages require a clean start.
 Give yourself or your group negative `chatcontrol.channel.autojoin.{channel}.{mode}` permission. Replace `{channel}` with channel name and `{mode}` with `write`/`read`, or use `chatcontrol.channel.autojoin.*` to disable all.
 :::
 
+### Placeholders like `{some_placeholder}` are not parsed inside a message
+The `{name}` syntax only works in files in `formats/`. Inside the text of a message, such as what you type in chat or pass to `/channel send`, only the `[name]` syntax is parsed. We never run the variable engine over message content, otherwise any player could type a variable in chat and have it execute.
+
+To use a placeholder inside a message, either put it in the channel format, or create a message variable in `variables/` with `Type: MESSAGE` and call it with `[name]`. See [JavaScript Variables](./javascript-variables).
+
 ### Players can speak when muted (e.g. using BanManager / LiteBans)
 ::: warning
 ChatControl honors mutes from AdvancedBan, BanManager, CMI, EssentialsX and LiteBans automatically when the mute plugin runs on the same backend server, so update to the latest ChatControl first. If your mute plugin only runs on the proxy, or you use a different plugin such as LibertyBans, set `Chat_Listener_Priority` to `HIGH` in settings.yml and restart. See [Listener Priorities](./listener-priorities) for other plugin combinations.
