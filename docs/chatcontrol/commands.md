@@ -81,7 +81,7 @@ Reloads config. Some features (listener priorities, console filter) require a fu
 Add, import, list, reload or toggle chat filters. A rule is a way to catch anything in your chat, commands, signs, items, books or server packets and execute actions on it. For example, typing "apple" gives a player a warning. Used against spam, swears, ads, bots, or even to create help systems, chat bots or new commands (like Skript). See [Rules](./rules).
 
 ### `/chc sendformat`
-Send a formatted message using a format file. Usage: `/chc sendformat [-reload] <format> <player> [message]`.
+Send a formatted message using a format file. Usage: `/chc sendformat [-reload] <format> <player> [message]`. Use `all` as the player to send to everyone on the server. With a remote database and proxy enabled, the target player can be connected to any server on your network.
 
 ### `/chc tag`
 Set custom nick/prefix/suffix for players (admin). Proxy supported.

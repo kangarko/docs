@@ -23,18 +23,18 @@ You can read more about channel auto-join permissions here: [Channels Auto-Join]
 :::
 
 ::: tip Color Permissions
-For legacy colors use ``chatcontrol.color.`{color}``, for hex colors use ``chatcontrol.hexcolor.`{color_name}``
-If you see the dumb of the permissions file below, please note that chatcontrol.color.`{color}` can also have the color replaced with decorations too, not just legacy colors. So you can use:
+For legacy colors use ``chatcontrol.color.`{color}`` where `{color}` is the lowercase color name with underscores, e.g. `chatcontrol.color.red` or `chatcontrol.color.dark_blue` (not `darkblue` nor `dark-blue`). For hex colors use ``chatcontrol.hexcolor.`{color}`` with the code without `#`, e.g. `chatcontrol.hexcolor.ccffdd`.
+If you see the dump of the permissions file below, please note that chatcontrol.color.`{color}` can also have the color replaced with decorations too, not just legacy colors. So you can use:
 
 * chatcontrol.color.bold
 * chatcontrol.color.obfuscated
 * chatcontrol.color.strikethrough
-* chatcontrol.color.underline
+* chatcontrol.color.underlined
 * chatcontrol.color.italic
 
 For gradients in the `/chc color` menu, use ``chatcontrol.guigradient.`{name}``` where `{name}` is the lowercased gradient name (e.g. `chatcontrol.guigradient.sunset`, `chatcontrol.guigradient.ocean`).
 
-**For the most up-to-date color permission information, see the header comments in the "Colors" section of settings.yml.**
+You can also grant `chatcontrol.color.colors` to allow all colors at once and `chatcontrol.color.decorations` to allow all decorations at once.
 :::
 
 ## Permissions List
@@ -177,9 +177,9 @@ Let players use colors and formatting in what they type.
 
 | Permission | What it does |
 |---|---|
-| `chatcontrol.color.<name>` | Use a `&` color or style. `<name>`: `red`, `bold`, `italic`, `underline`, `strikethrough`, `obfuscated`, ... |
+| `chatcontrol.color.<name>` | Use a `&` color or style. `<name>` is lowercase with underscores: `red`, `dark_blue`, `bold`, `italic`, `underlined`, `strikethrough`, `obfuscated`, ... |
 | `chatcontrol.hexcolor.<hex>` | Use a hex color, e.g. `ccffdd` (no `#`) |
-| `chatcontrol.action.<action>` | Use clickable/hover MiniMessage tags. `<action>`: `hover`, `click`, `insertion`, `rainbow`, `font`. Can be abused, hand out carefully |
+| `chatcontrol.action.<action>` | Use clickable/hover MiniMessage tags. `<action>`: `hover`, `head`, `click`, `insertion`, `rainbow`, `shadow`, `lang`, `transition`, `font`. Can be abused, hand out carefully |
 | `chatcontrol.guicolor.<name>` | Pick a named color in the `/chc color` menu |
 | `chatcontrol.hexguicolor.<hex>` | Pick a hex color in the `/chc color` menu |
 | `chatcontrol.guigradient.<name>` | Pick a gradient in the `/chc color` menu, e.g. `sunset` |

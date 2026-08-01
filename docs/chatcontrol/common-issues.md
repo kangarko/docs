@@ -245,8 +245,8 @@ If using ViaVersion, disable PacketEvents integration in settings.yml.
 
 ## 🎨 Colors and Formatting {#color-section}
 
-### MiniMessage tags not working (`<underline>`, `<strikethrough>`, etc.)
-Players need the corresponding permission: `chatcontrol.color.underline`, `chatcontrol.color.strikethrough`, etc. For hover/click: `chatcontrol.action.hover`, `chatcontrol.action.click`.
+### MiniMessage tags not working (`<underlined>`, `<strikethrough>`, etc.)
+Players need the corresponding permission: `chatcontrol.color.underlined`, `chatcontrol.color.strikethrough`, etc. Color names are lowercase with underscores, e.g. `chatcontrol.color.dark_blue`. For hover/click: `chatcontrol.action.hover`, `chatcontrol.action.click`.
 
 ### Hex/RGB colors not working in placeholders
 Use MiniMessage `<#123456>` format. Legacy `&#123456` may not work in all contexts since ChatControl 11.
