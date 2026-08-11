@@ -27,7 +27,7 @@ Channel range types:
 1. **Global** — everyone on your server/network
 2. **Blocks ranged** — players within a distance
 3. **World ranged** — players on the same/connected worlds
-4. **Party** — faction/party members (can also have block/world range)
+4. **Party** — faction/clan/party members (can also have block/world range). Set the `Party` key in the channel to one of the values listed in the `Party` comment of the `Channels` section in your settings.yml, such as `towny-town` or `simpleclans-clan`. Over proxy, party messages only reach other servers when the party plugin shares its data across them (`simpleclans-clan` and `simpleclans-ally` with SimpleClans on a shared MySQL database and its `use-bungeecord` option enabled); all other parties only reach players on the sender's server.
 
 ### Auto Join
 

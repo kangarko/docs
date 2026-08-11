@@ -37,7 +37,11 @@ ChatControl's API is organized into several categories of classes that serve dif
 
 ## Creating a Custom Party Channel
 
-A party channel in ChatControl allows only players in the same group (such as a faction, town, or plot) to see each others' messages. Here's how to create one:
+A party channel in ChatControl allows only players in the same group (such as a faction, town, clan or plot) to see each others' messages. Many plugins are supported out of the box (see the `Party` comment in the `Channels` section of your settings.yml), including SimpleClans via `simpleclans-clan` and `simpleclans-ally` — check that list before writing your own integration. Here's how to create one:
+
+::: warning
+Custom parties registered through the two-argument `Party.register()` are evaluated on the sender's server only, so in proxy networks, messages in such channels do not reach players on other servers. If your plugin shares its group data across servers (i.e. over a database), use the three-argument overload `Party.register(name, isInParty, isInRemoteParty)` where the last function resolves membership from the receiver and the remote sender's UUID, and your channel will work network-wide.
+:::
 
 ### Step 1: Configure Dependencies
 
