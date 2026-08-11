@@ -129,10 +129,13 @@ The `X` placeholder can be replaced with any of the following synced player data
 | Variable | Description |
 |----------|-------------|
 | `_name` | Player's name |
+| `_nick` | Player's colored nick, or his name if no nick is set |
+| `_uuid` | Player's unique id (all zeros for the console) |
 | `_prefix` | Player's prefix |
 | `_suffix` | Player's suffix |
 | `_group` | Player's primary permission group |
 | `_server` | Current server the player is connected to |
+| `_channels` | Channels the player has joined, or a localized "None" |
 | `_is_vanished` | Returns `true` if player is vanished, otherwise `false` |
 | `_is_afk` | Returns `true` if player is AFK, otherwise `false` |
 
