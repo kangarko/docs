@@ -25,9 +25,12 @@ These variables are taken from player's Bukkit server and work on [Proxy](proxy)
 | Variable Name | Description |
 |---|---|
 | `{player_name}` | Dude's name. |
+| `{player_uuid}` | Player's unique id. |
 | `{player_nick}` | Player's nick (or name if not set). |
 | `{player_group}` | Player's group from permission plugin installed on his server. |
 | `{player_prefix}` | Player's prefix from the server he is on. |
+| `{player_suffix}` | Player's suffix from the server he is on. |
+| `{player_channels}` | Channels the player has joined, or a localized "None". |
 | `{player_server}` | Player's server he is on. |
 | `{player_is_afk}` | Returns true or false if player is AFK. |
 | `{player_is_ignoring_<type>}` | Returns true or false if player is ignoring the given toggle. See Toggle.Apply_On in settings.yml for available types. |
@@ -58,7 +61,8 @@ Sometimes we provide more variables than the ones above, such as `{message}` whe
 | Variable Name | Description |
 |---|---|
 | `{player}` or `{player_name}` | Dude's name. |
-| `{sender_name}` | (Only some places in the plugin) The name of the message sender you can use in Receiver_Condition variables in your formats (If you use `{player}` in that keys it will return the message receiver's name and not the sender's). |
+| `{player_uuid}` | Player's unique id, or empty for the console and for Discord. |
+| `{sender_name}` and `{sender_uuid}` | The name and the unique id of the message sender, which you can also use in the Receiver_Condition, Receiver_Permission and Receiver_Variable keys of your formats (if you use `{player}` in those keys it returns the message receiver, not the sender). |
 | `{player_tab_name}` | Player's list name. |
 | `{player_display_name}` | Player's display name. |
 | `{player_nick}` | Player's nick, or name if no nick. |
@@ -123,6 +127,20 @@ Starting with version 11.0.0, the plugin supports dynamic placeholders that auto
 - `{sender_X}` - References the message sender's data  
 - `{receiver_X}` - References the message recipient's data  
 - `{killer_X}` - References the killer's data (where applicable)
+- `{tagged_X}` - References the mentioned player's data, in the Sound_Notify format in settings.yml
+
+::: warning These only work where we know both sides of the message
+| Where | What you can use |
+|---|---|
+| Private messages: pm-sender.yml, pm-receiver.yml, the console and toast formats and the private message spy format | `{sender_X}` and `{receiver_X}` |
+| Operators in messages/ such as join, quit, kick and timed | `{sender_X}` for the player the message is about, `{receiver_X}` for each player who sees it |
+| Operators in rules/ | `{sender_X}` |
+| Death messages | `{killer_X}`, and only when a player did the killing |
+| Sound_Notify format in settings.yml | `{tagged_X}` |
+| Channel formats, /me, /say, motd and everywhere else | only `{sender}`, `{sender_name}` and `{sender_uuid}` |
+
+Everywhere else use the `{player_X}` variables, which always refer to the player the message is being shown to. A variable we cannot fill in is printed exactly as you typed it, so `{sender_nick}` in a channel format shows up as "{sender_nick}" for everyone.
+:::
 
 The `X` placeholder can be replaced with any of the following synced player data fields:
 
@@ -130,7 +148,7 @@ The `X` placeholder can be replaced with any of the following synced player data
 |----------|-------------|
 | `_name` | Player's name |
 | `_nick` | Player's colored nick, or his name if no nick is set |
-| `_uuid` | Player's unique id (all zeros for the console) |
+| `_uuid` | Player's unique id. All zeros for the console, and empty when there is none at all, such as a Discord message from an account nobody linked to a Minecraft player |
 | `_prefix` | Player's prefix |
 | `_suffix` | Player's suffix |
 | `_group` | Player's primary permission group |
@@ -138,6 +156,8 @@ The `X` placeholder can be replaced with any of the following synced player data
 | `_channels` | Channels the player has joined, or a localized "None" |
 | `_is_vanished` | Returns `true` if player is vanished, otherwise `false` |
 | `_is_afk` | Returns `true` if player is AFK, otherwise `false` |
+| `_is_ignoring_<type>` | Returns `true` if the player turned the given part off with /toggle. See Toggle.Apply_On in settings.yml for available types |
+| `_toggle_<type>` | The reverse of `_is_ignoring_<type>`: `true` while the player still has that part turned on |
 
 ## PlaceholderAPI Syntax
 
