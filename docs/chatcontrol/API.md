@@ -166,6 +166,10 @@ public class ChatEventListener implements Listener {
 
 The `ChatControlAPI` class provides several utility methods for interacting with the plugin:
 
+::: warning
+Player data is loaded from the database asynchronously around the time a player joins, and unloaded when he quits. Any method that works with a player's data, such as `getCache`, `checkMessage`, `checkRules` or `sendMessage`, throws an exception when his data is not loaded yet. Call `ChatControlAPI.isPlayerCached(player)` first and skip your logic when it returns false. This matters most when you call us from a join listener or from a task you schedule on join, because the data is often not ready at that point.
+:::
+
 ```java
 import org.bukkit.entity.Player;
 import org.bukkit.command.CommandSender;
@@ -178,6 +182,10 @@ import org.mineacademy.chatcontrol.operator.Rule.RuleCheck;
 
 // Check if server chat is globally muted
 boolean isChatMuted = ChatControlAPI.isChatMuted();
+
+// Always check that a player's data is loaded before using any method that needs it
+if (!ChatControlAPI.isPlayerCached(player))
+    return;
 
 // Get a player's cache data
 PlayerCache playerCache = ChatControlAPI.getCache(player);
@@ -208,6 +216,7 @@ if (channelExists) {
 
 This example demonstrates the core API functionality for:
 - Checking global chat mute status
+- Verifying a player's data is loaded before using it
 - Accessing player data
 - Filtering messages through various checks
 - Testing messages against specific rule types
