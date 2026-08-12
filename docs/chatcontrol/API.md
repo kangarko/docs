@@ -58,7 +58,7 @@ This ensures your plugin loads after ChatControl, allowing you to access its API
 
 ### Step 2: Register Your Party
 
-Register your party name in your plugin's `onLoad()` or `onEnable()` method:
+Register your party name in your plugin's `onLoad()` method. ChatControl loads its channels while it enables, and `softdepend` makes your plugin enable after it, so a party registered in `onEnable()` arrives too late and ChatControl fails to load the channel using it with "No such channel party". Bukkit runs every plugin's `onLoad()` before any plugin is enabled, so registering there always works. If you must register later, run `/chc reload` afterwards to re-read the channels.
 
 ```java
 import org.mineacademy.chatcontrol.api.Party;
@@ -66,7 +66,7 @@ import org.mineacademy.chatcontrol.api.Party;
 public class YourPlugin extends JavaPlugin {
     
     @Override
-    public void onEnable() {
+    public void onLoad() {
         // Only register if ChatControl is present
         if (Bukkit.getPluginManager().getPlugin("ChatControl") != null) {
             registerCustomParty();

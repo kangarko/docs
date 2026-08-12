@@ -203,6 +203,17 @@ Support for party chat, see [Channels](./channels). Requires both `FriendsAPIFor
 
 </div>
 
+<div class="plugin-card">
+
+#### SimpleClans <Badge type="tip" text="Clan Chat" />
+Clan and ally chat channels with the `simpleclans-clan` and `simpleclans-ally` party values, see [Channels](./channels). Players who ignore each other are also filtered out of SimpleClans' own clan chat.
+
+::: tip Works Across Your Network
+Unlike other party plugins, these channels also work over proxy. Run SimpleClans on a shared MySQL database with its `use-bungeecord` option enabled on every server, then set `Proxy: true` on the channel. SimpleClans only pushes clan changes to servers that have players online at that moment, so a server that was empty when a clan changed keeps the old membership until it restarts.
+:::
+
+</div>
+
 </div>
 
 ### 🎮 Gameplay
