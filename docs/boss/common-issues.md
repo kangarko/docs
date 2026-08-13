@@ -11,7 +11,7 @@
 ## Spawning Issues
 
 ### Bosses are not spawning!
-- Check Spawning Limits: /boss menu > Bosses > Your Boss > Spawning Limits
+- Check the limits: /boss menu > Bosses > Your Boss > Spawning > World Limits, Radius and Where Limits Are Applied
 - Check if your Spawn Rule includes the Boss and its delay, chance, and other properties
 - Check if other plugins block mob spawning (WorldGuard, GriefPrevention, Factions, Residence, etc.)
 - Try spawning with `/boss egg` to see error messages:
@@ -23,16 +23,16 @@
 ### Spawning Configuration Questions
 
 **Spawn Bosses at a certain time?**  
-Create a spawn rule for the given time in /boss menu > Spawn Rules.
+Create an On A Block At A Given Time rule in /boss menu > Spawning.
 
 **Rotating spawns (one of several Bosses at a location)?**  
 Use a **Respawn After Death** spawn rule. Add all bosses to one rule with a delay (e.g., 30 seconds). Only **one boss from the rule is alive at any time** — when it dies, the next spawns after the delay.
 
 **Spawn a Boss after players kill a number of other Bosses?**  
-Use an **After A Kill Goal** spawn rule in /boss menu > Spawn Rules. Select which Bosses count, the kill goal and the locations to spawn at. Kills from all players share one persistent counter.
+Use an **After A Kill Goal** spawn rule in /boss menu > Spawning. Select which Bosses count, the kill goal and the locations to spawn at. Kills from all players share one persistent counter, and only kills by a player count.
 
 **Spawn Bosses when entering a region?**  
-Create the region using /boss tools, then make a spawn rule via /boss menu > Spawn Rules > Entering a Region. Alternatively, use [CommandRegions](https://www.spigotmc.org/resources/18001/) with WorldGuard.
+Create the region using /boss tools, then make an **On Entering A Region** rule via /boss menu > Spawning. It needs `Register_Regions: true` in settings.yml, otherwise the button is greyed out.
 
 ## Entity and Behavior Issues
 
@@ -59,13 +59,13 @@ Set `settings.log-named-deaths` to `false` in spigot.yml.
 Minecraft's dragon behavior is inconsistent when spawned manually. Experiment with custom rules to change the spawning phase.
 
 **Make animals aggressive / add better AI?**  
-Install Citizens and enable custom pathfinder in /boss menu > Bosses > Your Boss > Settings > Citizens. Only affects newly spawned Bosses.
+Open Boss > Settings > **AI & Behavior**, turn on Custom Targeting, then pick Follow, Attack and at least one entry under Target Entities. Leaving Target Entities empty is why most Bosses stand still. Only affects newly spawned Bosses.
 
 **Change skins for NPC Bosses?**  
-Open Boss > Settings > Citizens Settings and change the skin there.
+Open Boss > Settings > AI & Behavior > Skin. Player Bosses need Citizens installed.
 
 **Customize Player or Citizen boss behavior (speed, follow distance, armor toughness)?**  
-Enable Citizens integration in Boss > Settings > Citizens, then use `/npc select` while looking at the Boss and configure with `/npc` commands.
+Use the AI & Behavior menu first. For anything Citizens owns, run `/npc select` while looking at the Boss and configure with `/npc` commands.
 
 ## Permissions and World Management
 
@@ -84,14 +84,17 @@ Caused by ViaVersion, ProtocolSupport, CMI, or OpenInv — not a Boss issue. Swi
 
 ## Customization Options
 
-**Custom messages or commands on Boss death/spawn/health threshold?**  
-Open Boss menu > Settings > Commands.
+**Custom messages or commands on Boss death/spawn/target/health threshold?**  
+Open Boss menu > Settings > Commands. Skills have their own command list too.
+
+**Skills never fire?**  
+Skills ignore players in Creative or Spectator mode, vanished players and NPCs, so testing in Creative looks broken. Targeting skills also need the Boss to have a target within `Skills.Target_Range` blocks (8 by default). Set `Debug` to `[skills]` in settings.yml to see the reason for every skip.
 
 **Disable a message?**  
 Set it to `"none"`, `""`, or `[]`.
 
-**Increase maximum Boss health from 2048?**  
-Change it in spigot.yml. Health values over 256 may cause weird behavior and are unsupported.
+**Increase maximum Boss health?**  
+Raise `settings.attribute.maxHealth` in spigot.yml. Health values over 256 may cause weird behavior and are unsupported.
 
 ## Health and Damage Issues
 
@@ -111,7 +114,7 @@ This is likely caused by the Steal Life skill working in reverse due to a config
 Some entity attack types (like evoker fangs) are separate entities in Minecraft and don't inherit the Boss's damage multiplier. This is a Minecraft limitation.
 
 **PlaceholderAPI kill variables not working**  
-Boss variables (like `{boss_kills}`) require the Boss to be killed by direct player damage. If a Boss dies from /effect commands, fire damage, or other indirect causes, kill placeholders won't trigger.
+The kill placeholders (`%boss_<name>_<player>_kills%` and `%boss_<name>_top_kills_<n>_<player/value>%`) require the Boss to be killed by direct player damage. If a Boss dies from /effect commands, fire damage, or other indirect causes, nothing is counted.
 
 ## Common Tips
 
@@ -125,8 +128,8 @@ Boss variables (like `{boss_kills}`) require the Boss to be killed by direct pla
 **"Failed to download library" error**  
 Your server couldn't download required libraries from Maven Central (network outage, firewall, DNS issues). Restart to retry.
 
-**"Counting unloaded Bosses requires modern Paper software. Disabling..."**  
-Another plugin bundles an incompatible Adventure library. This is a [Jar Hell](../chatcontrol/jar-hell) issue — find and fix the conflicting plugin.
+**"Counting unloaded Bosses requires a modern Paper software. Disabling..."**  
+Your server is not Paper, or it is too old to have the event we need. Boss turns `Spawning.Count_Unloaded_Bosses_In_Limits` off for you and world limits then only count loaded chunks.
 
 **Boss packs not working on legacy versions (1.8.8)**  
 Pre-made Boss packs use modern entity types and materials. You need to manually adapt them for legacy versions.

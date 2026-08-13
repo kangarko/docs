@@ -4,35 +4,48 @@
 For the /boss command help, see [Commands](/boss/commands)
 :::
 
-You can configure your Boss to execute custom commands on the following events:
+You can configure your Boss to execute custom commands on the following events, all under Boss menu > Settings > **Commands**:
 
-1. Boss spawn
-2. Boss death
-3. When a Boss' health goes below a specific value (i.e. less than 10 HP)
+1. **Commands On Spawn** — when the Boss spawns
+2. **Commands On Death** — when the Boss dies
+3. **Commands On Target** — when the Boss starts targeting a player. Use `{player}` for that player. They fire once per new target, so re-targeting the same player does not spam them
+4. **Commands On Life Decrease** — when the Boss's health drops below a threshold you set in HP
 
 ![Boss Commands Menu](/images/boss/zZF9ics.png)
+
+Every [skill](skills#commands) has its own command list too, which runs each time the skill fires.
+
+**One Command Mode**, at the bottom of the Commands menu, stops after the first command that actually ran. Handy when you want one command for the killer and another for when there is none.
 
 ## Command Variables
 
 We support the following variables inside a command:
 
-- {killer} to replace the Boss' direct killer's name
+- `{player}` and `{player_name}` for the player the command is running for
+- `{killer}` and `{killer_name}` for the Boss' direct killer
+- `{boss_name}`, `{boss_alias}`, `{boss_world}`, `{boss_x}`, `{boss_y}`, `{boss_z}` and `{boss_location}`
 - All variables listed in the [Variables](/boss/variables) page (replace %% with {}).
-- Plus PlaceholderAPI variables for the killer. I.e. %player_health% will return the remaining killer's health.
+- Plus PlaceholderAPI variables for that player. I.e. %player_health% will return their remaining health.
+
+A command containing `{player}` or `{killer}` is skipped when no player is involved, for example a Boss killed by fire. Set `Debug` to `[commands]` in settings.yml to log every time that happens.
 
 ## Command Configuration:
 
-You can run the command as the console or with the permissions that the killer player has:
+You can run the command as the console or with the permissions that the player has:
 
 ![Command Configuration](/images/boss/qoRtIDO.png)
 
-You can also set a chance for the command such that it can run rarely or not much at all.
+You can also set a chance for the command, from 0% to 100%, so it can run rarely or not much at all. New commands start at 100% and run as console.
+
+::: warning
+Commands running as the player only resolve `{player}` and `{player_name}`. Keep **Run As Console?** enabled if your command uses `{boss_name}`, `{boss_alias}` or any other Boss variable.
+:::
 
 ## Special Commands
 
 Alongside any typical commands we also support the following special syntax:
 
-- `tell <message>` - Send all players within 10 blocks' radius the specified message. Separate multiple lines with |.
+- `tell <message>` - Send the message to the player the command is running for. When there is no such player, everyone within 10 blocks of the Boss receives it instead. Separate multiple lines with |.
 - `tell-damagers <message>` - Send a message to all players who damaged the boss. You can use {damager} for each damager's name and {damage} or {damage_percent} for the damage he did. Example: `tell-damagers &7Hey &6{damager}&7, you dealt &c{damage} damage &7to &a{boss_name}&7!` Separate multiple with |.
 - `tell-damagers-list <format> or <title>|<format>` - Works like tell-damagers but instead of sending one message to each damager, it sends a list of all damagers to each player so they see how up you rank compared to other players. In the message, you specify the format. You can use {order} to get the number, {damager}, {damage} or {damage_percent} as well as other [Boss variables](/boss/variables).
 
@@ -43,7 +56,7 @@ You can specify the header title of the messages using |, for example: `tell-dam
 
 -  `broadcast-damagers-list <format> or <title>|<format>` - See tell-damagers-list, but we will send the messages to all online players instead of only those who damaged the Boss before he died.
 - `broadcast <message>` - Send all players on the server the specified message. Separate multiple lines with |.
-- `discord <channelName> <message>` - (Requires DiscordSRV) Send the specified message to the given Discord channel.
+- `discord <channelName> <message>` - (Requires DiscordSRV) Send the specified message to the given Discord channel. Without DiscordSRV the command is skipped and a console warning is printed once every 30 minutes.
 
 ![Discord Command Example](/images/boss/RieObvS.png)
 

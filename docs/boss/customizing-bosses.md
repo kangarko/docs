@@ -2,25 +2,25 @@
 
 ![Customizing Banner](/images/boss/5ZMI9Lb.png)
 
-To configure your boss, click on its spawning egg in /boss menu > Bosses. You can also right-click a Boss Spawner Egg in your hands.
+To configure your boss, click on its spawning egg in /boss menu > Bosses. You can also left-click while holding a Boss Spawner Egg. Right-clicking spawns the Boss instead.
 
 ![Boss Configuration](/images/boss/G8WJNBQ.png)
 
 ## Some requested settings
 
-### Display Name / No AI / Gravity / Baby / other flags
+### No AI / Gravity / Baby / other flags
 
-Toggle these in Settings > Specific Settings.
+Toggle these in Settings > **Custom Settings**. The menu only lists the settings that apply to your Boss's mob type, so a Slime shows Slime Size while a Creeper shows Powered.
+
+The display name itself is Settings > **Alias**. Custom Settings only holds **Custom Name Visible**, which decides whether that name is always on screen.
 
 ::: warning
 Old Minecraft versions (especially 1.8.8) lack majority of these settings due to missing APIs.
 :::
 
-![Specific Settings](/images/boss/eBS3XA6.png)
-
 ### Making Boss invulnerable
 
-Use Specific Settings from the menu above to toggle this option. If your Minecraft version does not offer it, you must change the Boss's health to a very high value.
+Use Custom Settings from the menu above to toggle **Invulnerable**. If your Minecraft version does not offer it, you must change the Boss's health to a very high value.
 
 ### Health Bar
 
@@ -38,11 +38,11 @@ Health_Bar:
     Dead: BLACK
 ```
 
-Available variables: `{damage}`, `{world}`, `{x}`, `{y}`, `{z}`, `{player}`, `{boss_alias}`. The color settings control the health bar segments: **Remaining** for current health, **Total** for max health, and **Dead** when the hit kills the Boss.
+Available variables: `{damage}`, `{boss_name}`, `{boss_alias}`, `{world}`, `{x}`, `{y}`, `{z}`, `{player}`. The color settings control the health bar segments: **Remaining** for current health, **Total** for max health, and **Dead** when the hit kills the Boss.
 
 ### Citizens Retargeting
 
-If you have Citizens installed, you can make Bosses find new targets periodically. Enable in settings.yml under `Fighting.Citizens_Retarget`:
+Bosses running on the Citizens backend can look for a new target every so often instead of chasing the first player forever. Enable it in settings.yml under `Fighting.Citizens_Retarget`:
 
 ```yaml
 Citizens_Retarget:
@@ -60,27 +60,57 @@ The `Fighting.Disable_Cheats` list controls what player abilities are disabled w
 
 ### Boss Bar
 
-Each Boss can display a Boss Bar above all nearby players showing its name and remaining health. Toggle it per-boss in the Boss menu > Settings > Boss Bar.
+Each Boss can display a Boss Bar above all nearby players showing its name and remaining health. Toggle it per-boss in Boss menu > Settings > Custom Settings > **Boss Bar**. It needs Minecraft 1.9 or newer.
 
 Configure the global Boss Bar appearance in settings.yml under `Fighting.Boss_Bar`:
 
 ```yaml
 Boss_Bar:
   Color: RED
-  Style: SOLID
-  Format: "&c{boss_alias} &7- &c{health}&7/&c{max_health} &4❤"
-  Radius: 32
+  Style: PROGRESS
+  Format: "{boss_alias} &8- &c{health}&7/&c{max_health}"
+  Radius: 50
 ```
+
+`Color` accepts PINK, BLUE, RED, GREEN, YELLOW, PURPLE and WHITE. `Style` accepts PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12 and NOTCHED_20. `Format` accepts `{boss_alias}`, `{boss_name}`, `{health}`, `{max_health}` and `{health_percent}`.
 
 The Boss Bar appears when the Boss spawns, updates on damage, and automatically tracks nearby players within the configured radius. It is removed when the Boss dies or despawns.
 
 ### Projectile Immune
 
-You can make a Boss immune to all projectile damage (arrows, tridents, snowballs, etc.) by enabling the **Projectile_Immune** custom setting in the Boss menu > Settings > Specific Settings. This forces players to engage in melee combat only.
+You can make a Boss immune to all projectile damage (arrows, tridents, snowballs, etc.) by enabling **Projectile Immunity** in Boss menu > Settings > Custom Settings. This forces players to engage in melee combat only.
 
 ### Mannequin Support
 
-Boss now supports MANNEQUIN entities (in addition to ARMOR_STAND) as base mob types where applicable.
+On servers that have them, MANNEQUIN is offered as a base mob type. Mannequin Bosses take damage and die but never move or attack, so their AI & Behavior menu is empty. Armor stands are no longer offered as a base type.
+
+## AI and Behavior
+
+Open Boss menu > Settings > **AI & Behavior** to replace the mob's vanilla brain. The bottom of that menu prints which backend the Boss runs on:
+
+| Backend | When you get it |
+|---|---|
+| Native (Paper Goal API) | Paper 1.15 or newer, the default for ordinary Bosses |
+| Citizens (Player NPC) | Player Bosses, which need Citizens installed |
+| Citizens (legacy opt-in) | Non-Player Bosses with the old Citizens setting still on, and only on servers below 1.15 or without the Paper Goal API |
+| Static (no AI) | Mannequin Bosses |
+| Vanilla (no boss AI) | Servers older than 1.15 or without the Paper Goal API |
+
+| Setting | Default | What it does |
+|---|---|---|
+| **Enable Custom Targeting?** | Disabled | Master switch. While off, the mob keeps its vanilla behavior and the three settings below do nothing |
+| **Follow Target?** | Disabled | The Boss walks toward the entities you selected |
+| **Attack Target?** | Disabled | The Boss attacks them once in reach |
+| **Target Entities** | none | Which entity types the Boss hunts. Leave this empty and Follow and Attack stay dormant |
+| **Target Radius** | 24 blocks | How far the Boss looks for those entities, 4 to 40 |
+| **Enable Allow Wandering?** | Disabled | The Boss patrols around its spawn point instead of standing still |
+| **Wander Radius** | 18 blocks | How far it wanders, 4 to 40 |
+
+Player Bosses add a **Skin** and a **Speed** button, and Citizens-backed Bosses add **Sounds** for custom death, hurt and ambient sounds.
+
+::: tip
+Turning Custom Targeting on and leaving Target Entities empty is the usual reason a Boss stands still. Pick at least Player in the Target Entities menu.
+:::
 
 ## Death Commands and Rewards
 
@@ -105,7 +135,7 @@ Player_Commands:
   - crate give item {killer} common 1
 ```
 
-**To run multiple commands for the killer**, use Boss menu > Settings > Commands > Death Commands instead. You can add as many death commands as you want, and they all execute for the killer.
+**To run multiple commands for the killer**, use Boss menu > Settings > Commands > Commands On Death instead. You can add as many death commands as you want, and they all execute for the killer.
 
 ### Health Trigger Commands
 
@@ -113,7 +143,7 @@ Health-triggered commands fire when a Boss crosses a health threshold during com
 
 ### Target Commands
 
-Run commands when a Boss starts targeting a player. Configure them in Boss menu > Settings > Commands On Target. Use `{player}` in the command to reference the targeted player. These fire once per target acquisition, so rapid re-targeting of the same player will not spam the commands.
+Run commands when a Boss starts targeting a player. Configure them in Boss menu > Settings > Commands > Commands On Target. Use `{player}` in the command to reference the targeted player. These fire once per target acquisition, so rapid re-targeting of the same player will not spam the commands.
 
 ## Naming Rules
 
@@ -125,7 +155,7 @@ Boss names and spawn rule names **must not contain underscores** (`_`). Undersco
 
 For example, a Boss named `Vindicator_Johnny` would break the placeholder `%boss_Vindicator_Johnny_respawn_MyRule%` because the system can't tell where the name ends and the variable starts.
 
-Use spaces or camelCase instead: `Vindicator Johnny` or `VindicatorJohnny`.
+Use camelCase instead: `VindicatorJohnny`. Boss names take letters and digits only, 3 to 24 characters, so no spaces either. Spawn rule names do allow spaces.
 
 If you already have Bosses with underscores, they will continue to work for everything **except** PlaceholderAPI placeholders. Rename them by editing the boss YAML file (change the filename and find-replace inside the file).
 

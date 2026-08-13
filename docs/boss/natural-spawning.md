@@ -1,70 +1,103 @@
 # Natural Spawning
 
-Boss supports automatic spawning so your custom Bosses appear naturally in your worlds.
+Boss eggs, `/boss spawn`, dispensers and the API spawn Bosses manually. Spawn rules do it for you.
 
-Apart from Boss eggs and /boss spawn command, we offer 6 ways to spawn Bosses automatically:
+Create one in `/boss menu` > **Spawning** > **Create New** and pick one of the 6 types below.
 
-**There are MANY options you can configure:**
+Every rule gets the same base conditions:
 
-- Create one spawn rule for multiple bosses.
-- Delay (such as every 1 hour)
-- Days, months, time of the real human year (such as spawn every Friday at 18:00)
-- Minecraft time
-- Light level
-- Height (spawn in deep caves?)
-- Require rain and/or thunder to spawn
-- Chance to spawn (such as 0.01% for extra rare spawning) 
-- Region (WorldGuard, Lands, our own region system and many more!)
+- Which Bosses it spawns, and its own delay
+- Days of the week, months of the year
+- Real-life hour and minute, using the `Timezone` from settings.yml
+- Minecraft time and light level
+- Requires rain, requires thunder
+- A run chance from 0% to 100%
+- An **Enabled?** toggle, so you can park a rule instead of deleting it
+
+Each type adds its own options on top.
 
 ::: tip
-You can even keep Bosses within their spawn region, or create a custom location where they return to when they attempt to escape it.
+Set `Debug` to `[spawning]` in settings.yml to see why a rule did or did not fire.
 :::
 
-## 1) Replacing Vanilla Mobs
-When a monster of the same type spawns naturally (e.g. Zombie, Skeleton), there is a configurable chance it will be transformed into a Boss.
-
-If your server has spawning disabled or you want more control, use:
-
-## 2) Spawning At A Given Time
+## 1) On A Block At A Given Time
 
 ![Time-based Spawning](/images/boss/ymqHCQB.png)
 
-Spawn Bosses at predefined locations on a schedule. Configure the real-life day, week, hour and minute. You can even limit spawning to each Friday at 18:00 when it is a night in the game and raining!
+Spawns at locations you saved with `/boss location`, on a schedule. Every day at 17:00, each Friday at noon, every 30 minutes.
 
-The delay is measured from the last successful spawn, so slow kills never postpone the schedule. If the Boss is still alive when its next spawn is due (blocked by a spawning limit), the delay restarts from its death instead, so the Boss never reappears instantly after being killed.
+Adds **Select Locations**, **Location Offset** (randomize the exact block, off by default) and an exact **Hour** and **Minute**, where `-1` means any.
 
-## 3) Respawning After Death
+The delay runs from the last successful spawn, so slow kills never postpone the schedule. If the Boss is still alive when the next spawn is due, the delay restarts from its death instead.
 
-Respawn the Boss after a configurable delay once it dies. Persists across server restarts.
+A location only spawns while a player is within 30 blocks. Change that with `Spawning.Location_Spawn_Nearby_Player_Radius`, or set it to `-1` to drop the check. Respawn After Death and After A Kill Goal are exempt from it.
 
-When one respawn rule contains multiple Bosses, the delay is shared by the whole rule. After any assigned Boss dies, the next assigned Boss waits for the same cooldown before appearing.
+## 2) On Entering A Region
 
-## 4) Spawning When Entering A Region
+Spawns when a player walks into one of your Boss regions.
 
-Spawn a Boss when players enter a region, with configurable delay and nearby Boss limit.
+Adds **Regions**, **Select Locations** and **Max Bosses In Region**.
 
-## 5) Naturally Around Players
-Periodically scan areas around players and spawn Bosses near them.
+The Boss appears at your saved locations, not on the player. Only regions made with `/boss region` work here. **Max Bosses In Region** counts this rule's Bosses already inside that region, and defaults to no limit.
 
-You can cap the max Bosses per Spawn Rule, or individually per Boss in the Spawning Limits section.
+## 3) Respawn After Death
+
+Brings the Boss back a set delay after it dies. Survives restarts.
+
+Adds **Select Locations** and **Location Offset**.
+
+Only one Boss from the rule lives at a time. Put several Bosses in one rule and they share the delay, so the next one appears a cooldown after any of them dies.
+
+## 4) Randomly Around Players
+
+Spawns around players like vanilla mobs do. Your vanilla mobs stay untouched.
+
+Adds **Radius** (5 to 80 blocks, default 30), a **Height** range, per-world chances and per-biome chances.
+
+Bosses never appear closer than `Spawning.Nearby_Spawn_Min_Distance_From_Player` blocks (5 by default), and GriefPrevention claims are skipped.
+
+## 5) Replacing Vanilla Mobs
+
+A naturally spawning mob turns into your Boss instead. A Zombie Boss replaces zombies, a Skeleton Boss replaces skeletons.
+
+Adds a **Height** range, per-world chances and per-biome chances on top of the rule's **Run Chance**.
+
+Two settings.yml keys shape it:
+
+- `Spawning.Ignore_Replacing_Vanilla_From` — spawn causes that never get replaced. Default `[COMMAND, CUSTOM, SLIME_SPLIT]`
+- `Spawning.Cancel_Vanilla_If_Replace_Fails` — kill the vanilla mob when the rule fails its conditions or limits. Off by default
 
 ## 6) After A Kill Goal
 
-Spawn Bosses at your saved /boss location points after players kill a set amount of other Bosses.
+Spawns at your saved locations after players kill enough of your other Bosses.
 
-Pick which Bosses count towards the goal, then set the Kill Goal. Kills from every player add to one shared counter that survives restarts and resets automatically once the goal Boss spawns. Each counted kill shows the killer an actionbar progress message you can customize with the `{boss}`, `{count}`, `{goal}` and `{remaining}` variables, or type `none` to hide it. The rule menu shows the current progress and has a button to reset the counter manually.
+| Button | Default | What it does |
+|---|---|---|
+| **Counted Bosses** | none | Which Bosses count towards the goal |
+| **Kill Goal** | 100 | How many kills are needed |
+| **Kill Progress** | 0 | The shared counter, click to reset it |
+| **Progress Message** | `&7Kills: &f{count}&7/&f{goal}` | Actionbar message for the killer, or `none` to hide it |
+
+The message takes `{boss}` (the Boss just killed), `{count}`, `{goal}` and `{remaining}`.
+
+Only player kills count, so a Boss that burns to death adds nothing. Every player feeds one shared counter that survives restarts and resets when the goal Boss spawns. If the goal is hit but the spawn is blocked by a limit, the counter stays and retries on the next kill.
 
 ::: warning
-Spawn rule names **must not contain underscores** (`_`). Underscores break PlaceholderAPI placeholder parsing. See [Naming Rules](./customizing-bosses#underscores-not-allowed-in-names) for details.
+Spawn rule names **must not contain underscores** (`_`). Underscores break PlaceholderAPI placeholder parsing. See [Naming Rules](./customizing-bosses#underscores-not-allowed-in-names).
 :::
 
 ## Regions
-On top of that, each Boss can be configured to only appear in certain regions. 
+
+**Randomly Around Players** and **Replacing Vanilla Mobs** can be locked to regions from six sources: Boss's own regions, Residence, Factions, Towny, Lands and WorldGuard. Turn **Regions Enabled?** on inside the rule (off by default), pick your regions, then choose whitelist or blacklist.
+
+**On Entering A Region** always has regions on and only reads Boss's own regions.
 
 ### How to Create a Boss Region?
 1. Obtain a Region Tool via /boss tools
-2. Right click a block to set the primary point, and left click a block to set the secondary region point.
-3. Run `/boss region add <name>`
+2. Left click a block for the primary point, right click a block for the secondary point.
+3. Run `/boss region new <name>`
 
 The selection is visualized so you always know how big the region is.
 ![Region Selection](/images/boss/o2uYAwY.png)
+
+To keep a Boss inside the region it spawned in, and pick where it returns when it escapes, use Boss menu > Spawning > **Region Keeping**.

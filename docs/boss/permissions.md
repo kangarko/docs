@@ -2,6 +2,8 @@
 
 Here you can view all the permission this plugin supports. We recommend using LuckPerms as a permission plugin, as it has proven stability over the many years of its course.
 
+Every node below defaults to operators only. `/boss` itself needs no permission, it just prints the help.
+
 > You can view the required permission directly within the error message when you attempt to execute a command you don't have access to.
 
 > ![Permission](/images/boss/1hEj8Uq.png)
@@ -22,11 +24,29 @@ Info: Find spawned bosses with the "/boss find" command.
 Perm: boss.command.conversation
 Info: Reply to conversation with the server, for example in the menu when you need to type answer to the chat but other plugin is blocking this, use the "/boss conversation" command.
 
+Perm: boss.command.countunloaded
+Info: Count Bosses in unloaded chunks with the "/boss countunloaded" command.
+
+Perm: boss.command.debug
+Info: ZIP your settings for a bug report with the "/boss debug" command.
+
+Perm: boss.command.dumplocale
+Info: Copy the language file to lang/ with the "/boss dumplocale" command.
+
+Perm: boss.command.duplicate
+Info: Copy a Boss under a new name with the "/boss duplicate" command.
+
+Perm: boss.command.eggdrop
+Info: Drop Boss eggs at a location with the "/boss eggdrop" command.
+
 Perm: boss.command.egg
 Info: Get Boss Spawner Egg the "/boss egg" command.
 
 Perm: boss.command.list
 Info: List commands with the "/boss list" command.
+
+Perm: boss.command.location
+Info: Create or manage spawn locations with the "/boss location" command.
 
 Perm: boss.command.menu
 Info: Open the main Boss menu with the "/boss menu" command.
@@ -48,6 +68,9 @@ Info: Remove Bosses with the "/boss remove" command. This won't remove spawned b
 
 Perm: boss.command.scan
 Info: Remove Bosses from unloaded chunks (basically your whole world).
+
+Perm: boss.command.skull
+Info: Get player skulls to place on Boss heads with the "/boss skull" command.
 
 Perm: boss.command.spawn
 Info: Spawn Bosses.
@@ -71,17 +94,13 @@ Perm: boss.use.spawneregg
 Info: Use the Boss Spawn Egg.
 
 Perm: boss.use.inspect
-Info: Use the Boss Spawn Egg to click a Boss to find more information.
+Info: Use the Info Tool and the Tamer Tool from /boss tools.
 
 Perm: boss.spawn.{name}
-Info: Use the Boss spawner egg for a specific Boss. 
-Note: Replace {name} with your Boss name, that is lower-case,
-without spaces translate special characters into non-special ones, examples below -
-Permission for "Skeleton Warrior" is boss.spawn.skeletonwarrior
-Permission for "Der Günter" is boss.spawn.dergunter
-
-Perm: boss.use.tamer
-Info: Use the Boss Tamer Tool to edit owners of tameable entities.
+Info: Use the Boss spawner egg for a specific Boss.
+Note: Replace {name} with the Boss name exactly as you named it, case included.
+Boss names only allow English letters and numbers, so "SkeletonWarrior"
+becomes boss.spawn.SkeletonWarrior
 
 Perm: boss.airspawn
 Info: Use the Boss Spawn Egg in the air so Bosses appear in the line of sight in front of you.
@@ -99,6 +118,6 @@ Info: Allow you to spawn bosses in protected GriefPrevention regions.
 Permissions to get various messages.
  
 ````yml
-Perm: boss.notify.update
+Perm: boss.update.notify
 Info: Receive update notifications in-game when you join.
 ````

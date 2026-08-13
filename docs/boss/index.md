@@ -21,43 +21,46 @@ Bosses are simply vanilla Minecraft monsters and animals with enhanced behavior 
 
 ## Boss Properties
 
-![img](/images/boss/s6BeP1n.png)
+Everything is configured in game. Run `/boss menu`, open **Bosses** and click your Boss to reach the four menus below.
 
-* Give the Boss a custom name
-* Edit Boss' health and maximum health
-* Set equipment to the Boss
-  * Item in the main hand
-  * Item in off hand
-  * Armor: Head, Chestplate, Leggings and Boots
-  * Set a drop chance for each equipment slot independently.
-* Edit potion effects
-  * Bosses may carry all potion effects, including those not available within the Creative Inventory such as Levitation or Jump.
-* Customize Minecraft attributes
-  * Attack damage
-  * Armor
-  * Zombie Spawn Reinforcements
-  * Knockback Resistance
-  * Movement Speed
-  * Follow Range
-  * Armor Toughness
-  * Max Health
-* Edit specific settings for the Boss type (different settings for Zombies, Slimes, Creepers, etc.)
-  * Glowing Box
-  * Invulnerable - God Mode
-  * No AI
-  * Gravity
-  * Can Pickup Items
-  * Silent
-  * Burns Under Sunlight
-  * Baby
-  * Slime Size
-  * Creeper Powered
-  * ...
-* Set what happens on Boss' death
-  * Dropped items + drop chance for each item independently
-  * Spawn reinforcements - summon other/more Bosses!
-  * Strike lightning
-  * Execute commands on death, on spawn or when a Boss reaches a certain health! 
-* Keep Bosses in the region (that you create) where they spawned!
+### Settings
+
+| Button | What you can change |
+|---|---|
+| **Alias** | The name above the Boss's head and in messages. Colors and MiniMessage tags are supported, or hide it entirely |
+| **Health** | The health the Boss spawns with, up to your server's `settings.attribute.maxHealth` |
+| **Equipment** | Main hand, off hand, helmet, chestplate, leggings and boots, each with its own drop chance. Optionally let Minecraft fill empty slots at random |
+| **Particles** | An ambient particle effect around the Boss, in one of eight [shapes](particles) |
+| **Potion Effects** | Any potion effect at level 1 to 50, including ones you cannot get in Creative such as Levitation |
+| **Attributes** | Whichever of the 24 vanilla attributes your mob type supports, from Attack Damage and Movement Speed to Scale and Step Height, plus a Boss-only Damage Multiplier |
+| **Lightning** | Strike a harmless lightning bolt when the Boss spawns, dies, or both |
+| **Riding** | Stack the Boss on other Bosses or on vanilla mobs, and choose whether the mount dies with it |
+| **AI & Behavior** | Custom targeting, which entities the Boss hunts, target and wander radius, plus skin, speed and custom sounds for Player NPCs |
+| **Commands** | Commands on spawn, on death, when the Boss starts targeting a player, and when its health drops below a threshold. See [Boss Commands](boss-commands) |
+| **Custom Settings** | Toggles that depend on the mob type: Invulnerable, No AI, Gravity, Silent, Glowing, Collidable, Can Pickup Items, Projectile Immunity, Boss Bar, Hit Cooldown, Burns Under Sunlight, Baby, Slime Size, Phantom Size, Powered (creepers), Enderman Teleport, Enderdragon Grief and Phase, Villager Profession and Type, and more |
+| **ModelEngine** | Custom models and attack animations when ModelEngine is installed |
+
+### Skills
+
+22 abilities you can stack on a Boss, each with its own delay, health range, messages and commands. See [Skills](skills).
+
+### Death
+
+| Button | What you can change |
+|---|---|
+| **Drops** | General drops with a chance per item, ranked rewards for the players who dealt the most damage, and whether vanilla drops still apply |
+| **Dropped Experience** | A fixed amount or a range, or the Minecraft default |
+| **Reinforcements** | Other Bosses or vanilla mobs that appear when this one dies |
+
+### Spawning
+
+| Button | What you can change |
+|---|---|
+| **Spawn Rules** | The six automatic spawn rules, see [Natural Spawning](natural-spawning) |
+| **World Limits**, **Radius**, **Where Limits Are Applied** | How many of this Boss may live per world and around each other, and which spawn causes those limits apply to. See [Spawning Limits](spawning-limits) |
+| **Region Keeping** | Keep the Boss inside the region it spawned in, and pick where it returns when it escapes |
+| **Spawn Egg Appearance** | The material, name and lore of this Boss's [spawner egg](spawner-egg) |
+
+You can also duplicate a Boss with all its settings under a new name, hand yourself its spawner egg, or kill every copy of it in loaded chunks, straight from the Boss menu.
 
 See [Skills](skills) or [Natural Spawning](natural-spawning) for more.
