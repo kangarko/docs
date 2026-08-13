@@ -11,6 +11,8 @@ A variable (placeholder) is a message in brackets `{}` (***this now also support
 
 ## PlaceholderAPI variables
 
+### Closest Boss
+
 These need a Boss within `Variables.Nearby_Boss_Radius` blocks (20 by default, in settings.yml) that a player has already damaged. An untouched Boss standing right next to you is invisible to them.
 
 They also only resolve on the main server thread, so a plugin asking for them asynchronously gets an empty string and a console warning.
@@ -31,6 +33,13 @@ They also only resolve on the main server thread, so a plugin asking for them as
 | `%boss_location_y%` | Closest boss' Y position. |
 | `%boss_location_z%` | Closest boss' Z position. |
 | `%boss_location_world%` | Closest boss' world name. |
+
+### Named Boss and counts
+
+These take a Boss name and work anywhere, no nearby Boss needed.
+
+| Variable Name | Description |
+|---|---|
 | `%boss_{bossName}_respawn_{spawnRule}%` | Display the time until the given Boss respawns from the given respawn rule. If the rule contains multiple Bosses, this shows the shared rule cooldown. |
 | `%boss_{bossName}_alias%` | The given Boss' alias, colors included. Add `_plain` to strip them. |
 | `%boss_{bossName}_{player}_damage%` | Display the total damage the given player has dealt to this Boss, counts damage dealt to all spawned entities. Replace {player} with `player` for the current player, a player name, or a UUID. |
@@ -42,6 +51,8 @@ They also only resolve on the main server thread, so a plugin asking for them as
 | `%boss_{bossName}_spawned%` | Count of alive instances of the given Boss across all worlds. |
 | `%boss_{bossName}_spawned_{world}%` | Count of alive instances of the given Boss in the given world. |
 | `%boss_spawned_here%` | Count of all alive Bosses in the player's current world. |
+
+### Region selection
 
 These need a region selection in progress with the Region Tool from `/boss tools`. `%boss_has_region%`, `%boss_region_world%` and `%boss_region_size%` want both points set; the coordinate ones resolve as soon as that single point exists.
 
@@ -62,9 +73,9 @@ These variables might be used for some messages in localization/ folder for thos
 | `{player} or {player_name}` | Dude's name. |
 | `{boss_name}` | Boss' name which equals to its yml file in Bosses/ folder. No colors supported. |
 | `{boss_alias}` | Boss' alias, which can be different from the name. It can be set in Boss menu > Settings > Alias. Colors are supported. |
-| `{date}` | The current date and time. |
-| `{date_short}` | A date in dd.MM.yyyy HH:mm format. |
-| `{date_month}` | The current month. |
+| `{date}` | The current date and time, `dd.MM.yyyy HH:mm:ss`. |
+| `{date_short}` | The same without seconds, `dd.MM.yyyy HH:mm`. |
+| `{date_month}` | Day and month only, `dd.MM HH:mm`. |
 | `{chat_line}` | A simple chat line. |
 | `{chat_line_smooth}` | A smooth chat line. |
 | `{label_main}` | Return our main command label. |
