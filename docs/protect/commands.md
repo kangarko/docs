@@ -28,6 +28,13 @@ To see more on how commands works and how it can be used, simply hover your mous
 
 <div class="command-list">
 
+### `/protect createrule`
+Open a menu listing the items you carry and click one to create a rule matching its material, name and lore exactly. The rule alerts staff and confiscates the item, and it is active immediately, no reload needed.
+
+Rules created this way land in `rules/generated.rs`, a plain rule file you can edit like any other. Items you already have a matching rule for are marked in the menu so you cannot create the same rule twice. Your items stay in your inventory the whole time.
+
+This is the fastest way to block a custom item you found on a player: pick it up, run the command and click it.
+
 ### `/protect debug`
 If you want to report a bug, run this command. It will compile all files into a single ZIP file that you can then upload to GitHub when creating an Issue. We remove your MySQL password and other sensitive data.
 

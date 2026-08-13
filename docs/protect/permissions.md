@@ -51,6 +51,9 @@ public final class Permissions {
 
 		@Permission("Permission to close the inventory of a player.")
 		public static final String INV_CLOSE = "protect.command.invclose";
+
+		@Permission("Permission to create rules from items in a GUI.")
+		public static final String CREATE_RULE = "protect.command.createrule";
 	}
 
 	@PermissionGroup("Permissions for bypassing certain checks.")
