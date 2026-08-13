@@ -35,13 +35,13 @@ List all installed Bosses.
 Spawn a Boss at coordinates. Usage: `/boss spawn <world x y z> <boss1|boss2|random>`. Use `~ ~ ~ ~` for your own position. Works from console and command blocks.
 
 ### `/boss egg`
-Get a Boss spawner egg that you can place or give to players. Usage: `/boss egg <boss> [player] [amount]`.
+Get a Boss spawner egg that you can place or give to players. Usage: `/boss egg <boss> [player] [amount]`. The two optional arguments do not combine: `/boss egg Zombie Notch` hands one egg to Notch, `/boss egg Zombie Notch 5` hands 5 to you.
 
 ### `/boss eggdrop`
 Drop Boss egg(s) at a specific world location. Usage: `/boss eggdrop <world x y z> <boss1|boss2|random>`. Supports `~` for relative coordinates. Use `|` to spawn multiple bosses or `random` for a random boss.
 
 ### `/boss find`
-Find nearby Bosses in loaded chunks.
+List every alive Boss in loaded chunks, each with a teleport and a kill button. Usage: `/boss find [boss/*] [world]`.
 
 ### `/boss butcher`
 Kill spawned Bosses. Usage: `/boss butcher <radius/world/*> [boss]`, radius from 0 to 10,000.

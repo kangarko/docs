@@ -11,7 +11,9 @@ A variable (placeholder) is a message in brackets `{}` (***this now also support
 
 ## PlaceholderAPI variables
 
-The following variables require a nearby Boss within `Variables.Nearby_Boss_Radius` blocks (20 by default) in settings.yml. They only resolve on the main server thread, so a plugin asking for them asynchronously gets an empty string and a console warning.
+These need a Boss within `Variables.Nearby_Boss_Radius` blocks (20 by default, in settings.yml) that a player has already damaged. An untouched Boss standing right next to you is invisible to them.
+
+They also only resolve on the main server thread, so a plugin asking for them asynchronously gets an empty string and a console warning.
 
 | Variable Name | Description |
 |---|---|
@@ -41,7 +43,7 @@ The following variables require a nearby Boss within `Variables.Nearby_Boss_Radi
 | `%boss_{bossName}_spawned_{world}%` | Count of alive instances of the given Boss in the given world. |
 | `%boss_spawned_here%` | Count of all alive Bosses in the player's current world. |
 
-The following variables require the player to have the Region Tool from `/boss tools` and both region points selected.
+These need a region selection in progress with the Region Tool from `/boss tools`. `%boss_has_region%`, `%boss_region_world%` and `%boss_region_size%` want both points set; the coordinate ones resolve as soon as that single point exists.
 
 | Variable Name | Description |
 |---|---|
@@ -60,17 +62,19 @@ These variables might be used for some messages in localization/ folder for thos
 | `{player} or {player_name}` | Dude's name. |
 | `{boss_name}` | Boss' name which equals to its yml file in Bosses/ folder. No colors supported. |
 | `{boss_alias}` | Boss' alias, which can be different from the name. It can be set in Boss menu > Settings > Alias. Colors are supported. |
-| `{ip_address}` | Player's IP address. |
-| `{timestamp}` | The current time. |
-| `{timestamp_short}` | A time formatted in dd.MM.yyy HH:mm format. |
+| `{date}` | The current date and time. |
+| `{date_short}` | A date in dd.MM.yyyy HH:mm format. |
+| `{date_month}` | The current month. |
 | `{chat_line}` | A simple chat line. |
 | `{chat_line_smooth}` | A smooth chat line. |
-| `{server_name}` | The "server-name" key from server.properties, or if you use PlaceholderAPI with the server extension, from its file. |
-| `{label}` | Return our main command label. |
-| `{plugin_prefix}` | Return the Prefix key from your settings.yml |
-| `{info_prefix} or {prefix_info}` | Return the info prefix from your localization. |
-| `{success_prefix} or {prefix_success}` | Return the success prefix from your localization. |
-| `{warn_prefix} or {prefix_warn}` | Return the warn prefix from your localization. |
-| `{error_prefix} or {prefix_error}` | Return the error prefix from your localization. |
-| `{question_prefix} or {prefix_question}` | Return the question prefix from your localization. |
-| `{announce_prefix} or {prefix_announce}` | Return the announce prefix from your localization. |
+| `{label_main}` | Return our main command label. |
+| `{plugin_name}` | Return the plugin name. |
+| `{plugin_version}` | Return the plugin version. |
+| `{server_version}` | Return the Minecraft version. |
+| `{prefix_plugin}` | Return the Prefix key from your settings.yml |
+| `{prefix_info}` | Return the info prefix from your localization. |
+| `{prefix_success}` | Return the success prefix from your localization. |
+| `{prefix_warn}` | Return the warn prefix from your localization. |
+| `{prefix_error}` | Return the error prefix from your localization. |
+| `{prefix_question}` | Return the question prefix from your localization. |
+| `{prefix_announce}` | Return the announce prefix from your localization. |

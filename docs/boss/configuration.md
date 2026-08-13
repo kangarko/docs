@@ -28,7 +28,7 @@ Boss updates your configuration automatically and seamlessly. When you update to
 | `Spawning.Air_Spawn` | true | Right clicking air with a spawner egg spawns the Boss in the distance |
 | `Spawning.Air_Spawn_Max_Distance` | 30 | How far that reaches. Over 50 blocks loads a lot of chunks |
 | `Spawning.Location_Spawn_Nearby_Player_Radius` | 30 | Location rules need a player this close. `-1` disables the check |
-| `Spawning.Nearby_Spawn_Min_Distance_From_Player` | 5 | Bosses never appear closer than this |
+| `Spawning.Nearby_Spawn_Min_Distance_From_Player` | 5 | How close to the player the Randomly Around Players rule may drop a Boss |
 | `Spawning.Count_Unloaded_Bosses_In_Limits` | true | Count Bosses in unloaded chunks against world limits. Paper only |
 | `Spawning.Live_Updates` | true | Push menu changes onto Bosses already alive in loaded chunks |
 | `Spawning.Integration.Lands` | true | Do not spawn in Lands areas that have mob spawning off |

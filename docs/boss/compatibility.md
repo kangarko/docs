@@ -19,7 +19,7 @@ Please read the [General Compatibility Guide](../general/compatibility.md) for g
 * **DiscordSRV** Powers the `discord <channel> <message>` Boss command.
 * **PlaceholderAPI** Registers the `%boss_*%` [variables](variables).
 * **ModelEngine** Use ModelEngine for custom 3D Boss models. Create your model in ModelEngine, then link it to your Boss via the Boss menu. Attack animations are handled by ModelEngine.
-* **Citizens** Required for Player Bosses, and available to any Boss for custom pathfinding, skins, sounds and retargeting. Configure in your Boss > Settings > AI & Behavior.
+* **Citizens** Required for Player Bosses, which is where skins, speed and custom sounds live. Every other Boss runs Boss's own native AI on Paper 1.15 and newer; Citizens only takes over for them on older Minecraft or without the Paper Goal API. Configure in your Boss > Settings > AI & Behavior.
 * **Pets and stacking plugins** may cause issues with Boss, contact their dev team to add exception for us. See [Common Issues](common-issues) for more information.
 * **MythicMobs** and Boss are mutually compatible as long as you don't try turning a Boss from our plugin into a MythicMob and applying both plugins on the same entity.
 * **MMOCore** Boss registers a `killboss` experience source and quest objective, see below.
