@@ -98,6 +98,29 @@ For example, to show the filename in grey, italic and underlined instead of brac
 
 When `Send_Messages_As_Bot` is `true`, the bot re-uploads attachments to the same Discord channel before deleting the user's original message. This keeps the links working in both Discord and Minecraft. If a file is too large to re-upload or the network call fails, the attachments are dropped from that single message and a warning is logged; the text part of the message is still delivered.
 
+### Emojis
+
+Discord only turns `:shortcode:` into an emoji for people typing in its own client. Anything a bot posts is stored exactly as sent, so `:skull:` arrives as plain text. To show an emoji on Discord you must send either the emoji character itself, or `<:name:id>` for one of your server's custom emojis. Print that code by typing `\:name:` on Discord and sending it.
+
+That leaves a gap when your in-game text and your Discord text want different characters — a resource pack glyph, an ItemsAdder shortcode or a unicode emoji in game, a custom Discord emoji on Discord. Map them once with `Replacements_To_Discord` and every message keeps its own wording:
+
+```yaml
+Discord:
+  Replacements_To_Discord:
+    ":heart:": "❤"
+    "☠": "<:skull:753251852451053598>"
+```
+
+We apply this to every message we send to Discord: channel chat, [join/quit/kick/death/timed messages](./messages), [spy](./spy), dynmap chat and the `then discord` operator. What players see in game is not touched, so a single death message variant can read `☠ {player} was slain` in game and `<:skull:753251852451053598> Notch was slain` on Discord.
+
+Replacements are literal, not regular expressions, and run in the order you write them.
+
+::: tip Webhooks
+If you enable `Webhook`, custom emojis from other Discord servers only render when `@everyone` has the **Use External Emojis** permission in that channel.
+:::
+
+The other direction is `Remove_Emojis`. Keep it on `false` and emojis people type on Discord reach Minecraft as `:smile:` tags for plugins such as ItemsAdder to render, while the message on Discord keeps the emoji itself. Set it to `true` to strip emojis everywhere.
+
 ## Troubleshooting
 
 ### Discord → Minecraft rules triggering incorrectly

@@ -59,6 +59,21 @@ message:
 - none
 ```
 
+## Sending Messages to Discord
+
+Point a message type at a Discord channel ID in settings.yml and we forward whatever message that type actually sent, including the random variant we picked from your list:
+
+```yaml
+Messages:
+  Discord:
+    join: 753251852451053598
+    death: 753251852451053598
+```
+
+This needs [DiscordSRV](./discord). Use it instead of writing a second, Discord-only copy of every group with `then discord` — that operator is for the cases where Discord should read differently from the game, or should receive a message the game does not.
+
+If your in-game wording relies on characters Discord cannot show, such as resource pack glyphs or emojis you want as custom Discord emojis, map them once under `Discord.Replacements_To_Discord` and keep a single message list. See [Emojis](./discord#emojis).
+
 ## Universal Conditions
 
 ::: warning
