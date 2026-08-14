@@ -295,7 +295,7 @@ Use the `:name:` font images in chat, formats and format hovers.
 <div class="plugin-card">
 
 #### Nexo <Badge type="info" text="Font Images" />
-Auto-detected. Use Nexo `:name:` font images in chat, formats and format hovers, just like ItemsAdder.
+Auto-detected. Use Nexo `:name:` font images in chat, formats and format hovers, just like ItemsAdder. Players can also write `<glyph:name>` and `<g:name>` tags in chat, both placeholders and tags follow the per-glyph permissions you set in Nexo.
 
 </div>
 
