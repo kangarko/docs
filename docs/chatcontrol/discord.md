@@ -109,11 +109,15 @@ Discord:
   Replacements_To_Discord:
     ":heart:": "❤"
     "☠": "<:skull:753251852451053598>"
+    "<green>⬤": "🟢"
+    "<red>⬤": "🔴"
 ```
 
 We apply this to every message we send to Discord: channel chat, [join/quit/kick/death/timed messages](./messages), [spy](./spy), dynmap chat and the `then discord` operator. What players see in game is not touched, so a single death message variant can read `☠ {player} was slain` in game and `<:skull:753251852451053598> Notch was slain` on Discord.
 
-Replacements are literal, not regular expressions, and run in the order you write them.
+Start a key with one color to only replace text shown in that color in game, so the same character can map to different Discord emojis — `<green>⬤` for join messages and `<red>⬤` for quit messages, both using the same `⬤` character. `&` codes and MiniMessage tags both work, and RGB colors match their closest chat color, so `<#55ff55>` and `<green>` mean the same key. Decorations such as `<bold>` are ignored, both in the key and in the message. A key without a color matches the text in any color, which makes it the fallback when no colored key fits.
+
+Replacements are literal, not regular expressions. Colored keys always win over plain ones, otherwise they run in the order you write them.
 
 ::: tip Webhooks
 If you enable `Webhook`, custom emojis from other Discord servers only render when `@everyone` has the **Use External Emojis** permission in that channel.
