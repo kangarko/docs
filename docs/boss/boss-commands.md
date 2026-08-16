@@ -55,11 +55,31 @@ You can specify the header title of the messages using |, for example: `tell-dam
 
 
 -  `broadcast-damagers-list <format> or <title>|<format>` - See tell-damagers-list, but we will send the messages to all online players instead of only those who damaged the Boss before he died.
+
 - `broadcast <message>` - Send all players on the server the specified message. Separate multiple lines with |.
-- `discord <channelName> <message>` - (Requires DiscordSRV) Send the specified message to the given Discord channel. Without DiscordSRV the command is skipped and a console warning is printed once every 30 minutes.
+- `discord <channel> <message>` - (Requires DiscordSRV) Send the specified message to the given Discord channel. Without DiscordSRV the command is skipped and a console warning is printed once every 30 minutes.
+
+For `<channel>` you can use either:
+
+- a **game channel name** you linked in DiscordSRV's `config.yml` under `Channels`, such as `global`
+- a **raw Discord channel ID**, such as `1145283619283492352`, which needs no DiscordSRV configuration at all. Enable Developer Mode in Discord (User Settings > Advanced on desktop, User Settings > Appearance on mobile), then right click the channel and pick Copy Channel ID.
 
 ![Discord Command Example](/images/boss/RieObvS.png)
 
 Here is the example in action:
 
 ![Discord Message Example](/images/boss/sG8Jy16.png)
+
+### Announcing a Boss Spawn on Discord
+
+Open Boss menu > Settings > **Commands** > **Commands On Spawn**, click Create new and enter:
+
+```
+discord 1145283619283492352 :crossed_swords: **{boss_alias}** has spawned in {boss_world} at {boss_x}, {boss_y}, {boss_z}!
+```
+
+Repeat for each Boss you want announced. Since the message is a per-Boss setting, you can announce your mini bosses to one channel and your raid bosses to another, or leave the command off the Bosses you do not care about.
+
+::: tip
+Only `&` color codes are stripped before the message reaches Discord. MiniMessage tags such as `<gold>` are not processed and would show up literally, so use Discord's own Markdown (`**bold**`, `_italic_`) and emoji shortcodes instead. Messages longer than Discord's 2000 character limit are split across several messages.
+:::

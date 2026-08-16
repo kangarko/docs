@@ -818,6 +818,8 @@ then notify protect.alert.admins &8[&4{rule_name} violation&8] &c{player} got hi
 #### `then discord <channel> <message>`
 Requires DiscordSRV. Send a message to the given Discord channel. Use the `{player}` variable to get the player and other variables normally.
 
+For `<channel>` use either a game channel name you linked in DiscordSRV's `config.yml`, such as `global`, or a raw Discord channel ID such as `1145283619283492352`, which needs no DiscordSRV configuration. To copy an ID, enable Developer Mode in Discord (User Settings > Advanced on desktop, User Settings > Appearance on mobile), then right click the channel and pick Copy Channel ID. The same applies to the `Discord_Channel` keys in settings.yml.
+
 #### `then write`
 Write a message to the file.
 
