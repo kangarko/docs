@@ -68,7 +68,7 @@ Every skill except the three Commands ones ships with three default messages, so
 
 Click **Commands** > **Create new** and type the command without the `/`. Each one has a **Run Chance** (0% to 100%, new commands start at 100%) and a **Run As Console?** toggle (on by default).
 
-Every special syntax from the [Boss Commands](boss-commands) page works here: `tell`, `broadcast`, `tell-damagers`, `discord`.
+Every special syntax from the [Boss Commands](boss-commands) page works here: `tell`, `broadcast`, `tell-damagers`, `tell-damagers-list`, `broadcast-damagers-list` (both with the optional `-top-<amount>` suffix) and `discord`.
 
 ::: warning
 Run the command as the player and only `{player}` and `{player_name}` get replaced. Keep **Run As Console?** on if you need `{boss_name}`, `{boss_alias}` or any other Boss variable.

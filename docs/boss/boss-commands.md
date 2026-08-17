@@ -56,6 +56,8 @@ You can specify the header title of the messages using |, for example: `tell-dam
 
 -  `broadcast-damagers-list <format> or <title>|<format>` - See tell-damagers-list, but we will send the messages to all online players instead of only those who damaged the Boss before he died.
 
+Both list commands accept a `-top-<amount>` suffix that cuts the list down to the best damagers, for example `broadcast-damagers-list-top-3 Who Hurt {boss_name}|&f#{order}. &6{damager} &f- &c{damage} ({damage_percent})` only lists the three highest damagers. Everybody who damaged the Boss still receives the tell-damagers-list message, and {damage_percent} still compares each damager against the total damage taken by the Boss, so the shown percents do not add up to 100% when the list is cut.
+
 - `broadcast <message>` - Send all players on the server the specified message. Separate multiple lines with |.
 - `discord <channel> <message>` - (Requires DiscordSRV) Send the specified message to the given Discord channel. Without DiscordSRV the command is skipped and a console warning is printed once every 30 minutes.
 
