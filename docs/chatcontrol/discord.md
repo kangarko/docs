@@ -4,7 +4,7 @@ Connect your channels to Discord. Send any message — staff alerts about ads/mi
 
 ::: danger Important
 - Give your bot the **Manage Messages** permission on Discord.
-- To avoid duplicate messages, set `DiscordChatChannelMinecraftToDiscord` to false in DiscordSRV/config.yml.
+- Set `DiscordChatChannelMinecraftToDiscord` to false in DiscordSRV/config.yml. We already stop that relay ourselves, this just saves DiscordSRV the wasted work.
 :::
 
 ## Installation
@@ -60,6 +60,14 @@ Finally, open ChatControl's settings.yml, go to Channels.List section and paste 
 You can use the `then discord` operator in [Rules](./rules), such as `then discord 753251852451053598 Hello world!`. Specify the Discord channel ID and the message you want to send there.
 
 ## Additional Notes
+
+### Which Channels Reach Discord
+
+A channel reaches Discord only when you give it a `Discord_Channel_Id`. Leave the key out of your staff, admin or local channels and nothing they say is posted anywhere.
+
+DiscordSRV has a chat bridge of its own that ignores channels entirely: it takes every message from the chat event and posts it to the one channel mapped to its `global` game channel. Left running next to ours, it posts your linked channels twice and leaks the unlinked ones into whatever `global` points at, usually the public `mc-chat`.
+
+So while `Discord.Enabled` and `Channels.Enabled` are both on, we cancel that relay and keep the bridge in the channels. Messages we send ourselves are untouched, which is why plugins such as InteractiveChat still get to edit them on the way out. If you would rather let DiscordSRV carry the chat, set `Discord.Enabled` to false in settings.yml and we stay out of its way.
 
 ### Proxy Integration
 
@@ -140,7 +148,15 @@ Discord uses its own formatting (bold with \*\*, italic with \*, etc.) while Cha
 - **`Format_From_Discord`** controls how Discord messages appear in Minecraft. Use MiniMessage formatting here — do not use Discord markdown like `**bold**` as Minecraft won't render it.
 
 ### DiscordSRV grabbing messages suppressed by rules
-If DiscordSRV still sends messages to Discord even after ChatControl's rules suppress them, adjust your [Listener Priorities](./listener-priorities) so ChatControl processes messages before DiscordSRV. Set ChatControl's priority higher (earlier) than DiscordSRV's.
+With `Channels.Enabled` on this cannot happen, we stop DiscordSRV's relay outright.
+
+With channels off, DiscordSRV reads the chat event itself and is your only bridge, so a message your rules killed can still reach it. Adjust your [Listener Priorities](./listener-priorities) so ChatControl processes messages before DiscordSRV. Note that `deny silently` deliberately leaves the chat event running so the writer still sees the message, which means no priority setting stops DiscordSRV from relaying it.
 
 ### Duplicate messages appearing
 Set `DiscordChatChannelMinecraftToDiscord` to `false` in DiscordSRV's config.yml. If using proxy, ensure only one server has DiscordSRV installed to avoid duplication.
+
+### A private channel shows up on Discord
+Remove the `Discord_Channel_Id` key from that channel in settings.yml. If the channel never had one, DiscordSRV's own relay is posting it, so update ChatControl or set `DiscordChatChannelMinecraftToDiscord` to `false` in DiscordSRV's config.yml.
+
+### Nothing reaches Discord after updating
+Your channels are missing `Discord_Channel_Id`. Older builds let DiscordSRV's own relay carry the chat, which is what leaked the private channels; now every channel decides for itself. Add the key to each channel you want bridged, see [step 5](#_5-link-channels-in-chatcontrol).
