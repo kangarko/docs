@@ -131,6 +131,36 @@ Clusters:
 
 If you have RedisBungee (or a fork like RedisBungee-Velocity) installed, we automatically detect it and redirect messages over Redis. You can disable this with `Redis_Integration: false` in the proxy settings.yml.
 
+## Tab Completion Filtering
+
+Modern clients (1.13+) complete command names and their argument structure client-side from the command tree the proxy sends on join and server switch. The `Tab_Complete` section in the proxy settings.yml edits that tree before it reaches the player (on Velocity) and filters suggestion responses at request time (on BungeeCord). Players with the `chatcontrol.bypass.tabcomplete` permission (checked on the proxy) are exempt.
+
+```yaml
+Tab_Complete:
+
+  # Hide commands from tab completion entirely. Regular expressions matched against
+  # the command label prefixed by "/". List each alias separately, "/lpv" and
+  # "/luckpermsvelocity" are independent entries. Velocity only.
+  Hide_Commands:
+  - (/lpv|/luckpermsvelocity)$
+
+  # Remove argument suggestions per command. "*" removes all of them.
+  # On Velocity, specific values only work for static sub-commands such as
+  # "/velocity dump", dynamic suggestions such as player or server names can
+  # only be removed with "*". On BungeeCord, specific dynamic values work too.
+  Filter_Arguments:
+    server: ["*"]
+    velocity: [dump, heap]
+```
+
+Notes:
+
+- Hiding only affects tab completion. Use [rules](rules) to block executing the command.
+- `Hide_Commands` requires Velocity. The BungeeCord API does not expose the command tree.
+- Clients older than 1.13 complete commands from the server response, which no proxy API exposes, so `Hide_Commands` does not apply to them.
+- On BungeeCord, `Filter_Arguments` filters the suggestions of proxy commands (such as `/server`) at request time, including dynamic values.
+- To filter commands registered on your Bukkit servers, prefer the `Tab_Complete` section in ChatControl's own settings.yml on each server. On Velocity, the proxy filter also works on them since the proxy sends the merged tree.
+
 ## Proxy Settings Reference
 
 The proxy settings.yml (inside your VelocityControl or BungeeControl plugins folder) contains these sections:
@@ -139,7 +169,7 @@ The proxy settings.yml (inside your VelocityControl or BungeeControl plugins fol
 |---------|-------------|
 | `Server_Aliases` | Map server names to display aliases |
 | `Messages` | Enable join/quit/switch messages, set prefixes, configure ignored servers |
-| `Tab_Complete` | Filter proxy command tab-completion suggestions |
+| `Tab_Complete` | Hide commands and filter tab-completion suggestions, see [Tab Completion Filtering](#tab-completion-filtering) |
 | `Chat_Forwarding` | Relay chat for servers without ChatControl |
 | `Clusters` | Group servers for scoped data |
 | `Integration.Parties` | Party and Friends / Parties plugin integration |

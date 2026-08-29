@@ -227,7 +227,7 @@ Let trusted staff skip filters and limits. Hand these out carefully.
 | `chatcontrol.bypass.vanish` | Lets you see and message vanished players |
 | `chatcontrol.bypass.similarity.chat` | The "too similar" check for messages |
 | `chatcontrol.bypass.similarity.command` | The "too similar" check for commands |
-| `chatcontrol.bypass.tabcomplete` | Tab-complete filtering |
+| `chatcontrol.bypass.tabcomplete` | Tab-complete filtering. Also checked by VelocityControl and BungeeControl for the proxy `Tab_Complete` filters, where it must be granted by a proxy-side permission plugin |
 | `chatcontrol.bypass.warnpoints` | Warning points and their punishments |
 | `chatcontrol.bypass.parrot` | The "parrot" antispam check |
 | `chatcontrol.bypass.spy.<type>` | Stops your own actions being spied on. `<type>`: `chat`, `command`, `private_message`, `mail`, `sign`, `book`, `anvil` |
