@@ -41,10 +41,10 @@ All options are optional except **Message**. See chat.yml for examples.
 |--------|-------------|
 | `Message` | **(Required)** The text this part prints |
 | `Sender_Permission` | Only show this part if sender has this permission. Prefix with `!` to negate (e.g. `!group.bot` shows the part to everyone *without* that permission) |
-| `Sender_Variable` | Show part if sender's variable equals value. Syntax: `{placeholder} value` (prefix with `!` to negate). Example: `{player_gamemode} creative` or `{player_gamemode} !creative` |
+| `Sender_Variable` | Show part if sender's variable equals value. Syntax: `{placeholder} value` (prefix with `!` to negate). Example: `{player_gamemode} creative` or `{player_gamemode} !creative`. Can also be a list of conditions where every entry must match, e.g. `["{channel} standard", "{sender_is_discord} false"]` only shows the part for in-game senders in the standard channel |
 | `Sender_Condition` | JavaScript returning true/false. Uses `player` variable. See chat.yml for examples. **Performance penalty.** |
 | `Receiver_Permission` | Only show to receivers with this permission. Prefix with `!` to negate. Supports `{sender_name}` and `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
-| `Receiver_Variable` | Like Sender_Variable but checked per receiver. Supports `{sender_name}`, `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
+| `Receiver_Variable` | Like Sender_Variable but checked per receiver. Takes a single condition (no list support). Supports `{sender_name}`, `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
 | `Receiver_Condition` | JavaScript per receiver. **Heavy performance penalty.** Supports `{sender_name}`, `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
 | `Hover` | List of texts shown on mouse hover. Supports ItemsAdder and Nexo font images (`:name:`). |
 | `Hover_Item` | JavaScript returning ItemStack (e.g., `player.getItemInHand()`) |
