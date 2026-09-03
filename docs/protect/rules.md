@@ -368,6 +368,24 @@ check attribute modified
 require attribute value 100
 ````
 
+#### `check duplicate`
+Fire this rule if another copy of the item exists right now. While at least one enabled rule uses this operator, Protect stamps a hidden ID into every unstackable item the rule's `match` covers (with `match *`: tools, weapons, armor, elytra, totems, potions, shulker boxes; with `match "ELYTRA"` only elytras). Copying an item copies the ID, whatever the exploit was, so a copy is found when the same ID turns up twice in one scan (the player's inventory and the container he opened) or when another online player or a loaded container is verified to hold it at that moment. Handing an item over never matches since only one copy exists at a time.
+
+Items receive their ID when Protect scans a survival or adventure player (on join, when opening a container, with `Scan.Periodic` or `/protect scan`), so an item copied before its first scan goes unnoticed. Protect ships this as `rules/dupe.rs`, disabled, alerting only and logging every find to the console. Read the comments in that file before enabling it, they list what the check cannot catch (stackable items, exploits that create new items, placeable items losing the ID when placed) and the two sources of false alarms: kit or shop templates saved from an already stamped item, which you fix once by clicking `allow copies` in the alert or holding the item and running `/protect dupe allow`, and rollbacks reviving items that were already traded away. Items are never stamped in creative mode.
+
+Unlike other rules, `check duplicate` rules also see items the `Custom_Display_Name`, `Custom_Lore`, `Custom_Persistent_Tags`, `Custom_Model_Data` and `Metadata_Item` keys in the Ignore section of settings.yml would skip, because those keys exist to spare plugin items from illegal item rules and a copy of a plugin item is still a copy. `Ignore.Materials` still applies.
+
+Use `{dupe_holder}` for who holds the other copy and `{dupe_id}` for the item ID in your messages.
+
+Example:
+
+````
+match *
+name duplicate
+check duplicate
+then notify protect.notify.duplicate &8[&4Dupe&8] &7Duplicated &f{item_type_formatted}&7 found on &f{player}&7, another copy is held by &f{dupe_holder}&7. ID {dupe_id}
+````
+
 #### `then disenchant`
 Remove all enchantments from the item.
 

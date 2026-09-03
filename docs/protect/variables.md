@@ -64,6 +64,8 @@ The variables you can use in operators inside rules/.
 | `{item_type}` | The item material name of the taken item, i.e. DIAMOND_SWORD. |
 | `{item_type_formatted}` | The above but nicely formatted (i.e. Diamond Sword). |
 | `{item_amount}` | The amount of the itemstack in the inventory slot. |
+| `{dupe_holder}` | For rules with `check duplicate`: the player or container holding the other copy of the item, such as "Notch" or "Chest at world 10 64 -3". |
+| `{dupe_id}` | The hidden ID of the scanned item, empty if it has none. The shipped alert passes it to `/protect dupe allow` behind its `allow copies` button. |
 
 ---
 

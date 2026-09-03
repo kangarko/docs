@@ -54,6 +54,9 @@ public final class Permissions {
 
 		@Permission("Permission to create rules from items in a GUI.")
 		public static final String CREATE_RULE = "protect.command.createrule";
+
+		@Permission("Permission to manage duplicate detection, such as trusting the IDs of kit items.")
+		public static final String DUPE = "protect.command.dupe";
 	}
 
 	@PermissionGroup("Permissions for bypassing certain checks.")
@@ -77,12 +80,15 @@ public final class Permissions {
 
 		@Permission("Permission to receive alerts when a command is executed.")
 		public static final String COMMAND_SPY = "protect.notify.commandspy";
-		
+
 		@Permission("Permission to receive alerts when a transaction is completed.")
 		public static final String TRANSACTION = "protect.notify.transaction";
 
-		@Permission("Permission to receive alerts when items match against scan rules.")
+		@Permission("Permission to receive alerts when an item is matched against rules.")
 		public static final String ITEM = "protect.notify.item";
+
+		@Permission("Permission to receive alerts when a duplicated item is found by the rules/dupe.rs rule.")
+		public static final String DUPLICATE = "protect.notify.duplicate";
 	}
 
 	@Permission("Permission to be placed in a group. Replace group name with the actual group name.")

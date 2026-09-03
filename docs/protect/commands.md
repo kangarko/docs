@@ -38,6 +38,9 @@ This is the fastest way to block a custom item you found on a player: pick it up
 ### `/protect debug`
 If you want to report a bug, run this command. It will compile all files into a single ZIP file that you can then upload to GitHub when creating an Issue. We remove your MySQL password and other sensitive data.
 
+### `/protect dupe`
+Allow copies of kit and shop items in duplicate detection, see `rules/dupe.rs` and the `check duplicate` operator in [Rules](rules). Hold the item and run `/protect dupe allow`, or click `allow copies` in the duplicate alert, and its copies are no longer reported. `/protect dupe list` shows the allowed items, click one to report its copies again.
+
 ### `/protect edititem`
 Edit properties such as name, lore, enchants or potions of the held item.
 
@@ -58,6 +61,8 @@ A complex command to view database logs for confiscated items, spied commands or
 
 There are many options, example: `/protect logs items date:1h location:here,10` will find all confiscated items in the last hour at your location within a 10-block radius.
 
+Add `menu` after the table name to browse the same results in a GUI instead of the chat: `/protect logs items menu rule:duplicate` lists every entry as the item it took, and clicking one opens the entry with the player's inventory as it looked at the scan.
+
 ![Sample filter](/images/protect/PxMg9JA.png)
 
 #### Restoring Confiscated Items
@@ -67,7 +72,7 @@ If an item was wrongly confiscated, use `/protect logs items` to view the log. C
 1. **Drag items** from the GUI directly into your inventory to restore them one by one
 2. **Click the restore button** to return all items from that confiscation event to the player
 
-Restored items receive internal metadata marking them as legitimate, so they will not be confiscated again by the same rule.
+Restored items are scanned like any other, so fix the rule first or give the player the `protect.bypass.scan` permission. A duplicate you give back is reported again for as long as its other copy exists.
 
 ### `/protect perms`
 Display all plugin's permissions.
