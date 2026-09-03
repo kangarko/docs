@@ -48,7 +48,7 @@ All options are optional except **Message**. See chat.yml for examples.
 | `Receiver_Condition` | JavaScript per receiver. **Heavy performance penalty.** Supports `{sender_name}`, `{channel_name}`. See [Variables](variables#placeholderapi-syntax) for examples |
 | `Hover` | List of texts shown on mouse hover. Supports ItemsAdder and Nexo font images (`:name:`). |
 | `Hover_Item` | JavaScript returning ItemStack (e.g., `player.getItemInHand()`) |
-| `Open_Url` | URL to open on click |
+| `Open_Url` | URL to open on click. Must be a valid URL, otherwise a console warning is printed and the part stays unclickable |
 | `Suggest_Command` | Command to put in chat input on click |
 | `Run_Command` | Command to run on click (runs as the receiver) |
 | `Insertion` | Text inserted on shift+click |
