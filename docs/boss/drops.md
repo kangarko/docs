@@ -34,6 +34,8 @@ You can even reward each of these players completely different items and run com
 
 ![PvP Drops](/images/boss/EoRS08y.png)
 
+Each damage rank has its own **Commands** menu where you can add as many commands as you like. They support `{player}`, `{order}` and `{damage}` on top of every variable and special command from the [Boss Commands](boss-commands) page, so `tell &7You dealt &c{damage} damage&7!` or `give {player} diamond 5` both work. Whether they run as the console or as the player is set in settings.yml under Death.Run_PvP_Commands_As_Console.
+
 ### Party Rewards
 
 **Party Rewards** in Boss menu > Death > Drops > Player Drops ranks damage by party instead of by individual player. It needs the AlessioDP Parties plugin, and without it the toggle is ignored and ranking falls back to individual players. Each rank's reward is then copied to every party member who damaged the Boss within the **Party Reward Radius** of the Boss death location. Set the radius to `0` for unlimited.

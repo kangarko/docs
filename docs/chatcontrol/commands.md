@@ -162,6 +162,8 @@ Send a private message.
 ### `/toggle`
 Disable receiving message types: `announcement`, `broadcast`, `chat`, `mail`, `private_message`, `proxy_chat`, `sound_notify`, `join`, `quit`, `kick`, `death`, `timed`, `switch`. For example, you can enable players to disable seeing death messages or timed message announcements.
 
+Usage: `/toggle <type> [player]` for plugin parts and `/toggle <type> [group] [player]` for message types, where `*` as the group toggles every group of that type. The player argument lets the console or staff with `chatcontrol.command.toggle.others` toggle for someone else, which is handy for menu plugins running commands on behalf of players. `/toggle list [player]` shows what is toggled off.
+
 </div>
 
 ## Proxy Commands

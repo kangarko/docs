@@ -152,6 +152,7 @@ Let players use the plugin's commands (default label `/chc`).
 | `chatcontrol.command.toggle.<type>` | Toggle seeing a feature. `<type>`: `mail`, `announcement`, `me`, `pm`, `death`, `join`, `kick`, `quit`, `list`, `soundnotify` |
 | `chatcontrol.command.toggle.on` | Turn a toggle on |
 | `chatcontrol.command.toggle.off` | Turn a toggle off |
+| `chatcontrol.command.toggle.others` | Toggle plugin parts and messages for other players |
 | `chatcontrol.command.update` | Refresh a player's tab-list name |
 
 ### Channels
