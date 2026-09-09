@@ -164,6 +164,8 @@ Disable receiving message types: `announcement`, `broadcast`, `chat`, `mail`, `p
 
 Usage: `/toggle <type> [player]` for plugin parts and `/toggle <type> [group] [player]` for message types, where `*` as the group toggles every group of that type. The player argument lets the console or staff with `chatcontrol.command.toggle.others` toggle for someone else, which is handy for menu plugins running commands on behalf of players. `/toggle list [player]` shows what is toggled off.
 
+Add `-s` or `-silent` to hide confirmation messages, for example `/toggle chat Steve -s` or `/toggle join * Steve -s`. Errors and `/toggle list` output stay visible.
+
 </div>
 
 ## Proxy Commands
@@ -186,4 +188,4 @@ img {
 .dark img {
   border-color: #444;
 }
-</style> 
+</style>
