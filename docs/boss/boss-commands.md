@@ -35,7 +35,7 @@ To move an Enderman Boss while blocking natural teleports, set `Custom_Settings.
 boss uid tpto {boss_uuid} {boss_world} <x> <y> <z>
 ```
 
-`{boss_uuid}` selects the Boss running the skill. Vanilla `/tp` remains subject to the teleport restriction.
+`{boss_uuid}` selects the Boss running the skill.
 
 ## Command Configuration:
 
