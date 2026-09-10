@@ -178,6 +178,8 @@ Sprays a cone of dragon's breath in front of the Boss. The spray lasts 1.5 secon
 
 Teleports the Boss onto a random nearby player.
 
+This skill works with `Custom_Settings.Enderman_Teleport: false`, allowing deliberate teleports while natural Enderman teleports remain blocked.
+
 * **Radius** — 1 to 50 blocks to search, default 5
 * Default delay: `45 seconds - 2 minutes`
 

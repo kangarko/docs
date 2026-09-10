@@ -56,7 +56,9 @@ Spawn Bosses near a specific player. Usage: `/boss spawnpl <player> <boss1|boss2
 Show what biome you are currently standing in. Usage: `/boss biome [player]`.
 
 ### `/boss uid`
-Manage a specific Boss by its UUID. Usage: `/boss uid <tp/tpto/kill/nbt> <uuid>`. Useful for debugging individual Boss entities.
+Manage an entity by UUID. Use `/boss uid tpto <uuid> <world> <x> <y> <z>` to move it, or `/boss uid <tp/kill/nbt> <uuid>` for the other actions. Coordinates must be whole numbers; players can use `~` for their current world or coordinate.
+
+The `tpto` command can move an Enderman Boss with `Custom_Settings.Enderman_Teleport: false`.
 
 ### `/boss region`
 Create and manage Boss spawn regions. Use `/boss tools` to get the region tool first, then `/boss region new <name>` after selecting the area. Only registered while `Register_Regions` is true in settings.yml.

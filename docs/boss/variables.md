@@ -72,6 +72,7 @@ These variables might be used for some messages in localization/ folder for thos
 |---|---|
 | `{player} or {player_name}` | Dude's name. |
 | `{boss_name}` | Boss' name which equals to its yml file in Bosses/ folder. No colors supported. |
+| `{boss_uuid}` | UUID of the spawned Boss entity. Also available in Boss commands and skill commands. |
 | `{boss_alias}` | Boss' alias, which can be different from the name. It can be set in Boss menu > Settings > Alias. Colors are supported. |
 | `{date}` | The current date and time, `dd.MM.yyyy HH:mm:ss`. |
 | `{date_short}` | The same without seconds, `dd.MM.yyyy HH:mm`. |

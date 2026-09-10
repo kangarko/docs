@@ -23,11 +23,19 @@ We support the following variables inside a command:
 
 - `{player}` and `{player_name}` for the player the command is running for
 - `{killer}` and `{killer_name}` for the Boss' direct killer
-- `{boss_name}`, `{boss_alias}`, `{boss_world}`, `{boss_x}`, `{boss_y}`, `{boss_z}` and `{boss_location}`
+- `{boss_name}`, `{boss_uuid}`, `{boss_alias}`, `{boss_world}`, `{boss_x}`, `{boss_y}`, `{boss_z}` and `{boss_location}`
 - All variables listed in the [Variables](/boss/variables) page (replace %% with {}).
 - Plus PlaceholderAPI variables for that player. I.e. %player_health% will return their remaining health.
 
 A command containing `{player}` or `{killer}` is skipped when no player is involved, for example a Boss killed by fire. Set `Debug` to `[commands]` in settings.yml to log every time that happens.
+
+To move an Enderman Boss while blocking natural teleports, set `Custom_Settings.Enderman_Teleport: false` and use this in a Commands skill, replacing `<x> <y> <z>` with the destination coordinates:
+
+```text
+boss uid tpto {boss_uuid} {boss_world} <x> <y> <z>
+```
+
+`{boss_uuid}` selects the Boss running the skill. Vanilla `/tp` remains subject to the teleport restriction.
 
 ## Command Configuration:
 
