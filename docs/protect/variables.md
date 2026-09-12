@@ -1,7 +1,7 @@
 # Variables
 
 ::: warning Important
-Read this page carefully - live player and rule variables cannot be used everywhere. See the bottom of this page for broadcast variables that may be used in discord/global alert messages.
+Read this page carefully - live player and rule variables cannot be used everywhere. See section 3 for broadcast variables that may be used in discord/global alert messages, and section 4 for the confiscation message sent to the player.
 :::
 
 ---
@@ -117,3 +117,17 @@ Additional variables available for shop transaction broadcast.
 | `{shop_owner_uid}` | The shop owner's uuid, if any. |
 | `{amount}` | The amount of transacted goods. |
 | `{item_type}` | The material name of transacted item. |
+
+---
+
+## 4. Confiscate Message Variables
+
+The variables you can use in `After_Scan.Confiscate_Message` in settings.yml, the one message sent to the player after a scan took his items. The rule variables in section 2 are not available here, because one message covers everything the whole scan took, however many rules were involved.
+
+| Variable Name | Description |
+|---|---|
+| `{items}` | Everything the scan took, summed per material, i.e. "3x Diamond Sword, 2x Bedrock". |
+| `{player}` | The scanned player's name. |
+| `{world}` | The world he was scanned in. |
+| `{x}`, `{y}` and `{z}` | His location points. |
+| `{location}` | His full location. |

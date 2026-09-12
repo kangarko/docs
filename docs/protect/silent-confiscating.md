@@ -11,6 +11,8 @@ then console say >{player}< has triggered {rule_name}!
 
 In the example above, this rule would silently trigger once every 10 seconds per player.
 
+Taking items stays silent to the player as well, as long as you leave `After_Scan.Confiscate_Message` in settings.yml at its default of "none" and use no `then warn` operators. Set that key only when you want the player told what he lost, which makes a false positive easier to report and roll back.
+
 It is also possible to use the ignore perm and give a player a temporary permission from your permissions plugin, here is an example with LuckPerms, to accomplish the same delay:
 
 ````

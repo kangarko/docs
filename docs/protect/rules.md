@@ -575,7 +575,7 @@ Attempts to remove the excessive amount of matching items from the inventory and
 
 When the rule has `require name` or `require lore`, only items matching those conditions are removed — other items of the same material type are left untouched.
 
-Requires "require inventory amount" to be set. Example: I hold 64x beacons. The "require inventory amount" is set to 10. After "then confiscate excess" is fired, Protect will take 54x beacons so I am left with 10x in my inventory.
+Requires "ignore inventory amount" to be set. Example: I hold 64x beacons. The "ignore inventory amount" is set to 10. After "then confiscate excess" is fired, Protect will take 54x beacons so I am left with 10x in my inventory.
 
 Example:
 
@@ -584,15 +584,17 @@ then confiscate excess
 ````
 
 #### `then confiscate`
-Remove the item at the scanned slot from the inventory and logs to the database. Use "/protect logs" to view.
-
-Requires "require inventory amount" to be set. Example: I hold 64x beacons. The "require inventory amount" is set to 10. After "then confiscate excess" is fired, Protect will take 54x beacons so I am left with 10x in my inventory.
+Remove the item at the scanned slot from the inventory and logs to the database. Use "/protect logs" to view. The whole slot is taken, so no amount operator is needed.
 
 Example:
 
 ````
 then confiscate
 ````
+
+::: tip Telling the player
+By default a player loses the item without being told anything. Set `After_Scan.Confiscate_Message` in settings.yml to send one message listing everything a scan took, or use `then warn` below for a different message per rule.
+:::
 
 # Standard Operators
 
@@ -898,6 +900,8 @@ https://github.com/kangarko/Foundation/blob/master/src/main/java/org/mineacademy
 Optional message to send to the player. Use | to define multiple messages, one of which will be selected randomly. Use the `{player}` variable to get the player and other variables normally.
 
 To send multiline warn messages, you can use multiple "then warn" operators multiple times on new lines.
+
+This fires whenever the rule matches, which is not the same as the rule taking anything, so a rule that only logs or clones still warns. Each "then warn" line is sent at most once every 0.5 seconds per player, so an inventory holding eight matching items produces one message, not eight. It stacks with the global `After_Scan.Confiscate_Message`; set that one to "none" if you only want your per-rule wording.
 
 
 #### `then abort`
