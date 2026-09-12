@@ -18,6 +18,17 @@ We use WorldEdit to save two arena states: initial snapshot (starting state) and
 
 An arena snapshot captures all blocks within the region at a specific moment.
 
+## Explosion Boundaries
+
+Explosions never break blocks outside the arena region. On top of that, every arena file carries:
+
+```yaml
+# How many blocks inward from the region border are explosions unable to break?
+Border_Explosion_Protection: 1
+```
+
+This leaves the arena's outer walls, floor and ceiling standing, so a rocket or hell fire cannot open an escape route. Set it to 0 to let explosions reach the very edge of the region.
+
 ::: warning Compatibility
 - **FastAsyncWorldEdit**: May interfere with block physics. Test without FAWE if issues occur.
 - **WorldGuard**: Ensure `-build` and `-block-place` flags are not set to "false".
