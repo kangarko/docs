@@ -58,6 +58,12 @@ Show what biome you are currently standing in. Usage: `/boss biome [player]`.
 ### `/boss uid`
 Manage an entity by UUID. Use `/boss uid tpto <uuid> <world> <x> <y> <z>` to move it, or `/boss uid <tp/kill/nbt> <uuid>` for the other actions. Coordinates must be whole numbers; players can use `~` for their current world or coordinate.
 
+Every action also accepts a Boss name in place of the UUID, which is what you want when you run the command from a command block or another plugin and have no way to learn the entity UUID. `tpto`, `kill` and `nbt` then apply to every alive Boss of that name, and `tp` takes you to the closest one. Only Bosses in loaded chunks are matched, the same as `/boss find`.
+
+```text
+boss uid tpto Jefe world 100 64 100
+```
+
 The `tpto` command can move an Enderman Boss with `Custom_Settings.Enderman_Teleport: false`.
 
 ### `/boss region`

@@ -37,6 +37,12 @@ boss uid tpto {boss_uuid} {boss_world} <x> <y> <z>
 
 `{boss_uuid}` selects the Boss running the skill.
 
+Outside the plugin there is no `{boss_uuid}` to read, so pass the Boss name instead. This moves every alive Boss named Jefe that sits in a loaded chunk, and works from a command block, the console or any other plugin:
+
+```text
+boss uid tpto Jefe world <x> <y> <z>
+```
+
 ## Command Configuration:
 
 You can run the command as the console or with the permissions that the player has:

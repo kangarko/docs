@@ -20,6 +20,7 @@ They also only resolve on the main server thread, so a plugin asking for them as
 | Variable Name | Description |
 |---|---|
 | `%boss_name%` | Closest boss' name (the same as the file name). |
+| `%boss_uuid%` | Closest boss' entity UUID, ready to pass to `/boss uid`. |
 | `%boss_alias%` | Closest boss' alias. Colors are supported. |
 | `%boss_alias_plain%` | Closest boss' alias with the colors stripped. |
 | `%boss_is_nearby%` | `true` or `false` depending on whether a Boss is in range. |
