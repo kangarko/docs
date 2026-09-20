@@ -61,7 +61,7 @@ A complex command to view database logs for confiscated items, spied commands or
 
 There are many options, example: `/protect logs items date:1h location:here,10` will find all confiscated items in the last hour at your location within a 10-block radius.
 
-Add `menu` after the table name to browse the same results in a GUI instead of the chat: `/protect logs items menu rule:duplicate` lists every entry as the item it took, and clicking one opens the entry with the player's inventory as it looked at the scan.
+Add `menu` anywhere after the table name, before or after the filters, to browse the same results in a GUI instead of the chat: `/protect logs items rule:duplicate menu` lists every entry as the item it took, and clicking one opens the entry with the player's inventory as it looked at the scan.
 
 ![Sample filter](/images/protect/PxMg9JA.png)
 

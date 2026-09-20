@@ -108,7 +108,7 @@ Many issues are caused by incompatible plugin dependencies rather than our plugi
     <tr>
       <td><strong>26.x</strong></td>
       <td>✅</td>
-      <td>Fully supported, up to 26.2</td>
+      <td>Fully supported, up to 26.3</td>
     </tr>
     <tr>
       <td><strong>1.21.x</strong></td>
