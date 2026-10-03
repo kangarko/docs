@@ -32,6 +32,18 @@ The delay runs from the last successful spawn, so slow kills never postpone the 
 
 A location only spawns while a player is within 30 blocks. Change that with `Spawning.Location_Spawn_Nearby_Player_Radius`, or set it to `-1` to drop the check. Respawn After Death and After A Kill Goal are exempt from it.
 
+To load a scheduled location even when no player is nearby or online, add this to its file in `spawnrules/` and run `/boss reload`:
+
+```yaml
+Chunk_Load_Seconds: 10
+```
+
+This option supports `LOCATION_PERIOD` and `RESPAWN_AFTER_DEATH` rules on modern Paper and its forks. It requires `Spawning.Count_Unloaded_Bosses_In_Limits: true`. Folia and older servers reject positive values; leaving the option out or setting it to `0` preserves the existing behavior.
+
+Use an unquoted whole number from `0` through `300`. After a successful spawn, Boss keeps the target chunk loaded for that many seconds of server ticks, then releases its own temporary ticket. Players, other plugins and server unload settings can keep the chunk loaded longer. A failed spawn releases its newly acquired ticket immediately. Other schedule conditions and spawning limits still apply.
+
+Set the Boss's `Custom_Settings.Despawn` to `false` for a persistent mob. World limits count both loaded Bosses and the saved unloaded records; keep unloaded counting enabled and retain `unloaded-bosses.yml`. Loading the target also checks its saved entities before spawning, but it cannot recover missing records for unrelated chunks. The server must continue ticking for an empty server schedule to run.
+
 ## 2) On Entering A Region
 
 Spawns when a player walks into one of your Boss regions.

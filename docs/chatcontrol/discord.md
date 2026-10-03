@@ -147,6 +147,28 @@ Discord uses its own formatting (bold with \*\*, italic with \*, etc.) while Cha
 - **`Format_To_Discord`** controls how Minecraft messages appear in Discord. Use plain text or Discord markdown here — do not use MiniMessage tags like `<#123456>` as Discord won't render them.
 - **`Format_From_Discord`** controls how Discord messages appear in Minecraft. Use MiniMessage formatting here — do not use Discord markdown like `**bold**` as Minecraft won't render it.
 
+`Channels.Format_Discord` is the default for Minecraft messages sent to Discord. A channel's `Format_To_Discord` overrides it for Minecraft authors only. An empty `Format_To_Discord` disables that channel's outbound messages; an absent value uses the global default.
+
+When `Discord.Send_Messages_As_Bot` is enabled, Discord authored messages are reposted using `Channels.Format_Discord`. A server prefix in `Format_To_Discord` therefore applies only to Minecraft authors. `Format_From_Discord` changes what Minecraft players see and does not change the bot's repost. If it is absent, incoming messages use the channel's ordinary `Format`.
+
+An empty or blank `Channels.Format_Discord` disables bot reposts and attachment uploads while preserving the original Discord message. A format that produces no visible text also leaves the original message in place. Minecraft delivery and explicit `Format_To_Discord` overrides still work.
+
+For example:
+
+```yaml
+Channels:
+  Format_Discord: "({player_name}) {message}"
+  List:
+    global:
+      Format: global-chat
+      Format_To_Discord: "({server_name}) ({player_name}) {message}"
+      Format_From_Discord: "<gray>({player_name}) {message}"
+```
+
+The former per channel `Format_Discord` key migrates into whichever directional keys are absent. Explicit `Format_To_Discord` and `Format_From_Discord` values take precedence. The migrated legacy key is removed from the saved configuration.
+
+Each backend with DiscordSRV receives incoming Discord events independently. ChatControl does not forward those events through Velocity, and proxy chat deduplication does not coordinate bot reposts. Keep `Channels.Format_Discord` consistent across backends. If Discord text filtering and bot reposts are unnecessary, set `Send_Messages_As_Bot` to `false` on every backend to retain the original Discord message.
+
 ### DiscordSRV grabbing messages suppressed by rules
 With `Channels.Enabled` on this cannot happen, we stop DiscordSRV's relay outright.
 
