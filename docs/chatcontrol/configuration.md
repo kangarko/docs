@@ -35,3 +35,11 @@ Here are (almost) all files that will appear in your ChatControl folder.
 ::: tip
 To see the default contend of these files, ChatControl .jar file using WinRar or any unzipping program and you will see these files in their default states in there. Keep in mind you can't edit them there.
 :::
+
+## Player data retention
+
+Clear_Data_If_Inactive in settings.yml removes stored data for inactive players when the server starts. This includes spy choices and mute settings. Set it to `0` to disable cleanup, or use a positive duration such as `60 days` to keep cleanup enabled.
+
+From ChatControl 12.2.18, zero durations such as `0 day` and `0 seconds` also disable cleanup. On earlier versions, use plain `0`.
+
+Time settings accept whole numbers with singular or plural units, such as `1 day` or `2 hours`. Negative values, fractions and unknown units are rejected.
