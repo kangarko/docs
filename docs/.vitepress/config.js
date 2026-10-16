@@ -94,6 +94,7 @@ export default {
             { text: 'Upgrading', link: '/chatcontrol/upgrading' }, 
             { text: 'Proxy', link: '/chatcontrol/proxy' },
             { text: 'Discord', link: '/chatcontrol/discord' },
+            { text: 'Discord Bot Messages', link: '/chatcontrol/discord-bots' },
           ]
         },
         {

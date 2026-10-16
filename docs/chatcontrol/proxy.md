@@ -10,6 +10,8 @@ Channels, private messages, nicks, warning points, /list, and tab-completion all
 
 Keep ChatControl on your Bukkit servers.
 
+When upgrading to ChatControl 12.2.19, install BungeeControl 5.1.12 or VelocityControl 3.1.12 on the proxy and update ChatControl on every backend together. These releases change how player data is synchronized. Stop the network, replace the JARs, then start it again.
+
 ## Setup
 
 ::: warning

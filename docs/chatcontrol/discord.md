@@ -61,6 +61,10 @@ You can use the `then discord` operator in [Rules](./rules), such as `then disco
 
 ## Additional Notes
 
+### Messages From Other Bots
+
+To bridge another bot's messages, enable `Discord.Bridge_Bot_Messages` in settings.yml and allow bots in DiscordSRV. See [Discord Bot Messages](./discord-bots) for setup and filtering behavior.
+
 ### Which Channels Reach Discord
 
 A channel reaches Discord only when you give it a `Discord_Channel_Id`. Leave the key out of your staff, admin or local channels and nothing they say is posted anywhere.
@@ -88,7 +92,7 @@ Discord:
 
 ### Attachments From Discord
 
-Files, images and other attachments posted on Discord are bridged into Minecraft as clickable `[filename]` links that open the file in the player's browser when clicked, with the URL shown on hover. Filenames are passed through your chat filters so they can be denied or rewritten by rules.
+Files, images and other attachments posted on Discord are bridged into Minecraft as clickable `[filename]` links that open the file in the player's browser when clicked, with the URL shown on hover. Attachment names and URLs are displayed separately from the text checked by rules. Messages containing only attachments still count toward chat delay and message limits when `Discord.Filter_Chat` is enabled.
 
 You can change how each attachment looks with the `Attachment_Format` key. It accepts MiniMessage and two placeholders: `{url}` for the attachment link and `{filename}` for its name. Multiple attachments are joined by a space.
 
@@ -139,7 +143,7 @@ The other direction is `Remove_Emojis`. Keep it on `false` and emojis people typ
 When messages come from Discord into Minecraft, your chat rules will process them. If you have emoji-related or special character rules, they may trigger on Discord messages. Use the `ignore discord` operator in your rules to prevent this, or `require discord` to create Discord-only rules.
 
 ### `deny silent` not deleting Discord messages
-The `deny silently` operator prevents messages from appearing in Minecraft chat, but it cannot delete the original Discord message. To delete Discord messages, ensure your bot has the **Manage Messages** permission on Discord and set `Send_Messages_As_Bot` to `true`.
+The `then deny silently` operator hides the message from other Minecraft players. ChatControl also attempts to delete the original Discord message, so give your bot the **Manage Messages** permission. Rules apply when `Discord.Filter_Chat` is enabled, independently of `Send_Messages_As_Bot`.
 
 ### Discord channel text formatting issues
 Discord uses its own formatting (bold with \*\*, italic with \*, etc.) while ChatControl uses MiniMessage. These are not automatically converted between platforms. Format your `Format_To_Discord` without MiniMessage tags, and your `Format_From_Discord` without Discord markdown.
