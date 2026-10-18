@@ -10,7 +10,7 @@ Channels, private messages, nicks, warning points, /list, and tab-completion all
 
 Keep ChatControl on your Bukkit servers.
 
-When upgrading to ChatControl 12.2.19, install BungeeControl 5.1.12 or VelocityControl 3.1.12 on the proxy and update ChatControl on every backend together. These releases change how player data is synchronized. Stop the network, replace the JARs, then start it again.
+When upgrading to ChatControl 12.2.19, install BungeeControl 5.1.12 or VelocityControl 3.1.12 on the proxy and update ChatControl on every backend together. These releases change how player data is synchronized. Stop the network, replace the JARs, then start it again. On ChatControl 12.2.19, an older proxy addon makes every backend log `Cannot invoke "java.lang.Boolean.booleanValue()"` every few seconds and players on other servers appear offline. Since 12.2.20 the backend prints a console message once per hour asking you to update instead.
 
 ## Setup
 
