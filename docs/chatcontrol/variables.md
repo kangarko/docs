@@ -215,10 +215,10 @@ Always use `{syntax}` and NOT %syntax%. We have dropped supporting %syntax% in C
 | `{chatcontrol_player_prefix_section}` | Similar to the one above, see `{chatcontrol_player_nick_section}` for what _section does. | 
 | `{chatcontrol_player_suffix}` | Return player's suffix set with /tag, or "" if not set. |
 | `{chatcontrol_player_suffix_section}` | Similar to the one above, see `{chatcontrol_player_nick_section}` for what _section does. | 
-| `{chatcontrol_reply_target}` | Returns "none" or the /reply player if any. |
+| `{chatcontrol_player_reply_target}` | Returns "none" or the /reply player if any. |
 | `{chatcontrol_player_newcomer}` | Returns "true" or "false" whether or not the player is newcomer. Newcomer limits are set in settings.yml. |
 | `{chatcontrol_is_ignoring_<type>}` | Returns "true" or "false" if the player is ignoring the given mode via /toggle command. See Toggle.Apply_On for available types. |
-| `{chatcontrol_data_<key>}` | Returns a custom variable. This is set in rules with data-related operators, see [Rules](rules). See rules/chat.rs for example (search for @bot name demo rule). |
+| `{chatcontrol_player_data_<key>}` | Returns a custom variable. This is set in rules with data-related operators, see [Rules](rules). See rules/chat.rs for example (search for @bot name demo rule). Inside rules and formats you can also write `{data_<key>}`. |
 
 ## The '+' Plus Letter And Trailing Space Removal
 
