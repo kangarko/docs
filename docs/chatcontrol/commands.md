@@ -153,6 +153,8 @@ Reply to a private message (proxy + console supported).
 ### `/spy`
 See messages outside your reach (other channels, PMs, books, signs, commands). Toggle via command or GUI.
 
+Add `-s` or `-silent` to `/spy on`, `/spy off` and `/spy toggle` to hide confirmation messages, for example `/spy toggle chat global Steve -s` from a menu plugin. Errors, `/spy list` and `/spy status` output stay visible.
+
 ### `/tag`
 Set your own nick, prefix, or suffix.
 

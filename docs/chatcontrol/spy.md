@@ -47,6 +47,9 @@ Enable or disable spying by clicking buttons frantically.
 ### /spy toggle
 Enable or disable only spying certain parts of plugin such as mails, or certain chat channels, for player. 
 
+### Silent mode
+Add `-s` or `-silent` to `/spy on`, `/spy off` or `/spy toggle` to skip the confirmation message, which is handy when a menu plugin runs the command for the player. Errors still show.
+
 ## Automatically Toggle Spying
 
 Give staff "chatcontrol.spy.autoenable" permission to automatically enable spying for them on join.

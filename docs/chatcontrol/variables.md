@@ -204,7 +204,7 @@ Always use `{syntax}` and NOT %syntax%. We have dropped supporting %syntax% in C
 | `{chatcontrol_label_spy}` | The first command alias that triggers spy command. |
 | `{chatcontrol_label_tell}` | The first command alias that triggers tell command. |
 | `{chatcontrol_label_toggle}` | The first command alias that triggers toggle command. |
-| `{chatcontrol_player_is_spying_<channel>}` | Returns "true" or "false" if the player is spying the given channel. |
+| `{chatcontrol_player_is_spying_<channel>}` | Returns "true" or "false" if the player has spying turned on for the given channel, also when he is in that channel himself. The channel name is not case sensitive. |
 | `{chatcontrol_player_is_spying_<mode>}` | Returns "true" or "false" if the player is spying the given mode. Modes available: `chat`, `command`, `private_message`, `mail`, `sign`, `book` and `anvil`. |
 | `{chatcontrol_player_in_channel_<channel>}` | Returns "true" or "false" if the player is in the given channel. |
 | `{chatcontrol_channel}` | Returns the player's current channel he's writing into. |
