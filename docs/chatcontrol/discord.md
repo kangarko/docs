@@ -65,6 +65,10 @@ You can use the `then discord` operator in [Rules](./rules), such as `then disco
 
 To bridge another bot's messages, enable `Discord.Bridge_Bot_Messages` in settings.yml and allow bots in DiscordSRV. See [Discord Bot Messages](./discord-bots) for setup and filtering behavior.
 
+### Mutes and Bans
+
+Messages from Discord follow the punishments of the player behind them: ChatControl's own /mute, LiteBans mutes, and LiteBans or BanManager bans. We find that player through his linked account, or by the player name matching his Discord nickname. A blocked message is deleted from Discord and the author sees a short notice. To let only linked accounts chat, set `DiscordChatChannelRequireLinkedAccount` to true in DiscordSRV's config.yml.
+
 ### Which Channels Reach Discord
 
 A channel reaches Discord only when you give it a `Discord_Channel_Id`. Leave the key out of your staff, admin or local channels and nothing they say is posted anywhere.

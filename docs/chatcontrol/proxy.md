@@ -30,7 +30,7 @@ servers:
     restricted: false
 ```
 
-Make sure server names match exactly with `Server_Name` in ChatControl's proxy.yml.
+Make sure server names match exactly with `Server_Name` in ChatControl's proxy.yml. Without Redis, the proxy logs a warning naming the server when its name does not match, and /msg, /r and /list there only see local players.
 
 **Velocity's velocity.toml:**
 

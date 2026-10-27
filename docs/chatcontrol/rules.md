@@ -26,6 +26,7 @@ How they work is that they are simple regular expressions that we test against e
 * command.rs: Rules applied to commands.
 * global.rs: Rules applied to everything, if you import this file, see below.
 * groups.rs: Groups of rule operators, so you can catch 50 curse words all of which will alert your staff members the same way but don't have to copy paste the alert message 50 times. You simple create a group and reference to it later. See below.
+* private_message.rs: Rules applied to private messages from /tell, /reply and the conversation mode, after we remove the tags the sender has no permission for, so tags your rules add stay clickable. Add `private_message` to `Rules.Apply_On` in settings.yml to turn it on. Use `{receiver_name}` and the other `{receiver_}` variables to refer to the receiving player.
 * sign.rs: Rules applied to signs when placed.
 * tag.rs: Rules applied to /tag command when players set their own nick, prefix or suffix.
 
