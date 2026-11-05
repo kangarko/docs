@@ -32,6 +32,7 @@ Boss updates your configuration automatically and seamlessly. When you update to
 | `Spawning.Count_Unloaded_Bosses_In_Limits` | true | Count Bosses in unloaded chunks against world limits. Paper only |
 | `Spawning.Live_Updates` | true | Push menu changes onto Bosses already alive in loaded chunks |
 | `Spawning.Integration.Lands` | true | Do not spawn in Lands areas that have mob spawning off |
+| `Spawning.Integration.GPFlags` | true | Let Boss eggs and `/boss spawn` work in GriefPrevention claims where GPFlags' `NoMobSpawns` or `NoMonsterSpawns` is set |
 | `Fighting.Retarget_Chance` | 0% | Chance a Boss switches to whoever hit it |
 | `Fighting.Disable_Cheats` | FLIGHT, GOD_MODE, INVISIBILITY | Player abilities cut off during a Boss fight |
 | `Health.Prevent_Regeneration` | false | Stop all Bosses regenerating health from any source |

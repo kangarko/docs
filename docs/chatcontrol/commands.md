@@ -57,7 +57,7 @@ Send a command to proxy or another server. Requires `chatcontrol.command.forward
 View player nicks, data, test variables, or check newcomer status.
 
 ### `/chc log`
-Search player activity (messages, commands, books, mail, PMs). Supports filtering: `/chc log all by:kangarko in:1h`.
+Search player activity (messages, commands, books, mail, PMs). Supports filtering: `/chc log all player:kangarko in:1h`. On a shared MySQL database, hover a line to see its server and add `server:survival` to list one server only.
 
 ### `/chc message`
 Manage join, quit, death messages and timed broadcasts in-game.

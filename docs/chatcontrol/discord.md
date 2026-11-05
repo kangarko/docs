@@ -175,7 +175,7 @@ Channels:
 
 The former per channel `Format_Discord` key migrates into whichever directional keys are absent. Explicit `Format_To_Discord` and `Format_From_Discord` values take precedence. The migrated legacy key is removed from the saved configuration.
 
-Each backend with DiscordSRV receives incoming Discord events independently. ChatControl does not forward those events through Velocity, and proxy chat deduplication does not coordinate bot reposts. Keep `Channels.Format_Discord` consistent across backends. If Discord text filtering and bot reposts are unnecessary, set `Send_Messages_As_Bot` to `false` on every backend to retain the original Discord message.
+Each backend with DiscordSRV receives incoming Discord events and shows them to its own players. ChatControl does not forward them through the proxy. When the backends share a MySQL database, only one of them answers each Discord message: it reposts it as the bot, re-uploads its attachments, deletes it when a rule blocks it and replies to the sender. The other backends link to the attachments it re-uploaded. Keep `Channels.Format_Discord` and `Send_Messages_As_Bot` the same on every backend. If Discord text filtering and bot reposts are unnecessary, set `Send_Messages_As_Bot` to `false` on every backend to keep the original Discord message.
 
 ### DiscordSRV grabbing messages suppressed by rules
 With `Channels.Enabled` on this cannot happen, we stop DiscordSRV's relay outright.
@@ -183,7 +183,7 @@ With `Channels.Enabled` on this cannot happen, we stop DiscordSRV's relay outrig
 With channels off, DiscordSRV reads the chat event itself and is your only bridge, so a message your rules killed can still reach it. Adjust your [Listener Priorities](./listener-priorities) so ChatControl processes messages before DiscordSRV. Note that `deny silently` deliberately leaves the chat event running so the writer still sees the message, which means no priority setting stops DiscordSRV from relaying it.
 
 ### Duplicate messages appearing
-Set `DiscordChatChannelMinecraftToDiscord` to `false` in DiscordSRV's config.yml. If using proxy, ensure only one server has DiscordSRV installed to avoid duplication.
+Set `DiscordChatChannelMinecraftToDiscord` to `false` in DiscordSRV's config.yml. If several backends run DiscordSRV with the same bot, connect them to the same MySQL database so only one of them reposts each Discord message. With a local database every backend reposts it on its own.
 
 ### A private channel shows up on Discord
 Remove the `Discord_Channel_Id` key from that channel in settings.yml. If the channel never had one, DiscordSRV's own relay is posting it, so update ChatControl or set `DiscordChatChannelMinecraftToDiscord` to `false` in DiscordSRV's config.yml.

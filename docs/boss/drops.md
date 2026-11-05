@@ -40,6 +40,10 @@ Each damage rank has its own **Commands** menu where you can add as many command
 
 **Party Rewards** in Boss menu > Death > Drops > Player Drops ranks damage by party instead of by individual player. It needs the AlessioDP Parties plugin, and without it the toggle is ignored and ranking falls back to individual players. Each rank's reward is then copied to every party member who damaged the Boss within the **Party Reward Radius** of the Boss death location. Set the radius to `0` for unlimited.
 
+### Spawner Only
+
+**Spawner Only** in Boss menu > Death > Drops > Player Drops gives player drops only to the player who spawned the Boss from an egg, as long as he damaged it. He receives the top reward even when others dealt more damage, and nobody else gets player drops. A Boss spawned any other way, for example by a spawn rule or `/boss spawn`, rewards its damagers as usual. The setting is saved as `Drops.Player_Spawner_Only` in the Boss file.
+
 ## Developer API
 If you are a power user, we offer an extensive API so that you can take over the drop system completely.
 

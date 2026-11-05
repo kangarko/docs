@@ -18,6 +18,8 @@ You can use logs on these aspects of game:
 
 You can use the "/chc log" command in game to view, and sort logs.
 
+When several servers share a MySQL database, every line remembers the server it came from. Hover over a line in `/chc log` to see it, or add `server:survival` to list one server only. The name is the `Server_Name` from proxy.yml.
+
 ## Logging Commands
 
 You can also specify what commands will be logged in Command_List of settings.yml:

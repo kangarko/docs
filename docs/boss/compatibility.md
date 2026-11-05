@@ -13,6 +13,7 @@ Please read the [General Compatibility Guide](../general/compatibility.md) for g
 * **WorldGuard** Set the `boss-target` flag to false to stop Bosses targeting players inside a region. Needs Minecraft 1.16 or newer.
 * **Lands** Boss prevents Bosses from spawning in Lands areas where mob/animal/phantom spawning flags are disabled. Toggle with `Spawning.Integration.Lands` in settings.yml (default: true).
 * **GriefPrevention** The Randomly Around Players rule skips claims, and spawner eggs are blocked in other players' claims unless you have `boss.bypass.claim`.
+* **GPFlags** Bosses from spawner eggs and `/boss spawn` are not stopped by GPFlags' `NoMobSpawns` and `NoMonsterSpawns` inside a GriefPrevention claim, where only the claim owner can use eggs. Other mobs stay blocked, except what the Boss rides or summons with its spawn commands. Toggle with `Spawning.Integration.GPFlags` in settings.yml (default: true).
 * **Heroes** Boss kills grant Heroes experience to the killer.
 * **AlessioDP Parties** Required for the Party Rewards option in Death > Drops > Player Drops.
 * **StackMob, RoseStacker, WildStacker** Hooked automatically so your Bosses never get stacked.

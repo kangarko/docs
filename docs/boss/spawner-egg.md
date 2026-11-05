@@ -14,9 +14,9 @@ Change how the egg looks under Boss menu > Spawning > **Spawn Egg Appearance**: 
 ## Using a Spawner Egg
 Right click to spawn the Boss (tip: You can also click the air or blocks far away!). Left click to open Boss menu.
 
-The egg is consumed unless you are in Creative. Tameable Bosses are tamed to whoever spawned them. Spawning inside another player's GriefPrevention claim is blocked unless you have `boss.bypass.claim`.
+The egg is used up only when the Boss spawns, and never in Creative. If another plugin stops the spawn, you keep the egg and see why. Tameable Bosses are tamed to whoever spawned them. Spawning inside another player's GriefPrevention claim is blocked unless you have `boss.bypass.claim`.
 
-Boss eggs also work in dispensers. The Boss appears at the block the dispenser faces and one egg is used up.
+Boss eggs also work in dispensers. The Boss appears at the block the dispenser faces and one egg is used up, or none when the Boss cannot spawn.
 
 ![Using Spawner Egg](/images/boss/hmXEiG9.png)
 
