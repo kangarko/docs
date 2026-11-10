@@ -295,6 +295,10 @@ For PremiumVanish, give the `chatcontrol.bypass.reach` permission to force vanis
 LuckPerms proxy command: `/luckpermsbungee group <group> permission set chatcontrol.bypass.range true server:<server>`
 :::
 
+### A vanished player is announced when he joins
+
+ChatControl checks if the player is vanished at the moment it sends the join message, which is `Messages.Defer_Join_Message_By` (1 tick by default) after he joined. Vanish plugins that hide the player while he is joining are detected automatically. If yours hides him a moment later, as EssentialsX does with `essentials.silentjoin.vanish` on Spigot and on Paper older than 1.21.8, raise `Defer_Join_Message_By` in settings.yml to a few ticks, for example `5 ticks`. Set `Debug` to `[player-message]` to see in the console when a join message is skipped because of vanish.
+
 </div>
 
 <div class="section-container discord-section">
