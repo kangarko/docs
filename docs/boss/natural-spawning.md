@@ -16,6 +16,8 @@ Every rule gets the same base conditions:
 
 Each type adds its own options on top.
 
+The delay runs from the last successful spawn, so slow kills never postpone the schedule. If the Boss is still alive when the next spawn is due, the delay restarts from its death instead. Turn on **Ignore Last Death**, next to **Delay**, to spawn the next Boss right after that death. Respawn After Death always counts from the death.
+
 ::: tip
 Set `Debug` to `[spawning]` in settings.yml to see why a rule did or did not fire.
 :::
@@ -27,8 +29,6 @@ Set `Debug` to `[spawning]` in settings.yml to see why a rule did or did not fir
 Spawns at locations you saved with `/boss location`, on a schedule. Every day at 17:00, each Friday at noon, every 30 minutes.
 
 Adds **Select Locations**, **Location Offset** (randomize the exact block, off by default) and an exact **Hour** and **Minute**, where `-1` means any.
-
-The delay runs from the last successful spawn, so slow kills never postpone the schedule. If the Boss is still alive when the next spawn is due, the delay restarts from its death instead.
 
 A location only spawns while a player is within 30 blocks. Change that with `Spawning.Location_Spawn_Nearby_Player_Radius`, or set it to `-1` to drop the check. Respawn After Death and After A Kill Goal are exempt from it.
 
